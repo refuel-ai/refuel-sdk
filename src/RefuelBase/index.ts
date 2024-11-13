@@ -19,13 +19,21 @@ export class RefuelBase {
         const url = `${this.baseUrl}${endpoint}`;
         const headers: HeadersInit = {
             Authorization: `Bearer ${this.accessToken}`,
-            "Content-Type": "application/json",
         };
+
+        let body;
+
+        if (data instanceof FormData) {
+            body = data;
+        } else if (data) {
+            headers["Content-Type"] = "application/json";
+            body = JSON.stringify(data);
+        }
 
         const response = await fetch(url, {
             method,
             headers,
-            body: data ? JSON.stringify(data) : undefined,
+            body,
         });
 
         const responseJSON = await response.json();

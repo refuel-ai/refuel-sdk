@@ -295,3 +295,27 @@ export interface InviteUsersResponse {
     failed: string[];
     success: string[];
 }
+export interface TaxonomyLabel {
+    id: string;
+    name: string;
+    description: string;
+    level: number | null;
+    parents: string[];
+}
+
+export interface TaxonomyLabelData {
+    name: string;
+    description?: string | null;
+}
+
+export interface TaxonomyLabelRequestBody {
+    labels: TaxonomyLabelData[];
+}
+
+export interface TaxonomyLabelsResponse {
+    id: string;
+    created_at: string;
+    updated_at: string;
+    labels: TaxonomyLabel[];
+    task_id: string;
+}
