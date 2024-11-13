@@ -167,12 +167,19 @@ class RefuelBase {
             const url = `${this.baseUrl}${endpoint}`;
             const headers = {
                 Authorization: `Bearer ${this.accessToken}`,
-                "Content-Type": "application/json",
             };
+            let body;
+            if (data instanceof FormData) {
+                body = data;
+            }
+            else if (data) {
+                headers["Content-Type"] = "application/json";
+                body = JSON.stringify(data);
+            }
             const response = yield fetch(url, {
                 method,
                 headers,
-                body: data ? JSON.stringify(data) : undefined,
+                body,
             });
             const responseJSON = yield response.json();
             if (!response.ok) {
@@ -219,6 +226,92 @@ class Tasks {
             return this.base.request({
                 method: "DELETE",
                 endpoint: `/tasks/${taskId}`,
+            });
+        });
+    }
+}
+
+class Taxonomies {
+    constructor(base) {
+        this.base = base;
+    }
+    create(taskId_1) {
+        return __awaiter(this, arguments, void 0, function* (taskId, labels = []) {
+            const data = {
+                labels: Array.isArray(labels) ? labels : [labels],
+            };
+            return this.base.request({
+                method: "POST",
+                endpoint: `/tasks/${taskId}/taxonomies`,
+                data,
+            });
+        });
+    }
+    get(taskId, taxonomyId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.base.request({
+                method: "GET",
+                endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
+            });
+        });
+    }
+    delete(taskId, taxonomyId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.base.request({
+                method: "DELETE",
+                endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
+            });
+        });
+    }
+}
+
+class TaxonomyLabels {
+    constructor(base) {
+        this.base = base;
+    }
+    create(taskId, taxonomyId, labels) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const data = new FormData();
+            data.append("labels", JSON.stringify(Array.isArray(labels) ? labels : [labels]));
+            return this.base.request({
+                method: "POST",
+                endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
+                data,
+            });
+        });
+    }
+    list(taskId, taxonomyId, options) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const params = new URLSearchParams();
+            if (options === null || options === void 0 ? void 0 : options.offset) {
+                params.append("offset", options.offset.toString());
+            }
+            if (options === null || options === void 0 ? void 0 : options.maxItems) {
+                params.append("max_items", options.maxItems.toString());
+            }
+            if (options === null || options === void 0 ? void 0 : options.filter) {
+                params.append("filter", options === null || options === void 0 ? void 0 : options.filter);
+            }
+            return this.base.request({
+                method: "GET",
+                endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}?${params.toString()}`,
+            });
+        });
+    }
+    update(taskId, taxonomyId, labelId, data) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.base.request({
+                method: "PATCH",
+                endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`,
+                data,
+            });
+        });
+    }
+    delete(taskId, taxonomyId, labelId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.base.request({
+                method: "DELETE",
+                endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`,
             });
         });
     }
@@ -377,6 +470,8 @@ class Refuel {
         this.datasets = new Datasets(this.base);
         this.projects = new Projects(this.base);
         this.tasks = new Tasks(this.base);
+        this.taxonomies = new Taxonomies(this.base);
+        this.taxonomyLabels = new TaxonomyLabels(this.base);
         this.team = new Team(this.base);
         this.usage = new Usage(this.base);
         this.users = new Users(this.base);
