@@ -162,7 +162,7 @@ class RefuelBase {
     }
     request(_a) {
         return __awaiter(this, arguments, void 0, function* ({ method, endpoint, data, }) {
-            const url = `${this.baseUrl}${endpoint}`;
+            const url = `${this.baseUrl}${endpoint}`.replace(/(?<!https:)\/{2}/g, "/");
             const headers = {
                 Authorization: `Bearer ${this.accessToken}`,
                 "Content-Type": "application/json",
