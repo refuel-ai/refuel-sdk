@@ -4,6 +4,8 @@ import { Datasets } from "./Datasets";
 import { Projects } from "./Projects";
 import { RefuelBase } from "./RefuelBase";
 import { Tasks } from "./Tasks";
+import { Taxonomies } from "./Taxonomies";
+import { TaxonomyLabels } from "./TaxonomyLabels";
 import { Team } from "./Team";
 import { Usage } from "./Usage";
 import { Users } from "./Users";
@@ -19,6 +21,8 @@ export class Refuel {
     public datasets: Datasets;
     public projects: Projects;
     public tasks: Tasks;
+    public taxonomies: Taxonomies;
+    public taxonomyLabels: TaxonomyLabels;
     public team: Team;
     public usage: Usage;
     public users: Users;
@@ -31,6 +35,8 @@ export class Refuel {
         this.datasets = new Datasets(this.base);
         this.projects = new Projects(this.base);
         this.tasks = new Tasks(this.base);
+        this.taxonomies = new Taxonomies(this.base);
+        this.taxonomyLabels = new TaxonomyLabels(this.base);
         this.team = new Team(this.base);
         this.usage = new Usage(this.base);
         this.users = new Users(this.base);
