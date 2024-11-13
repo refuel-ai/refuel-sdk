@@ -16,7 +16,10 @@ export class RefuelBase {
         endpoint: string;
         data?: RequestBody;
     }): Promise<Response> {
-        const url = `${this.baseUrl}${endpoint}`;
+        const url = `${this.baseUrl}${endpoint}`.replace(
+            /(?<!https:)\/{2}/g,
+            "/"
+        );
         const headers: HeadersInit = {
             Authorization: `Bearer ${this.accessToken}`,
             "Content-Type": "application/json",
