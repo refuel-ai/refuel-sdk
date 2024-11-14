@@ -315,7 +315,8 @@ export interface TaxonomyLabelRequestBody {
 export interface TaxonomyLabelsResponse {
     id: string;
     created_at: string;
-    updated_at: string;
     labels: TaxonomyLabel[];
     task_id: string;
+    total_count: number;
+    updated_at: string;
 }
