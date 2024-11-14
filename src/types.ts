@@ -1,8 +1,3 @@
-export interface ApplicationRequestBody {
-    project_id: string;
-    task_id: string;
-}
-
 export interface Application {
     id: string;
     created_at: string;
@@ -19,23 +14,46 @@ export interface Application {
     updated_at: string;
 }
 
+export interface ApplicationCreateOptions {
+    projectId: string;
+    taskId: string;
+    name?: string;
+}
+
 export interface ApplicationLabel {
     label: string[];
     confidence: number;
     raw_confidence: number;
+    explanation?: string;
 }
 
-export interface ApplicationOutput {
+export interface ApplicationOutputSync {
     refuel_uuid: string;
     refuel_api_timestamp: string;
     refuel_fields: Record<string, ApplicationLabel>;
-    usage: Record<string, unknown>;
+    usage?: Record<string, unknown>;
 }
 
-export interface ApplicationResponse {
+export interface ApplicationOutputAsync {
+    refuel_uuid: string;
+    refuel_api_timestamp: string;
+    uri: string;
+}
+
+export interface ApplicationLabelResponse<
+    T = ApplicationOutputSync | ApplicationOutputAsync
+> {
     application_id: string;
     application_name: string;
-    refuel_output: ApplicationOutput[];
+    refuel_output: T[];
+}
+
+export interface ApplicationLabelOptions {
+    explain?: boolean;
+    async?: boolean;
+    modelId?: string;
+    redactPII?: boolean;
+    telemetry?: boolean;
 }
 
 export interface ProjectData {
