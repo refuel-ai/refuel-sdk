@@ -1,8 +1,3 @@
-export interface ApplicationRequestBody {
-    project_id: string;
-    task_id: string;
-}
-
 export interface Application {
     id: string;
     created_at: string;
@@ -19,10 +14,17 @@ export interface Application {
     updated_at: string;
 }
 
+export interface ApplicationCreateOptions {
+    projectId: string;
+    taskId: string;
+    name?: string;
+}
+
 export interface ApplicationLabel {
     label: string[];
     confidence: number;
     raw_confidence: number;
+    explanation?: string;
 }
 
 export interface ApplicationOutput {
@@ -36,6 +38,18 @@ export interface ApplicationResponse {
     application_id: string;
     application_name: string;
     refuel_output: ApplicationOutput[];
+}
+
+export interface ApplicationLabelOptions {
+    /** override the model used to label */
+    modelId?: string;
+    /** compute telemetry */
+    telemetry?: boolean;
+    /** include explanation in response */
+    explain?: boolean;
+    /** fields to explain */
+    explainFields?: string[];
+    redactPII?: boolean;
 }
 
 export interface ProjectData {

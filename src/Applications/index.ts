@@ -1,7 +1,8 @@
 import { RefuelBase } from "../RefuelBase";
 import {
     Application,
-    ApplicationRequestBody,
+    ApplicationCreateOptions,
+    ApplicationLabelOptions,
     ApplicationResponse,
 } from "../types";
 
@@ -12,11 +13,18 @@ export class Applications {
         this.base = base;
     }
 
-    async create(data: ApplicationRequestBody): Promise<Application> {
-        return this.base.request<Application, ApplicationRequestBody>({
+    async create(options: ApplicationCreateOptions): Promise<Application> {
+        const params = new URLSearchParams();
+        params.append("project_id", options.projectId);
+        params.append("task_id", options.taskId);
+
+        if (options.name) {
+            params.append("name", options.name);
+        }
+
+        return this.base.request<Application>({
             method: "POST",
-            endpoint: "/applications",
-            data,
+            endpoint: `/applications?${params.toString()}`,
         });
     }
 
@@ -48,11 +56,23 @@ export class Applications {
     async label<T extends Record<string, unknown> = Record<string, unknown>>(
         applicationId: string,
         data: T[],
-        options?: { modelId?: string }
+        options?: ApplicationLabelOptions
     ): Promise<ApplicationResponse> {
         const params = new URLSearchParams();
         if (options?.modelId) {
             params.append("model_id", options.modelId);
+        }
+
+        if (options?.telemetry !== undefined) {
+            params.append("telemetry", options.telemetry.toString());
+        }
+
+        if (options?.explain !== undefined) {
+            params.append("explain", options.explain.toString());
+        }
+
+        if (options?.redactPII !== undefined) {
+            params.append("redact_pii", options.redactPII.toString());
         }
 
         return this.base.request<ApplicationResponse, T[]>({
