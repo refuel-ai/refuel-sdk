@@ -9,8 +9,8 @@ export class Users {
     }
 
     async create(email: string | string[]) {
-        const data = JSON.stringify(Array.isArray(email) ? email : [email]);
-        return this.base.request<InviteUsersResponse, string>({
+        const data = Array.isArray(email) ? email : [email];
+        return this.base.request<InviteUsersResponse, string[]>({
             method: "POST",
             endpoint: "/users",
             data,
