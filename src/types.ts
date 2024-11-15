@@ -279,16 +279,27 @@ export interface RefuelTeam {
     refuel_api_key: string;
 }
 
+export enum UserState {
+    ACTIVE = "ACTIVE",
+    INVITED = "INVITED",
+    CREATED = "CREATED",
+}
+
 export interface User {
-    id: string;
-    created_at: string;
-    team: string;
+    name: string | null;
     email: string;
-    name?: string;
+    team: string;
     picture: string | null;
+    state: UserState;
+}
+
+export interface AuthenticatedUser extends User {
+    id: string;
+    api_key: string | null;
+    created_at: string;
     permissions: string[];
-    access_token: string | null;
-    state: string | null;
+    updated_at: string;
+    access_token: string;
 }
 
 export interface InviteUsersResponse {
