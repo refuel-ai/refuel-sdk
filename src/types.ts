@@ -331,3 +331,16 @@ export interface TaxonomyLabelsResponse {
     total_count: number;
     updated_at: string;
 }
+
+export type IntegrationConfig = Record<string, string | null>;
+
+export interface Integration {
+    id: string;
+    name: string;
+    category: string;
+    description: string;
+    is_connected: boolean;
+    is_available: boolean;
+    config: IntegrationConfig;
+    logo_url: string;
+}
