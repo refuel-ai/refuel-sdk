@@ -43,4 +43,14 @@ export class Taxonomies {
             endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
         });
     }
+
+    async duplicate(
+        taskId: string,
+        taxonomyId: string
+    ): Promise<TaxonomyLabelsResponse> {
+        return this.base.request<TaxonomyLabelsResponse>({
+            method: "POST",
+            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/duplicate`,
+        });
+    }
 }
