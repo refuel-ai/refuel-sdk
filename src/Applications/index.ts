@@ -56,11 +56,11 @@ export class Applications {
     }
 
     async label<
-        T extends Record<string, unknown> = Record<string, unknown>,
+        FieldKeys extends string,
         A extends boolean | undefined = undefined
     >(
         applicationId: string,
-        data: T[],
+        data: Record<string, unknown>[],
         options?: ApplicationLabelOptions & { async?: A }
     ) {
         const params = new URLSearchParams();
@@ -87,8 +87,8 @@ export class Applications {
         return this.base.request<
             A extends true
                 ? ApplicationLabelResponse<ApplicationOutputAsync>
-                : ApplicationLabelResponse<ApplicationOutputSync>,
-            T[]
+                : ApplicationLabelResponse<ApplicationOutputSync<FieldKeys>>,
+            Record<string, unknown>[]
         >({
             method: "POST",
             endpoint: `/applications/${applicationId}/label?${params.toString()}`,
