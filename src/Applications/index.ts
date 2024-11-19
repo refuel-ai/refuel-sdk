@@ -95,4 +95,16 @@ export class Applications {
             data,
         });
     }
+
+    async getLabeledItem<FieldKeys extends string>(
+        applicationId: string,
+        itemId: string
+    ) {
+        return this.base.request<
+            ApplicationLabelResponse<ApplicationOutputSync<FieldKeys>>
+        >({
+            method: "GET",
+            endpoint: `/applications/${applicationId}/items/${itemId}`,
+        });
+    }
 }
