@@ -27,10 +27,10 @@ export interface ApplicationLabel {
     explanation?: string;
 }
 
-export interface ApplicationOutputSync {
+export interface ApplicationOutputSync<FieldKeys extends string = string> {
     refuel_uuid: string;
     refuel_api_timestamp: string;
-    refuel_fields: Record<string, ApplicationLabel>;
+    refuel_fields: Record<FieldKeys, ApplicationLabel>;
     usage?: Record<string, unknown>;
 }
 
