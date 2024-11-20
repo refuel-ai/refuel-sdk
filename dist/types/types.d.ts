@@ -1,7 +1,3 @@
-export interface ApplicationRequestBody {
-    project_id: string;
-    task_id: string;
-}
 export interface Application {
     id: string;
     created_at: string;
@@ -12,26 +8,45 @@ export interface Application {
     model_name: string;
     name: string;
     project_id: string;
+    subtasks: Subtask[];
     task_id: string;
     task_name: string;
     task_updated_at: string | null;
     updated_at: string;
 }
+export interface ApplicationCreateOptions {
+    projectId: string;
+    taskId: string;
+    name?: string;
+}
 export interface ApplicationLabel {
     label: string[];
     confidence: number;
     raw_confidence: number;
+    explanation?: string;
 }
-export interface ApplicationOutput {
+export interface ApplicationOutputSync<FieldKeys extends string = string> {
     refuel_uuid: string;
     refuel_api_timestamp: string;
-    refuel_fields: Record<string, ApplicationLabel>;
-    usage: Record<string, unknown>;
+    refuel_fields: Record<FieldKeys, ApplicationLabel>;
+    usage?: Record<string, unknown>;
 }
-export interface ApplicationResponse {
+export interface ApplicationOutputAsync {
+    refuel_uuid: string;
+    refuel_api_timestamp: string;
+    uri: string;
+}
+export interface ApplicationLabelResponse<T = ApplicationOutputSync | ApplicationOutputAsync> {
     application_id: string;
     application_name: string;
-    refuel_output: ApplicationOutput[];
+    refuel_output: T[];
+}
+export interface ApplicationLabelOptions {
+    explain?: boolean;
+    async?: boolean;
+    modelId?: string;
+    redactPII?: boolean;
+    telemetry?: boolean;
 }
 export interface ProjectData {
     project_name: string;
@@ -71,11 +86,11 @@ export interface Label {
     selected_labels: string[] | null;
     source: LabelSource;
 }
-export interface DatasetItem {
-    id: string;
+export interface LabeledDatasetItem {
     fields: Record<string, unknown> | null;
     labels: Label[] | null;
     telemetry: Telemetry[] | null;
+    in_evalset: boolean;
 }
 export interface Metadata {
     existingLabelTaskIds?: string[] | null;
@@ -105,16 +120,23 @@ export interface DatasetSchema {
     type: string;
     $schema: string;
 }
+export interface DatasetFromList {
+    id: string;
+    dataset_name: string;
+    created_at: string;
+    updated_at: string | null;
+    ingest_status: string | null;
+    dataset_schema: DatasetSchema;
+    source: string;
+}
 export interface Dataset {
     id: string;
     column_metadata: ColumnMetadata | null;
-    created_at: string;
-    dataset_name: string;
-    dataset_schema: DatasetSchema | null;
+    name: string;
+    schema: DatasetSchema | null;
     ingest_status: string | null;
-    items?: DatasetItem[];
+    items: Record<string, string>[];
     response_count: number;
-    source: string | null;
     total_count: number;
 }
 export declare enum FilterFieldCategory {
@@ -234,16 +256,25 @@ export interface RefuelTeam {
     name: string;
     refuel_api_key: string;
 }
+export declare enum UserState {
+    ACTIVE = "ACTIVE",
+    INVITED = "INVITED",
+    CREATED = "CREATED"
+}
 export interface User {
-    id: string;
-    created_at: string;
-    team: string;
+    name: string | null;
     email: string;
-    name?: string;
+    team: string;
     picture: string | null;
+    state: UserState;
+}
+export interface AuthenticatedUser extends User {
+    id: string;
+    api_key: string | null;
+    created_at: string;
     permissions: string[];
-    access_token: string | null;
-    state: string | null;
+    updated_at: string;
+    access_token: string;
 }
 export interface InviteUsersResponse {
     failed: string[];
@@ -270,4 +301,15 @@ export interface TaxonomyLabelsResponse {
     task_id: string;
     total_count: number;
     updated_at: string;
+}
+export type IntegrationConfig = Record<string, string | null>;
+export interface Integration {
+    id: string;
+    name: string;
+    category: string;
+    description: string;
+    is_connected: boolean;
+    is_available: boolean;
+    config: IntegrationConfig;
+    logo_url: string;
 }

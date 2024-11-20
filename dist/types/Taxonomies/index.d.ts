@@ -6,4 +6,5 @@ export declare class Taxonomies {
     create(taskId: string, labels?: TaxonomyLabelData | TaxonomyLabelData[]): Promise<TaxonomyLabelsResponse>;
     get(taskId: string, taxonomyId: string): Promise<TaxonomyLabelsResponse>;
     delete(taskId: string, taxonomyId: string): Promise<void>;
+    duplicate(taskId: string, taxonomyId: string): Promise<TaxonomyLabelsResponse>;
 }
