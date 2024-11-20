@@ -6,6 +6,7 @@ import {
     ApplicationLabelResponse,
     ApplicationOutputAsync,
     ApplicationOutputSync,
+    Dataset,
 } from "../types";
 
 export class Applications {
@@ -105,6 +106,38 @@ export class Applications {
         >({
             method: "GET",
             endpoint: `/applications/${applicationId}/items/${itemId}`,
+        });
+    }
+
+    async feedback(
+        applicationId: string,
+        itemId: string,
+        correctLabelData: Record<string, string>
+    ) {
+        const application = await this.get(applicationId);
+
+        const subtaskMap = Object.fromEntries(
+            application.subtasks?.map((subtask) => [
+                subtask.name,
+                subtask.id,
+            ]) ?? []
+        );
+
+        const feedbackData: Record<string, { label: string }> = {};
+        for (const [subtaskName, subtaskLabel] of Object.entries(
+            correctLabelData
+        )) {
+            const subtaskId = subtaskMap[subtaskName];
+            if (!subtaskId) {
+                throw new Error(`Invalid field: ${subtaskName}`);
+            }
+            feedbackData[subtaskId] = { label: subtaskLabel };
+        }
+
+        return this.base.request<Dataset>({
+            method: "POST",
+            endpoint: `/applications/${applicationId}/items/${itemId}/label`,
+            data: feedbackData,
         });
     }
 }

@@ -13,6 +13,29 @@ const refuel = new Refuel("your_access_token");
 
 const applicationLabels = await refuel.applications.label(
     "your_application_id",
-    [{ example: "test" }]
+    [
+        // Data to label
+        {
+            menu_text:
+                "Grilled chicken sandwich with avocado and chipotle mayo",
+        },
+    ]
+);
+```
+
+### Update label from application response
+
+```typescript
+import { Refuel } from "refuel-sdk";
+
+const refuel = new Refuel("your_access_token");
+
+await refuel.applications.feedback(
+    "your_application_id",
+    "your_labeled_item_id",
+    // Correct label
+    {
+        vegetarian: false,
+    }
 );
 ```
