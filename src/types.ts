@@ -8,6 +8,7 @@ export interface Application {
     model_name: string;
     name: string;
     project_id: string;
+    subtasks: Subtask[];
     task_id: string;
     task_name: string;
     task_updated_at: string | null;
@@ -99,11 +100,11 @@ export interface Label {
     source: LabelSource;
 }
 
-export interface DatasetItem {
-    id: string;
+export interface LabeledDatasetItem {
     fields: Record<string, unknown> | null;
     labels: Label[] | null;
     telemetry: Telemetry[] | null;
+    in_evalset: boolean;
 }
 
 export interface Metadata {
@@ -139,16 +140,24 @@ export interface DatasetSchema {
     $schema: string;
 }
 
+export interface DatasetFromList {
+    id: string;
+    dataset_name: string;
+    created_at: string;
+    updated_at: string | null;
+    ingest_status: string | null;
+    dataset_schema: DatasetSchema;
+    source: string;
+}
+
 export interface Dataset {
     id: string;
     column_metadata: ColumnMetadata | null;
-    created_at: string;
-    dataset_name: string;
-    dataset_schema: DatasetSchema | null;
+    name: string;
+    schema: DatasetSchema | null;
     ingest_status: string | null;
-    items?: DatasetItem[];
+    items: Record<string, string>[];
     response_count: number;
-    source: string | null;
     total_count: number;
 }
 
