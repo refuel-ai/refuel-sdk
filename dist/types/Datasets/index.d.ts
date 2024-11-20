@@ -1,8 +1,9 @@
 import { RefuelBase } from "../RefuelBase";
-import { Dataset } from "../types";
+import { Dataset, DatasetFromList } from "../types";
 export declare class Datasets {
     private readonly base;
     constructor(base: RefuelBase);
-    list(projectId?: string): Promise<Dataset[]>;
+    get(datasetId: string): Promise<Dataset>;
+    list(projectId?: string): Promise<DatasetFromList[]>;
     delete(datasetId: string): Promise<void>;
 }

@@ -1,86 +1,88 @@
-/******************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
-/* global Reflect, Promise, SuppressedError, Symbol, Iterator */
-
-
-function __awaiter(thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-}
-
-typeof SuppressedError === "function" ? SuppressedError : function (error, suppressed, message) {
-    var e = new Error(message);
-    return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
-};
-
 class Applications {
     constructor(base) {
         this.base = base;
     }
-    create(data) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "POST",
-                endpoint: "/applications",
-                data,
-            });
+    async create(options) {
+        const params = new URLSearchParams();
+        params.append("project_id", options.projectId);
+        params.append("task_id", options.taskId);
+        if (options.name) {
+            params.append("name", options.name);
+        }
+        return this.base.request({
+            method: "POST",
+            endpoint: `/applications?${params.toString()}`,
         });
     }
-    get(applicationId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "GET",
-                endpoint: `/applications/${applicationId}`,
-            });
+    async get(applicationId) {
+        return this.base.request({
+            method: "GET",
+            endpoint: `/applications/${applicationId}`,
         });
     }
-    list(projectId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const endpoint = projectId
-                ? `/projects/${projectId}/applications`
-                : "/applications";
-            return this.base.request({
-                method: "GET",
-                endpoint,
-            });
+    async list(projectId) {
+        const endpoint = projectId
+            ? `/projects/${projectId}/applications`
+            : "/applications";
+        return this.base.request({
+            method: "GET",
+            endpoint,
         });
     }
-    delete(applicationId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "DELETE",
-                endpoint: `/applications/${applicationId}`,
-            });
+    async delete(applicationId) {
+        return this.base.request({
+            method: "DELETE",
+            endpoint: `/applications/${applicationId}`,
         });
     }
-    label(applicationId, data, options) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const params = new URLSearchParams();
-            if (options === null || options === void 0 ? void 0 : options.modelId) {
-                params.append("model_id", options.modelId);
+    async label(applicationId, data, options) {
+        const params = new URLSearchParams();
+        if (options === null || options === void 0 ? void 0 : options.modelId) {
+            params.append("model_id", options.modelId);
+        }
+        if ((options === null || options === void 0 ? void 0 : options.telemetry) !== undefined) {
+            params.append("telemetry", options.telemetry.toString());
+        }
+        if ((options === null || options === void 0 ? void 0 : options.explain) !== undefined) {
+            params.append("explain", options.explain.toString());
+        }
+        if ((options === null || options === void 0 ? void 0 : options.redactPII) !== undefined) {
+            params.append("redact_pii", options.redactPII.toString());
+        }
+        if ((options === null || options === void 0 ? void 0 : options.async) !== undefined) {
+            params.append("is_async", options.async.toString());
+        }
+        return this.base.request({
+            method: "POST",
+            endpoint: `/applications/${applicationId}/label?${params.toString()}`,
+            data,
+        });
+    }
+    async getLabeledItem(applicationId, itemId) {
+        return this.base.request({
+            method: "GET",
+            endpoint: `/applications/${applicationId}/items/${itemId}`,
+        });
+    }
+    async feedback(applicationId, itemId, correctLabelData) {
+        var _a, _b;
+        const application = await this.get(applicationId);
+        const subtaskMap = Object.fromEntries((_b = (_a = application.subtasks) === null || _a === void 0 ? void 0 : _a.map((subtask) => [
+            subtask.name,
+            subtask.id,
+        ])) !== null && _b !== void 0 ? _b : []);
+        const feedbackData = {};
+        for (const [subtaskName, subtaskLabel] of Object.entries(correctLabelData)) {
+            const subtaskId = subtaskMap[subtaskName];
+            if (!subtaskId) {
+                throw new Error(`Invalid field: ${subtaskName}`);
             }
-            return this.base.request({
-                method: "POST",
-                endpoint: `/applications/${applicationId}/label?${params.toString()}`,
-                data,
-            });
+            feedbackData[subtaskId] = { label: subtaskLabel };
+        }
+        return this.base.request({
+            method: "POST",
+            endpoint: `/applications/${applicationId}/items/${itemId}/label`,
+            data: feedbackData,
         });
     }
 }
@@ -91,24 +93,51 @@ class Datasets {
     constructor(base) {
         this.base = base;
     }
-    list(projectId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const params = new URLSearchParams();
-            if (projectId) {
-                params.append("project_id", projectId);
-            }
-            return this.base.request({
-                method: "GET",
-                endpoint: `/datasets?${params.toString()}`,
-            });
+    async get(datasetId) {
+        return this.base.request({
+            method: "GET",
+            endpoint: `/datasets/${datasetId}`,
         });
     }
-    delete(datasetId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "DELETE",
-                endpoint: `/datasets/${datasetId}`,
-            });
+    async list(projectId) {
+        const params = new URLSearchParams();
+        if (projectId) {
+            params.append("project_id", projectId);
+        }
+        return this.base.request({
+            method: "GET",
+            endpoint: `/datasets?${params.toString()}`,
+        });
+    }
+    async delete(datasetId) {
+        return this.base.request({
+            method: "DELETE",
+            endpoint: `/datasets/${datasetId}`,
+        });
+    }
+}
+
+class Integrations {
+    constructor(base) {
+        this.base = base;
+    }
+    async get(integrationId) {
+        return this.base.request({
+            method: "GET",
+            endpoint: `/integrations/${integrationId}`,
+        });
+    }
+    async list() {
+        return this.base.request({
+            method: "GET",
+            endpoint: "/integrations",
+        });
+    }
+    async update(integrationId, data) {
+        return this.base.request({
+            method: "PATCH",
+            endpoint: `/integrations/${integrationId}`,
+            data,
         });
     }
 }
@@ -117,40 +146,32 @@ class Projects {
     constructor(base) {
         this.base = base;
     }
-    create(data) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const params = new URLSearchParams();
-            params.append("project_name", data.project_name);
-            params.append("description", data.description);
-            return this.base.request({
-                method: "POST",
-                endpoint: `/projects?${params.toString()}`,
-                data,
-            });
+    async create(data) {
+        const params = new URLSearchParams();
+        params.append("project_name", data.project_name);
+        params.append("description", data.description);
+        return this.base.request({
+            method: "POST",
+            endpoint: `/projects?${params.toString()}`,
+            data,
         });
     }
-    get(projectId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "GET",
-                endpoint: `/projects/${projectId}`,
-            });
+    async get(projectId) {
+        return this.base.request({
+            method: "GET",
+            endpoint: `/projects/${projectId}`,
         });
     }
-    list() {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "GET",
-                endpoint: "/projects",
-            });
+    async list() {
+        return this.base.request({
+            method: "GET",
+            endpoint: "/projects",
         });
     }
-    delete(projectId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "DELETE",
-                endpoint: `/projects/${projectId}`,
-            });
+    async delete(projectId) {
+        return this.base.request({
+            method: "DELETE",
+            endpoint: `/projects/${projectId}`,
         });
     }
 }
@@ -160,32 +181,30 @@ class RefuelBase {
         this.accessToken = accessToken;
         this.baseUrl = baseUrl;
     }
-    request(_a) {
-        return __awaiter(this, arguments, void 0, function* ({ method, endpoint, data, }) {
-            const url = `${this.baseUrl}${endpoint}`;
-            const headers = {
-                Authorization: `Bearer ${this.accessToken}`,
-            };
-            let body;
-            if (data instanceof FormData) {
-                body = data;
-            }
-            else if (data) {
-                headers["Content-Type"] = "application/json";
-                body = JSON.stringify(data);
-            }
-            const response = yield fetch(url, {
-                method,
-                headers,
-                body,
-            });
-            const responseJSON = yield response.json();
-            if (!response.ok) {
-                throw new Error((responseJSON === null || responseJSON === void 0 ? void 0 : responseJSON.error_msg) ||
-                    "An error occurred while making the API request.");
-            }
-            return (responseJSON.data || responseJSON);
+    async request({ method, endpoint, data, }) {
+        const url = `${this.baseUrl}${endpoint}`;
+        const headers = {
+            Authorization: `Bearer ${this.accessToken}`,
+        };
+        let body;
+        if (data instanceof FormData) {
+            body = data;
+        }
+        else if (data) {
+            headers["Content-Type"] = "application/json";
+            body = JSON.stringify(data);
+        }
+        const response = await fetch(url, {
+            method,
+            headers,
+            body,
         });
+        const responseJSON = await response.json();
+        if (!response.ok) {
+            throw new Error((responseJSON === null || responseJSON === void 0 ? void 0 : responseJSON.error_msg) ||
+                "An error occurred while making the API request.");
+        }
+        return (responseJSON.data || responseJSON);
     }
 }
 
@@ -193,38 +212,30 @@ class Tasks {
     constructor(base) {
         this.base = base;
     }
-    get(taskId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "GET",
-                endpoint: `/tasks/${taskId}`,
-            });
+    async get(taskId) {
+        return this.base.request({
+            method: "GET",
+            endpoint: `/tasks/${taskId}`,
         });
     }
-    list(projectId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const endpoint = projectId ? `/projects/${projectId}/tasks` : "/tasks";
-            return this.base.request({
-                method: "GET",
-                endpoint,
-            });
+    async list(projectId) {
+        const endpoint = projectId ? `/projects/${projectId}/tasks` : "/tasks";
+        return this.base.request({
+            method: "GET",
+            endpoint,
         });
     }
-    update(taskId, data) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "PATCH",
-                endpoint: `/tasks/${taskId}`,
-                data,
-            });
+    async update(taskId, data) {
+        return this.base.request({
+            method: "PATCH",
+            endpoint: `/tasks/${taskId}`,
+            data,
         });
     }
-    delete(taskId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "DELETE",
-                endpoint: `/tasks/${taskId}`,
-            });
+    async delete(taskId) {
+        return this.base.request({
+            method: "DELETE",
+            endpoint: `/tasks/${taskId}`,
         });
     }
 }
@@ -233,32 +244,32 @@ class Taxonomies {
     constructor(base) {
         this.base = base;
     }
-    create(taskId_1) {
-        return __awaiter(this, arguments, void 0, function* (taskId, labels = []) {
-            const data = {
-                labels: Array.isArray(labels) ? labels : [labels],
-            };
-            return this.base.request({
-                method: "POST",
-                endpoint: `/tasks/${taskId}/taxonomies`,
-                data,
-            });
+    async create(taskId, labels = []) {
+        const data = {
+            labels: Array.isArray(labels) ? labels : [labels],
+        };
+        return this.base.request({
+            method: "POST",
+            endpoint: `/tasks/${taskId}/taxonomies`,
+            data,
         });
     }
-    get(taskId, taxonomyId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "GET",
-                endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
-            });
+    async get(taskId, taxonomyId) {
+        return this.base.request({
+            method: "GET",
+            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
         });
     }
-    delete(taskId, taxonomyId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "DELETE",
-                endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
-            });
+    async delete(taskId, taxonomyId) {
+        return this.base.request({
+            method: "DELETE",
+            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
+        });
+    }
+    async duplicate(taskId, taxonomyId) {
+        return this.base.request({
+            method: "POST",
+            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/duplicate`,
         });
     }
 }
@@ -267,50 +278,42 @@ class TaxonomyLabels {
     constructor(base) {
         this.base = base;
     }
-    create(taskId, taxonomyId, labels) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const data = new FormData();
-            data.append("labels", JSON.stringify(Array.isArray(labels) ? labels : [labels]));
-            return this.base.request({
-                method: "POST",
-                endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
-                data,
-            });
+    async create(taskId, taxonomyId, labels) {
+        const data = new FormData();
+        data.append("labels", JSON.stringify(Array.isArray(labels) ? labels : [labels]));
+        return this.base.request({
+            method: "POST",
+            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
+            data,
         });
     }
-    list(taskId, taxonomyId, options) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const params = new URLSearchParams();
-            if (options === null || options === void 0 ? void 0 : options.offset) {
-                params.append("offset", options.offset.toString());
-            }
-            if (options === null || options === void 0 ? void 0 : options.maxItems) {
-                params.append("max_items", options.maxItems.toString());
-            }
-            if (options === null || options === void 0 ? void 0 : options.filter) {
-                params.append("filter", options === null || options === void 0 ? void 0 : options.filter);
-            }
-            return this.base.request({
-                method: "GET",
-                endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}?${params.toString()}`,
-            });
+    async list(taskId, taxonomyId, options) {
+        const params = new URLSearchParams();
+        if (options === null || options === void 0 ? void 0 : options.offset) {
+            params.append("offset", options.offset.toString());
+        }
+        if (options === null || options === void 0 ? void 0 : options.maxItems) {
+            params.append("max_items", options.maxItems.toString());
+        }
+        if (options === null || options === void 0 ? void 0 : options.filter) {
+            params.append("filter", options === null || options === void 0 ? void 0 : options.filter);
+        }
+        return this.base.request({
+            method: "GET",
+            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}?${params.toString()}`,
         });
     }
-    update(taskId, taxonomyId, labelId, data) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "PATCH",
-                endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`,
-                data,
-            });
+    async update(taskId, taxonomyId, labelId, data) {
+        return this.base.request({
+            method: "PATCH",
+            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`,
+            data,
         });
     }
-    delete(taskId, taxonomyId, labelId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "DELETE",
-                endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`,
-            });
+    async delete(taskId, taxonomyId, labelId) {
+        return this.base.request({
+            method: "DELETE",
+            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`,
         });
     }
 }
@@ -319,25 +322,21 @@ class Team {
     constructor(base) {
         this.base = base;
     }
-    get() {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "GET",
-                endpoint: "/team",
-            });
+    async get() {
+        return this.base.request({
+            method: "GET",
+            endpoint: "/team",
         });
     }
-    regenerateApiKey() {
-        return __awaiter(this, void 0, void 0, function* () {
-            yield this.base.request({
-                method: "PATCH",
-                endpoint: "/team",
-                data: {
-                    update_api_key: true,
-                },
-            });
-            return (yield this.get()).refuel_api_key;
+    async regenerateApiKey() {
+        await this.base.request({
+            method: "PATCH",
+            endpoint: "/team",
+            data: {
+                update_api_key: true,
+            },
         });
+        return (await this.get()).refuel_api_key;
     }
 }
 
@@ -345,24 +344,22 @@ class Usage {
     constructor(base) {
         this.base = base;
     }
-    get(startDate, endDate, options) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const params = new URLSearchParams();
-            params.append("start_date", startDate);
-            params.append("end_date", endDate);
-            if (options === null || options === void 0 ? void 0 : options.applicationId) {
-                params.append("application_id", options.applicationId);
-            }
-            if (options === null || options === void 0 ? void 0 : options.taskId) {
-                params.append("task_id", options.taskId);
-            }
-            if (options === null || options === void 0 ? void 0 : options.modelId) {
-                params.append("model", options.modelId);
-            }
-            return this.base.request({
-                method: "GET",
-                endpoint: `/usage?${params.toString()}`,
-            });
+    async get(startDate, endDate, options) {
+        const params = new URLSearchParams();
+        params.append("start_date", startDate);
+        params.append("end_date", endDate);
+        if (options === null || options === void 0 ? void 0 : options.applicationId) {
+            params.append("application_id", options.applicationId);
+        }
+        if (options === null || options === void 0 ? void 0 : options.taskId) {
+            params.append("task_id", options.taskId);
+        }
+        if (options === null || options === void 0 ? void 0 : options.modelId) {
+            params.append("model", options.modelId);
+        }
+        return this.base.request({
+            method: "GET",
+            endpoint: `/usage?${params.toString()}`,
         });
     }
 }
@@ -371,30 +368,24 @@ class Users {
     constructor(base) {
         this.base = base;
     }
-    create(email) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const data = JSON.stringify(Array.isArray(email) ? email : [email]);
-            return this.base.request({
-                method: "POST",
-                endpoint: "/users",
-                data,
-            });
+    async create(email) {
+        const data = Array.isArray(email) ? email : [email];
+        return this.base.request({
+            method: "POST",
+            endpoint: "/users",
+            data,
         });
     }
-    get(userId) {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "GET",
-                endpoint: `/users/${userId}`,
-            });
+    async get(userId) {
+        return this.base.request({
+            method: "GET",
+            endpoint: `/users/${userId}`,
         });
     }
-    list() {
-        return __awaiter(this, void 0, void 0, function* () {
-            return this.base.request({
-                method: "GET",
-                endpoint: `/users`,
-            });
+    async list() {
+        return this.base.request({
+            method: "GET",
+            endpoint: `/users`,
         });
     }
 }
@@ -459,6 +450,12 @@ var FeatureFlagValues;
     FeatureFlagValues["ENABLED"] = "enabled";
     FeatureFlagValues["DISABLED"] = "disabled";
 })(FeatureFlagValues || (FeatureFlagValues = {}));
+var UserState;
+(function (UserState) {
+    UserState["ACTIVE"] = "ACTIVE";
+    UserState["INVITED"] = "INVITED";
+    UserState["CREATED"] = "CREATED";
+})(UserState || (UserState = {}));
 
 class Refuel {
     constructor(accessToken, options) {
@@ -466,6 +463,7 @@ class Refuel {
         this.base = new RefuelBase(accessToken, baseUrl);
         this.applications = new Applications(this.base);
         this.datasets = new Datasets(this.base);
+        this.integrations = new Integrations(this.base);
         this.projects = new Projects(this.base);
         this.tasks = new Tasks(this.base);
         this.taxonomies = new Taxonomies(this.base);
@@ -476,5 +474,5 @@ class Refuel {
     }
 }
 
-export { DatasetColumnType, FeatureFlagValues, FilterFieldCategory, FilterOperator, LabelSource, Refuel, SchemaMode, TaskType, TransformType };
+export { DatasetColumnType, FeatureFlagValues, FilterFieldCategory, FilterOperator, LabelSource, Refuel, SchemaMode, TaskType, TransformType, UserState };
 //# sourceMappingURL=index.mjs.map

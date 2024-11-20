@@ -1,13 +1,15 @@
 import { RefuelBase } from "../RefuelBase";
-import { Application, ApplicationRequestBody, ApplicationResponse } from "../types";
+import { Application, ApplicationCreateOptions, ApplicationLabelOptions, ApplicationLabelResponse, ApplicationOutputAsync, ApplicationOutputSync, Dataset } from "../types";
 export declare class Applications {
     private readonly base;
     constructor(base: RefuelBase);
-    create(data: ApplicationRequestBody): Promise<Application>;
+    create(options: ApplicationCreateOptions): Promise<Application>;
     get(applicationId: string): Promise<Application>;
     list(projectId?: string): Promise<Application[]>;
     delete(applicationId: string): Promise<void>;
-    label<T extends Record<string, unknown> = Record<string, unknown>>(applicationId: string, data: T[], options?: {
-        modelId?: string;
-    }): Promise<ApplicationResponse>;
+    label<FieldKeys extends string, A extends boolean | undefined = undefined>(applicationId: string, data: Record<string, unknown>[], options?: ApplicationLabelOptions & {
+        async?: A;
+    }): Promise<A extends true ? ApplicationLabelResponse<ApplicationOutputAsync> : ApplicationLabelResponse<ApplicationOutputSync<FieldKeys>>>;
+    getLabeledItem<FieldKeys extends string>(applicationId: string, itemId: string): Promise<ApplicationLabelResponse<ApplicationOutputSync<FieldKeys>>>;
+    feedback(applicationId: string, itemId: string, correctLabelData: Record<string, string>): Promise<Dataset>;
 }
