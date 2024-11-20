@@ -1,5 +1,5 @@
 import { RefuelBase } from "../RefuelBase";
-import { Dataset } from "../types";
+import { Dataset, DatasetFromList } from "../types";
 
 export class Datasets {
     private readonly base: RefuelBase;
@@ -8,14 +8,21 @@ export class Datasets {
         this.base = base;
     }
 
-    async list(projectId?: string): Promise<Dataset[]> {
+    async get(datasetId: string): Promise<Dataset> {
+        return this.base.request<Dataset>({
+            method: "GET",
+            endpoint: `/datasets/${datasetId}`,
+        });
+    }
+
+    async list(projectId?: string): Promise<DatasetFromList[]> {
         const params = new URLSearchParams();
 
         if (projectId) {
             params.append("project_id", projectId);
         }
 
-        return this.base.request<Dataset[]>({
+        return this.base.request<DatasetFromList[]>({
             method: "GET",
             endpoint: `/datasets?${params.toString()}`,
         });
