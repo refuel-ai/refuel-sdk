@@ -6,14 +6,13 @@ class Applications {
     }
     async create(options) {
         const params = new URLSearchParams();
-        params.append("project_id", options.projectId);
         params.append("task_id", options.taskId);
         if (options.name) {
             params.append("name", options.name);
         }
         return this.base.request({
             method: "POST",
-            endpoint: `/applications?${params.toString()}`,
+            endpoint: `/projects/${options.projectId}/applications?${params.toString()}`,
         });
     }
     async get(applicationId) {
@@ -90,6 +89,45 @@ class Applications {
 }
 
 const DEFAULT_BASE_URL = "https://cloud-api.refuel.ai";
+
+class DatasetExports {
+    constructor(base) {
+        this.base = base;
+    }
+    async get(exportId, datasetId) {
+        return this.base.request({
+            method: "GET",
+            endpoint: `/datasets/${datasetId}/exports/${exportId}`,
+        });
+    }
+    async create(datasetId, options) {
+        const params = new URLSearchParams();
+        if (options === null || options === void 0 ? void 0 : options.email) {
+            params.append("email", options.email);
+        }
+        if (options === null || options === void 0 ? void 0 : options.taskId) {
+            params.append("task_id", options.taskId);
+        }
+        if ((options === null || options === void 0 ? void 0 : options.includeUUID) !== undefined) {
+            params.append("include_uuid", options.includeUUID.toString());
+        }
+        if ((options === null || options === void 0 ? void 0 : options.includeLabels) !== undefined) {
+            params.append("include_labels", options.includeLabels.toString());
+        }
+        if (options === null || options === void 0 ? void 0 : options.taskRunId) {
+            params.append("task_run_id", options.taskRunId);
+        }
+        if (Array.isArray(options === null || options === void 0 ? void 0 : options.filters)) {
+            options.filters.forEach((filter) => {
+                params.append("filters", JSON.stringify(filter));
+            });
+        }
+        return this.base.request({
+            method: "POST",
+            endpoint: `/datasets/${datasetId}/exports?${params.toString()}`,
+        });
+    }
+}
 
 class Datasets {
     constructor(base) {
@@ -465,6 +503,7 @@ class Refuel {
         this.base = new RefuelBase(accessToken, baseUrl);
         this.applications = new Applications(this.base);
         this.datasets = new Datasets(this.base);
+        this.datasetExports = new DatasetExports(this.base);
         this.integrations = new Integrations(this.base);
         this.projects = new Projects(this.base);
         this.tasks = new Tasks(this.base);
