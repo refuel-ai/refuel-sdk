@@ -1,4 +1,5 @@
 import { Applications } from "./Applications";
+import { DatasetExports } from "./DatasetExports";
 import { Datasets } from "./Datasets";
 import { Integrations } from "./Integrations";
 import { Projects } from "./Projects";
@@ -15,6 +16,7 @@ export declare class Refuel {
     private base;
     applications: Applications;
     datasets: Datasets;
+    datasetExports: DatasetExports;
     integrations: Integrations;
     projects: Projects;
     tasks: Tasks;

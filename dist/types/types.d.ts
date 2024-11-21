@@ -313,3 +313,15 @@ export interface Integration {
     config: IntegrationConfig;
     logo_url: string;
 }
+export interface ExportDatasetOptions {
+    email?: string;
+    filters?: SQLFilter[];
+    includeLabels?: boolean;
+    includeUUID?: boolean;
+    taskId?: string;
+    taskRunId?: string;
+}
+export interface ExportDatasetResponse {
+    export_id: string;
+    uri: string;
+}
