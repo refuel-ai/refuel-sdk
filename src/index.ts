@@ -1,5 +1,6 @@
 import { Applications } from "./Applications";
 import { DEFAULT_BASE_URL } from "./consts";
+import { DatasetExports } from "./DatasetExports";
 import { Datasets } from "./Datasets";
 import { Integrations } from "./Integrations";
 import { Projects } from "./Projects";
@@ -20,6 +21,7 @@ export class Refuel {
 
     public applications: Applications;
     public datasets: Datasets;
+    public datasetExports: DatasetExports;
     public integrations: Integrations;
     public projects: Projects;
     public tasks: Tasks;
@@ -35,6 +37,7 @@ export class Refuel {
 
         this.applications = new Applications(this.base);
         this.datasets = new Datasets(this.base);
+        this.datasetExports = new DatasetExports(this.base);
         this.integrations = new Integrations(this.base);
         this.projects = new Projects(this.base);
         this.tasks = new Tasks(this.base);
