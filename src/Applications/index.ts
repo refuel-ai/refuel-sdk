@@ -18,7 +18,6 @@ export class Applications {
 
     async create(options: ApplicationCreateOptions): Promise<Application> {
         const params = new URLSearchParams();
-        params.append("project_id", options.projectId);
         params.append("task_id", options.taskId);
 
         if (options.name) {
@@ -27,7 +26,9 @@ export class Applications {
 
         return this.base.request<Application>({
             method: "POST",
-            endpoint: `/applications?${params.toString()}`,
+            endpoint: `/projects/${
+                options.projectId
+            }/applications?${params.toString()}`,
         });
     }
 
