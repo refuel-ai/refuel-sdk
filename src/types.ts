@@ -513,3 +513,32 @@ export interface TeamModel {
     display_name: string;
     params: Record<string, unknown>;
 }
+
+export type TaskRunStatus =
+    | "restarted"
+    | "not_started"
+    | "active"
+    | "completed"
+    | "failed"
+    | "preview"
+    | "cancelled";
+
+export interface TaskRun {
+    id: string;
+    project_id: string;
+    task_id: string;
+    task_name: string;
+    model_name: string;
+    dataset_id: string;
+    dataset_name: string;
+    status: TaskRunStatus;
+    is_eval_run: boolean;
+    created_at: string;
+    updated_at: string;
+    model_ids: string[];
+}
+
+export interface TaskRunOptions {
+    datasetId?: string;
+    evalSet?: boolean;
+}
