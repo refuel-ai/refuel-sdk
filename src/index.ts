@@ -8,6 +8,7 @@ import { Integrations } from "./Integrations";
 import { Projects } from "./Projects";
 import { RefuelBase } from "./RefuelBase";
 import { TaskModels } from "./TaskModels";
+import { TaskRuns } from "./TaskRuns";
 import { Tasks } from "./Tasks";
 import { Taxonomies } from "./Taxonomies";
 import { TaxonomyLabels } from "./TaxonomyLabels";
@@ -31,6 +32,7 @@ export class Refuel {
     public readonly integrations: Integrations;
     public readonly projects: Projects;
     public readonly taskModels: TaskModels;
+    public readonly taskRuns: TaskRuns;
     public readonly tasks: Tasks;
     public readonly taxonomies: Taxonomies;
     public readonly taxonomyLabels: TaxonomyLabels;
@@ -51,6 +53,7 @@ export class Refuel {
         this.integrations = new Integrations(this.base);
         this.projects = new Projects(this.base);
         this.taskModels = new TaskModels(this.base);
+        this.taskRuns = new TaskRuns(this.base);
         this.tasks = new Tasks(this.base);
         this.taxonomies = new Taxonomies(this.base);
         this.taxonomyLabels = new TaxonomyLabels(this.base);
