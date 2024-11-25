@@ -129,6 +129,54 @@ class DatasetExports {
     }
 }
 
+class DatasetItems {
+    constructor(base) {
+        this.base = base;
+    }
+    async create(datasetId, data) {
+        return this.base.request({
+            method: "POST",
+            endpoint: `/datasets/${datasetId}/items`,
+            data,
+        });
+    }
+    async get(datasetId, itemId) {
+        return (await this.base.request({
+            method: "GET",
+            endpoint: `/datasets/${datasetId}/items/${itemId}`,
+        }))[0];
+    }
+    async list(datasetId, options) {
+        const params = new URLSearchParams();
+        if (options === null || options === void 0 ? void 0 : options.filters) {
+            options.filters.forEach((filter) => {
+                params.append("filters", JSON.stringify(filter));
+            });
+        }
+        if (options === null || options === void 0 ? void 0 : options.maxItems) {
+            params.append("max_items", options.maxItems.toString());
+        }
+        if (options === null || options === void 0 ? void 0 : options.orderBy) {
+            options.orderBy.forEach((orderBy) => {
+                params.append("order_bys", orderBy);
+            });
+        }
+        if (options === null || options === void 0 ? void 0 : options.offset) {
+            params.append("offset", options.offset.toString());
+        }
+        return this.base.request({
+            method: "GET",
+            endpoint: `/datasets/${datasetId}?${params.toString()}`,
+        });
+    }
+    async delete(datasetId, itemId) {
+        return this.base.request({
+            method: "DELETE",
+            endpoint: `/datasets/${datasetId}/items/${itemId}`,
+        });
+    }
+}
+
 class Datasets {
     constructor(base) {
         this.base = base;
@@ -153,6 +201,48 @@ class Datasets {
         return this.base.request({
             method: "DELETE",
             endpoint: `/datasets/${datasetId}`,
+        });
+    }
+}
+
+class FinetunedModels {
+    constructor(base) {
+        this.base = base;
+    }
+    async create(data) {
+        return this.base.request({
+            method: "POST",
+            endpoint: `/projects/${data.project_id}/finetuned_models`,
+            data,
+        });
+    }
+    async get(modelId) {
+        return this.base.request({
+            method: "GET",
+            endpoint: `/finetuned_models/${modelId}`,
+        });
+    }
+    async list(projectId, taskId) {
+        const params = new URLSearchParams();
+        if (taskId) {
+            params.append("task_id", taskId);
+        }
+        return this.base.request({
+            method: "GET",
+            endpoint: `/projects/${projectId}/finetuned_models?${params.toString()}`,
+        });
+    }
+    async update(modelId, data) {
+        return this.base.request({
+            method: "PATCH",
+            endpoint: `/finetuned_models/${modelId}`,
+            data,
+        });
+    }
+    async delete(modelId) {
+        return this.base.request({
+            method: "DELETE",
+            endpoint: `/finetuned_models/${modelId}`,
         });
     }
 }
@@ -245,6 +335,45 @@ class RefuelBase {
                 "An error occurred while making the API request.");
         }
         return (responseJSON.data || responseJSON);
+    }
+}
+
+class TaskModels {
+    constructor(base) {
+        this.base = base;
+    }
+    async list(taskId) {
+        const response = await this.base.request({
+            method: "GET",
+            endpoint: `/tasks/${taskId}/models`,
+        });
+        return response.models;
+    }
+}
+
+class TaskRuns {
+    constructor(base) {
+        this.base = base;
+    }
+    async list(taskId, options) {
+        let endpoint = `/tasks/${taskId}/runs`;
+        if ((options === null || options === void 0 ? void 0 : options.datasetId) && (options === null || options === void 0 ? void 0 : options.evalSet)) {
+            throw new Error("Cannot provide both datasetId and evalSet");
+        }
+        if (options === null || options === void 0 ? void 0 : options.datasetId) {
+            endpoint += `/${options.datasetId}`;
+        }
+        else if (options === null || options === void 0 ? void 0 : options.evalSet) {
+            endpoint = `/tasks/${taskId}/evalset/runs`;
+        }
+        const response = await this.base.request({
+            method: "GET",
+            endpoint,
+        });
+        if (Array.isArray(response)) {
+            return response;
+        }
+        return [response];
     }
 }
 
@@ -380,6 +509,18 @@ class Team {
     }
 }
 
+class TeamModels {
+    constructor(base) {
+        this.base = base;
+    }
+    async list() {
+        return this.base.request({
+            method: "GET",
+            endpoint: "/models",
+        });
+    }
+}
+
 class Usage {
     constructor(base) {
         this.base = base;
@@ -496,6 +637,44 @@ exports.UserState = void 0;
     UserState["INVITED"] = "INVITED";
     UserState["CREATED"] = "CREATED";
 })(exports.UserState || (exports.UserState = {}));
+exports.MetricFormat = void 0;
+(function (MetricFormat) {
+    MetricFormat["NUMERIC"] = "numeric";
+    MetricFormat["PERCENTAGE"] = "percentage";
+    MetricFormat["HISTOGRAM"] = "histogram";
+    MetricFormat["DICT"] = "dict";
+})(exports.MetricFormat || (exports.MetricFormat = {}));
+exports.AvailabilityStatus = void 0;
+(function (AvailabilityStatus) {
+    AvailabilityStatus["UNAVAILABLE"] = "UNAVAILABLE";
+    AvailabilityStatus["AVAILABLE"] = "AVAILABLE";
+})(exports.AvailabilityStatus || (exports.AvailabilityStatus = {}));
+exports.FinetuningRunStatus = void 0;
+(function (FinetuningRunStatus) {
+    FinetuningRunStatus["INITIALIZATION_IN_PROGRESS"] = "INITIALIZATION IN PROGRESS";
+    FinetuningRunStatus["INITIALIZATION_COMPLETE"] = "INITIALIZATION COMPLETE";
+    FinetuningRunStatus["DATASET_PREP_NOT_STARTED"] = "DATASET PREPARATION NOT STARTED";
+    FinetuningRunStatus["DATASET_PREP_IN_PROGRESS"] = "DATASET PREPARATION IN PROGRESS";
+    FinetuningRunStatus["DATASET_PREP_COMPLETED"] = "DATASET PREPARATION COMPLETED";
+    FinetuningRunStatus["DATASET_PREP_FAILED"] = "DATASET PREPARATION FAILED";
+    FinetuningRunStatus["RESOURCE_ALLOCATION_NOT_STARTED"] = "RESOURCE ALLOCATION NOT STARTED";
+    FinetuningRunStatus["RESOURCE_ALLOCATION_IN_PROGRESS"] = "RESOURCE ALLOCATION IN PROGRESS";
+    FinetuningRunStatus["RESOURCE_ALLOCATION_COMPLETED"] = "RESOURCE ALLOCATION COMPLETED";
+    FinetuningRunStatus["RESOURCE_ALLOCATION_FAILED"] = "RESOURCE ALLOCATION FAILED";
+    FinetuningRunStatus["TRAINING_NOT_STARTED"] = "TRAINING NOT STARTED";
+    FinetuningRunStatus["TRAINING_IN_PROGRESS"] = "TRAINING IN PROGRESS";
+    FinetuningRunStatus["TRAINING_COMPLETED"] = "TRAINING COMPLETED";
+    FinetuningRunStatus["TRAINING_FAILED"] = "TRAINING FAILED";
+    FinetuningRunStatus["DEPLOY_NOT_STARTED"] = "DEPLOYMENT NOT STARTED";
+    FinetuningRunStatus["DEPLOY_IN_PROGRESS"] = "DEPLOYMENT IN PROGRESS";
+    FinetuningRunStatus["DEPLOY_COMPLETED"] = "DEPLOYMENT COMPLETED";
+    FinetuningRunStatus["DEPLOY_FAILED"] = "DEPLOYMENT FAILED";
+    FinetuningRunStatus["EVALUATION_NOT_STARTED"] = "EVALUATION NOT STARTED";
+    FinetuningRunStatus["EVALUATION_IN_PROGRESS"] = "EVALUATION IN PROGRESS";
+    FinetuningRunStatus["EVALUATION_COMPLETED"] = "EVALUATION COMPLETED";
+    FinetuningRunStatus["EVALUATION_FAILED"] = "EVALUATION FAILED";
+    FinetuningRunStatus["INTERRUPTED"] = "INTERRUPTED";
+})(exports.FinetuningRunStatus || (exports.FinetuningRunStatus = {}));
 
 class Refuel {
     constructor(accessToken, options) {
@@ -503,13 +682,18 @@ class Refuel {
         this.base = new RefuelBase(accessToken, baseUrl);
         this.applications = new Applications(this.base);
         this.datasets = new Datasets(this.base);
+        this.datasetItems = new DatasetItems(this.base);
         this.datasetExports = new DatasetExports(this.base);
+        this.finetunedModels = new FinetunedModels(this.base);
         this.integrations = new Integrations(this.base);
         this.projects = new Projects(this.base);
+        this.taskModels = new TaskModels(this.base);
+        this.taskRuns = new TaskRuns(this.base);
         this.tasks = new Tasks(this.base);
         this.taxonomies = new Taxonomies(this.base);
         this.taxonomyLabels = new TaxonomyLabels(this.base);
         this.team = new Team(this.base);
+        this.teamModels = new TeamModels(this.base);
         this.usage = new Usage(this.base);
         this.users = new Users(this.base);
     }

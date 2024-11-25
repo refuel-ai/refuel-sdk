@@ -325,3 +325,132 @@ export interface ExportDatasetResponse {
     export_id: string;
     uri: string;
 }
+export interface DatasetItemsOptions {
+    filters?: SQLFilter[];
+    maxItems?: number;
+    offset?: number;
+    orderBy?: string[];
+}
+export declare enum MetricFormat {
+    NUMERIC = "numeric",
+    PERCENTAGE = "percentage",
+    HISTOGRAM = "histogram",
+    DICT = "dict"
+}
+export interface MetricResult {
+    name: string;
+    value: any;
+    type: MetricFormat;
+    support: number;
+    subtaskId: string;
+}
+export interface TaskRunMetrics {
+    task: MetricResult[] | null;
+    subtasks: Record<string, MetricResult[]> | null;
+}
+export interface EvaluationStat {
+    metrics?: TaskRunMetrics | null;
+    model?: string | null;
+}
+export interface FinetuningHyperparameters {
+    adapter: string;
+    learning_rate: number;
+    lora_r: number;
+    num_epochs: number;
+}
+export interface FinetuningRunStage {
+    detail: string | null;
+    index: number;
+    stage_id: string;
+    status: "NOT STARTED" | "IN PROGRESS" | "COMPLETED" | "FAILED";
+}
+export declare enum AvailabilityStatus {
+    UNAVAILABLE = "UNAVAILABLE",
+    AVAILABLE = "AVAILABLE"
+}
+export declare enum FinetuningRunStatus {
+    INITIALIZATION_IN_PROGRESS = "INITIALIZATION IN PROGRESS",
+    INITIALIZATION_COMPLETE = "INITIALIZATION COMPLETE",
+    DATASET_PREP_NOT_STARTED = "DATASET PREPARATION NOT STARTED",
+    DATASET_PREP_IN_PROGRESS = "DATASET PREPARATION IN PROGRESS",
+    DATASET_PREP_COMPLETED = "DATASET PREPARATION COMPLETED",
+    DATASET_PREP_FAILED = "DATASET PREPARATION FAILED",
+    RESOURCE_ALLOCATION_NOT_STARTED = "RESOURCE ALLOCATION NOT STARTED",
+    RESOURCE_ALLOCATION_IN_PROGRESS = "RESOURCE ALLOCATION IN PROGRESS",
+    RESOURCE_ALLOCATION_COMPLETED = "RESOURCE ALLOCATION COMPLETED",
+    RESOURCE_ALLOCATION_FAILED = "RESOURCE ALLOCATION FAILED",
+    TRAINING_NOT_STARTED = "TRAINING NOT STARTED",
+    TRAINING_IN_PROGRESS = "TRAINING IN PROGRESS",
+    TRAINING_COMPLETED = "TRAINING COMPLETED",
+    TRAINING_FAILED = "TRAINING FAILED",
+    DEPLOY_NOT_STARTED = "DEPLOYMENT NOT STARTED",
+    DEPLOY_IN_PROGRESS = "DEPLOYMENT IN PROGRESS",
+    DEPLOY_COMPLETED = "DEPLOYMENT COMPLETED",
+    DEPLOY_FAILED = "DEPLOYMENT FAILED",
+    EVALUATION_NOT_STARTED = "EVALUATION NOT STARTED",
+    EVALUATION_IN_PROGRESS = "EVALUATION IN PROGRESS",
+    EVALUATION_COMPLETED = "EVALUATION COMPLETED",
+    EVALUATION_FAILED = "EVALUATION FAILED",
+    INTERRUPTED = "INTERRUPTED"
+}
+export interface LabelingModel {
+    id: string;
+    availability_status: AvailabilityStatus;
+    base_model: string;
+    created_at: string | null;
+    datasets: string[];
+    evaluation_stats: EvaluationStat[];
+    finetuning_run_status: FinetuningRunStatus | null;
+    finetuning_run_timeline: FinetuningRunStage[] | null;
+    hyperparameters: FinetuningHyperparameters | null;
+    name: string;
+    project_id: string | null;
+    provider: string;
+    task_id: string | null;
+    training_stats: {
+        training_loss: [number, number][] | null;
+        evaluation_loss: [number, number][] | null;
+        checkpoint_index: number[];
+    } | null;
+    updated_at: string | null;
+}
+export interface FinetunedModelCreateOptions {
+    augmented_finetuning_model: string | null;
+    base_model: string;
+    max_training_rows?: number;
+    comparison_model: string;
+    datasets: string[];
+    hyperparameters: {
+        learning_rate_multiplier: number;
+        num_epochs: number;
+        lora_r?: number;
+    };
+    lora: boolean;
+    project_id: string;
+    task_id: string;
+}
+export interface TeamModel {
+    name: string;
+    provider: string;
+    display_name: string;
+    params: Record<string, unknown>;
+}
+export type TaskRunStatus = "restarted" | "not_started" | "active" | "completed" | "failed" | "preview" | "cancelled";
+export interface TaskRun {
+    id: string;
+    project_id: string;
+    task_id: string;
+    task_name: string;
+    model_name: string;
+    dataset_id: string;
+    dataset_name: string;
+    status: TaskRunStatus;
+    is_eval_run: boolean;
+    created_at: string;
+    updated_at: string;
+    model_ids: string[];
+}
+export interface TaskRunOptions {
+    datasetId?: string;
+    evalSet?: boolean;
+}
