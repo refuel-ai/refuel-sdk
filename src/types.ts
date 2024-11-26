@@ -538,7 +538,20 @@ export interface TaskRun {
     model_ids: string[];
 }
 
-export interface TaskRunOptions {
+export interface TaskRunListOptions {
     datasetId?: string;
     evalSet?: boolean;
+}
+
+export interface TaskRunCreateOptions {
+    limit?: number;
+    evalSet?: boolean;
+    filters?: SQLFilter[];
+    modelIds?: string[];
+    datasetId?: string;
+}
+
+export interface TaskRunCancelOptions {
+    evalSet?: boolean;
+    datasetId?: string;
 }
