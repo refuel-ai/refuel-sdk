@@ -1,3 +1,18 @@
+export type DeepPartial<T> = {
+    [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
+};
+export interface RequestOptions<T> {
+    method: string;
+    endpoint: string;
+    data?: T;
+    retries?: number;
+    initialRetryTimeout?: number;
+    maxRetries?: number;
+    retryStatusCodes?: number[];
+}
+export type RefuelOptions = Pick<RequestOptions<unknown>, "retries" | "initialRetryTimeout" | "maxRetries" | "retryStatusCodes"> & {
+    baseUrl?: string;
+};
 export interface Application {
     id: string;
     created_at: string;
@@ -69,7 +84,7 @@ export declare enum LabelSource {
     LLM = "LLM",
     HUMAN = "HUMAN"
 }
-export interface Label {
+export interface DatasetItemLabel {
     confidence: number | null;
     created_by: string | null;
     error_msg: string | null;
@@ -86,9 +101,22 @@ export interface Label {
     selected_labels: string[] | null;
     source: LabelSource;
 }
+export type DatasetItemLabelUpdateData = {
+    label: string;
+    explanation?: string | null;
+} | {
+    label?: string | null;
+    explanation: string;
+};
+export interface DatasetItemLabelsUpdate {
+    [subtaskId: string]: DatasetItemLabelUpdateData;
+}
+export interface DatasetItemLabels {
+    [subtaskId: string]: DatasetItemLabel;
+}
 export interface LabeledDatasetItem {
     fields: Record<string, unknown> | null;
-    labels: Label[] | null;
+    labels: DatasetItemLabels | null;
     telemetry: Telemetry[] | null;
     in_evalset: boolean;
 }
@@ -135,7 +163,7 @@ export interface Dataset {
     name: string;
     schema: DatasetSchema | null;
     ingest_status: string | null;
-    items: Record<string, string>[];
+    items: LabeledDatasetItem[];
     response_count: number;
     total_count: number;
 }
@@ -450,7 +478,24 @@ export interface TaskRun {
     updated_at: string;
     model_ids: string[];
 }
-export interface TaskRunOptions {
+export interface TaskRunListOptions {
     datasetId?: string;
     evalSet?: boolean;
+}
+export interface TaskRunCreateOptions {
+    limit?: number;
+    evalSet?: boolean;
+    filters?: SQLFilter[];
+    modelIds?: string[];
+    datasetId?: string;
+}
+export interface TaskRunCancelOptions {
+    evalSet?: boolean;
+    datasetId?: string;
+}
+export interface LabelListOptions {
+    modelId?: string;
+    subtaskId?: string;
+    generateMissingLabels?: boolean;
+    generateMissingExplanations?: boolean;
 }

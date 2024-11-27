@@ -86,8 +86,6 @@ class Applications {
     }
 }
 
-const DEFAULT_BASE_URL = "https://cloud-api.refuel.ai";
-
 class DatasetExports {
     constructor(base) {
         this.base = base;
@@ -270,6 +268,63 @@ class Integrations {
     }
 }
 
+class Labels {
+    constructor(base) {
+        this.base = base;
+    }
+    getLabelsFromResponse(response) {
+        const labels = response.items[0].labels;
+        if (!labels) {
+            throw new Error("No labels found");
+        }
+        return labels;
+    }
+    async list(taskId, datasetId, itemId, options) {
+        const params = new URLSearchParams();
+        if (options === null || options === void 0 ? void 0 : options.modelId) {
+            params.append("model_id", options.modelId);
+        }
+        if (options === null || options === void 0 ? void 0 : options.subtaskId) {
+            params.append("subtask_id", options.subtaskId);
+        }
+        if (typeof (options === null || options === void 0 ? void 0 : options.generateMissingLabels) === "boolean") {
+            params.append("generate_missing_labels", options.generateMissingLabels.toString());
+        }
+        if (typeof (options === null || options === void 0 ? void 0 : options.generateMissingExplanations) === "boolean") {
+            params.append("generate_missing_explanations", options.generateMissingExplanations.toString());
+        }
+        const response = await this.base.request({
+            method: "GET",
+            endpoint: `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label?${params.toString()}`,
+        });
+        return this.getLabelsFromResponse(response);
+    }
+    async update(taskId, datasetId, itemId, labels) {
+        const response = await this.base.request({
+            method: "POST",
+            endpoint: `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label`,
+            data: labels,
+        });
+        return this.getLabelsFromResponse(response);
+    }
+    async approve(taskId, datasetId, itemId) {
+        const existingLabels = await this.list(taskId, datasetId, itemId);
+        return this.update(taskId, datasetId, itemId, existingLabels);
+    }
+    async generateExplanations(taskId, datasetId, itemId, subtaskId) {
+        const params = new URLSearchParams();
+        params.append("generate_missing_explanations", "true");
+        if (subtaskId) {
+            params.append("subtask_id", subtaskId);
+        }
+        const response = await this.base.request({
+            method: "GET",
+            endpoint: `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label?${params.toString()}`,
+        });
+        return this.getLabelsFromResponse(response);
+    }
+}
+
 class Projects {
     constructor(base) {
         this.base = base;
@@ -304,12 +359,24 @@ class Projects {
     }
 }
 
+const DEFAULT_BASE_URL = "https://cloud-api.refuel.ai";
+const DEFAULT_MAX_RETRIES = 5;
+const DEFAULT_INITIAL_RETRY_TIMEOUT = 2500;
+const DEFAULT_RETRY_STATUS_CODES = [202, 429];
+
 class RefuelBase {
-    constructor(accessToken, baseUrl) {
+    constructor(accessToken, options = {}) {
+        var _a, _b, _c, _d;
         this.accessToken = accessToken;
-        this.baseUrl = baseUrl;
+        this.baseUrl = (_a = options.baseUrl) !== null && _a !== void 0 ? _a : DEFAULT_BASE_URL;
+        this.maxRetries = (_b = options.maxRetries) !== null && _b !== void 0 ? _b : DEFAULT_MAX_RETRIES;
+        this.initialRetryTimeout =
+            (_c = options.initialRetryTimeout) !== null && _c !== void 0 ? _c : DEFAULT_INITIAL_RETRY_TIMEOUT;
+        this.retryStatusCodes =
+            (_d = options.retryStatusCodes) !== null && _d !== void 0 ? _d : DEFAULT_RETRY_STATUS_CODES;
     }
-    async request({ method, endpoint, data, }) {
+    async request(options) {
+        const { method, endpoint, data, retries = 0, maxRetries = this.maxRetries, initialRetryTimeout = this.initialRetryTimeout, retryStatusCodes = this.retryStatusCodes, } = options;
         const url = `${this.baseUrl}${endpoint}`;
         const headers = {
             Authorization: `Bearer ${this.accessToken}`,
@@ -327,6 +394,22 @@ class RefuelBase {
             headers,
             body,
         });
+        if (retryStatusCodes.includes(response.status)) {
+            if (retries >= maxRetries) {
+                throw new Error(`Max retries reached while waiting for the request to complete. Last response status: ${response.status}`);
+            }
+            // Calculate exponential backoff with jitter
+            const baseBackoff = initialRetryTimeout * Math.pow(2, retries);
+            const jitter = Math.random() * 1000;
+            const backoffTime = baseBackoff + jitter;
+            // Wait for the calculated backoff time
+            await new Promise((resolve) => setTimeout(resolve, backoffTime));
+            // Retry the request recursively with incremented retries
+            return this.request({
+                ...options,
+                retries: retries + 1,
+            });
+        }
         const responseJSON = await response.json();
         if (!response.ok) {
             throw new Error((responseJSON === null || responseJSON === void 0 ? void 0 : responseJSON.error_msg) ||
@@ -352,6 +435,47 @@ class TaskModels {
 class TaskRuns {
     constructor(base) {
         this.base = base;
+    }
+    async create(taskId, options) {
+        var _a;
+        const params = new URLSearchParams();
+        if (options === null || options === void 0 ? void 0 : options.limit) {
+            params.append("limit", options.limit.toString());
+        }
+        if (options === null || options === void 0 ? void 0 : options.filters) {
+            options.filters.forEach((filter) => {
+                params.append("filters", JSON.stringify(filter));
+            });
+        }
+        if ((_a = options === null || options === void 0 ? void 0 : options.modelIds) === null || _a === void 0 ? void 0 : _a.length) {
+            options.modelIds.forEach((modelId) => {
+                params.append("model_ids", modelId);
+            });
+        }
+        const endpoint = (options === null || options === void 0 ? void 0 : options.evalSet)
+            ? `/tasks/${taskId}/evalset/runs?${params.toString()}`
+            : `/tasks/${taskId}/runs?${params.toString()}`;
+        return this.base.request({
+            method: "POST",
+            endpoint,
+        });
+    }
+    async cancel(taskId, options) {
+        if (!options.datasetId && !options.evalSet) {
+            throw new Error("Either datasetId or evalSet must be provided");
+        }
+        const params = new URLSearchParams();
+        params.append("cancel_run", "true");
+        if (options === null || options === void 0 ? void 0 : options.datasetId) {
+            params.append("dataset_id", options.datasetId);
+        }
+        const endpoint = (options === null || options === void 0 ? void 0 : options.evalSet)
+            ? `/tasks/${taskId}/evalset/runs`
+            : `/tasks/${taskId}/runs?${params.toString()}`;
+        return this.base.request({
+            method: "POST",
+            endpoint,
+        });
     }
     async list(taskId, options) {
         let endpoint = `/tasks/${taskId}/runs`;
@@ -676,14 +800,14 @@ var FinetuningRunStatus;
 
 class Refuel {
     constructor(accessToken, options) {
-        const baseUrl = (options === null || options === void 0 ? void 0 : options.baseUrl) || DEFAULT_BASE_URL;
-        this.base = new RefuelBase(accessToken, baseUrl);
+        this.base = new RefuelBase(accessToken, options);
         this.applications = new Applications(this.base);
         this.datasets = new Datasets(this.base);
         this.datasetItems = new DatasetItems(this.base);
         this.datasetExports = new DatasetExports(this.base);
         this.finetunedModels = new FinetunedModels(this.base);
         this.integrations = new Integrations(this.base);
+        this.labels = new Labels(this.base);
         this.projects = new Projects(this.base);
         this.taskModels = new TaskModels(this.base);
         this.taskRuns = new TaskRuns(this.base);
