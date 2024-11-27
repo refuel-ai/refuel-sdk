@@ -1,3 +1,24 @@
+export type DeepPartial<T> = {
+    [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
+};
+
+export interface RequestOptions<T> {
+    method: string;
+    endpoint: string;
+    data?: T;
+    retries?: number;
+    initialRetryTimeout?: number;
+    maxRetries?: number;
+    retryStatusCodes?: number[];
+}
+
+export type RefuelOptions = Pick<
+    RequestOptions<unknown>,
+    "retries" | "initialRetryTimeout" | "maxRetries" | "retryStatusCodes"
+> & {
+    baseUrl?: string;
+};
+
 export interface Application {
     id: string;
     created_at: string;
