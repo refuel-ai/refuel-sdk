@@ -1,10 +1,10 @@
+import { RefuelOptions, RequestOptions } from "../types";
 export declare class RefuelBase {
     protected readonly accessToken: string;
     protected readonly baseUrl: string;
-    constructor(accessToken: string, baseUrl: string);
-    request<Response, RequestBody = unknown>({ method, endpoint, data, }: {
-        method: string;
-        endpoint: string;
-        data?: RequestBody;
-    }): Promise<Response>;
+    protected readonly maxRetries: number;
+    protected readonly initialRetryTimeout: number;
+    protected readonly retryStatusCodes: number[];
+    constructor(accessToken: string, options?: RefuelOptions);
+    request<Response, RequestBody = unknown>(options: RequestOptions<RequestBody>): Promise<Response>;
 }
