@@ -123,11 +123,11 @@ export interface DatasetItemLabel {
 
 export type DatasetItemLabelUpdateData =
     | {
-          label: string;
+          label: string | number | boolean;
           explanation?: string | null;
       }
     | {
-          label?: string | null;
+          label?: string | number | boolean | null;
           explanation: string;
       };
 
