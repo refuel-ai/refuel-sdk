@@ -79,10 +79,26 @@ export class Labels {
     async approve(
         taskId: string,
         datasetId: string,
-        itemId: string
+        itemId: string,
+        subtaskId?: string
     ): Promise<DatasetItemLabels> {
         const existingLabels = await this.list(taskId, datasetId, itemId);
-        return this.update(taskId, datasetId, itemId, existingLabels);
+
+        let updatedLabels: DatasetItemLabelsUpdate = {};
+
+        if (subtaskId) {
+            const existingSubtaskLabels = existingLabels[subtaskId];
+
+            if (!existingSubtaskLabels) {
+                throw new Error(`No labels found for subtask ${subtaskId}`);
+            }
+
+            updatedLabels[subtaskId] = existingSubtaskLabels;
+        } else {
+            updatedLabels = existingLabels;
+        }
+
+        return this.update(taskId, datasetId, itemId, updatedLabels);
     }
 
     async generateExplanations(
