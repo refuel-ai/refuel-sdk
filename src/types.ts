@@ -103,7 +103,7 @@ export enum LabelSource {
     HUMAN = "HUMAN",
 }
 
-export interface Label {
+export interface DatasetItemLabel {
     confidence: number | null;
     created_by: string | null;
     error_msg: string | null;
@@ -121,9 +121,27 @@ export interface Label {
     source: LabelSource;
 }
 
+export type DatasetItemLabelUpdateData =
+    | {
+          label: string;
+          explanation?: string | null;
+      }
+    | {
+          label?: string | null;
+          explanation: string;
+      };
+
+export interface DatasetItemLabelsUpdate {
+    [subtaskId: string]: DatasetItemLabelUpdateData;
+}
+
+export interface DatasetItemLabels {
+    [subtaskId: string]: DatasetItemLabel;
+}
+
 export interface LabeledDatasetItem {
     fields: Record<string, unknown> | null;
-    labels: Label[] | null;
+    labels: DatasetItemLabels | null;
     telemetry: Telemetry[] | null;
     in_evalset: boolean;
 }
@@ -177,7 +195,7 @@ export interface Dataset {
     name: string;
     schema: DatasetSchema | null;
     ingest_status: string | null;
-    items: Record<string, string>[];
+    items: LabeledDatasetItem[];
     response_count: number;
     total_count: number;
 }
@@ -575,4 +593,11 @@ export interface TaskRunCreateOptions {
 export interface TaskRunCancelOptions {
     evalSet?: boolean;
     datasetId?: string;
+}
+
+export interface LabelListOptions {
+    modelId?: string;
+    subtaskId?: string;
+    generateMissingLabels?: boolean;
+    generateMissingExplanations?: boolean;
 }
