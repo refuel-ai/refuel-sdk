@@ -1,5 +1,4 @@
 import { Applications } from "./Applications";
-import { DEFAULT_BASE_URL } from "./consts";
 import { DatasetExports } from "./DatasetExports";
 import { DatasetItems } from "./DatasetItems";
 import { Datasets } from "./Datasets";
@@ -14,12 +13,9 @@ import { Taxonomies } from "./Taxonomies";
 import { TaxonomyLabels } from "./TaxonomyLabels";
 import { Team } from "./Team";
 import { TeamModels } from "./TeamModels";
+import { RefuelOptions } from "./types";
 import { Usage } from "./Usage";
 import { Users } from "./Users";
-
-interface RefuelOptions {
-    baseUrl?: string;
-}
 
 export class Refuel {
     public readonly base: RefuelBase;
@@ -42,8 +38,7 @@ export class Refuel {
     public readonly users: Users;
 
     constructor(accessToken: string, options?: RefuelOptions) {
-        const baseUrl = options?.baseUrl || DEFAULT_BASE_URL;
-        this.base = new RefuelBase(accessToken, baseUrl);
+        this.base = new RefuelBase(accessToken, options);
 
         this.applications = new Applications(this.base);
         this.datasets = new Datasets(this.base);
