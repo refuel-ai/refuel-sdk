@@ -56,7 +56,10 @@ export class RefuelBase {
             body,
         });
 
-        if (retryStatusCodes.includes(response.status)) {
+        if (
+            method.toUpperCase() === "GET" &&
+            retryStatusCodes.includes(response.status)
+        ) {
             if (retries >= maxRetries) {
                 throw new Error(
                     `Max retries reached while waiting for the request to complete. Last response status: ${response.status}`
