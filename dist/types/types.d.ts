@@ -102,10 +102,10 @@ export interface DatasetItemLabel {
     source: LabelSource;
 }
 export type DatasetItemLabelUpdateData = {
-    label: string;
+    label: string | number | boolean;
     explanation?: string | null;
 } | {
-    label?: string | null;
+    label?: string | number | boolean | null;
     explanation: string;
 };
 export interface DatasetItemLabelsUpdate {
