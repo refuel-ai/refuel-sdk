@@ -309,9 +309,20 @@ class Labels {
         });
         return this.getLabelsFromResponse(response);
     }
-    async approve(taskId, datasetId, itemId) {
+    async approve(taskId, datasetId, itemId, subtaskId) {
         const existingLabels = await this.list(taskId, datasetId, itemId);
-        return this.update(taskId, datasetId, itemId, existingLabels);
+        let updatedLabels = {};
+        if (subtaskId) {
+            const existingSubtaskLabels = existingLabels[subtaskId];
+            if (!existingSubtaskLabels) {
+                throw new Error(`No labels found for subtask ${subtaskId}`);
+            }
+            updatedLabels[subtaskId] = existingSubtaskLabels;
+        }
+        else {
+            updatedLabels = existingLabels;
+        }
+        return this.update(taskId, datasetId, itemId, updatedLabels);
     }
     async generateExplanations(taskId, datasetId, itemId, subtaskId) {
         const params = new URLSearchParams();
@@ -364,8 +375,17 @@ class Projects {
 const DEFAULT_BASE_URL = "https://cloud-api.refuel.ai";
 const DEFAULT_MAX_RETRIES = 5;
 const DEFAULT_INITIAL_RETRY_TIMEOUT = 2500;
-const DEFAULT_RETRY_STATUS_CODES = [202, 429];
+const DEFAULT_RETRY_STATUS_CODES = [202, 429, 504];
 
+class RefuelAPIError extends Error {
+    constructor(response, url = response === null || response === void 0 ? void 0 : response.url, status = response === null || response === void 0 ? void 0 : response.status) {
+        super(`${(response === null || response === void 0 ? void 0 : response.statusText) || "Network error"} (${url})`);
+        this.response = response;
+        this.url = url;
+        this.status = status;
+        this.name = "RefuelAPIError";
+    }
+}
 class RefuelBase {
     constructor(accessToken, options = {}) {
         var _a, _b, _c, _d;
@@ -378,7 +398,7 @@ class RefuelBase {
             (_d = options.retryStatusCodes) !== null && _d !== void 0 ? _d : DEFAULT_RETRY_STATUS_CODES;
     }
     async request(options) {
-        const { method, endpoint, data, retries = 0, maxRetries = this.maxRetries, initialRetryTimeout = this.initialRetryTimeout, retryStatusCodes = this.retryStatusCodes, } = options;
+        const { method, endpoint, data, maxRetries = this.maxRetries, initialRetryTimeout = this.initialRetryTimeout, retryStatusCodes = this.retryStatusCodes, } = options;
         const url = `${this.baseUrl}${endpoint}`;
         const headers = {
             Authorization: `Bearer ${this.accessToken}`,
@@ -391,33 +411,47 @@ class RefuelBase {
             headers["Content-Type"] = "application/json";
             body = JSON.stringify(data);
         }
-        const response = await fetch(url, {
-            method,
-            headers,
-            body,
-        });
-        if (retryStatusCodes.includes(response.status)) {
-            if (retries >= maxRetries) {
-                throw new Error(`Max retries reached while waiting for the request to complete. Last response status: ${response.status}`);
+        let retries = 0;
+        while (true) {
+            try {
+                const response = await fetch(url, {
+                    method,
+                    headers,
+                    body,
+                });
+                if (method.toUpperCase() === "GET" &&
+                    retryStatusCodes.includes(response.status)) {
+                    if (retries >= maxRetries) {
+                        throw new RefuelAPIError(response);
+                    }
+                    // Proceed to retry logic
+                }
+                else if (!response.ok) {
+                    // Non-retriable error
+                    throw new RefuelAPIError(response);
+                }
+                else {
+                    // Successful response
+                    const responseJSON = await response.json();
+                    return (responseJSON.data || responseJSON);
+                }
             }
+            catch (error) {
+                // Handle network errors or exceptions thrown by fetch
+                if (retries >= maxRetries) {
+                    throw new RefuelAPIError(undefined, url);
+                }
+                // Proceed to retry logic
+            }
+            // Retry logic
             // Calculate exponential backoff with jitter
             const baseBackoff = initialRetryTimeout * Math.pow(2, retries);
             const jitter = Math.random() * 1000;
             const backoffTime = baseBackoff + jitter;
             // Wait for the calculated backoff time
             await new Promise((resolve) => setTimeout(resolve, backoffTime));
-            // Retry the request recursively with incremented retries
-            return this.request({
-                ...options,
-                retries: retries + 1,
-            });
+            retries += 1;
         }
-        const responseJSON = await response.json();
-        if (!response.ok) {
-            throw new Error((responseJSON === null || responseJSON === void 0 ? void 0 : responseJSON.error_msg) ||
-                "An error occurred while making the API request.");
-        }
-        return (responseJSON.data || responseJSON);
     }
 }
 
