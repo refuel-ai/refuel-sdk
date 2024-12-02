@@ -6,6 +6,17 @@ import {
 } from "../consts";
 import { RefuelOptions, RequestOptions } from "../types";
 
+export class RefuelAPIError extends Error {
+    constructor(
+        public readonly response?: Response,
+        public readonly url: string | undefined = response?.url,
+        public readonly status: number | undefined = response?.status
+    ) {
+        super(`${response?.statusText || "Network error"} (${url})`);
+        this.name = "RefuelAPIError";
+    }
+}
+
 export class RefuelBase {
     protected readonly accessToken: string;
     protected readonly baseUrl: string;
@@ -30,7 +41,6 @@ export class RefuelBase {
             method,
             endpoint,
             data,
-            retries = 0,
             maxRetries = this.maxRetries,
             initialRetryTimeout = this.initialRetryTimeout,
             retryStatusCodes = this.retryStatusCodes,
@@ -50,22 +60,41 @@ export class RefuelBase {
             body = JSON.stringify(data);
         }
 
-        const response = await fetch(url, {
-            method,
-            headers,
-            body,
-        });
+        let retries = 0;
 
-        if (
-            method.toUpperCase() === "GET" &&
-            retryStatusCodes.includes(response.status)
-        ) {
-            if (retries >= maxRetries) {
-                throw new Error(
-                    `Max retries reached while waiting for the request to complete. Last response status: ${response.status}`
-                );
+        while (true) {
+            try {
+                const response = await fetch(url, {
+                    method,
+                    headers,
+                    body,
+                });
+
+                if (
+                    method.toUpperCase() === "GET" &&
+                    retryStatusCodes.includes(response.status)
+                ) {
+                    if (retries >= maxRetries) {
+                        throw new RefuelAPIError(response);
+                    }
+                    // Proceed to retry logic
+                } else if (!response.ok) {
+                    // Non-retriable error
+                    throw new RefuelAPIError(response);
+                } else {
+                    // Successful response
+                    const responseJSON = await response.json();
+                    return (responseJSON.data || responseJSON) as Response;
+                }
+            } catch (error) {
+                // Handle network errors or exceptions thrown by fetch
+                if (retries >= maxRetries) {
+                    throw new RefuelAPIError(undefined, url);
+                }
+                // Proceed to retry logic
             }
 
+            // Retry logic
             // Calculate exponential backoff with jitter
             const baseBackoff = initialRetryTimeout * Math.pow(2, retries);
             const jitter = Math.random() * 1_000;
@@ -74,22 +103,7 @@ export class RefuelBase {
             // Wait for the calculated backoff time
             await new Promise((resolve) => setTimeout(resolve, backoffTime));
 
-            // Retry the request recursively with incremented retries
-            return this.request<Response, RequestBody>({
-                ...options,
-                retries: retries + 1,
-            });
+            retries += 1;
         }
-
-        const responseJSON = await response.json();
-
-        if (!response.ok) {
-            throw new Error(
-                responseJSON?.error_msg ||
-                    "An error occurred while making the API request."
-            );
-        }
-
-        return (responseJSON.data || responseJSON) as Response;
     }
 }
