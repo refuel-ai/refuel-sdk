@@ -472,6 +472,9 @@ class TaskRuns {
     }
     async create(taskId, options) {
         var _a;
+        if (!(options === null || options === void 0 ? void 0 : options.datasetId) && !(options === null || options === void 0 ? void 0 : options.evalSet)) {
+            throw new Error("Either datasetId or evalSet must be provided");
+        }
         const params = new URLSearchParams();
         if (options === null || options === void 0 ? void 0 : options.limit) {
             params.append("limit", options.limit.toString());
@@ -485,6 +488,9 @@ class TaskRuns {
             options.modelIds.forEach((modelId) => {
                 params.append("model_ids", modelId);
             });
+        }
+        if (options === null || options === void 0 ? void 0 : options.datasetId) {
+            params.append("dataset_id", options.datasetId);
         }
         const endpoint = (options === null || options === void 0 ? void 0 : options.evalSet)
             ? `/tasks/${taskId}/evalset/runs?${params.toString()}`
