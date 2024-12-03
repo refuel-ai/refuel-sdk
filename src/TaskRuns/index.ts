@@ -17,6 +17,10 @@ export class TaskRuns {
         taskId: string,
         options?: TaskRunCreateOptions
     ): Promise<TaskRun> {
+        if (!options?.datasetId && !options?.evalSet) {
+            throw new Error("Either datasetId or evalSet must be provided");
+        }
+
         const params = new URLSearchParams();
 
         if (options?.limit) {
@@ -33,6 +37,10 @@ export class TaskRuns {
             options.modelIds.forEach((modelId) => {
                 params.append("model_ids", modelId);
             });
+        }
+
+        if (options?.datasetId) {
+            params.append("dataset_id", options.datasetId);
         }
 
         const endpoint = options?.evalSet
