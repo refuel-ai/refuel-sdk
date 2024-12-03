@@ -23,6 +23,30 @@ export class Labels {
         return labels;
     }
 
+    /**
+     * Get labels for a specific item
+     *
+     * @example
+     * ```ts
+     * const labels = await refuel.labels.list(taskId, datasetId, itemId);
+     * ```
+     *
+     * @example
+     * You can optionally specify a specific model
+     * ```ts
+     * const labels = await refuel.labels.list(taskId, datasetId, itemId, {
+     *     modelId: "3f9d7a28-4e6c-42d5-9bcd-8ecf4b9f6a2d",
+     * });
+     * ```
+     *
+     * @example
+     * You can optionally label just a specific subtask
+     * ```ts
+     * const labels = await refuel.labels.list(taskId, datasetId, itemId, {
+     *     subtaskId: "7b9e4f12-8d53-4691-b8c1-2a384f7e5d9c",
+     * });
+     * ```
+     */
     async list(
         taskId: string,
         datasetId: string,
@@ -61,6 +85,39 @@ export class Labels {
         return this.getLabelsFromResponse(response);
     }
 
+    /**
+     * Update labels for a specific item
+     *
+     * @example
+     * Update a label without an explanation
+     * ```ts
+     * await refuel.labels.update(taskId, datasetId, itemId, {
+     *     "3f9d7a28-4e6c-42d5-9bcd-8ecf4b9f6a2d": {
+     *         label: "positive"
+     *     }
+     * });
+     * ```
+     * @example
+     * Update a label with an explanation
+     * ```ts
+     * await refuel.labels.update(taskId, datasetId, itemId, {
+     *     "3f9d7a28-4e6c-42d5-9bcd-8ecf4b9f6a2d": {
+     *         label: "positive",
+     *         explanation: "The text expresses a clearly positive sentiment"
+     *     }
+     * });
+     * ```
+     *
+     * @example
+     * Update just an explanation
+     * ```ts
+     * await refuel.labels.update(taskId, datasetId, itemId, {
+     *     "3f9d7a28-4e6c-42d5-9bcd-8ecf4b9f6a2d": {
+     *         explanation: "The text expresses a clearly positive sentiment"
+     *     }
+     * });
+     * ```
+     */
     async update(
         taskId: string,
         datasetId: string,
@@ -76,6 +133,20 @@ export class Labels {
         return this.getLabelsFromResponse(response);
     }
 
+    /**
+     * Approve labels for a specific item
+     *
+     * @example
+     * ```ts
+     * await refuel.labels.approve(taskId, datasetId, itemId);
+     * ```
+     *
+     * @example
+     * You can optionally approve labels for just a specific subtask
+     * ```ts
+     * await refuel.labels.approve(taskId, datasetId, itemId, subtaskId);
+     * ```
+     */
     async approve(
         taskId: string,
         datasetId: string,
@@ -101,6 +172,20 @@ export class Labels {
         return this.update(taskId, datasetId, itemId, updatedLabels);
     }
 
+    /**
+     * Generates an explanation for why a given label was selected
+     *
+     * @example
+     * ```ts
+     * await refuel.labels.generateExplanations(taskId, datasetId, itemId);
+     * ```
+     *
+     * @example
+     * You can optionally generate explanations for just a specific subtask
+     * ```ts
+     * await refuel.labels.generateExplanations(taskId, datasetId, itemId, subtaskId);
+     * ```
+     */
     async generateExplanations(
         taskId: string,
         datasetId: string,

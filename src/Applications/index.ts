@@ -16,6 +16,17 @@ export class Applications {
         this.base = base;
     }
 
+    /**
+     * Deploy a specific task as an application
+     *
+     * @example
+     * ```ts
+     * const application = await refuel.applications.create({
+     *     projectId: "2a79a616-180b-4226-9f1a-d04d47e7e100",
+     *     taskId: "3b8cd724-291c-4123-8f2b-e05d38f1e200",
+     * });
+     * ```
+     */
     async create(options: ApplicationCreateOptions): Promise<Application> {
         const params = new URLSearchParams();
         params.append("task_id", options.taskId);
@@ -32,6 +43,14 @@ export class Applications {
         });
     }
 
+    /**
+     * Get an application
+     *
+     * @example
+     * ```ts
+     * const application = await refuel.applications.get(applicationId);
+     * ```
+     */
     async get(applicationId: string): Promise<Application> {
         return this.base.request<Application>({
             method: "GET",
@@ -39,6 +58,14 @@ export class Applications {
         });
     }
 
+    /**
+     * List all applications
+     *
+     * @example
+     * ```ts
+     * const applications = await refuel.applications.list();
+     * ```
+     */
     async list(projectId?: string): Promise<Application[]> {
         const endpoint = projectId
             ? `/projects/${projectId}/applications`
@@ -50,13 +77,48 @@ export class Applications {
         });
     }
 
+    /**
+     * Delete an application
+     *
+     * @example
+     * ```ts
+     * await refuel.applications.delete(applicationId);
+     * ```
+     */
     async delete(applicationId: string): Promise<void> {
-        return this.base.request<void>({
+        return this.base.request({
             method: "DELETE",
             endpoint: `/applications/${applicationId}`,
         });
     }
 
+    /**
+     * Labels an item with your application
+     *
+     * @example Basic usage
+     * ```ts
+     * const labeledItems = await refuel.applications.label(applicationId, [{
+     *     "menu_text": "Grilled chicken sandwich with avocado and chipotle mayo",
+     * }]);
+     * ```
+     *
+     * @example Using all available options
+     * ```ts
+     * const labeledItemsWithOptions = await refuel.applications.label(
+     *     "4f91b229-37d4-42f1-8a3b-9c1e98e9f300",
+     *     [{
+     *         "menu_text": "Grilled chicken sandwich with avocado and chipotle mayo",
+     *     }],
+     *     {
+     *         explain: true,           // Include explanation of the labeling decision
+     *         async: true,             // Process labels asynchronously
+     *         modelId: "gpt-4",        // Specify which model to use
+     *         redactPII: true,         // Redact personally identifiable information
+     *         telemetry: false,        // Disable telemetry collection
+     *     }
+     * );
+     * ```
+     */
     async label<
         FieldKeys extends string,
         A extends boolean | undefined = undefined
@@ -98,6 +160,14 @@ export class Applications {
         });
     }
 
+    /**
+     * Get labels for a specific item
+     *
+     * @example
+     * ```ts
+     * const labeledItem = await refuel.applications.getLabeledItem(applicationId, itemId);
+     * ```
+     */
     async getLabeledItem<FieldKeys extends string>(
         applicationId: string,
         itemId: string
@@ -110,6 +180,16 @@ export class Applications {
         });
     }
 
+    /**
+     * Provide the correct label for an item
+     *
+     * @example
+     * ```ts
+     * await refuel.applications.feedback(applicationId, itemId, {
+     *     "vegetarian": false,
+     * });
+     * ```
+     */
     async feedback(
         applicationId: string,
         itemId: string,

@@ -28,10 +28,16 @@
   },
   "homepage": "https://github.com/refuel-ai/refuel-sdk#readme",
   "devDependencies": {
+    "@eslint/js": "^9.16.0",
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.3.0",
+    "eslint": "^9.16.0",
+    "eslint-plugin-tsdoc": "^0.4.0",
     "rollup": "^4.24.4",
     "rollup-plugin-typescript2": "^0.36.0",
-    "typescript": "^5.6.3"
+    "typedoc": "^0.27.2",
+    "typedoc-plugin-markdown": "^4.3.1",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.17.0"
   }
 }

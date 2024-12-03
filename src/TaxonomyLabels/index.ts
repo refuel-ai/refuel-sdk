@@ -24,7 +24,7 @@ export class TaxonomyLabels {
             JSON.stringify(Array.isArray(labels) ? labels : [labels])
         );
 
-        return this.base.request<void>({
+        return this.base.request({
             method: "POST",
             endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
             data,
@@ -78,7 +78,7 @@ export class TaxonomyLabels {
         taxonomyId: string,
         labelId: string
     ): Promise<void> {
-        return this.base.request<void>({
+        return this.base.request({
             method: "DELETE",
             endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`,
         });

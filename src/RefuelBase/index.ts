@@ -86,7 +86,7 @@ export class RefuelBase {
                     const responseJSON = await response.json();
                     return (responseJSON.data || responseJSON) as Response;
                 }
-            } catch (error) {
+            } catch {
                 // Handle network errors or exceptions thrown by fetch
                 if (retries >= maxRetries) {
                     throw new RefuelAPIError(undefined, url);

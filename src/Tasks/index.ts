@@ -33,7 +33,7 @@ export class Tasks {
     }
 
     async delete(taskId: string): Promise<void> {
-        return this.base.request<void>({
+        return this.base.request({
             method: "DELETE",
             endpoint: `/tasks/${taskId}`,
         });

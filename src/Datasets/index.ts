@@ -29,7 +29,7 @@ export class Datasets {
     }
 
     async delete(datasetId: string): Promise<void> {
-        return this.base.request<void>({
+        return this.base.request({
             method: "DELETE",
             endpoint: `/datasets/${datasetId}`,
         });

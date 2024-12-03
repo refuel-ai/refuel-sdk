@@ -64,7 +64,7 @@ export class DatasetItems {
     }
 
     async delete(datasetId: string, itemId: string): Promise<void> {
-        return this.base.request<void>({
+        return this.base.request({
             method: "DELETE",
             endpoint: `/datasets/${datasetId}/items/${itemId}`,
         });

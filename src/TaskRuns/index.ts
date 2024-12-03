@@ -62,7 +62,7 @@ export class TaskRuns {
             ? `/tasks/${taskId}/evalset/runs`
             : `/tasks/${taskId}/runs?${params.toString()}`;
 
-        return this.base.request<void>({
+        return this.base.request({
             method: "POST",
             endpoint,
         });

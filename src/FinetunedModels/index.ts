@@ -47,7 +47,7 @@ export class FinetunedModels {
     }
 
     async delete(modelId: string): Promise<void> {
-        return this.base.request<void>({
+        return this.base.request({
             method: "DELETE",
             endpoint: `/finetuned_models/${modelId}`,
         });

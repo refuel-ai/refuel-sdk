@@ -16,7 +16,7 @@ export class Team {
     }
 
     async regenerateApiKey(): Promise<string> {
-        await this.base.request<void>({
+        await this.base.request({
             method: "PATCH",
             endpoint: "/team",
             data: {

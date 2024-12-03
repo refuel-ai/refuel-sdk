@@ -38,7 +38,7 @@ export class Taxonomies {
     }
 
     async delete(taskId: string, taxonomyId: string): Promise<void> {
-        return this.base.request<void>({
+        return this.base.request({
             method: "DELETE",
             endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
         });

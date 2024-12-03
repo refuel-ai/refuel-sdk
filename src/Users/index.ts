@@ -8,6 +8,14 @@ export class Users {
         this.base = base;
     }
 
+    /**
+     * Invite users to your team's account
+     *
+     * @example
+     * ```ts
+     * await refuel.users.create(["user@example.com", "user2@example.com"]);
+     * ```
+     */
     async create(email: string | string[]) {
         const data = Array.isArray(email) ? email : [email];
         return this.base.request<InviteUsersResponse, string[]>({
@@ -17,6 +25,14 @@ export class Users {
         });
     }
 
+    /**
+     * Get a specific user
+     *
+     * @example
+     * ```ts
+     * const user = await refuel.users.get(userId);
+     * ```
+     */
     async get(userId: string): Promise<User> {
         return this.base.request<User>({
             method: "GET",
@@ -24,6 +40,14 @@ export class Users {
         });
     }
 
+    /**
+     * List all users on your team
+     *
+     * @example
+     * ```ts
+     * const users = await refuel.users.list();
+     * ```
+     */
     async list(): Promise<User[]> {
         return this.base.request<User[]>({
             method: "GET",

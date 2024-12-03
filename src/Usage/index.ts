@@ -8,6 +8,22 @@ export class Usage {
         this.base = base;
     }
 
+    /**
+     * Get usage data for your team
+     *
+     * @example
+     * ```ts
+     * const usage = await refuel.usage.get(startDate, endDate);
+     * ```
+     *
+     * @example
+     * You can optionally filter by application, task, or model
+     * ```ts
+     * const usage = await refuel.usage.get(startDate, endDate, {
+     *     applicationId: "3b84c725-190a-4337-8f2b-e15e58f8d200",
+     * });
+     * ```
+     */
     async get(
         startDate: string,
         endDate: string,
