@@ -26,4 +26,14 @@ export class Team {
 
         return (await this.get()).refuel_api_key;
     }
+
+    async signUrl(url: string): Promise<{ url: string }> {
+        const params = new URLSearchParams();
+        params.append("url", url);
+
+        return this.base.request<{ url: string }>({
+            method: "GET",
+            endpoint: `/team/sign-url?${params.toString()}`,
+        });
+    }
 }
