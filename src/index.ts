@@ -14,6 +14,7 @@ import { Taxonomies } from "./Taxonomies";
 import { TaxonomyLabels } from "./TaxonomyLabels";
 import { Team } from "./Team";
 import { TeamModels } from "./TeamModels";
+import { Teams } from "./Teams";
 import { RefuelOptions } from "./types";
 import { Usage } from "./Usage";
 import { Users } from "./Users";
@@ -36,6 +37,7 @@ export class Refuel {
     public readonly taxonomyLabels: TaxonomyLabels;
     public readonly team: Team;
     public readonly teamModels: TeamModels;
+    public readonly teams: Teams;
     public readonly usage: Usage;
     public readonly users: Users;
 
@@ -57,6 +59,7 @@ export class Refuel {
         this.taxonomyLabels = new TaxonomyLabels(this.base);
         this.team = new Team(this.base);
         this.teamModels = new TeamModels(this.base);
+        this.teams = new Teams(this.base);
         this.usage = new Usage(this.base);
         this.users = new Users(this.base);
     }
