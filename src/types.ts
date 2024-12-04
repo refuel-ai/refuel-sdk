@@ -345,6 +345,16 @@ export interface RefuelTeam {
     refuel_api_key: string;
 }
 
+export interface RefuelListTeam {
+    name: string;
+    api_key: string;
+    api_key_sha: string;
+    created_at: string;
+    email_domain: string;
+    feature_flags: Record<string, FeatureFlagValues>;
+    integrations: Record<string, Record<string, unknown>>;
+}
+
 export enum UserState {
     ACTIVE = "ACTIVE",
     INVITED = "INVITED",
