@@ -1,5 +1,4 @@
 import { Applications } from "./Applications";
-import { Catalog } from "./Catalog";
 import { DatasetExports } from "./DatasetExports";
 import { DatasetItems } from "./DatasetItems";
 import { Datasets } from "./Datasets";
@@ -23,7 +22,6 @@ export class Refuel {
     public readonly base: RefuelBase;
 
     public readonly applications: Applications;
-    public readonly catalog: Catalog;
     public readonly datasetExports: DatasetExports;
     public readonly datasetItems: DatasetItems;
     public readonly datasets: Datasets;
@@ -45,7 +43,6 @@ export class Refuel {
         this.base = new RefuelBase(accessToken, options);
 
         this.applications = new Applications(this.base);
-        this.catalog = new Catalog(this.base);
         this.datasets = new Datasets(this.base);
         this.datasetItems = new DatasetItems(this.base);
         this.datasetExports = new DatasetExports(this.base);
