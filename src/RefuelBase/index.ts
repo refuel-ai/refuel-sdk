@@ -63,35 +63,31 @@ export class RefuelBase {
         let retries = 0;
 
         while (true) {
+            let response: globalThis.Response | undefined = undefined;
+
             try {
-                const response = await fetch(url, {
+                response = await fetch(url, {
                     method,
                     headers,
                     body,
                 });
+            } catch {}
 
-                if (
-                    method.toUpperCase() === "GET" &&
-                    retryStatusCodes.includes(response.status)
-                ) {
-                    if (retries >= maxRetries) {
-                        throw new RefuelAPIError(response);
-                    }
-                    // Proceed to retry logic
-                } else if (!response.ok) {
-                    // Non-retriable error
-                    throw new RefuelAPIError(response);
-                } else {
-                    // Successful response
-                    const responseJSON = await response.json();
-                    return (responseJSON.data || responseJSON) as Response;
-                }
-            } catch (error) {
-                // Handle network errors or exceptions thrown by fetch
+            if (
+                method.toUpperCase() === "GET" &&
+                (!response || retryStatusCodes.includes(response.status))
+            ) {
                 if (retries >= maxRetries) {
-                    throw new RefuelAPIError(undefined, url);
+                    throw new RefuelAPIError(response);
                 }
                 // Proceed to retry logic
+            } else if (!response?.ok) {
+                // Non-retriable error
+                throw new RefuelAPIError(response, url);
+            } else {
+                // Successful response
+                const responseJSON = await response.json();
+                return (responseJSON.data || responseJSON) as Response;
             }
 
             // Retry logic
