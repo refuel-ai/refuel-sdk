@@ -13,16 +13,21 @@ class Applications {
             endpoint: `/projects/${options.projectId}/applications?${params.toString()}`,
         });
     }
-    async get(applicationId) {
+    async get(applicationId, isCatalog) {
+        const endpoint = isCatalog
+            ? `/catalog/${applicationId}`
+            : `/applications/${applicationId}`;
         return this.base.request({
             method: "GET",
-            endpoint: `/applications/${applicationId}`,
+            endpoint,
         });
     }
-    async list(projectId) {
+    async list(projectId, isCatalog) {
         const endpoint = projectId
             ? `/projects/${projectId}/applications`
-            : "/applications";
+            : isCatalog
+                ? "/catalog"
+                : "/applications";
         return this.base.request({
             method: "GET",
             endpoint,
@@ -34,7 +39,7 @@ class Applications {
             endpoint: `/applications/${applicationId}`,
         });
     }
-    async label(applicationId, data, options) {
+    async label(applicationId, data, isCatalog, options) {
         const params = new URLSearchParams();
         if (options === null || options === void 0 ? void 0 : options.modelId) {
             params.append("model_id", options.modelId);
@@ -51,9 +56,12 @@ class Applications {
         if ((options === null || options === void 0 ? void 0 : options.async) !== undefined) {
             params.append("is_async", options.async.toString());
         }
+        const endpoint = isCatalog
+            ? `/catalog/${applicationId}/predict?${params.toString()}`
+            : `/applications/${applicationId}/label?${params.toString()}`;
         return this.base.request({
             method: "POST",
-            endpoint: `/applications/${applicationId}/label?${params.toString()}`,
+            endpoint,
             data,
         });
     }
