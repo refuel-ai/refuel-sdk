@@ -9,10 +9,9 @@ export class DatasetExports {
     }
 
     async get(exportId: string, datasetId: string): Promise<string> {
-        return this.base.request<string>({
-            method: "GET",
-            endpoint: `/datasets/${datasetId}/exports/${exportId}`,
-        });
+        return this.base.request<string>(
+            `/datasets/${datasetId}/exports/${exportId}`
+        );
     }
 
     async create(
@@ -47,9 +46,11 @@ export class DatasetExports {
             });
         }
 
-        return this.base.request<ExportDatasetResponse>({
-            method: "POST",
-            endpoint: `/datasets/${datasetId}/exports?${params.toString()}`,
-        });
+        return this.base.request<ExportDatasetResponse>(
+            `/datasets/${datasetId}/exports?${params.toString()}`,
+            {
+                method: "POST",
+            }
+        );
     }
 }

@@ -24,11 +24,13 @@ export class TaxonomyLabels {
             JSON.stringify(Array.isArray(labels) ? labels : [labels])
         );
 
-        return this.base.request<void>({
-            method: "POST",
-            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
-            data,
-        });
+        return this.base.request<void>(
+            `/tasks/${taskId}/taxonomies/${taxonomyId}`,
+            {
+                method: "POST",
+                data,
+            }
+        );
     }
 
     async list(
@@ -54,10 +56,9 @@ export class TaxonomyLabels {
             params.append("filter", options?.filter);
         }
 
-        return this.base.request<TaxonomyLabelsResponse>({
-            method: "GET",
-            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}?${params.toString()}`,
-        });
+        return this.base.request<TaxonomyLabelsResponse>(
+            `/tasks/${taskId}/taxonomies/${taxonomyId}?${params.toString()}`
+        );
     }
 
     async update(
@@ -66,11 +67,13 @@ export class TaxonomyLabels {
         labelId: string,
         data: Partial<TaxonomyLabelData>
     ): Promise<TaxonomyLabel> {
-        return this.base.request<TaxonomyLabel>({
-            method: "PATCH",
-            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`,
-            data,
-        });
+        return this.base.request<TaxonomyLabel>(
+            `/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`,
+            {
+                method: "PATCH",
+                data,
+            }
+        );
     }
 
     async delete(
@@ -78,9 +81,11 @@ export class TaxonomyLabels {
         taxonomyId: string,
         labelId: string
     ): Promise<void> {
-        return this.base.request<void>({
-            method: "DELETE",
-            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`,
-        });
+        return this.base.request<void>(
+            `/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`,
+            {
+                method: "DELETE",
+            }
+        );
     }
 }

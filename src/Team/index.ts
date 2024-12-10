@@ -9,16 +9,12 @@ export class Team {
     }
 
     async get(): Promise<RefuelTeam> {
-        return this.base.request<RefuelTeam>({
-            method: "GET",
-            endpoint: "/team",
-        });
+        return this.base.request<RefuelTeam>("/team");
     }
 
     async regenerateApiKey(): Promise<string> {
-        await this.base.request<void>({
+        await this.base.request<void>("/team", {
             method: "PATCH",
-            endpoint: "/team",
             data: {
                 update_api_key: true,
             },
@@ -31,9 +27,8 @@ export class Team {
         const params = new URLSearchParams();
         params.append("url", url);
 
-        return this.base.request<{ url: string }>({
-            method: "GET",
-            endpoint: `/team/sign-url?${params.toString()}`,
-        });
+        return this.base.request<{ url: string }>(
+            `/team/sign-url?${params.toString()}`
+        );
     }
 }

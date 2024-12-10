@@ -33,9 +33,6 @@ export class Usage {
             params.append("model", options.modelId);
         }
 
-        return this.base.request<UsageData>({
-            method: "GET",
-            endpoint: `/usage?${params.toString()}`,
-        });
+        return this.base.request<UsageData>(`/usage?${params.toString()}`);
     }
 }

@@ -23,34 +23,36 @@ export class Taxonomies {
         return this.base.request<
             TaxonomyLabelsResponse,
             TaxonomyLabelRequestBody
-        >({
+        >(`/tasks/${taskId}/taxonomies`, {
             method: "POST",
-            endpoint: `/tasks/${taskId}/taxonomies`,
             data,
         });
     }
 
     async get(taskId: string, taxonomyId: string) {
-        return this.base.request<TaxonomyLabelsResponse>({
-            method: "GET",
-            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
-        });
+        return this.base.request<TaxonomyLabelsResponse>(
+            `/tasks/${taskId}/taxonomies/${taxonomyId}`
+        );
     }
 
     async delete(taskId: string, taxonomyId: string): Promise<void> {
-        return this.base.request<void>({
-            method: "DELETE",
-            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
-        });
+        return this.base.request<void>(
+            `/tasks/${taskId}/taxonomies/${taxonomyId}`,
+            {
+                method: "DELETE",
+            }
+        );
     }
 
     async duplicate(
         taskId: string,
         taxonomyId: string
     ): Promise<TaxonomyLabelsResponse> {
-        return this.base.request<TaxonomyLabelsResponse>({
-            method: "POST",
-            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/duplicate`,
-        });
+        return this.base.request<TaxonomyLabelsResponse>(
+            `/tasks/${taskId}/taxonomies/${taxonomyId}/duplicate`,
+            {
+                method: "POST",
+            }
+        );
     }
 }

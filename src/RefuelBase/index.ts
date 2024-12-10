@@ -35,16 +35,16 @@ export class RefuelBase {
     }
 
     public async request<Response, RequestBody = unknown>(
-        options: RequestOptions<RequestBody>
+        endpoint: string,
+        options?: RequestOptions<RequestBody>
     ): Promise<Response> {
         const {
             method = "GET",
-            endpoint,
             data,
             maxRetries = this.maxRetries,
             initialRetryTimeout = this.initialRetryTimeout,
             retryStatusCodes = this.retryStatusCodes,
-        } = options;
+        } = options || {};
 
         const url = `${this.baseUrl}${endpoint}`;
         const headers: HeadersInit = {

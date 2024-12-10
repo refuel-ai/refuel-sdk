@@ -9,18 +9,17 @@ export class FinetunedModels {
     }
 
     async create(data: FinetunedModelCreateOptions): Promise<LabelingModel> {
-        return this.base.request<LabelingModel>({
-            method: "POST",
-            endpoint: `/projects/${data.project_id}/finetuned_models`,
-            data,
-        });
+        return this.base.request<LabelingModel>(
+            `/projects/${data.project_id}/finetuned_models`,
+            {
+                method: "POST",
+                data,
+            }
+        );
     }
 
     async get(modelId: string): Promise<LabelingModel> {
-        return this.base.request<LabelingModel>({
-            method: "GET",
-            endpoint: `/finetuned_models/${modelId}`,
-        });
+        return this.base.request<LabelingModel>(`/finetuned_models/${modelId}`);
     }
 
     async list(projectId: string, taskId?: string): Promise<LabelingModel[]> {
@@ -29,27 +28,27 @@ export class FinetunedModels {
             params.append("task_id", taskId);
         }
 
-        return this.base.request<LabelingModel[]>({
-            method: "GET",
-            endpoint: `/projects/${projectId}/finetuned_models?${params.toString()}`,
-        });
+        return this.base.request<LabelingModel[]>(
+            `/projects/${projectId}/finetuned_models?${params.toString()}`
+        );
     }
 
     async update(
         modelId: string,
         data: Partial<LabelingModel>
     ): Promise<LabelingModel> {
-        return this.base.request<LabelingModel, Partial<LabelingModel>>({
-            method: "PATCH",
-            endpoint: `/finetuned_models/${modelId}`,
-            data,
-        });
+        return this.base.request<LabelingModel, Partial<LabelingModel>>(
+            `/finetuned_models/${modelId}`,
+            {
+                method: "PATCH",
+                data,
+            }
+        );
     }
 
     async delete(modelId: string): Promise<void> {
-        return this.base.request<void>({
+        return this.base.request<void>(`/finetuned_models/${modelId}`, {
             method: "DELETE",
-            endpoint: `/finetuned_models/${modelId}`,
         });
     }
 }

@@ -9,27 +9,23 @@ export class Integrations {
     }
 
     async get(integrationId: string): Promise<Integration> {
-        return this.base.request<Integration>({
-            method: "GET",
-            endpoint: `/integrations/${integrationId}`,
-        });
+        return this.base.request<Integration>(`/integrations/${integrationId}`);
     }
 
     async list(): Promise<Integration[]> {
-        return this.base.request<Integration[]>({
-            method: "GET",
-            endpoint: "/integrations",
-        });
+        return this.base.request<Integration[]>("/integrations");
     }
 
     async update(
         integrationId: string,
         data: Partial<Integration>
     ): Promise<Integration> {
-        return this.base.request<Integration, Partial<Integration>>({
-            method: "PATCH",
-            endpoint: `/integrations/${integrationId}`,
-            data,
-        });
+        return this.base.request<Integration, Partial<Integration>>(
+            `/integrations/${integrationId}`,
+            {
+                method: "PATCH",
+                data,
+            }
+        );
     }
 }

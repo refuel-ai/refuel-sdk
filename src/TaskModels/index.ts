@@ -9,10 +9,9 @@ export class TaskModels {
     }
 
     async list(taskId: string): Promise<LabelingModel[]> {
-        const response = await this.base.request<{ models: LabelingModel[] }>({
-            method: "GET",
-            endpoint: `/tasks/${taskId}/models`,
-        });
+        const response = await this.base.request<{ models: LabelingModel[] }>(
+            `/tasks/${taskId}/models`
+        );
         return response.models;
     }
 }
