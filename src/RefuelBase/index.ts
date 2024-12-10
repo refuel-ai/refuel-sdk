@@ -38,7 +38,7 @@ export class RefuelBase {
         options: RequestOptions<RequestBody>
     ): Promise<Response> {
         const {
-            method,
+            method = "GET",
             endpoint,
             data,
             maxRetries = this.maxRetries,

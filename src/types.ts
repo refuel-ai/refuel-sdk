@@ -3,7 +3,7 @@ export type DeepPartial<T> = {
 };
 
 export interface RequestOptions<T> {
-    method: string;
+    method?: string;
     endpoint: string;
     data?: T;
     retries?: number;
