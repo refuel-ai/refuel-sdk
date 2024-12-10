@@ -53,10 +53,9 @@ export class Labels {
             );
         }
 
-        const response = await this.base.request<Dataset>({
-            method: "GET",
-            endpoint: `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label?${params.toString()}`,
-        });
+        const response = await this.base.request<Dataset>(
+            `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label?${params.toString()}`
+        );
 
         return this.getLabelsFromResponse(response);
     }
@@ -67,11 +66,13 @@ export class Labels {
         itemId: string,
         labels: DatasetItemLabelsUpdate
     ): Promise<DatasetItemLabels> {
-        const response = await this.base.request<Dataset>({
-            method: "POST",
-            endpoint: `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label`,
-            data: labels,
-        });
+        const response = await this.base.request<Dataset>(
+            `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label`,
+            {
+                method: "POST",
+                data: labels,
+            }
+        );
 
         return this.getLabelsFromResponse(response);
     }
@@ -114,10 +115,9 @@ export class Labels {
             params.append("subtask_id", subtaskId);
         }
 
-        const response = await this.base.request<Dataset>({
-            method: "GET",
-            endpoint: `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label?${params.toString()}`,
-        });
+        const response = await this.base.request<Dataset>(
+            `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label?${params.toString()}`
+        );
 
         return this.getLabelsFromResponse(response);
     }

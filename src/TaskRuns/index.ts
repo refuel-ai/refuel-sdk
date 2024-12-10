@@ -47,9 +47,8 @@ export class TaskRuns {
             ? `/tasks/${taskId}/evalset/runs?${params.toString()}`
             : `/tasks/${taskId}/runs?${params.toString()}`;
 
-        return this.base.request<TaskRun>({
+        return this.base.request<TaskRun>(endpoint, {
             method: "POST",
-            endpoint,
         });
     }
 
@@ -70,9 +69,8 @@ export class TaskRuns {
             ? `/tasks/${taskId}/evalset/runs`
             : `/tasks/${taskId}/runs?${params.toString()}`;
 
-        return this.base.request<void>({
+        return this.base.request<void>(endpoint, {
             method: "POST",
-            endpoint,
         });
     }
 
@@ -92,10 +90,7 @@ export class TaskRuns {
             endpoint = `/tasks/${taskId}/evalset/runs`;
         }
 
-        const response = await this.base.request<TaskRun | TaskRun[]>({
-            method: "GET",
-            endpoint,
-        });
+        const response = await this.base.request<TaskRun | TaskRun[]>(endpoint);
 
         if (Array.isArray(response)) {
             return response;

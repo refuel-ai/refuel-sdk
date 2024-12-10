@@ -24,19 +24,16 @@ export class Applications {
             params.append("name", options.name);
         }
 
-        return this.base.request<Application>({
-            method: "POST",
-            endpoint: `/projects/${
-                options.projectId
-            }/applications?${params.toString()}`,
-        });
+        return this.base.request<Application>(
+            `/projects/${options.projectId}/applications?${params.toString()}`,
+            {
+                method: "POST",
+            }
+        );
     }
 
     async get(applicationId: string): Promise<Application> {
-        return this.base.request<Application>({
-            method: "GET",
-            endpoint: `/applications/${applicationId}`,
-        });
+        return this.base.request<Application>(`/applications/${applicationId}`);
     }
 
     async list(projectId?: string): Promise<Application[]> {
@@ -44,16 +41,12 @@ export class Applications {
             ? `/projects/${projectId}/applications`
             : "/applications";
 
-        return this.base.request<Application[]>({
-            method: "GET",
-            endpoint,
-        });
+        return this.base.request<Application[]>(endpoint);
     }
 
     async delete(applicationId: string): Promise<void> {
-        return this.base.request<void>({
+        return this.base.request<void>(`/applications/${applicationId}`, {
             method: "DELETE",
-            endpoint: `/applications/${applicationId}`,
         });
     }
 
@@ -91,9 +84,8 @@ export class Applications {
                 ? ApplicationLabelResponse<ApplicationOutputAsync>
                 : ApplicationLabelResponse<ApplicationOutputSync<FieldKeys>>,
             Record<string, unknown>[]
-        >({
+        >(`/applications/${applicationId}/label?${params.toString()}`, {
             method: "POST",
-            endpoint: `/applications/${applicationId}/label?${params.toString()}`,
             data,
         });
     }
@@ -104,10 +96,7 @@ export class Applications {
     ) {
         return this.base.request<
             ApplicationLabelResponse<ApplicationOutputSync<FieldKeys>>
-        >({
-            method: "GET",
-            endpoint: `/applications/${applicationId}/items/${itemId}`,
-        });
+        >(`/applications/${applicationId}/items/${itemId}`);
     }
 
     async feedback(
@@ -135,10 +124,12 @@ export class Applications {
             feedbackData[subtaskId] = { label: subtaskLabel };
         }
 
-        return this.base.request<Dataset>({
-            method: "POST",
-            endpoint: `/applications/${applicationId}/items/${itemId}/label`,
-            data: feedbackData,
-        });
+        return this.base.request<Dataset>(
+            `/applications/${applicationId}/items/${itemId}/label`,
+            {
+                method: "POST",
+                data: feedbackData,
+            }
+        );
     }
 }

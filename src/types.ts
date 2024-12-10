@@ -4,7 +4,6 @@ export type DeepPartial<T> = {
 
 export interface RequestOptions<T> {
     method?: string;
-    endpoint: string;
     data?: T;
     retries?: number;
     initialRetryTimeout?: number;

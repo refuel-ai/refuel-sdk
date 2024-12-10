@@ -10,24 +10,17 @@ export class Users {
 
     async create(email: string | string[]) {
         const data = Array.isArray(email) ? email : [email];
-        return this.base.request<InviteUsersResponse, string[]>({
+        return this.base.request<InviteUsersResponse, string[]>("/users", {
             method: "POST",
-            endpoint: "/users",
             data,
         });
     }
 
     async get(userId: string): Promise<User> {
-        return this.base.request<User>({
-            method: "GET",
-            endpoint: `/users/${userId}`,
-        });
+        return this.base.request<User>(`/users/${userId}`);
     }
 
     async list(): Promise<User[]> {
-        return this.base.request<User[]>({
-            method: "GET",
-            endpoint: `/users`,
-        });
+        return this.base.request<User[]>("/users");
     }
 }

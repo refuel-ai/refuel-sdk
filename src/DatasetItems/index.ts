@@ -12,9 +12,8 @@ export class DatasetItems {
         datasetId: string,
         data: Record<string, unknown>[]
     ): Promise<Dataset> {
-        return this.base.request<Dataset>({
+        return this.base.request<Dataset>(`/datasets/${datasetId}/items`, {
             method: "POST",
-            endpoint: `/datasets/${datasetId}/items`,
             data,
         });
     }
@@ -24,10 +23,9 @@ export class DatasetItems {
         itemId: string
     ): Promise<Record<string, string>> {
         return (
-            await this.base.request<Record<string, string>[]>({
-                method: "GET",
-                endpoint: `/datasets/${datasetId}/items/${itemId}`,
-            })
+            await this.base.request<Record<string, string>[]>(
+                `/datasets/${datasetId}/items/${itemId}`
+            )
         )[0];
     }
 
@@ -57,16 +55,17 @@ export class DatasetItems {
             params.append("offset", options.offset.toString());
         }
 
-        return this.base.request<Dataset[]>({
-            method: "GET",
-            endpoint: `/datasets/${datasetId}?${params.toString()}`,
-        });
+        return this.base.request<Dataset[]>(
+            `/datasets/${datasetId}?${params.toString()}`
+        );
     }
 
     async delete(datasetId: string, itemId: string): Promise<void> {
-        return this.base.request<void>({
-            method: "DELETE",
-            endpoint: `/datasets/${datasetId}/items/${itemId}`,
-        });
+        return this.base.request<void>(
+            `/datasets/${datasetId}/items/${itemId}`,
+            {
+                method: "DELETE",
+            }
+        );
     }
 }

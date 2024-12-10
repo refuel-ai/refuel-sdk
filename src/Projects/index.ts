@@ -13,31 +13,23 @@ export class Projects {
         params.append("project_name", data.project_name);
         params.append("description", data.description);
 
-        return this.base.request<Project>({
+        return this.base.request<Project>(`/projects?${params.toString()}`, {
             method: "POST",
-            endpoint: `/projects?${params.toString()}`,
             data,
         });
     }
 
     async get(projectId: string): Promise<Project> {
-        return this.base.request<Project>({
-            method: "GET",
-            endpoint: `/projects/${projectId}`,
-        });
+        return this.base.request<Project>(`/projects/${projectId}`);
     }
 
     async list(): Promise<Project[]> {
-        return this.base.request<Project[]>({
-            method: "GET",
-            endpoint: "/projects",
-        });
+        return this.base.request<Project[]>("/projects");
     }
 
     async delete(projectId: string): Promise<void> {
-        return this.base.request<void>({
+        return this.base.request<void>(`/projects/${projectId}`, {
             method: "DELETE",
-            endpoint: `/projects/${projectId}`,
         });
     }
 }

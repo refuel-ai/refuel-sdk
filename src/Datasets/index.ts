@@ -9,10 +9,7 @@ export class Datasets {
     }
 
     async get(datasetId: string): Promise<Dataset> {
-        return this.base.request<Dataset>({
-            method: "GET",
-            endpoint: `/datasets/${datasetId}`,
-        });
+        return this.base.request<Dataset>(`/datasets/${datasetId}`);
     }
 
     async list(projectId?: string): Promise<DatasetFromList[]> {
@@ -22,16 +19,14 @@ export class Datasets {
             params.append("project_id", projectId);
         }
 
-        return this.base.request<DatasetFromList[]>({
-            method: "GET",
-            endpoint: `/datasets?${params.toString()}`,
-        });
+        return this.base.request<DatasetFromList[]>(
+            `/datasets?${params.toString()}`
+        );
     }
 
     async delete(datasetId: string): Promise<void> {
-        return this.base.request<void>({
+        return this.base.request<void>(`/datasets/${datasetId}`, {
             method: "DELETE",
-            endpoint: `/datasets/${datasetId}`,
         });
     }
 }

@@ -9,9 +9,6 @@ export class TeamModels {
     }
 
     async list(): Promise<TeamModel[]> {
-        return this.base.request<TeamModel[]>({
-            method: "GET",
-            endpoint: "/models",
-        });
+        return this.base.request<TeamModel[]>("/models");
     }
 }
