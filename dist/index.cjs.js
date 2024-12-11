@@ -15,21 +15,17 @@ class Applications {
             endpoint: `/projects/${options.projectId}/applications?${params.toString()}`,
         });
     }
-    async get(applicationId, isCatalog) {
-        const endpoint = isCatalog
-            ? `/catalog/${applicationId}`
-            : `/applications/${applicationId}`;
+    async get(applicationId) {
+        const endpoint = `/applications/${applicationId}`;
         return this.base.request({
             method: "GET",
             endpoint,
         });
     }
-    async list(projectId, isCatalog) {
+    async list(projectId) {
         const endpoint = projectId
             ? `/projects/${projectId}/applications`
-            : isCatalog
-                ? "/catalog"
-                : "/applications";
+            : "/applications";
         return this.base.request({
             method: "GET",
             endpoint,
@@ -41,7 +37,7 @@ class Applications {
             endpoint: `/applications/${applicationId}`,
         });
     }
-    async label(applicationId, data, isCatalog, options) {
+    async label(applicationId, data, options) {
         const params = new URLSearchParams();
         if (options === null || options === void 0 ? void 0 : options.modelId) {
             params.append("model_id", options.modelId);
@@ -58,9 +54,7 @@ class Applications {
         if ((options === null || options === void 0 ? void 0 : options.async) !== undefined) {
             params.append("is_async", options.async.toString());
         }
-        const endpoint = isCatalog
-            ? `/catalog/${applicationId}/predict?${params.toString()}`
-            : `/applications/${applicationId}/label?${params.toString()}`;
+        const endpoint = `/applications/${applicationId}/label?${params.toString()}`;
         return this.base.request({
             method: "POST",
             endpoint,
@@ -421,35 +415,30 @@ class RefuelBase {
         }
         let retries = 0;
         while (true) {
+            let response = undefined;
             try {
-                const response = await fetch(url, {
+                response = await fetch(url, {
                     method,
                     headers,
                     body,
                 });
-                if (method.toUpperCase() === "GET" &&
-                    retryStatusCodes.includes(response.status)) {
-                    if (retries >= maxRetries) {
-                        throw new RefuelAPIError(response);
-                    }
-                    // Proceed to retry logic
-                }
-                else if (!response.ok) {
-                    // Non-retriable error
+            }
+            catch { }
+            if (method.toUpperCase() === "GET" &&
+                (!response || retryStatusCodes.includes(response.status))) {
+                if (retries >= maxRetries) {
                     throw new RefuelAPIError(response);
                 }
-                else {
-                    // Successful response
-                    const responseJSON = await response.json();
-                    return (responseJSON.data || responseJSON);
-                }
-            }
-            catch (error) {
-                // Handle network errors or exceptions thrown by fetch
-                if (retries >= maxRetries) {
-                    throw new RefuelAPIError(undefined, url);
-                }
                 // Proceed to retry logic
+            }
+            else if (!(response === null || response === void 0 ? void 0 : response.ok)) {
+                // Non-retriable error
+                throw new RefuelAPIError(response, url);
+            }
+            else {
+                // Successful response
+                const responseJSON = await response.json();
+                return (responseJSON.data || responseJSON);
             }
             // Retry logic
             // Calculate exponential backoff with jitter
@@ -678,6 +667,14 @@ class Team {
             },
         });
         return (await this.get()).refuel_api_key;
+    }
+    async signUrl(url) {
+        const params = new URLSearchParams();
+        params.append("url", url);
+        return this.base.request({
+            method: "GET",
+            endpoint: `/team/sign-url?${params.toString()}`,
+        });
     }
 }
 

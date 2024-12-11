@@ -32,21 +32,17 @@ export class Applications {
         });
     }
 
-    async get(applicationId: string, isCatalog?: boolean): Promise<Application> {
-        const endpoint = isCatalog
-            ? `/catalog/${applicationId}`
-            : `/applications/${applicationId}`;
+    async get(applicationId: string): Promise<Application> {
+        const endpoint = `/applications/${applicationId}`;
         return this.base.request<Application>({
             method: "GET",
             endpoint,
         });
     }
 
-    async list(projectId?: string, isCatalog?: boolean): Promise<Application[]> {
+    async list(projectId?: string): Promise<Application[]> {
         const endpoint = projectId
             ? `/projects/${projectId}/applications`
-            : isCatalog
-            ? "/catalog"
             : "/applications";
 
         return this.base.request<Application[]>({
@@ -68,7 +64,6 @@ export class Applications {
     >(
         applicationId: string,
         data: Record<string, unknown>[],
-        isCatalog?: boolean,
         options?: ApplicationLabelOptions & { async?: A }
     ) {
         const params = new URLSearchParams();
@@ -92,9 +87,7 @@ export class Applications {
             params.append("is_async", options.async.toString());
         }
 
-        const endpoint = isCatalog
-            ? `/catalog/${applicationId}/predict?${params.toString()}`
-            : `/applications/${applicationId}/label?${params.toString()}`;
+        const endpoint = `/applications/${applicationId}/label?${params.toString()}`;
 
         return this.base.request<
             A extends true
