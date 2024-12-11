@@ -8,30 +8,22 @@ class Applications {
         if (options.name) {
             params.append("name", options.name);
         }
-        return this.base.request({
+        return this.base.request(`/projects/${options.projectId}/applications?${params.toString()}`, {
             method: "POST",
-            endpoint: `/projects/${options.projectId}/applications?${params.toString()}`,
         });
     }
     async get(applicationId) {
-        return this.base.request({
-            method: "GET",
-            endpoint: `/applications/${applicationId}`,
-        });
+        return this.base.request(`/applications/${applicationId}`);
     }
     async list(projectId) {
         const endpoint = projectId
             ? `/projects/${projectId}/applications`
             : "/applications";
-        return this.base.request({
-            method: "GET",
-            endpoint,
-        });
+        return this.base.request(endpoint);
     }
     async delete(applicationId) {
-        return this.base.request({
+        return this.base.request(`/applications/${applicationId}`, {
             method: "DELETE",
-            endpoint: `/applications/${applicationId}`,
         });
     }
     async label(applicationId, data, options) {
@@ -51,17 +43,13 @@ class Applications {
         if ((options === null || options === void 0 ? void 0 : options.async) !== undefined) {
             params.append("is_async", options.async.toString());
         }
-        return this.base.request({
+        return this.base.request(`/applications/${applicationId}/label?${params.toString()}`, {
             method: "POST",
-            endpoint: `/applications/${applicationId}/label?${params.toString()}`,
             data,
         });
     }
     async getLabeledItem(applicationId, itemId) {
-        return this.base.request({
-            method: "GET",
-            endpoint: `/applications/${applicationId}/items/${itemId}`,
-        });
+        return this.base.request(`/applications/${applicationId}/items/${itemId}`);
     }
     async feedback(applicationId, itemId, correctLabelData) {
         var _a, _b;
@@ -78,9 +66,8 @@ class Applications {
             }
             feedbackData[subtaskId] = { label: subtaskLabel };
         }
-        return this.base.request({
+        return this.base.request(`/applications/${applicationId}/items/${itemId}/label`, {
             method: "POST",
-            endpoint: `/applications/${applicationId}/items/${itemId}/label`,
             data: feedbackData,
         });
     }
@@ -91,10 +78,7 @@ class DatasetExports {
         this.base = base;
     }
     async get(exportId, datasetId) {
-        return this.base.request({
-            method: "GET",
-            endpoint: `/datasets/${datasetId}/exports/${exportId}`,
-        });
+        return this.base.request(`/datasets/${datasetId}/exports/${exportId}`);
     }
     async create(datasetId, options) {
         const params = new URLSearchParams();
@@ -118,9 +102,8 @@ class DatasetExports {
                 params.append("filters", JSON.stringify(filter));
             });
         }
-        return this.base.request({
+        return this.base.request(`/datasets/${datasetId}/exports?${params.toString()}`, {
             method: "POST",
-            endpoint: `/datasets/${datasetId}/exports?${params.toString()}`,
         });
     }
 }
@@ -130,17 +113,13 @@ class DatasetItems {
         this.base = base;
     }
     async create(datasetId, data) {
-        return this.base.request({
+        return this.base.request(`/datasets/${datasetId}/items`, {
             method: "POST",
-            endpoint: `/datasets/${datasetId}/items`,
             data,
         });
     }
     async get(datasetId, itemId) {
-        return (await this.base.request({
-            method: "GET",
-            endpoint: `/datasets/${datasetId}/items/${itemId}`,
-        }))[0];
+        return (await this.base.request(`/datasets/${datasetId}/items/${itemId}`))[0];
     }
     async list(datasetId, options) {
         const params = new URLSearchParams();
@@ -160,15 +139,11 @@ class DatasetItems {
         if (options === null || options === void 0 ? void 0 : options.offset) {
             params.append("offset", options.offset.toString());
         }
-        return this.base.request({
-            method: "GET",
-            endpoint: `/datasets/${datasetId}?${params.toString()}`,
-        });
+        return this.base.request(`/datasets/${datasetId}?${params.toString()}`);
     }
     async delete(datasetId, itemId) {
-        return this.base.request({
+        return this.base.request(`/datasets/${datasetId}/items/${itemId}`, {
             method: "DELETE",
-            endpoint: `/datasets/${datasetId}/items/${itemId}`,
         });
     }
 }
@@ -178,25 +153,18 @@ class Datasets {
         this.base = base;
     }
     async get(datasetId) {
-        return this.base.request({
-            method: "GET",
-            endpoint: `/datasets/${datasetId}`,
-        });
+        return this.base.request(`/datasets/${datasetId}`);
     }
     async list(projectId) {
         const params = new URLSearchParams();
         if (projectId) {
             params.append("project_id", projectId);
         }
-        return this.base.request({
-            method: "GET",
-            endpoint: `/datasets?${params.toString()}`,
-        });
+        return this.base.request(`/datasets?${params.toString()}`);
     }
     async delete(datasetId) {
-        return this.base.request({
+        return this.base.request(`/datasets/${datasetId}`, {
             method: "DELETE",
-            endpoint: `/datasets/${datasetId}`,
         });
     }
 }
@@ -206,39 +174,30 @@ class FinetunedModels {
         this.base = base;
     }
     async create(data) {
-        return this.base.request({
+        return this.base.request(`/projects/${data.project_id}/finetuned_models`, {
             method: "POST",
-            endpoint: `/projects/${data.project_id}/finetuned_models`,
             data,
         });
     }
     async get(modelId) {
-        return this.base.request({
-            method: "GET",
-            endpoint: `/finetuned_models/${modelId}`,
-        });
+        return this.base.request(`/finetuned_models/${modelId}`);
     }
     async list(projectId, taskId) {
         const params = new URLSearchParams();
         if (taskId) {
             params.append("task_id", taskId);
         }
-        return this.base.request({
-            method: "GET",
-            endpoint: `/projects/${projectId}/finetuned_models?${params.toString()}`,
-        });
+        return this.base.request(`/projects/${projectId}/finetuned_models?${params.toString()}`);
     }
     async update(modelId, data) {
-        return this.base.request({
+        return this.base.request(`/finetuned_models/${modelId}`, {
             method: "PATCH",
-            endpoint: `/finetuned_models/${modelId}`,
             data,
         });
     }
     async delete(modelId) {
-        return this.base.request({
+        return this.base.request(`/finetuned_models/${modelId}`, {
             method: "DELETE",
-            endpoint: `/finetuned_models/${modelId}`,
         });
     }
 }
@@ -248,21 +207,14 @@ class Integrations {
         this.base = base;
     }
     async get(integrationId) {
-        return this.base.request({
-            method: "GET",
-            endpoint: `/integrations/${integrationId}`,
-        });
+        return this.base.request(`/integrations/${integrationId}`);
     }
     async list() {
-        return this.base.request({
-            method: "GET",
-            endpoint: "/integrations",
-        });
+        return this.base.request("/integrations");
     }
     async update(integrationId, data) {
-        return this.base.request({
+        return this.base.request(`/integrations/${integrationId}`, {
             method: "PATCH",
-            endpoint: `/integrations/${integrationId}`,
             data,
         });
     }
@@ -293,16 +245,12 @@ class Labels {
         if (typeof (options === null || options === void 0 ? void 0 : options.generateMissingExplanations) === "boolean") {
             params.append("generate_missing_explanations", options.generateMissingExplanations.toString());
         }
-        const response = await this.base.request({
-            method: "GET",
-            endpoint: `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label?${params.toString()}`,
-        });
+        const response = await this.base.request(`/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label?${params.toString()}`);
         return this.getLabelsFromResponse(response);
     }
     async update(taskId, datasetId, itemId, labels) {
-        const response = await this.base.request({
+        const response = await this.base.request(`/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label`, {
             method: "POST",
-            endpoint: `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label`,
             data: labels,
         });
         return this.getLabelsFromResponse(response);
@@ -328,10 +276,7 @@ class Labels {
         if (subtaskId) {
             params.append("subtask_id", subtaskId);
         }
-        const response = await this.base.request({
-            method: "GET",
-            endpoint: `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label?${params.toString()}`,
-        });
+        const response = await this.base.request(`/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label?${params.toString()}`);
         return this.getLabelsFromResponse(response);
     }
 }
@@ -344,28 +289,20 @@ class Projects {
         const params = new URLSearchParams();
         params.append("project_name", data.project_name);
         params.append("description", data.description);
-        return this.base.request({
+        return this.base.request(`/projects?${params.toString()}`, {
             method: "POST",
-            endpoint: `/projects?${params.toString()}`,
             data,
         });
     }
     async get(projectId) {
-        return this.base.request({
-            method: "GET",
-            endpoint: `/projects/${projectId}`,
-        });
+        return this.base.request(`/projects/${projectId}`);
     }
     async list() {
-        return this.base.request({
-            method: "GET",
-            endpoint: "/projects",
-        });
+        return this.base.request("/projects");
     }
     async delete(projectId) {
-        return this.base.request({
+        return this.base.request(`/projects/${projectId}`, {
             method: "DELETE",
-            endpoint: `/projects/${projectId}`,
         });
     }
 }
@@ -395,8 +332,8 @@ class RefuelBase {
         this.retryStatusCodes =
             (_d = options.retryStatusCodes) !== null && _d !== void 0 ? _d : DEFAULT_RETRY_STATUS_CODES;
     }
-    async request(options) {
-        const { method, endpoint, data, maxRetries = this.maxRetries, initialRetryTimeout = this.initialRetryTimeout, retryStatusCodes = this.retryStatusCodes, } = options;
+    async request(endpoint, options) {
+        const { method = "GET", data, maxRetries = this.maxRetries, initialRetryTimeout = this.initialRetryTimeout, retryStatusCodes = this.retryStatusCodes, } = options || {};
         const url = `${this.baseUrl}${endpoint}`;
         const headers = {
             Authorization: `Bearer ${this.accessToken}`,
@@ -411,35 +348,30 @@ class RefuelBase {
         }
         let retries = 0;
         while (true) {
+            let response = undefined;
             try {
-                const response = await fetch(url, {
+                response = await fetch(url, {
                     method,
                     headers,
                     body,
                 });
-                if (method.toUpperCase() === "GET" &&
-                    retryStatusCodes.includes(response.status)) {
-                    if (retries >= maxRetries) {
-                        throw new RefuelAPIError(response);
-                    }
-                    // Proceed to retry logic
-                }
-                else if (!response.ok) {
-                    // Non-retriable error
-                    throw new RefuelAPIError(response);
-                }
-                else {
-                    // Successful response
-                    const responseJSON = await response.json();
-                    return (responseJSON.data || responseJSON);
-                }
             }
-            catch (error) {
-                // Handle network errors or exceptions thrown by fetch
+            catch { }
+            if (method.toUpperCase() === "GET" &&
+                (!response || retryStatusCodes.includes(response.status))) {
                 if (retries >= maxRetries) {
-                    throw new RefuelAPIError(undefined, url);
+                    throw new RefuelAPIError(response, url);
                 }
                 // Proceed to retry logic
+            }
+            else if (!(response === null || response === void 0 ? void 0 : response.ok)) {
+                // Non-retriable error
+                throw new RefuelAPIError(response, url);
+            }
+            else {
+                // Successful response
+                const responseJSON = await response.json();
+                return (responseJSON.data || responseJSON);
             }
             // Retry logic
             // Calculate exponential backoff with jitter
@@ -458,10 +390,7 @@ class TaskModels {
         this.base = base;
     }
     async list(taskId) {
-        const response = await this.base.request({
-            method: "GET",
-            endpoint: `/tasks/${taskId}/models`,
-        });
+        const response = await this.base.request(`/tasks/${taskId}/models`);
         return response.models;
     }
 }
@@ -495,9 +424,8 @@ class TaskRuns {
         const endpoint = (options === null || options === void 0 ? void 0 : options.evalSet)
             ? `/tasks/${taskId}/evalset/runs?${params.toString()}`
             : `/tasks/${taskId}/runs?${params.toString()}`;
-        return this.base.request({
+        return this.base.request(endpoint, {
             method: "POST",
-            endpoint,
         });
     }
     async cancel(taskId, options) {
@@ -512,9 +440,8 @@ class TaskRuns {
         const endpoint = (options === null || options === void 0 ? void 0 : options.evalSet)
             ? `/tasks/${taskId}/evalset/runs`
             : `/tasks/${taskId}/runs?${params.toString()}`;
-        return this.base.request({
+        return this.base.request(endpoint, {
             method: "POST",
-            endpoint,
         });
     }
     async list(taskId, options) {
@@ -528,10 +455,7 @@ class TaskRuns {
         else if (options === null || options === void 0 ? void 0 : options.evalSet) {
             endpoint = `/tasks/${taskId}/evalset/runs`;
         }
-        const response = await this.base.request({
-            method: "GET",
-            endpoint,
-        });
+        const response = await this.base.request(endpoint);
         if (Array.isArray(response)) {
             return response;
         }
@@ -544,29 +468,21 @@ class Tasks {
         this.base = base;
     }
     async get(taskId) {
-        return this.base.request({
-            method: "GET",
-            endpoint: `/tasks/${taskId}`,
-        });
+        return this.base.request(`/tasks/${taskId}`);
     }
     async list(projectId) {
         const endpoint = projectId ? `/projects/${projectId}/tasks` : "/tasks";
-        return this.base.request({
-            method: "GET",
-            endpoint,
-        });
+        return this.base.request(endpoint);
     }
     async update(taskId, data) {
-        return this.base.request({
+        return this.base.request(`/tasks/${taskId}`, {
             method: "PATCH",
-            endpoint: `/tasks/${taskId}`,
             data,
         });
     }
     async delete(taskId) {
-        return this.base.request({
+        return this.base.request(`/tasks/${taskId}`, {
             method: "DELETE",
-            endpoint: `/tasks/${taskId}`,
         });
     }
 }
@@ -579,28 +495,22 @@ class Taxonomies {
         const data = {
             labels: Array.isArray(labels) ? labels : [labels],
         };
-        return this.base.request({
+        return this.base.request(`/tasks/${taskId}/taxonomies`, {
             method: "POST",
-            endpoint: `/tasks/${taskId}/taxonomies`,
             data,
         });
     }
     async get(taskId, taxonomyId) {
-        return this.base.request({
-            method: "GET",
-            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
-        });
+        return this.base.request(`/tasks/${taskId}/taxonomies/${taxonomyId}`);
     }
     async delete(taskId, taxonomyId) {
-        return this.base.request({
+        return this.base.request(`/tasks/${taskId}/taxonomies/${taxonomyId}`, {
             method: "DELETE",
-            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
         });
     }
     async duplicate(taskId, taxonomyId) {
-        return this.base.request({
+        return this.base.request(`/tasks/${taskId}/taxonomies/${taxonomyId}/duplicate`, {
             method: "POST",
-            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/duplicate`,
         });
     }
 }
@@ -612,9 +522,8 @@ class TaxonomyLabels {
     async create(taskId, taxonomyId, labels) {
         const data = new FormData();
         data.append("labels", JSON.stringify(Array.isArray(labels) ? labels : [labels]));
-        return this.base.request({
+        return this.base.request(`/tasks/${taskId}/taxonomies/${taxonomyId}`, {
             method: "POST",
-            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}`,
             data,
         });
     }
@@ -629,22 +538,17 @@ class TaxonomyLabels {
         if (options === null || options === void 0 ? void 0 : options.filter) {
             params.append("filter", options === null || options === void 0 ? void 0 : options.filter);
         }
-        return this.base.request({
-            method: "GET",
-            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}?${params.toString()}`,
-        });
+        return this.base.request(`/tasks/${taskId}/taxonomies/${taxonomyId}?${params.toString()}`);
     }
     async update(taskId, taxonomyId, labelId, data) {
-        return this.base.request({
+        return this.base.request(`/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`, {
             method: "PATCH",
-            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`,
             data,
         });
     }
     async delete(taskId, taxonomyId, labelId) {
-        return this.base.request({
+        return this.base.request(`/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`, {
             method: "DELETE",
-            endpoint: `/tasks/${taskId}/taxonomies/${taxonomyId}/labels/${labelId}`,
         });
     }
 }
@@ -654,20 +558,21 @@ class Team {
         this.base = base;
     }
     async get() {
-        return this.base.request({
-            method: "GET",
-            endpoint: "/team",
-        });
+        return this.base.request("/team");
     }
     async regenerateApiKey() {
-        await this.base.request({
+        await this.base.request("/team", {
             method: "PATCH",
-            endpoint: "/team",
             data: {
                 update_api_key: true,
             },
         });
         return (await this.get()).refuel_api_key;
+    }
+    async signUrl(url) {
+        const params = new URLSearchParams();
+        params.append("url", url);
+        return this.base.request(`/team/sign-url?${params.toString()}`);
     }
 }
 
@@ -676,10 +581,7 @@ class TeamModels {
         this.base = base;
     }
     async list() {
-        return this.base.request({
-            method: "GET",
-            endpoint: "/models",
-        });
+        return this.base.request("/models");
     }
 }
 
@@ -700,10 +602,7 @@ class Usage {
         if (options === null || options === void 0 ? void 0 : options.modelId) {
             params.append("model", options.modelId);
         }
-        return this.base.request({
-            method: "GET",
-            endpoint: `/usage?${params.toString()}`,
-        });
+        return this.base.request(`/usage?${params.toString()}`);
     }
 }
 
@@ -713,23 +612,16 @@ class Users {
     }
     async create(email) {
         const data = Array.isArray(email) ? email : [email];
-        return this.base.request({
+        return this.base.request("/users", {
             method: "POST",
-            endpoint: "/users",
             data,
         });
     }
     async get(userId) {
-        return this.base.request({
-            method: "GET",
-            endpoint: `/users/${userId}`,
-        });
+        return this.base.request(`/users/${userId}`);
     }
     async list() {
-        return this.base.request({
-            method: "GET",
-            endpoint: `/users`,
-        });
+        return this.base.request("/users");
     }
 }
 

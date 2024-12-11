@@ -12,5 +12,5 @@ export declare class RefuelBase {
     protected readonly initialRetryTimeout: number;
     protected readonly retryStatusCodes: number[];
     constructor(accessToken: string, options?: RefuelOptions);
-    request<Response, RequestBody = unknown>(options: RequestOptions<RequestBody>): Promise<Response>;
+    request<Response, RequestBody = unknown>(endpoint: string, options?: RequestOptions<RequestBody>): Promise<Response>;
 }

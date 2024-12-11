@@ -5,4 +5,7 @@ export declare class Team {
     constructor(base: RefuelBase);
     get(): Promise<RefuelTeam>;
     regenerateApiKey(): Promise<string>;
+    signUrl(url: string): Promise<{
+        url: string;
+    }>;
 }
