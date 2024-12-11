@@ -2,8 +2,7 @@ export type DeepPartial<T> = {
     [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
 };
 export interface RequestOptions<T> {
-    method: string;
-    endpoint: string;
+    method?: string;
     data?: T;
     retries?: number;
     initialRetryTimeout?: number;
