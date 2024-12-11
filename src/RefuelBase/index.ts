@@ -78,7 +78,7 @@ export class RefuelBase {
                 (!response || retryStatusCodes.includes(response.status))
             ) {
                 if (retries >= maxRetries) {
-                    throw new RefuelAPIError(response);
+                    throw new RefuelAPIError(response, url);
                 }
                 // Proceed to retry logic
             } else if (!response?.ok) {
