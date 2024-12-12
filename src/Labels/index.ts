@@ -81,20 +81,30 @@ export class Labels {
         taskId: string,
         datasetId: string,
         itemId: string,
-        subtaskId?: string
+        options?: {
+            subtaskId?: string;
+            modelId?: string;
+        }
     ): Promise<DatasetItemLabels> {
-        const existingLabels = await this.list(taskId, datasetId, itemId);
+        const existingLabels = await this.list(
+            taskId,
+            datasetId,
+            itemId,
+            options
+        );
 
         let updatedLabels: DatasetItemLabelsUpdate = {};
 
-        if (subtaskId) {
-            const existingSubtaskLabels = existingLabels[subtaskId];
+        if (options?.subtaskId) {
+            const existingSubtaskLabels = existingLabels[options.subtaskId];
 
             if (!existingSubtaskLabels) {
-                throw new Error(`No labels found for subtask ${subtaskId}`);
+                throw new Error(
+                    `No labels found for subtask ${options.subtaskId}`
+                );
             }
 
-            updatedLabels[subtaskId] = existingSubtaskLabels;
+            updatedLabels[options.subtaskId] = existingSubtaskLabels;
         } else {
             updatedLabels = existingLabels;
         }
@@ -106,13 +116,20 @@ export class Labels {
         taskId: string,
         datasetId: string,
         itemId: string,
-        subtaskId?: string
+        options?: {
+            subtaskId?: string;
+            modelId?: string;
+        }
     ): Promise<DatasetItemLabels> {
         const params = new URLSearchParams();
         params.append("generate_missing_explanations", "true");
 
-        if (subtaskId) {
-            params.append("subtask_id", subtaskId);
+        if (options?.subtaskId) {
+            params.append("subtask_id", options.subtaskId);
+        }
+
+        if (options?.modelId) {
+            params.append("model_id", options.modelId);
         }
 
         const response = await this.base.request<Dataset>(
