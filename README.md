@@ -20,7 +20,7 @@ yarn add refuel-sdk
 
 # 🧑‍💻 Usage
 
-Make sure you have a valid API key from Refuel (shared with your team during onboarding).
+To get started, you'll need a Refuel API key. You can find this in your [account settings](https://app.refuel.ai/settings) or contact your team administrator.
 
 Import the SDK into your application and start interacting with the Refuel API:
 
@@ -55,7 +55,7 @@ await refuel.applications.feedback(
     "your_labeled_item_id",
     // Correct label
     {
-        vegetarian: false,
+        vegetarian: "no",
     }
 );
 ```
