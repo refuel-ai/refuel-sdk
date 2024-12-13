@@ -135,13 +135,20 @@ export class Labels {
         taskId: string,
         datasetId: string,
         itemId: string,
-        subtaskId?: string
+        options?: {
+            subtaskId?: string;
+            modelId?: string;
+        }
     ): Promise<DatasetItemLabels> {
         const params = new URLSearchParams();
         params.append("generate_missing_explanations", "true");
 
-        if (subtaskId) {
-            params.append("subtask_id", subtaskId);
+        if (options?.subtaskId) {
+            params.append("subtask_id", options.subtaskId);
+        }
+
+        if (options?.modelId) {
+            params.append("model_id", options.modelId);
         }
 
         const response = await this.base.request<Dataset>(
