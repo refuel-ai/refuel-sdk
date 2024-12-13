@@ -6,6 +6,11 @@ import {
     LabelListOptions,
 } from "../types";
 
+/**
+ * Handles operations related to labels.
+ * This class is not intended to be instantiated directly.
+ * Instead, access it through an instance of the Refuel class.
+ */
 export class Labels {
     private base: RefuelBase;
 
@@ -23,6 +28,14 @@ export class Labels {
         return labels;
     }
 
+    /**
+     * List all labels for a dataset item
+     *
+     * @example
+     * ```ts
+     * const labels = await refuel.labels.list(taskId, datasetId, itemId);
+     * ```
+     */
     async list(
         taskId: string,
         datasetId: string,
@@ -60,6 +73,14 @@ export class Labels {
         return this.getLabelsFromResponse(response);
     }
 
+    /**
+     * Update labels for a dataset item
+     *
+     * @example
+     * ```ts
+     * const labels = await refuel.labels.update(taskId, datasetId, itemId, { "subtask_id": "label_value" });
+     * ```
+     */
     async update(
         taskId: string,
         datasetId: string,
@@ -77,6 +98,14 @@ export class Labels {
         return this.getLabelsFromResponse(response);
     }
 
+    /**
+     * Approve labels for a dataset item
+     *
+     * @example
+     * ```ts
+     * const labels = await refuel.labels.approve(taskId, datasetId, itemId, subtaskId);
+     * ```
+     */
     async approve(
         taskId: string,
         datasetId: string,

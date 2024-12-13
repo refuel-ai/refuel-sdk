@@ -6,6 +6,11 @@ import {
     TaskRunListOptions,
 } from "../types";
 
+/**
+ * Handles operations related to task runs.
+ * This class is not intended to be instantiated directly.
+ * Instead, access it through an instance of the Refuel class.
+ */
 export class TaskRuns {
     private base: RefuelBase;
 
@@ -13,6 +18,14 @@ export class TaskRuns {
         this.base = base;
     }
 
+    /**
+     * Create a task run
+     *
+     * @example
+     * ```ts
+     * const taskRun = await refuel.taskRuns.create(taskId, { datasetId });
+     * ```
+     */
     async create(
         taskId: string,
         options?: TaskRunCreateOptions
@@ -52,6 +65,14 @@ export class TaskRuns {
         });
     }
 
+    /**
+     * Cancel a task run
+     *
+     * @example
+     * ```ts
+     * await refuel.taskRuns.cancel(taskId, { datasetId });
+     * ```
+     */
     async cancel(taskId: string, options: TaskRunCancelOptions): Promise<void> {
         if (!options.datasetId && !options.evalSet) {
             throw new Error("Either datasetId or evalSet must be provided");
@@ -74,6 +95,14 @@ export class TaskRuns {
         });
     }
 
+    /**
+     * List all task runs
+     *
+     * @example
+     * ```ts
+     * const taskRuns = await refuel.taskRuns.list(taskId);
+     * ```
+     */
     async list(
         taskId: string,
         options?: TaskRunListOptions

@@ -1,6 +1,11 @@
 import { RefuelBase } from "../RefuelBase";
 import { ExportDatasetOptions, ExportDatasetResponse } from "../types";
 
+/**
+ * Handles operations related to dataset exports.
+ * This class is not intended to be instantiated directly.
+ * Instead, access it through an instance of the Refuel class.
+ */
 export class DatasetExports {
     private readonly base: RefuelBase;
 
@@ -8,12 +13,28 @@ export class DatasetExports {
         this.base = base;
     }
 
+    /**
+     * Get the URL of a dataset export
+     *
+     * @example
+     * ```ts
+     * const export = await refuel.datasetExports.get(exportId, datasetId);
+     * ```
+     */
     async get(exportId: string, datasetId: string): Promise<string> {
         return this.base.request<string>(
             `/datasets/${datasetId}/exports/${exportId}`
         );
     }
 
+    /**
+     * Email a secure, expiring link to download a dataset
+     *
+     * @example
+     * ```ts
+     * const export = await refuel.datasetExports.create(datasetId, { email: "example@example.com" });
+     * ```
+     */
     async create(
         datasetId: string,
         options?: ExportDatasetOptions
