@@ -1100,7 +1100,7 @@ export interface FinetuningHyperparameters {
      * is, the quicker it adapts but with increased risk of
      * instability
      */
-    learning_rate: number;
+    learning_rate_multiplier: number;
 
     /**
      * Sets how much the model adapts during finetuning —
@@ -1187,6 +1187,9 @@ export interface LabelingModel {
     /** Availability status */
     availability_status: AvailabilityStatus;
 
+    /** Generate labels with this model and include them in the training data */
+    augmented_finetuning_model: string | null;
+
     /** Base model */
     base_model: string;
 
@@ -1207,6 +1210,9 @@ export interface LabelingModel {
 
     /** Finetuning hyperparameters */
     hyperparameters: FinetuningHyperparameters | null;
+
+    /** Whether to use LoRA finetuning */
+    lora: boolean;
 
     /** Labeling model name */
     name: string;
@@ -1251,44 +1257,16 @@ export interface LabelingModel {
 /**
  * Options for creating a finetuned model
  */
-export interface FinetunedModelCreateOptions {
-    /** Generate labels with this model and include them in the training data */
-    augmented_finetuning_model: string | null;
-
-    /** Base model to finetune */
-    base_model: string;
-
-    /** Maximum number of training rows */
-    max_training_rows?: number;
-
-    /** Model to compare the finetuned model to */
-    comparison_model: string;
-
-    /** Datasets */
-    datasets: string[];
-
-    /** Finetuning hyperparameters */
-    hyperparameters: Pick<
-        FinetuningHyperparameters,
-        "lora_r" | "num_epochs"
-    > & {
-        /**
-         * Adjusts how fast the model learns — the higher it
-         * is, the quicker it adapts but with increased risk of
-         * instability
-         */
-        learning_rate_multiplier: number;
-    };
-
-    /** Whether to use LoRA finetuning */
-    lora: boolean;
-
-    /** Project ID */
-    project_id: string;
-
-    /** Task ID */
-    task_id: string;
-}
+export type FinetunedModelCreateOptions = Pick<
+    LabelingModel,
+    | "augmented_finetuning_model"
+    | "base_model"
+    | "datasets"
+    | "hyperparameters"
+    | "lora"
+    | "project_id"
+    | "task_id"
+>;
 
 /**
  * LLM model available to a team
