@@ -1,12 +1,32 @@
-🚧 This SDK is a work in progress
+# Refuel JavaScript SDK
 
-➡️ See our complete SDK for Python: https://docs.refuel.ai/python-sdk/
+The Refuel JavaScript SDK is a lightweight and easy-to-use client library for interacting with the [Refuel API](https://cloud-api.refuel.ai/docs). It enables you to label data, manage application responses, and collect feedback seamlessly within your JavaScript or TypeScript applications.
 
-## Examples
+_Note: We also have a [SDK for Python](https://docs.refuel.ai/python-sdk/)._
 
-### Label data with a deployed application
+# 📦 Installation
 
-```typescript
+To install the SDK, use npm or yarn:
+
+```sh
+npm install refuel-sdk
+```
+
+or
+
+```sh
+yarn add refuel-sdk
+```
+
+# 🧑‍💻 Usage
+
+Make sure you have a valid API key from Refuel (shared with your team during onboarding).
+
+Import the SDK into your application and start interacting with the Refuel API:
+
+## Example: Label Data
+
+```javascript
 import { Refuel } from "refuel-sdk";
 
 const refuel = new Refuel("your_access_token");
@@ -23,9 +43,9 @@ const applicationLabels = await refuel.applications.label(
 );
 ```
 
-### Update label from application response
+## Example: Update Label with Feedback
 
-```typescript
+```javascript
 import { Refuel } from "refuel-sdk";
 
 const refuel = new Refuel("your_access_token");
@@ -39,3 +59,7 @@ await refuel.applications.feedback(
     }
 );
 ```
+
+# Questions?
+
+Reach out to us at support@refuel.ai with any questions!
