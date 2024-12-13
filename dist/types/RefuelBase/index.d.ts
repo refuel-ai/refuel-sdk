@@ -5,6 +5,7 @@ export declare class RefuelAPIError extends Error {
     readonly status: number | undefined;
     constructor(response?: Response | undefined, url?: string | undefined, status?: number | undefined);
 }
+/** @internal */
 export declare class RefuelBase {
     protected readonly accessToken: string;
     protected readonly baseUrl: string;

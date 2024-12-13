@@ -1,6 +1,6 @@
 {
   "name": "refuel-sdk",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Label, clean and enrich text datasets with LLMs",
   "main": "dist/index.cjs.js",
   "module": "dist/index.mjs",
@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/refuel-ai/refuel-sdk/issues"
   },
-  "homepage": "https://github.com/refuel-ai/refuel-sdk#readme",
+  "homepage": "https://www.refuel.ai/blog-posts/introducing-refuel-cloud",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.3.0",
