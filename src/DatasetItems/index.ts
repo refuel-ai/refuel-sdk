@@ -8,6 +8,14 @@ export class DatasetItems {
         this.base = base;
     }
 
+    /**
+     * Add data to a dataset
+     *
+     * @example
+     * ```ts
+     * const dataset = await refuel.datasetItems.create(datasetId, [{ "name": "John Doe" }, { "name": "Jane Doe" }]);
+     * ```
+     */
     async create(
         datasetId: string,
         data: Record<string, unknown>[]
@@ -18,6 +26,14 @@ export class DatasetItems {
         });
     }
 
+    /**
+     * Get a dataset item by ID
+     *
+     * @example
+     * ```ts
+     * const item = await refuel.datasetItems.get(datasetId, itemId);
+     * ```
+     */
     async get(
         datasetId: string,
         itemId: string
@@ -60,6 +76,14 @@ export class DatasetItems {
         );
     }
 
+    /**
+     * Delete a dataset item
+     *
+     * @example
+     * ```ts
+     * await refuel.datasetItems.delete(datasetId, itemId);
+     * ```
+     */
     async delete(datasetId: string, itemId: string): Promise<void> {
         return this.base.request<void>(
             `/datasets/${datasetId}/items/${itemId}`,

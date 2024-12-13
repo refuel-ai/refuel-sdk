@@ -5,6 +5,11 @@ import {
     TaxonomyLabelData,
 } from "../types";
 
+/**
+ * Handles operations related to taxonomy labels.
+ * This class is not intended to be instantiated directly.
+ * Instead, access it through an instance of the Refuel class.
+ */
 export class TaxonomyLabels {
     private readonly base: RefuelBase;
 
@@ -12,6 +17,17 @@ export class TaxonomyLabels {
         this.base = base;
     }
 
+    /**
+     * Add labels to a taxonomy
+     *
+     * @example
+     * ```ts
+     * const label = await refuel.taxonomyLabels.create(taskId, taxonomyId, [
+     *  { name: "Label 1" },
+     *  { name: "Label 2" },
+     * ]);
+     * ```
+     */
     async create(
         taskId: string,
         taxonomyId: string,
@@ -33,6 +49,14 @@ export class TaxonomyLabels {
         );
     }
 
+    /**
+     * List all labels in a taxonomy
+     *
+     * @example
+     * ```ts
+     * const labels = await refuel.taxonomyLabels.list(taskId, taxonomyId);
+     * ```
+     */
     async list(
         taskId: string,
         taxonomyId: string,
@@ -61,6 +85,14 @@ export class TaxonomyLabels {
         );
     }
 
+    /**
+     * Update a label in a taxonomy
+     *
+     * @example
+     * ```ts
+     * const label = await refuel.taxonomyLabels.update(taskId, taxonomyId, labelId, { name: "New Name" });
+     * ```
+     */
     async update(
         taskId: string,
         taxonomyId: string,
@@ -76,6 +108,14 @@ export class TaxonomyLabels {
         );
     }
 
+    /**
+     * Delete a label from a taxonomy
+     *
+     * @example
+     * ```ts
+     * await refuel.taxonomyLabels.delete(taskId, taxonomyId, labelId);
+     * ```
+     */
     async delete(
         taskId: string,
         taxonomyId: string,

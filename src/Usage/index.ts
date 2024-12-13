@@ -8,6 +8,14 @@ export class Usage {
         this.base = base;
     }
 
+    /**
+     * Get usage data for a specific time period
+     *
+     * @example
+     * ```ts
+     * const usage = await refuel.usage.get("2024-01-01", "2024-01-31");
+     * ```
+     */
     async get(
         startDate: string,
         endDate: string,

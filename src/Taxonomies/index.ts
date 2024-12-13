@@ -5,6 +5,11 @@ import {
     TaxonomyLabelsResponse,
 } from "../types";
 
+/**
+ * Handles operations related to taxonomies.
+ * This class is not intended to be instantiated directly.
+ * Instead, access it through an instance of the Refuel class.
+ */
 export class Taxonomies {
     private readonly base: RefuelBase;
 
@@ -12,6 +17,17 @@ export class Taxonomies {
         this.base = base;
     }
 
+    /**
+     * Create a taxonomy for a task
+     *
+     * @example
+     * ```ts
+     * const taxonomy = await refuel.taxonomies.create(taskId, [
+     *  { name: "Label 1" },
+     *  { name: "Label 2" },
+     * ]);
+     * ```
+     */
     async create(
         taskId: string,
         labels: TaxonomyLabelData | TaxonomyLabelData[] = []
@@ -35,6 +51,14 @@ export class Taxonomies {
         );
     }
 
+    /**
+     * Delete a taxonomy
+     *
+     * @example
+     * ```ts
+     * await refuel.taxonomies.delete(taskId, taxonomyId);
+     * ```
+     */
     async delete(taskId: string, taxonomyId: string): Promise<void> {
         return this.base.request<void>(
             `/tasks/${taskId}/taxonomies/${taxonomyId}`,
@@ -44,6 +68,14 @@ export class Taxonomies {
         );
     }
 
+    /**
+     * Create a duplicate of an existing taxonomy
+     *
+     * @example
+     * ```ts
+     * const taxonomy = await refuel.taxonomies.duplicate(taskId, taxonomyId);
+     * ```
+     */
     async duplicate(
         taskId: string,
         taxonomyId: string

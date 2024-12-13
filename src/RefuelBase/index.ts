@@ -17,6 +17,7 @@ export class RefuelAPIError extends Error {
     }
 }
 
+/** @internal */
 export class RefuelBase {
     protected readonly accessToken: string;
     protected readonly baseUrl: string;
