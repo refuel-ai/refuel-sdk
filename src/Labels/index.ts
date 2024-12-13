@@ -110,20 +110,30 @@ export class Labels {
         taskId: string,
         datasetId: string,
         itemId: string,
-        subtaskId?: string
+        options?: {
+            subtaskId?: string;
+            modelId?: string;
+        }
     ): Promise<DatasetItemLabels> {
-        const existingLabels = await this.list(taskId, datasetId, itemId);
+        const existingLabels = await this.list(
+            taskId,
+            datasetId,
+            itemId,
+            options
+        );
 
         let updatedLabels: DatasetItemLabelsUpdate = {};
 
-        if (subtaskId) {
-            const existingSubtaskLabels = existingLabels[subtaskId];
+        if (options?.subtaskId) {
+            const existingSubtaskLabels = existingLabels[options.subtaskId];
 
             if (!existingSubtaskLabels) {
-                throw new Error(`No labels found for subtask ${subtaskId}`);
+                throw new Error(
+                    `No labels found for subtask ${options.subtaskId}`
+                );
             }
 
-            updatedLabels[subtaskId] = existingSubtaskLabels;
+            updatedLabels[options.subtaskId] = existingSubtaskLabels;
         } else {
             updatedLabels = existingLabels;
         }
