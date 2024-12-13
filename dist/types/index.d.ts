@@ -17,6 +17,19 @@ import { TeamModels } from "./TeamModels";
 import { RefuelOptions } from "./types";
 import { Usage } from "./Usage";
 import { Users } from "./Users";
+/**
+ * Main class for interacting with the Refuel API.
+ *
+ * @example
+ * ```ts
+ * // Initialize the Refuel class with your access token
+ * const refuel = new Refuel(accessToken);
+ *
+ * // List all projects
+ * const projects = await refuel.projects.list();
+ * console.log(projects);
+ * ```
+ */
 export declare class Refuel {
     readonly base: RefuelBase;
     readonly applications: Applications;
