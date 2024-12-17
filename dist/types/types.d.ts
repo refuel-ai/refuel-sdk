@@ -891,6 +891,8 @@ export interface LabelingModel {
     augmented_finetuning_model: string | null;
     /** Base model */
     base_model: string;
+    /** Model to evaluate the finetuned model against */
+    comparison_model?: string | null;
     /** Date the labeling model was created */
     created_at: string | null;
     /** Datasets the labeling model is associated with */
@@ -940,7 +942,7 @@ export interface LabelingModel {
 /**
  * Options for creating a finetuned model
  */
-export type FinetunedModelCreateOptions = Pick<LabelingModel, "augmented_finetuning_model" | "base_model" | "datasets" | "hyperparameters" | "lora" | "project_id" | "task_id">;
+export type FinetunedModelCreateOptions = Pick<LabelingModel, "augmented_finetuning_model" | "base_model" | "comparison_model" | "datasets" | "hyperparameters" | "lora" | "project_id" | "task_id">;
 /**
  * LLM model available to a team
  */
