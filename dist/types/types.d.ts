@@ -811,7 +811,7 @@ export interface EvaluationStat {
  * Finetuning hyperparameters
  */
 export interface FinetuningHyperparameters {
-    adapter: string;
+    adapter?: string;
     /**
      * Adjusts how fast the model learns — the higher it
      * is, the quicker it adapts but with increased risk of
@@ -824,7 +824,7 @@ export interface FinetuningHyperparameters {
      * can learn, but it also requires more training data
      * to avoid overfitting
      */
-    lora_r: 8 | 16 | 32 | 64;
+    lora_r?: 8 | 16 | 32 | 64;
     /**
      * Sets the number of times the model will go through
      * the entire training data to improve its learning
