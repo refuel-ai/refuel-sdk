@@ -1,4 +1,5 @@
 import { Applications } from "./Applications";
+import { Calibrations } from "./Calibrations";
 import { DatasetExports } from "./DatasetExports";
 import { DatasetItems } from "./DatasetItems";
 import { Datasets } from "./Datasets";
@@ -35,6 +36,7 @@ export class Refuel {
     public readonly base: RefuelBase;
 
     public readonly applications: Applications;
+    public readonly calibrations: Calibrations;
     public readonly datasetExports: DatasetExports;
     public readonly datasetItems: DatasetItems;
     public readonly datasets: Datasets;
@@ -69,6 +71,7 @@ export class Refuel {
         );
 
         this.applications = new Applications(this.base);
+        this.calibrations = new Calibrations(this.base);
         this.datasets = new Datasets(this.base);
         this.datasetItems = new DatasetItems(this.base);
         this.datasetExports = new DatasetExports(this.base);
