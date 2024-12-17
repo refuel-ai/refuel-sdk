@@ -1,6 +1,6 @@
 {
   "name": "refuel-sdk",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Label, clean and enrich text datasets with LLMs",
   "main": "dist/index.cjs.js",
   "module": "dist/index.mjs",
