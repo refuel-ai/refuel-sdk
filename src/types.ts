@@ -1193,6 +1193,9 @@ export interface LabelingModel {
     /** Base model */
     base_model: string;
 
+    /** Model to evaluate the finetuned model against */
+    comparison_model?: string | null;
+
     /** Date the labeling model was created */
     created_at: string | null;
 
@@ -1261,6 +1264,7 @@ export type FinetunedModelCreateOptions = Pick<
     LabelingModel,
     | "augmented_finetuning_model"
     | "base_model"
+    | "comparison_model"
     | "datasets"
     | "hyperparameters"
     | "lora"
