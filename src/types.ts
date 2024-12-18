@@ -180,9 +180,6 @@ export interface ApplicationLabelOptions {
 
     /** Redact personally identifiable information */
     redactPII?: boolean;
-
-    /** Whether to compute telemetry metrics (e.g. how many tokens were used) */
-    telemetry?: boolean;
 }
 
 /**
