@@ -38,6 +38,13 @@ export type RefuelOptions = Pick<
 > & {
     /** Origin to send requests to */
     baseUrl?: string;
+
+    /**
+     * Refuel API key
+     *
+     * @see https://app.refuel.ai/settings
+     */
+    apiKey?: string;
 };
 
 /**

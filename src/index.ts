@@ -52,8 +52,21 @@ export class Refuel {
     public readonly usage: Usage;
     public readonly users: Users;
 
-    constructor(accessToken: string, options?: RefuelOptions) {
-        this.base = new RefuelBase(accessToken, options);
+    constructor(options?: RefuelOptions | string) {
+        let apiKey = typeof options === "string" ? options : options?.apiKey;
+
+        if (!apiKey && typeof process !== "undefined") {
+            apiKey = process.env.REFUEL_API_KEY;
+        }
+
+        if (!apiKey) {
+            throw new Error("Refuel API key is required");
+        }
+
+        this.base = new RefuelBase(
+            apiKey,
+            typeof options === "string" ? undefined : options
+        );
 
         this.applications = new Applications(this.base);
         this.datasets = new Datasets(this.base);
