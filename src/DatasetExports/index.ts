@@ -9,6 +9,7 @@ import { ExportDatasetOptions, ExportDatasetResponse } from "../types";
 export class DatasetExports {
     private readonly base: RefuelBase;
 
+    /** @internal */
     constructor(base: RefuelBase) {
         this.base = base;
     }

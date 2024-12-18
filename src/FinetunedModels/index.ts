@@ -4,6 +4,7 @@ import { LabelingModel, FinetunedModelCreateOptions } from "../types";
 export class FinetunedModels {
     private base: RefuelBase;
 
+    /** @internal */
     constructor(base: RefuelBase) {
         this.base = base;
     }

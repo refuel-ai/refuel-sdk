@@ -17,6 +17,7 @@ import {
 export class Applications {
     private readonly base: RefuelBase;
 
+    /** @internal */
     constructor(base: RefuelBase) {
         this.base = base;
     }
