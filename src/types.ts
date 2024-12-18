@@ -139,7 +139,7 @@ export interface ApplicationOutputSync<FieldKeys extends string = string> {
     refuel_fields: Record<FieldKeys, ApplicationLabel>;
 
     /** Telemetry metrics, such as how many tokens were used */
-    usage?: Record<string, unknown>;
+    usage: Record<string, unknown>;
 }
 
 /**
