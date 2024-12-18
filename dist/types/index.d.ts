@@ -49,6 +49,6 @@ export declare class Refuel {
     readonly teamModels: TeamModels;
     readonly usage: Usage;
     readonly users: Users;
-    constructor(accessToken: string, options?: RefuelOptions);
+    constructor(options?: RefuelOptions | string);
 }
 export * from "./types";

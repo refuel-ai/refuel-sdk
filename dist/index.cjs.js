@@ -123,9 +123,6 @@ class Applications {
         if (options === null || options === void 0 ? void 0 : options.modelId) {
             params.append("model_id", options.modelId);
         }
-        if ((options === null || options === void 0 ? void 0 : options.telemetry) !== undefined) {
-            params.append("telemetry", options.telemetry.toString());
-        }
         if ((options === null || options === void 0 ? void 0 : options.explain) !== undefined) {
             params.append("explain", options.explain.toString());
         }
@@ -1359,8 +1356,15 @@ exports.FinetuningRunStatus = void 0;
  * ```
  */
 class Refuel {
-    constructor(accessToken, options) {
-        this.base = new RefuelBase(accessToken, options);
+    constructor(options) {
+        let apiKey = typeof options === "string" ? options : options === null || options === void 0 ? void 0 : options.apiKey;
+        if (!apiKey && typeof process !== "undefined") {
+            apiKey = process.env.REFUEL_API_KEY;
+        }
+        if (!apiKey) {
+            throw new Error("Refuel API key is required");
+        }
+        this.base = new RefuelBase(apiKey, typeof options === "string" ? undefined : options);
         this.applications = new Applications(this.base);
         this.datasets = new Datasets(this.base);
         this.datasetItems = new DatasetItems(this.base);
