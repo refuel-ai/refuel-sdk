@@ -28,6 +28,12 @@ export interface RequestOptions<T> {
 export type RefuelOptions = Pick<RequestOptions<unknown>, "retries" | "initialRetryTimeout" | "maxRetries" | "retryStatusCodes"> & {
     /** Origin to send requests to */
     baseUrl?: string;
+    /**
+     * Refuel API key
+     *
+     * @see https://app.refuel.ai/settings
+     */
+    apiKey?: string;
 };
 /**
  * Application for labeling items
@@ -133,8 +139,6 @@ export interface ApplicationLabelOptions {
     modelId?: string;
     /** Redact personally identifiable information */
     redactPII?: boolean;
-    /** Whether to compute telemetry metrics (e.g. how many tokens were used) */
-    telemetry?: boolean;
 }
 /**
  * Data to create a project
