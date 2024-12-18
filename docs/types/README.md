@@ -1,0 +1,91 @@
+[**refuel-sdk**](../README.md)
+
+***
+
+[refuel-sdk](../modules.md) / types
+
+# types
+
+## Index
+
+### Enumerations
+
+- [AvailabilityStatus](enumerations/AvailabilityStatus.md)
+- [DatasetColumnType](enumerations/DatasetColumnType.md)
+- [FeatureFlagValues](enumerations/FeatureFlagValues.md)
+- [FilterFieldCategory](enumerations/FilterFieldCategory.md)
+- [FilterOperator](enumerations/FilterOperator.md)
+- [FinetuningRunStatus](enumerations/FinetuningRunStatus.md)
+- [LabelSource](enumerations/LabelSource.md)
+- [MetricFormat](enumerations/MetricFormat.md)
+- [SchemaMode](enumerations/SchemaMode.md)
+- [TaskType](enumerations/TaskType.md)
+- [TransformType](enumerations/TransformType.md)
+- [UserState](enumerations/UserState.md)
+
+### Interfaces
+
+- [Application](interfaces/Application.md)
+- [ApplicationCreateOptions](interfaces/ApplicationCreateOptions.md)
+- [ApplicationLabel](interfaces/ApplicationLabel.md)
+- [ApplicationLabelOptions](interfaces/ApplicationLabelOptions.md)
+- [ApplicationLabelResponse](interfaces/ApplicationLabelResponse.md)
+- [ApplicationOutputAsync](interfaces/ApplicationOutputAsync.md)
+- [ApplicationOutputSync](interfaces/ApplicationOutputSync.md)
+- [AuthenticatedUser](interfaces/AuthenticatedUser.md)
+- [ColumnMetadata](interfaces/ColumnMetadata.md)
+- [Dataset](interfaces/Dataset.md)
+- [DatasetFromList](interfaces/DatasetFromList.md)
+- [DatasetItemLabel](interfaces/DatasetItemLabel.md)
+- [DatasetItemLabels](interfaces/DatasetItemLabels.md)
+- [DatasetItemLabelsUpdate](interfaces/DatasetItemLabelsUpdate.md)
+- [DatasetItemsOptions](interfaces/DatasetItemsOptions.md)
+- [DatasetSchema](interfaces/DatasetSchema.md)
+- [DatasetSchemaColumn](interfaces/DatasetSchemaColumn.md)
+- [EvaluationStat](interfaces/EvaluationStat.md)
+- [ExportDatasetOptions](interfaces/ExportDatasetOptions.md)
+- [ExportDatasetResponse](interfaces/ExportDatasetResponse.md)
+- [FinetuningHyperparameters](interfaces/FinetuningHyperparameters.md)
+- [FinetuningRunStage](interfaces/FinetuningRunStage.md)
+- [Integration](interfaces/Integration.md)
+- [InviteUsersResponse](interfaces/InviteUsersResponse.md)
+- [LabeledDatasetItem](interfaces/LabeledDatasetItem.md)
+- [LabelingModel](interfaces/LabelingModel.md)
+- [LabelListOptions](interfaces/LabelListOptions.md)
+- [Metadata](interfaces/Metadata.md)
+- [MetricResult](interfaces/MetricResult.md)
+- [Project](interfaces/Project.md)
+- [ProjectData](interfaces/ProjectData.md)
+- [RefuelTeam](interfaces/RefuelTeam.md)
+- [RequestOptions](interfaces/RequestOptions.md)
+- [SQLFilter](interfaces/SQLFilter.md)
+- [Subtask](interfaces/Subtask.md)
+- [Task](interfaces/Task.md)
+- [TaskRun](interfaces/TaskRun.md)
+- [TaskRunCancelOptions](interfaces/TaskRunCancelOptions.md)
+- [TaskRunCreateOptions](interfaces/TaskRunCreateOptions.md)
+- [TaskRunListOptions](interfaces/TaskRunListOptions.md)
+- [TaskRunMetrics](interfaces/TaskRunMetrics.md)
+- [TaxonomyLabel](interfaces/TaxonomyLabel.md)
+- [TaxonomyLabelData](interfaces/TaxonomyLabelData.md)
+- [TaxonomyLabelRequestBody](interfaces/TaxonomyLabelRequestBody.md)
+- [TaxonomyLabelsResponse](interfaces/TaxonomyLabelsResponse.md)
+- [TeamModel](interfaces/TeamModel.md)
+- [Telemetry](interfaces/Telemetry.md)
+- [Transform](interfaces/Transform.md)
+- [UsageMetric](interfaces/UsageMetric.md)
+- [User](interfaces/User.md)
+
+### Type Aliases
+
+- [DatasetItemLabelUpdateData](type-aliases/DatasetItemLabelUpdateData.md)
+- [DeepPartial](type-aliases/DeepPartial.md)
+- [FilterOperatorOption](type-aliases/FilterOperatorOption.md)
+- [FilterValueType](type-aliases/FilterValueType.md)
+- [FinetunedModelCreateOptions](type-aliases/FinetunedModelCreateOptions.md)
+- [IntegrationConfig](type-aliases/IntegrationConfig.md)
+- [RefuelOptions](type-aliases/RefuelOptions.md)
+- [SortDirection](type-aliases/SortDirection.md)
+- [TaskRunStatus](type-aliases/TaskRunStatus.md)
+- [UsageData](type-aliases/UsageData.md)
+- [UsageMetricKey](type-aliases/UsageMetricKey.md)
