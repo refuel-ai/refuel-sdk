@@ -159,10 +159,6 @@ export class Applications {
             params.append("model_id", options.modelId);
         }
 
-        if (options?.telemetry !== undefined) {
-            params.append("telemetry", options.telemetry.toString());
-        }
-
         if (options?.explain !== undefined) {
             params.append("explain", options.explain.toString());
         }
