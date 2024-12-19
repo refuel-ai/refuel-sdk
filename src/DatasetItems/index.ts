@@ -4,6 +4,7 @@ import { Dataset, DatasetItemsOptions } from "../types";
 export class DatasetItems {
     private readonly base: RefuelBase;
 
+    /** @internal */
     constructor(base: RefuelBase) {
         this.base = base;
     }
