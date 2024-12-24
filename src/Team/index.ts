@@ -29,10 +29,10 @@ export class Team {
      * ```
      */
     async regenerateApiKey(): Promise<string> {
-        await this.base.request<void>("/team?regenerate_api_key=true", {
+        const params = new URLSearchParams({ regenerate_api_key: "true" });
+        await this.base.request<void>(`/team?${params.toString()}`, {
             method: "POST",
         });
-
         return (await this.get()).refuel_api_key;
     }
 
