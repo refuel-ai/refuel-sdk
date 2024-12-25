@@ -11,6 +11,8 @@
 ### Enumerations
 
 - [AvailabilityStatus](enumerations/AvailabilityStatus.md)
+- [CalibrationModel](enumerations/CalibrationModel.md)
+- [CalibrationStatus](enumerations/CalibrationStatus.md)
 - [DatasetColumnType](enumerations/DatasetColumnType.md)
 - [FeatureFlagValues](enumerations/FeatureFlagValues.md)
 - [FilterFieldCategory](enumerations/FilterFieldCategory.md)
@@ -33,6 +35,7 @@
 - [ApplicationOutputAsync](interfaces/ApplicationOutputAsync.md)
 - [ApplicationOutputSync](interfaces/ApplicationOutputSync.md)
 - [AuthenticatedUser](interfaces/AuthenticatedUser.md)
+- [Calibration](interfaces/Calibration.md)
 - [ColumnMetadata](interfaces/ColumnMetadata.md)
 - [Dataset](interfaces/Dataset.md)
 - [DatasetFromList](interfaces/DatasetFromList.md)

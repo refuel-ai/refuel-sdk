@@ -7,6 +7,7 @@ import { Dataset, DatasetFromList } from "../types";
  */
 export declare class Datasets {
     private readonly base;
+    /** @internal */
     constructor(base: RefuelBase);
     /**
      * Get a dataset by ID

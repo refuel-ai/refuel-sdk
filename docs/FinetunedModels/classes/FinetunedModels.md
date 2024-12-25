@@ -44,7 +44,7 @@ const model = await refuel.finetunedModels.create({
 
 #### Defined in
 
-[src/FinetunedModels/index.ts:32](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/FinetunedModels/index.ts#L32)
+[src/FinetunedModels/index.ts:32](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/FinetunedModels/index.ts#L32)
 
 ***
 
@@ -72,7 +72,7 @@ await refuel.finetunedModels.delete(modelId);
 
 #### Defined in
 
-[src/FinetunedModels/index.ts:94](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/FinetunedModels/index.ts#L94)
+[src/FinetunedModels/index.ts:94](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/FinetunedModels/index.ts#L94)
 
 ***
 
@@ -100,7 +100,7 @@ const model = await refuel.finetunedModels.get(modelId);
 
 #### Defined in
 
-[src/FinetunedModels/index.ts:50](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/FinetunedModels/index.ts#L50)
+[src/FinetunedModels/index.ts:50](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/FinetunedModels/index.ts#L50)
 
 ***
 
@@ -132,7 +132,7 @@ const models = await refuel.finetunedModels.list(projectId);
 
 #### Defined in
 
-[src/FinetunedModels/index.ts:62](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/FinetunedModels/index.ts#L62)
+[src/FinetunedModels/index.ts:62](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/FinetunedModels/index.ts#L62)
 
 ***
 
@@ -156,4 +156,4 @@ const models = await refuel.finetunedModels.list(projectId);
 
 #### Defined in
 
-[src/FinetunedModels/index.ts:73](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/FinetunedModels/index.ts#L73)
+[src/FinetunedModels/index.ts:73](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/FinetunedModels/index.ts#L73)

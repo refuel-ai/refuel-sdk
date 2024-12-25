@@ -1047,3 +1047,45 @@ export interface LabelListOptions {
      */
     generateMissingExplanations?: boolean;
 }
+/**
+ * The status of a confidence calibration
+ */
+export declare enum CalibrationStatus {
+    IN_PROGRESS = "IN_PROGRESS",
+    DELETED = "DELETED",
+    INTERRUPTED = "INTERRUPTED",
+    COMPLETED = "COMPLETED"
+}
+/**
+ * The model used for confidence calibration
+ */
+export declare enum CalibrationModel {
+    LINEAR_REGRESSION = "LINEAR_REGRESSION"
+}
+/**
+ * Confidence calibration
+ */
+export interface Calibration {
+    /** Calibration ID */
+    id: string;
+    /** Calibration name */
+    name: string;
+    /** Project ID */
+    project_id: string;
+    /** Task ID */
+    task_id: string;
+    /** Calibration status */
+    status: CalibrationStatus;
+    /** Training hyperparameters */
+    training_hyperparameters: string;
+    /** Calibration model */
+    model: CalibrationModel;
+    /** Model artifacts */
+    model_artifacts: Record<string, unknown>;
+    /** Date the calibration was created */
+    created_at: string;
+    /** Date the calibration was last updated */
+    updated_at: string;
+    /** Team ID */
+    team: string;
+}

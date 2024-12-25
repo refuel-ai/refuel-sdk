@@ -22,7 +22,7 @@ Data to send in the body of the request
 
 #### Defined in
 
-[src/types.ts:17](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L17)
+[src/types.ts:17](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L17)
 
 ***
 
@@ -34,7 +34,7 @@ Initial retry timeout (in milliseconds)
 
 #### Defined in
 
-[src/types.ts:23](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L23)
+[src/types.ts:23](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L23)
 
 ***
 
@@ -46,7 +46,7 @@ Maximum number of retries
 
 #### Defined in
 
-[src/types.ts:26](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L26)
+[src/types.ts:26](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L26)
 
 ***
 
@@ -64,7 +64,7 @@ HTTP method to use
 
 #### Defined in
 
-[src/types.ts:14](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L14)
+[src/types.ts:14](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L14)
 
 ***
 
@@ -76,7 +76,7 @@ Number of retries attempted
 
 #### Defined in
 
-[src/types.ts:20](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L20)
+[src/types.ts:20](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L20)
 
 ***
 
@@ -88,4 +88,4 @@ Status codes to retry on
 
 #### Defined in
 
-[src/types.ts:29](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L29)
+[src/types.ts:29](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L29)

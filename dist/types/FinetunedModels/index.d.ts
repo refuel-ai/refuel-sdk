@@ -2,6 +2,7 @@ import { RefuelBase } from "../RefuelBase";
 import { LabelingModel, FinetunedModelCreateOptions } from "../types";
 export declare class FinetunedModels {
     private base;
+    /** @internal */
     constructor(base: RefuelBase);
     /**
      * Create a new finetuned model

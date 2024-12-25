@@ -68,6 +68,24 @@ Re-exports [AvailabilityStatus](../types/enumerations/AvailabilityStatus.md)
 
 ***
 
+### Calibration
+
+Re-exports [Calibration](../types/interfaces/Calibration.md)
+
+***
+
+### CalibrationModel
+
+Re-exports [CalibrationModel](../types/enumerations/CalibrationModel.md)
+
+***
+
+### CalibrationStatus
+
+Re-exports [CalibrationStatus](../types/enumerations/CalibrationStatus.md)
+
+***
+
 ### ColumnMetadata
 
 Re-exports [ColumnMetadata](../types/interfaces/ColumnMetadata.md)

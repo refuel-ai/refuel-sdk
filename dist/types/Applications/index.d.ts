@@ -7,6 +7,7 @@ import { Application, ApplicationCreateOptions, ApplicationLabelOptions, Applica
  */
 export declare class Applications {
     private readonly base;
+    /** @internal */
     constructor(base: RefuelBase);
     /**
      * Deploy a specific task as an application

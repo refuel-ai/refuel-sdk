@@ -7,6 +7,7 @@ import { ExportDatasetOptions, ExportDatasetResponse } from "../types";
  */
 export declare class DatasetExports {
     private readonly base;
+    /** @internal */
     constructor(base: RefuelBase);
     /**
      * Get the URL of a dataset export

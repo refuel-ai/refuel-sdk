@@ -2,6 +2,7 @@ import { RefuelBase } from "../RefuelBase";
 import { Dataset, DatasetItemsOptions } from "../types";
 export declare class DatasetItems {
     private readonly base;
+    /** @internal */
     constructor(base: RefuelBase);
     /**
      * Add data to a dataset
