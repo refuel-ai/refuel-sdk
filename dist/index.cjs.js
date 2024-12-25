@@ -6,6 +6,7 @@
  * Instead, access it through an instance of the Refuel class.
  */
 class Applications {
+    /** @internal */
     constructor(base) {
         this.base = base;
     }
@@ -176,11 +177,278 @@ class Applications {
 }
 
 /**
+ * The source of a label value
+ */
+exports.LabelSource = void 0;
+(function (LabelSource) {
+    /** Label from an LLM */
+    LabelSource["LLM"] = "LLM";
+    /** Label from a human */
+    LabelSource["HUMAN"] = "HUMAN";
+})(exports.LabelSource || (exports.LabelSource = {}));
+/**
+ * The type of a column value
+ */
+exports.DatasetColumnType = void 0;
+(function (DatasetColumnType) {
+    DatasetColumnType["STRING"] = "string";
+    DatasetColumnType["NUMBER"] = "number";
+    DatasetColumnType["BOOLEAN"] = "boolean";
+    DatasetColumnType["IMAGE_URL"] = "image_url";
+    DatasetColumnType["PDF_URL"] = "pdf_url";
+})(exports.DatasetColumnType || (exports.DatasetColumnType = {}));
+/**
+ * The category of a filter field
+ */
+exports.FilterFieldCategory = void 0;
+(function (FilterFieldCategory) {
+    /** Filter on a label */
+    FilterFieldCategory["LABEL"] = "label";
+    /** Filter on metadata */
+    FilterFieldCategory["METADATA"] = "metadata";
+    /** Filter on similar items */
+    FilterFieldCategory["SIMILAR"] = "similar";
+})(exports.FilterFieldCategory || (exports.FilterFieldCategory = {}));
+/**
+ * The operator to use for a filter
+ */
+exports.FilterOperator = void 0;
+(function (FilterOperator) {
+    /** Equal to */
+    FilterOperator["EQUAL"] = "=";
+    /** Greater than */
+    FilterOperator["GREATER_THAN"] = ">";
+    /** Greater than or equal to */
+    FilterOperator["GREATER_THAN_OR_EQUAL"] = ">=";
+    /** ILIKE */
+    FilterOperator["ILIKE"] = "ILIKE";
+    /** In a list */
+    FilterOperator["IN"] = "IN";
+    /** Is not verified */
+    FilterOperator["IS_NOT_VERIFIED"] = "IS NOT VERIFIED";
+    /** Is verified */
+    FilterOperator["IS_VERIFIED"] = "IS VERIFIED";
+    /** Less than */
+    FilterOperator["LESS_THAN"] = "<";
+    /** Less than or equal to */
+    FilterOperator["LESS_THAN_OR_EQUAL"] = "<=";
+    /** Matches */
+    FilterOperator["MATCHES"] = "~*";
+    /** Not equal to */
+    FilterOperator["NOT_EQUAL"] = "<>";
+    /** Not ILIKE */
+    FilterOperator["NOT_ILIKE"] = "NOT ILIKE";
+    /** Not matches */
+    FilterOperator["NOT_MATCHES"] = "!~*";
+    /** Not null */
+    FilterOperator["NOT_NULL"] = "IS NOT NULL";
+    /** Null */
+    FilterOperator["NULL"] = "IS NULL";
+    /** Similar to another item */
+    FilterOperator["SIMILAR"] = "SIMILAR";
+})(exports.FilterOperator || (exports.FilterOperator = {}));
+/**
+ * The mode to used to generate the schema for a subtask
+ */
+exports.SchemaMode = void 0;
+(function (SchemaMode) {
+    /** Automatically generate the schema from the guidelines */
+    SchemaMode["AUTO"] = "auto";
+    /** Manually specify the schema */
+    SchemaMode["MANUAL"] = "manual";
+})(exports.SchemaMode || (exports.SchemaMode = {}));
+/**
+ * The type of enrichment
+ */
+exports.TransformType = void 0;
+(function (TransformType) {
+    /** Search the web for information relevant to the input */
+    TransformType["WEB_SEARCH"] = "web_search";
+    /** Search for a location on a map */
+    TransformType["MAP_SEARCH"] = "map_search";
+    /** Transform a webpage into structured data */
+    TransformType["WEBPAGE_TRANSFORM"] = "webpage_transform";
+    /** Extract text from an image or document */
+    TransformType["OCR"] = "ocr";
+    /** Use a custom API to transform the data */
+    TransformType["CUSTOM_API"] = "custom_api";
+})(exports.TransformType || (exports.TransformType = {}));
+/**
+ * The type of task
+ */
+exports.TaskType = void 0;
+(function (TaskType) {
+    /** Classify an item into one category */
+    TaskType["CLASSIFICATION"] = "classification";
+    /** Classify an item into one or more categories */
+    TaskType["MULTILABEL_CLASSIFICATION"] = "multilabel_classification";
+    /** Extract an answer from an item */
+    TaskType["ANSWER_EXTRACTION"] = "answer_extraction";
+    /** Extract structured data from a document */
+    TaskType["DOCUMENT_EXTRACTION"] = "document_extraction";
+    /** Extract attributes from an item */
+    TaskType["ATTRIBUTE_EXTRACTION"] = "attribute_extraction";
+    /** Chain of tasks */
+    TaskType["TASK_CHAIN"] = "task_chain";
+})(exports.TaskType || (exports.TaskType = {}));
+exports.FeatureFlagValues = void 0;
+(function (FeatureFlagValues) {
+    FeatureFlagValues["ENABLED"] = "enabled";
+    FeatureFlagValues["DISABLED"] = "disabled";
+})(exports.FeatureFlagValues || (exports.FeatureFlagValues = {}));
+/**
+ * Possible states for a user
+ */
+exports.UserState = void 0;
+(function (UserState) {
+    /** User is active */
+    UserState["ACTIVE"] = "ACTIVE";
+    /** User has been invited to the team */
+    UserState["INVITED"] = "INVITED";
+    /** User has been created but not invited */
+    UserState["CREATED"] = "CREATED";
+})(exports.UserState || (exports.UserState = {}));
+/**
+ * The format of a metric
+ */
+exports.MetricFormat = void 0;
+(function (MetricFormat) {
+    /** Numeric metric */
+    MetricFormat["NUMERIC"] = "numeric";
+    /** Percentage metric */
+    MetricFormat["PERCENTAGE"] = "percentage";
+    /** Histogram metric */
+    MetricFormat["HISTOGRAM"] = "histogram";
+    /** Dictionary metric */
+    MetricFormat["DICT"] = "dict";
+})(exports.MetricFormat || (exports.MetricFormat = {}));
+/**
+ * The availability status of a labeling model
+ */
+exports.AvailabilityStatus = void 0;
+(function (AvailabilityStatus) {
+    AvailabilityStatus["UNAVAILABLE"] = "UNAVAILABLE";
+    AvailabilityStatus["AVAILABLE"] = "AVAILABLE";
+})(exports.AvailabilityStatus || (exports.AvailabilityStatus = {}));
+/**
+ * The status of a finetuning run
+ */
+exports.FinetuningRunStatus = void 0;
+(function (FinetuningRunStatus) {
+    FinetuningRunStatus["INITIALIZATION_IN_PROGRESS"] = "INITIALIZATION IN PROGRESS";
+    FinetuningRunStatus["INITIALIZATION_COMPLETE"] = "INITIALIZATION COMPLETE";
+    FinetuningRunStatus["DATASET_PREP_NOT_STARTED"] = "DATASET PREPARATION NOT STARTED";
+    FinetuningRunStatus["DATASET_PREP_IN_PROGRESS"] = "DATASET PREPARATION IN PROGRESS";
+    FinetuningRunStatus["DATASET_PREP_COMPLETED"] = "DATASET PREPARATION COMPLETED";
+    FinetuningRunStatus["DATASET_PREP_FAILED"] = "DATASET PREPARATION FAILED";
+    FinetuningRunStatus["RESOURCE_ALLOCATION_NOT_STARTED"] = "RESOURCE ALLOCATION NOT STARTED";
+    FinetuningRunStatus["RESOURCE_ALLOCATION_IN_PROGRESS"] = "RESOURCE ALLOCATION IN PROGRESS";
+    FinetuningRunStatus["RESOURCE_ALLOCATION_COMPLETED"] = "RESOURCE ALLOCATION COMPLETED";
+    FinetuningRunStatus["RESOURCE_ALLOCATION_FAILED"] = "RESOURCE ALLOCATION FAILED";
+    FinetuningRunStatus["TRAINING_NOT_STARTED"] = "TRAINING NOT STARTED";
+    FinetuningRunStatus["TRAINING_IN_PROGRESS"] = "TRAINING IN PROGRESS";
+    FinetuningRunStatus["TRAINING_COMPLETED"] = "TRAINING COMPLETED";
+    FinetuningRunStatus["TRAINING_FAILED"] = "TRAINING FAILED";
+    FinetuningRunStatus["DEPLOY_NOT_STARTED"] = "DEPLOYMENT NOT STARTED";
+    FinetuningRunStatus["DEPLOY_IN_PROGRESS"] = "DEPLOYMENT IN PROGRESS";
+    FinetuningRunStatus["DEPLOY_COMPLETED"] = "DEPLOYMENT COMPLETED";
+    FinetuningRunStatus["DEPLOY_FAILED"] = "DEPLOYMENT FAILED";
+    FinetuningRunStatus["EVALUATION_NOT_STARTED"] = "EVALUATION NOT STARTED";
+    FinetuningRunStatus["EVALUATION_IN_PROGRESS"] = "EVALUATION IN PROGRESS";
+    FinetuningRunStatus["EVALUATION_COMPLETED"] = "EVALUATION COMPLETED";
+    FinetuningRunStatus["EVALUATION_FAILED"] = "EVALUATION FAILED";
+    FinetuningRunStatus["INTERRUPTED"] = "INTERRUPTED";
+})(exports.FinetuningRunStatus || (exports.FinetuningRunStatus = {}));
+/**
+ * The status of a confidence calibration
+ */
+exports.CalibrationStatus = void 0;
+(function (CalibrationStatus) {
+    CalibrationStatus["IN_PROGRESS"] = "IN_PROGRESS";
+    CalibrationStatus["DELETED"] = "DELETED";
+    CalibrationStatus["INTERRUPTED"] = "INTERRUPTED";
+    CalibrationStatus["COMPLETED"] = "COMPLETED";
+})(exports.CalibrationStatus || (exports.CalibrationStatus = {}));
+/**
+ * The model used for confidence calibration
+ */
+exports.CalibrationModel = void 0;
+(function (CalibrationModel) {
+    CalibrationModel["LINEAR_REGRESSION"] = "LINEAR_REGRESSION";
+})(exports.CalibrationModel || (exports.CalibrationModel = {}));
+
+/**
+ * Handles operations related to confidence calibrations.
+ * This class is not intended to be instantiated directly.
+ * Instead, access it through an instance of the Refuel class.
+ */
+class Calibrations {
+    constructor(base) {
+        this.base = base;
+    }
+    /**
+     * Calibrate the confidence of a task
+     *
+     * @example
+     * ```ts
+     * const calibration = await refuel.calibrations.create(taskId);
+     * ```
+     */
+    async create(taskId) {
+        return this.base.request(`/tasks/${taskId}/calibrations`, {
+            method: "POST",
+            data: {
+                status: exports.CalibrationStatus.IN_PROGRESS,
+            },
+        });
+    }
+    /**
+     * Get a confidence calibration by ID
+     *
+     * @example
+     * ```ts
+     * const task = await refuel.calibrations.get(taskId, calibrationId);
+     * ```
+     */
+    async get(taskId, calibrationId) {
+        return this.base.request(`/tasks/${taskId}/calibrations/${calibrationId}`);
+    }
+    /**
+     * List all confidence calibrations for a task
+     *
+     * @example
+     * ```ts
+     * const calibrations = await refuel.calibrations.list(taskId);
+     * ```
+     */
+    async list(taskId) {
+        return this.base.request(`/tasks/${taskId}/calibrations`);
+    }
+    /**
+     * Update a confidence calibration
+     *
+     * @example
+     * ```ts
+     * const calibration = await refuel.calibrations.update(taskId, calibrationId, {
+     *  status: CalibrationStatus.INTERRUPTED
+     * });
+     * ```
+     */
+    async update(taskId, calibrationId, data) {
+        return this.base.request(`/tasks/${taskId}/calibrations/${calibrationId}`, {
+            method: "PATCH",
+            data,
+        });
+    }
+}
+
+/**
  * Handles operations related to dataset exports.
  * This class is not intended to be instantiated directly.
  * Instead, access it through an instance of the Refuel class.
  */
 class DatasetExports {
+    /** @internal */
     constructor(base) {
         this.base = base;
     }
@@ -232,6 +500,7 @@ class DatasetExports {
 }
 
 class DatasetItems {
+    /** @internal */
     constructor(base) {
         this.base = base;
     }
@@ -301,6 +570,7 @@ class DatasetItems {
  * Instead, access it through an instance of the Refuel class.
  */
 class Datasets {
+    /** @internal */
     constructor(base) {
         this.base = base;
     }
@@ -346,6 +616,7 @@ class Datasets {
 }
 
 class FinetunedModels {
+    /** @internal */
     constructor(base) {
         this.base = base;
     }
@@ -1049,11 +1320,9 @@ class Team {
      * ```
      */
     async regenerateApiKey() {
-        await this.base.request("/team", {
-            method: "PATCH",
-            data: {
-                update_api_key: true,
-            },
+        const params = new URLSearchParams({ regenerate_api_key: "true" });
+        await this.base.request(`/team?${params.toString()}`, {
+            method: "POST",
         });
         return (await this.get()).refuel_api_key;
     }
@@ -1159,190 +1428,6 @@ class Users {
 }
 
 /**
- * The source of a label value
- */
-exports.LabelSource = void 0;
-(function (LabelSource) {
-    /** Label from an LLM */
-    LabelSource["LLM"] = "LLM";
-    /** Label from a human */
-    LabelSource["HUMAN"] = "HUMAN";
-})(exports.LabelSource || (exports.LabelSource = {}));
-/**
- * The type of a column value
- */
-exports.DatasetColumnType = void 0;
-(function (DatasetColumnType) {
-    DatasetColumnType["STRING"] = "string";
-    DatasetColumnType["NUMBER"] = "number";
-    DatasetColumnType["BOOLEAN"] = "boolean";
-    DatasetColumnType["IMAGE_URL"] = "image_url";
-    DatasetColumnType["PDF_URL"] = "pdf_url";
-})(exports.DatasetColumnType || (exports.DatasetColumnType = {}));
-/**
- * The category of a filter field
- */
-exports.FilterFieldCategory = void 0;
-(function (FilterFieldCategory) {
-    /** Filter on a label */
-    FilterFieldCategory["LABEL"] = "label";
-    /** Filter on metadata */
-    FilterFieldCategory["METADATA"] = "metadata";
-    /** Filter on similar items */
-    FilterFieldCategory["SIMILAR"] = "similar";
-})(exports.FilterFieldCategory || (exports.FilterFieldCategory = {}));
-/**
- * The operator to use for a filter
- */
-exports.FilterOperator = void 0;
-(function (FilterOperator) {
-    /** Equal to */
-    FilterOperator["EQUAL"] = "=";
-    /** Greater than */
-    FilterOperator["GREATER_THAN"] = ">";
-    /** Greater than or equal to */
-    FilterOperator["GREATER_THAN_OR_EQUAL"] = ">=";
-    /** ILIKE */
-    FilterOperator["ILIKE"] = "ILIKE";
-    /** In a list */
-    FilterOperator["IN"] = "IN";
-    /** Is not verified */
-    FilterOperator["IS_NOT_VERIFIED"] = "IS NOT VERIFIED";
-    /** Is verified */
-    FilterOperator["IS_VERIFIED"] = "IS VERIFIED";
-    /** Less than */
-    FilterOperator["LESS_THAN"] = "<";
-    /** Less than or equal to */
-    FilterOperator["LESS_THAN_OR_EQUAL"] = "<=";
-    /** Matches */
-    FilterOperator["MATCHES"] = "~*";
-    /** Not equal to */
-    FilterOperator["NOT_EQUAL"] = "<>";
-    /** Not ILIKE */
-    FilterOperator["NOT_ILIKE"] = "NOT ILIKE";
-    /** Not matches */
-    FilterOperator["NOT_MATCHES"] = "!~*";
-    /** Not null */
-    FilterOperator["NOT_NULL"] = "IS NOT NULL";
-    /** Null */
-    FilterOperator["NULL"] = "IS NULL";
-    /** Similar to another item */
-    FilterOperator["SIMILAR"] = "SIMILAR";
-})(exports.FilterOperator || (exports.FilterOperator = {}));
-/**
- * The mode to used to generate the schema for a subtask
- */
-exports.SchemaMode = void 0;
-(function (SchemaMode) {
-    /** Automatically generate the schema from the guidelines */
-    SchemaMode["AUTO"] = "auto";
-    /** Manually specify the schema */
-    SchemaMode["MANUAL"] = "manual";
-})(exports.SchemaMode || (exports.SchemaMode = {}));
-/**
- * The type of enrichment
- */
-exports.TransformType = void 0;
-(function (TransformType) {
-    /** Search the web for information relevant to the input */
-    TransformType["WEB_SEARCH"] = "web_search";
-    /** Search for a location on a map */
-    TransformType["MAP_SEARCH"] = "map_search";
-    /** Transform a webpage into structured data */
-    TransformType["WEBPAGE_TRANSFORM"] = "webpage_transform";
-    /** Extract text from an image or document */
-    TransformType["OCR"] = "ocr";
-    /** Use a custom API to transform the data */
-    TransformType["CUSTOM_API"] = "custom_api";
-})(exports.TransformType || (exports.TransformType = {}));
-/**
- * The type of task
- */
-exports.TaskType = void 0;
-(function (TaskType) {
-    /** Classify an item into one category */
-    TaskType["CLASSIFICATION"] = "classification";
-    /** Classify an item into one or more categories */
-    TaskType["MULTILABEL_CLASSIFICATION"] = "multilabel_classification";
-    /** Extract an answer from an item */
-    TaskType["ANSWER_EXTRACTION"] = "answer_extraction";
-    /** Extract structured data from a document */
-    TaskType["DOCUMENT_EXTRACTION"] = "document_extraction";
-    /** Extract attributes from an item */
-    TaskType["ATTRIBUTE_EXTRACTION"] = "attribute_extraction";
-    /** Chain of tasks */
-    TaskType["TASK_CHAIN"] = "task_chain";
-})(exports.TaskType || (exports.TaskType = {}));
-exports.FeatureFlagValues = void 0;
-(function (FeatureFlagValues) {
-    FeatureFlagValues["ENABLED"] = "enabled";
-    FeatureFlagValues["DISABLED"] = "disabled";
-})(exports.FeatureFlagValues || (exports.FeatureFlagValues = {}));
-/**
- * Possible states for a user
- */
-exports.UserState = void 0;
-(function (UserState) {
-    /** User is active */
-    UserState["ACTIVE"] = "ACTIVE";
-    /** User has been invited to the team */
-    UserState["INVITED"] = "INVITED";
-    /** User has been created but not invited */
-    UserState["CREATED"] = "CREATED";
-})(exports.UserState || (exports.UserState = {}));
-/**
- * The format of a metric
- */
-exports.MetricFormat = void 0;
-(function (MetricFormat) {
-    /** Numeric metric */
-    MetricFormat["NUMERIC"] = "numeric";
-    /** Percentage metric */
-    MetricFormat["PERCENTAGE"] = "percentage";
-    /** Histogram metric */
-    MetricFormat["HISTOGRAM"] = "histogram";
-    /** Dictionary metric */
-    MetricFormat["DICT"] = "dict";
-})(exports.MetricFormat || (exports.MetricFormat = {}));
-/**
- * The availability status of a labeling model
- */
-exports.AvailabilityStatus = void 0;
-(function (AvailabilityStatus) {
-    AvailabilityStatus["UNAVAILABLE"] = "UNAVAILABLE";
-    AvailabilityStatus["AVAILABLE"] = "AVAILABLE";
-})(exports.AvailabilityStatus || (exports.AvailabilityStatus = {}));
-/**
- * The status of a finetuning run
- */
-exports.FinetuningRunStatus = void 0;
-(function (FinetuningRunStatus) {
-    FinetuningRunStatus["INITIALIZATION_IN_PROGRESS"] = "INITIALIZATION IN PROGRESS";
-    FinetuningRunStatus["INITIALIZATION_COMPLETE"] = "INITIALIZATION COMPLETE";
-    FinetuningRunStatus["DATASET_PREP_NOT_STARTED"] = "DATASET PREPARATION NOT STARTED";
-    FinetuningRunStatus["DATASET_PREP_IN_PROGRESS"] = "DATASET PREPARATION IN PROGRESS";
-    FinetuningRunStatus["DATASET_PREP_COMPLETED"] = "DATASET PREPARATION COMPLETED";
-    FinetuningRunStatus["DATASET_PREP_FAILED"] = "DATASET PREPARATION FAILED";
-    FinetuningRunStatus["RESOURCE_ALLOCATION_NOT_STARTED"] = "RESOURCE ALLOCATION NOT STARTED";
-    FinetuningRunStatus["RESOURCE_ALLOCATION_IN_PROGRESS"] = "RESOURCE ALLOCATION IN PROGRESS";
-    FinetuningRunStatus["RESOURCE_ALLOCATION_COMPLETED"] = "RESOURCE ALLOCATION COMPLETED";
-    FinetuningRunStatus["RESOURCE_ALLOCATION_FAILED"] = "RESOURCE ALLOCATION FAILED";
-    FinetuningRunStatus["TRAINING_NOT_STARTED"] = "TRAINING NOT STARTED";
-    FinetuningRunStatus["TRAINING_IN_PROGRESS"] = "TRAINING IN PROGRESS";
-    FinetuningRunStatus["TRAINING_COMPLETED"] = "TRAINING COMPLETED";
-    FinetuningRunStatus["TRAINING_FAILED"] = "TRAINING FAILED";
-    FinetuningRunStatus["DEPLOY_NOT_STARTED"] = "DEPLOYMENT NOT STARTED";
-    FinetuningRunStatus["DEPLOY_IN_PROGRESS"] = "DEPLOYMENT IN PROGRESS";
-    FinetuningRunStatus["DEPLOY_COMPLETED"] = "DEPLOYMENT COMPLETED";
-    FinetuningRunStatus["DEPLOY_FAILED"] = "DEPLOYMENT FAILED";
-    FinetuningRunStatus["EVALUATION_NOT_STARTED"] = "EVALUATION NOT STARTED";
-    FinetuningRunStatus["EVALUATION_IN_PROGRESS"] = "EVALUATION IN PROGRESS";
-    FinetuningRunStatus["EVALUATION_COMPLETED"] = "EVALUATION COMPLETED";
-    FinetuningRunStatus["EVALUATION_FAILED"] = "EVALUATION FAILED";
-    FinetuningRunStatus["INTERRUPTED"] = "INTERRUPTED";
-})(exports.FinetuningRunStatus || (exports.FinetuningRunStatus = {}));
-
-/**
  * Main class for interacting with the Refuel API.
  *
  * @example
@@ -1366,6 +1451,7 @@ class Refuel {
         }
         this.base = new RefuelBase(apiKey, typeof options === "string" ? undefined : options);
         this.applications = new Applications(this.base);
+        this.calibrations = new Calibrations(this.base);
         this.datasets = new Datasets(this.base);
         this.datasetItems = new DatasetItems(this.base);
         this.datasetExports = new DatasetExports(this.base);

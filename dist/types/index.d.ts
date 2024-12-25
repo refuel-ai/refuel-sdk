@@ -1,4 +1,5 @@
 import { Applications } from "./Applications";
+import { Calibrations } from "./Calibrations";
 import { DatasetExports } from "./DatasetExports";
 import { DatasetItems } from "./DatasetItems";
 import { Datasets } from "./Datasets";
@@ -33,6 +34,7 @@ import { Users } from "./Users";
 export declare class Refuel {
     readonly base: RefuelBase;
     readonly applications: Applications;
+    readonly calibrations: Calibrations;
     readonly datasetExports: DatasetExports;
     readonly datasetItems: DatasetItems;
     readonly datasets: Datasets;
