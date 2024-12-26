@@ -36,7 +36,7 @@ await refuel.datasets.delete(datasetId);
 
 #### Defined in
 
-[src/Datasets/index.ts:57](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/Datasets/index.ts#L57)
+[src/Datasets/index.ts:57](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Datasets/index.ts#L57)
 
 ***
 
@@ -64,7 +64,7 @@ const dataset = await refuel.datasets.get(datasetId);
 
 #### Defined in
 
-[src/Datasets/index.ts:25](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/Datasets/index.ts#L25)
+[src/Datasets/index.ts:25](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Datasets/index.ts#L25)
 
 ***
 
@@ -92,4 +92,4 @@ const datasets = await refuel.datasets.list();
 
 #### Defined in
 
-[src/Datasets/index.ts:37](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/Datasets/index.ts#L37)
+[src/Datasets/index.ts:37](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Datasets/index.ts#L37)

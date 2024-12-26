@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[src/RefuelBase/index.ts:10](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/RefuelBase/index.ts#L10)
+[src/RefuelBase/index.ts:10](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/RefuelBase/index.ts#L10)
 
 ## Properties
 
@@ -78,7 +78,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 #### Defined in
 
-[src/RefuelBase/index.ts:11](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/RefuelBase/index.ts#L11)
+[src/RefuelBase/index.ts:11](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/RefuelBase/index.ts#L11)
 
 ***
 
@@ -102,7 +102,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 #### Defined in
 
-[src/RefuelBase/index.ts:13](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/RefuelBase/index.ts#L13)
+[src/RefuelBase/index.ts:13](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/RefuelBase/index.ts#L13)
 
 ***
 
@@ -112,7 +112,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 #### Defined in
 
-[src/RefuelBase/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/RefuelBase/index.ts#L12)
+[src/RefuelBase/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/RefuelBase/index.ts#L12)
 
 ***
 

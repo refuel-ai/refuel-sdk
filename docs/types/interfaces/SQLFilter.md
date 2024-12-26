@@ -18,7 +18,7 @@ Field to filter on
 
 #### Defined in
 
-[src/types.ts:554](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L554)
+[src/types.ts:554](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L554)
 
 ***
 
@@ -30,7 +30,7 @@ Filter type
 
 #### Defined in
 
-[src/types.ts:551](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L551)
+[src/types.ts:551](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L551)
 
 ***
 
@@ -42,7 +42,7 @@ Operator to use
 
 #### Defined in
 
-[src/types.ts:557](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L557)
+[src/types.ts:557](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L557)
 
 ***
 
@@ -54,7 +54,7 @@ Subtask ID
 
 #### Defined in
 
-[src/types.ts:566](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L566)
+[src/types.ts:566](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L566)
 
 ***
 
@@ -66,7 +66,7 @@ Value to filter on
 
 #### Defined in
 
-[src/types.ts:563](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L563)
+[src/types.ts:563](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L563)
 
 ***
 
@@ -78,4 +78,4 @@ Value type
 
 #### Defined in
 
-[src/types.ts:560](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L560)
+[src/types.ts:560](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L560)

@@ -39,7 +39,7 @@ const application = await refuel.applications.create({
 
 #### Defined in
 
-[src/Applications/index.ts:36](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/Applications/index.ts#L36)
+[src/Applications/index.ts:36](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Applications/index.ts#L36)
 
 ***
 
@@ -67,7 +67,7 @@ await refuel.applications.delete(applicationId);
 
 #### Defined in
 
-[src/Applications/index.ts:88](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/Applications/index.ts#L88)
+[src/Applications/index.ts:88](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Applications/index.ts#L88)
 
 ***
 
@@ -111,7 +111,7 @@ await refuel.applications.feedback(
 
 #### Defined in
 
-[src/Applications/index.ts:202](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/Applications/index.ts#L202)
+[src/Applications/index.ts:202](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Applications/index.ts#L202)
 
 ***
 
@@ -139,7 +139,7 @@ const application = await refuel.applications.get(applicationId);
 
 #### Defined in
 
-[src/Applications/index.ts:60](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/Applications/index.ts#L60)
+[src/Applications/index.ts:60](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Applications/index.ts#L60)
 
 ***
 
@@ -178,7 +178,7 @@ const labeledItem = await refuel.applications.getLabeledItem(
 
 #### Defined in
 
-[src/Applications/index.ts:105](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/Applications/index.ts#L105)
+[src/Applications/index.ts:105](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Applications/index.ts#L105)
 
 ***
 
@@ -247,7 +247,7 @@ console.log(labeledItem); // output label values
 
 #### Defined in
 
-[src/Applications/index.ts:150](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/Applications/index.ts#L150)
+[src/Applications/index.ts:150](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Applications/index.ts#L150)
 
 ***
 
@@ -275,4 +275,4 @@ const applications = await refuel.applications.list();
 
 #### Defined in
 
-[src/Applications/index.ts:72](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/Applications/index.ts#L72)
+[src/Applications/index.ts:72](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Applications/index.ts#L72)

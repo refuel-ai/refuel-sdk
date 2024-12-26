@@ -16,7 +16,7 @@ Metadata for the columns
 
 #### Defined in
 
-[src/types.ts:436](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L436)
+[src/types.ts:436](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L436)
 
 ***
 
@@ -28,7 +28,7 @@ Dataset ID
 
 #### Defined in
 
-[src/types.ts:433](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L433)
+[src/types.ts:433](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L433)
 
 ***
 
@@ -40,7 +40,7 @@ Ingest status
 
 #### Defined in
 
-[src/types.ts:445](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L445)
+[src/types.ts:445](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L445)
 
 ***
 
@@ -52,7 +52,7 @@ Items in the dataset
 
 #### Defined in
 
-[src/types.ts:448](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L448)
+[src/types.ts:448](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L448)
 
 ***
 
@@ -64,7 +64,7 @@ Dataset name
 
 #### Defined in
 
-[src/types.ts:439](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L439)
+[src/types.ts:439](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L439)
 
 ***
 
@@ -76,7 +76,7 @@ Number of items included in the response
 
 #### Defined in
 
-[src/types.ts:451](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L451)
+[src/types.ts:451](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L451)
 
 ***
 
@@ -88,7 +88,7 @@ Dataset schema
 
 #### Defined in
 
-[src/types.ts:442](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L442)
+[src/types.ts:442](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L442)
 
 ***
 
@@ -100,4 +100,4 @@ Total number of items in the dataset
 
 #### Defined in
 
-[src/types.ts:454](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/types.ts#L454)
+[src/types.ts:454](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L454)

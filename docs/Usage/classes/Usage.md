@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[src/Usage/index.ts:7](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/Usage/index.ts#L7)
+[src/Usage/index.ts:7](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Usage/index.ts#L7)
 
 ## Methods
 
@@ -70,4 +70,4 @@ const usage = await refuel.usage.get("2024-01-01", "2024-01-31");
 
 #### Defined in
 
-[src/Usage/index.ts:19](https://github.com/refuel-ai/refuel-sdk/blob/61d30041216a525535e2edabde48af0f00ec66c9/src/Usage/index.ts#L19)
+[src/Usage/index.ts:19](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Usage/index.ts#L19)
