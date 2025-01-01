@@ -6,7 +6,7 @@
   "module": "dist/index.mjs",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c && npm run docs",
     "docs": "typedoc --plugin typedoc-plugin-markdown --excludeInternal --out ./docs ./src/*"
   },
   "repository": {
