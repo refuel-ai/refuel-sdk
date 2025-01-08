@@ -26,7 +26,7 @@ Guidelines
 
 #### Defined in
 
-[src/types.ts:590](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L590)
+[src/types.ts:595](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L595)
 
 ***
 
@@ -42,7 +42,7 @@ Subtask ID
 
 #### Defined in
 
-[src/types.ts:584](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L584)
+[src/types.ts:589](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L589)
 
 ***
 
@@ -58,7 +58,7 @@ Input columns
 
 #### Defined in
 
-[src/types.ts:596](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L596)
+[src/types.ts:601](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L601)
 
 ***
 
@@ -74,7 +74,7 @@ Subtask name
 
 #### Defined in
 
-[src/types.ts:608](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L608)
+[src/types.ts:613](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L613)
 
 ***
 
@@ -90,7 +90,7 @@ Order of the subtask
 
 #### Defined in
 
-[src/types.ts:611](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L611)
+[src/types.ts:616](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L616)
 
 ***
 
@@ -102,7 +102,7 @@ Columns to output
 
 #### Defined in
 
-[src/types.ts:660](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L660)
+[src/types.ts:665](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L665)
 
 ***
 
@@ -114,7 +114,7 @@ Parameters for the enrichment
 
 #### Defined in
 
-[src/types.ts:663](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L663)
+[src/types.ts:668](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L668)
 
 ***
 
@@ -126,4 +126,4 @@ Type of enrichment
 
 #### Defined in
 
-[src/types.ts:657](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L657)
+[src/types.ts:662](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L662)

@@ -18,7 +18,7 @@ Dataset ID
 
 #### Defined in
 
-[src/types.ts:1377](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1377)
+[src/types.ts:1408](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1408)
 
 ***
 
@@ -30,7 +30,7 @@ Whether to get the eval set
 
 #### Defined in
 
-[src/types.ts:1368](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1368)
+[src/types.ts:1399](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1399)
 
 ***
 
@@ -42,7 +42,7 @@ Filters to apply to the dataset
 
 #### Defined in
 
-[src/types.ts:1371](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1371)
+[src/types.ts:1402](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1402)
 
 ***
 
@@ -54,7 +54,7 @@ Maximum number of items to label
 
 #### Defined in
 
-[src/types.ts:1365](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1365)
+[src/types.ts:1396](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1396)
 
 ***
 
@@ -66,4 +66,4 @@ Model(s) used to label the items in this run
 
 #### Defined in
 
-[src/types.ts:1374](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1374)
+[src/types.ts:1405](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1405)

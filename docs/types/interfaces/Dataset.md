@@ -6,6 +6,11 @@
 
 # Interface: Dataset
 
+## Extended by
+
+- [`DatasetUnlabeled`](DatasetUnlabeled.md)
+- [`DatasetLabeled`](DatasetLabeled.md)
+
 ## Properties
 
 ### column\_metadata
@@ -16,7 +21,7 @@ Metadata for the columns
 
 #### Defined in
 
-[src/types.ts:436](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L436)
+[src/types.ts:436](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L436)
 
 ***
 
@@ -28,7 +33,7 @@ Dataset ID
 
 #### Defined in
 
-[src/types.ts:433](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L433)
+[src/types.ts:433](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L433)
 
 ***
 
@@ -40,19 +45,7 @@ Ingest status
 
 #### Defined in
 
-[src/types.ts:445](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L445)
-
-***
-
-### items
-
-> **items**: [`LabeledDatasetItem`](LabeledDatasetItem.md)[]
-
-Items in the dataset
-
-#### Defined in
-
-[src/types.ts:448](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L448)
+[src/types.ts:445](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L445)
 
 ***
 
@@ -64,7 +57,7 @@ Dataset name
 
 #### Defined in
 
-[src/types.ts:439](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L439)
+[src/types.ts:439](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L439)
 
 ***
 
@@ -76,7 +69,7 @@ Number of items included in the response
 
 #### Defined in
 
-[src/types.ts:451](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L451)
+[src/types.ts:448](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L448)
 
 ***
 
@@ -88,7 +81,7 @@ Dataset schema
 
 #### Defined in
 
-[src/types.ts:442](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L442)
+[src/types.ts:442](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L442)
 
 ***
 
@@ -100,4 +93,4 @@ Total number of items in the dataset
 
 #### Defined in
 
-[src/types.ts:454](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L454)
+[src/types.ts:451](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L451)
