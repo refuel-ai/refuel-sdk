@@ -524,28 +524,57 @@ class DatasetItems {
      * const item = await refuel.datasetItems.get(datasetId, itemId);
      * ```
      */
-    async get(datasetId, itemId) {
-        return (await this.base.request(`/datasets/${datasetId}/items/${itemId}`))[0];
-    }
-    async list(datasetId, options) {
+    async get(datasetId, itemId, options) {
         const params = new URLSearchParams();
-        if (options === null || options === void 0 ? void 0 : options.filters) {
+        if (options === null || options === void 0 ? void 0 : options.taskId) {
+            params.append("task_id", options.taskId);
+        }
+        if (options === null || options === void 0 ? void 0 : options.modelId) {
+            params.append("model_id", options.modelId);
+        }
+        const path = (options === null || options === void 0 ? void 0 : options.taskId)
+            ? `/tasks/${options.taskId}/datasets/${datasetId}/items/${itemId}`
+            : `/datasets/${datasetId}/items/${itemId}`;
+        return (await this.base.request(`${path}?${params.toString()}`))[0];
+    }
+    async list(options) {
+        const params = new URLSearchParams();
+        let path;
+        if (options.taskId && options.evalSet) {
+            path = `/tasks/${options.taskId}/evalset`;
+        }
+        else if (options.taskId && options.seedSet) {
+            path = `/tasks/${options.taskId}/seedset`;
+        }
+        else if (options.taskId && options.datasetId) {
+            path = `/tasks/${options.taskId}/datasets/${options.datasetId}`;
+        }
+        else if (options.datasetId) {
+            path = `/datasets/${options.datasetId}`;
+        }
+        else {
+            throw new Error("Missing required parameters");
+        }
+        if (options.filters) {
             options.filters.forEach((filter) => {
                 params.append("filters", JSON.stringify(filter));
             });
         }
-        if (options === null || options === void 0 ? void 0 : options.maxItems) {
+        if (options.maxItems) {
             params.append("max_items", options.maxItems.toString());
         }
-        if (options === null || options === void 0 ? void 0 : options.orderBy) {
-            options.orderBy.forEach((orderBy) => {
-                params.append("order_bys", orderBy);
+        if (options.orderBy) {
+            const orderBys = Array.isArray(options.orderBy)
+                ? options.orderBy
+                : [options.orderBy];
+            orderBys.forEach((orderBy) => {
+                params.append("order_bys", JSON.stringify(orderBy));
             });
         }
-        if (options === null || options === void 0 ? void 0 : options.offset) {
+        if (options.offset) {
             params.append("offset", options.offset.toString());
         }
-        return this.base.request(`/datasets/${datasetId}?${params.toString()}`);
+        return this.base.request(`${path}?${params.toString()}`);
     }
     /**
      * Delete a dataset item
@@ -688,6 +717,18 @@ class FinetunedModels {
         return this.base.request(`/finetuned_models/${modelId}`, {
             method: "DELETE",
         });
+    }
+    /**
+     * Check if a task is trainable
+     *
+     * @example
+     * ```ts
+     * const isTrainable = await refuel.finetunedModels.isTaskTrainable(taskId);
+     * ```
+     */
+    async isTaskTrainable(taskId) {
+        const response = await this.base.request(`/tasks/${taskId}/trainable`);
+        return response.trainable;
     }
 }
 
@@ -1425,6 +1466,23 @@ class Users {
     }
 }
 
+const isLabeledDatasetItem = (item) => {
+    return typeof item === "object" && item !== null && "labels" in item;
+};
+const isDatasetLabeled = (dataset) => {
+    return (typeof dataset === "object" &&
+        dataset !== null &&
+        "items" in dataset &&
+        Array.isArray(dataset === null || dataset === void 0 ? void 0 : dataset.items) &&
+        isLabeledDatasetItem(dataset.items[0]));
+};
+const isTelemetry = (telemetry) => {
+    return (typeof telemetry === "object" &&
+        telemetry !== null &&
+        "telemetry_type" in telemetry &&
+        "telemetry_value" in telemetry);
+};
+
 /**
  * Main class for interacting with the Refuel API.
  *
@@ -1469,5 +1527,5 @@ class Refuel {
     }
 }
 
-export { AvailabilityStatus, CalibrationModel, CalibrationStatus, DatasetColumnType, FeatureFlagValues, FilterFieldCategory, FilterOperator, FinetuningRunStatus, LabelSource, MetricFormat, Refuel, SchemaMode, TaskType, TransformType, UserState };
+export { AvailabilityStatus, CalibrationModel, CalibrationStatus, DatasetColumnType, FeatureFlagValues, FilterFieldCategory, FilterOperator, FinetuningRunStatus, LabelSource, MetricFormat, Refuel, SchemaMode, TaskType, TransformType, UserState, isDatasetLabeled, isLabeledDatasetItem, isTelemetry };
 //# sourceMappingURL=index.mjs.map
