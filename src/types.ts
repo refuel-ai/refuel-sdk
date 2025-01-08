@@ -426,6 +426,9 @@ export interface DatasetFromList {
 
     /** Source of the dataset */
     source: string;
+
+    /** Project IDs this dataset is associated with */
+    projects: string[] | null;
 }
 
 export interface Dataset {
@@ -449,6 +452,9 @@ export interface Dataset {
 
     /** Total number of items in the dataset */
     total_count: number;
+
+    /** Project IDs this dataset is associated with */
+    project_ids: string[] | null;
 }
 
 export interface DatasetUnlabeled extends Dataset {

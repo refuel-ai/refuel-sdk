@@ -61,13 +61,17 @@ export class DatasetItems {
             ? `/tasks/${options.taskId}/datasets/${datasetId}/items/${itemId}`
             : `/datasets/${datasetId}/items/${itemId}`;
 
-        return (
-            await this.base.request<
-                T extends { taskId: string }
-                    ? LabeledDatasetItem[]
-                    : Record<string, unknown>[]
-            >(`${path}?${params.toString()}`)
-        )[0];
+        const response = await this.base.request<
+            T extends { taskId: string }
+                ? LabeledDatasetItem
+                : Record<string, unknown>[]
+        >(`${path}?${params.toString()}`);
+
+        if (Array.isArray(response)) {
+            return response[0];
+        }
+
+        return response;
     }
 
     async list<T extends ListDatasetItemsOptions>(options: T) {
