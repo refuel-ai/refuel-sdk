@@ -986,6 +986,9 @@ export interface Integration {
 
     /** URL to the logo of the external service */
     logo_url: string;
+
+    /** URL to the docs of the external service */
+    docs_url: string;
 }
 
 /**
