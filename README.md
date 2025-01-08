@@ -77,7 +77,7 @@ After making changes, use the following steps to test your changes locally:
 After merging your changes to main, complete the following steps to publish a new version of the SDK:
 
 1. Edit `package.json` and increase the version number
-2. Run `npm build`
+2. Run `npm run build`
 3. Create a new commit called "build vX.X.X" using the version number you saved to `package.json` in step 1
 4. Create a new PR with this commit and get that approved and merged to the main branch
 5. Checkout the latest main branch locally
