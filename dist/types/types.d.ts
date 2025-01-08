@@ -321,6 +321,8 @@ export interface DatasetFromList {
     dataset_schema: DatasetSchema;
     /** Source of the dataset */
     source: string;
+    /** Project IDs this dataset is associated with */
+    projects: string[] | null;
 }
 export interface Dataset {
     /** Dataset ID */
@@ -337,6 +339,8 @@ export interface Dataset {
     response_count: number;
     /** Total number of items in the dataset */
     total_count: number;
+    /** Project IDs this dataset is associated with */
+    project_ids: string[] | null;
 }
 export interface DatasetUnlabeled extends Dataset {
     items: Record<string, unknown>[];
@@ -729,6 +733,8 @@ export interface Integration {
     config: IntegrationConfig;
     /** URL to the logo of the external service */
     logo_url: string;
+    /** URL to the docs of the external service */
+    docs_url: string;
 }
 /**
  * Options for exporting a dataset

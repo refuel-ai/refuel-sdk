@@ -535,7 +535,11 @@ class DatasetItems {
         const path = (options === null || options === void 0 ? void 0 : options.taskId)
             ? `/tasks/${options.taskId}/datasets/${datasetId}/items/${itemId}`
             : `/datasets/${datasetId}/items/${itemId}`;
-        return (await this.base.request(`${path}?${params.toString()}`))[0];
+        const response = await this.base.request(`${path}?${params.toString()}`);
+        if (Array.isArray(response)) {
+            return response[0];
+        }
+        return response;
     }
     async list(options) {
         const params = new URLSearchParams();
@@ -585,9 +589,10 @@ class DatasetItems {
      * ```
      */
     async delete(datasetId, itemId) {
-        return this.base.request(`/datasets/${datasetId}/items/${itemId}`, {
+        const itemIds = Array.isArray(itemId) ? itemId : [itemId];
+        await Promise.all(itemIds.map((id) => this.base.request(`/datasets/${datasetId}/items/${id}`, {
             method: "DELETE",
-        });
+        })));
     }
 }
 
