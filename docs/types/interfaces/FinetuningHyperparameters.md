@@ -16,7 +16,7 @@ Finetuning hyperparameters
 
 #### Defined in
 
-[src/types.ts:1100](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1100)
+[src/types.ts:1131](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1131)
 
 ***
 
@@ -30,7 +30,7 @@ instability
 
 #### Defined in
 
-[src/types.ts:1107](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1107)
+[src/types.ts:1138](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1138)
 
 ***
 
@@ -45,7 +45,7 @@ to avoid overfitting
 
 #### Defined in
 
-[src/types.ts:1115](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1115)
+[src/types.ts:1146](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1146)
 
 ***
 
@@ -58,4 +58,4 @@ the entire training data to improve its learning
 
 #### Defined in
 
-[src/types.ts:1121](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1121)
+[src/types.ts:1152](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1152)

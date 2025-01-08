@@ -64,6 +64,32 @@ await refuel.applications.feedback(
 );
 ```
 
+# 🔨 Developing the SDK
+
+These steps are intended for developers of the refuel-sdk. If you are just installing refuel-sdk to use in your application then you can ignore this section.
+
+## Local development
+
+After making changes, use the following steps to test your changes locally:
+
+1. From the refuel-sdk directory run `npm run build`
+2. cd to the directory of your application (for example, `cd ~/Development/refuel-cloud-web`)
+3. Run `npm install /local/path/to/refuel-sdk`
+
+## Publishing new versions
+
+After merging your changes to main, complete the following steps to publish a new version of the SDK:
+
+1. Edit `package.json` and increase the version number
+2. Run `npm run build`
+3. Create a new commit called "build vX.X.X" using the version number you saved to `package.json` in step 1
+4. Create a new PR with this commit and get that approved and merged to the main branch
+5. Checkout the latest main branch locally
+6. Ensure that the latest commit is "build vX.X.X"
+7. Run `git tag vX.X.X`
+8. Run `git push origin --tags`
+9. Run `npm publish`
+
 # Questions?
 
 Reach out to us at support@refuel.ai with any questions!

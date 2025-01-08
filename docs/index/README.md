@@ -140,6 +140,12 @@ Re-exports [DatasetItemsOptions](../types/interfaces/DatasetItemsOptions.md)
 
 ***
 
+### DatasetLabeled
+
+Re-exports [DatasetLabeled](../types/interfaces/DatasetLabeled.md)
+
+***
+
 ### DatasetSchema
 
 Re-exports [DatasetSchema](../types/interfaces/DatasetSchema.md)
@@ -149,6 +155,12 @@ Re-exports [DatasetSchema](../types/interfaces/DatasetSchema.md)
 ### DatasetSchemaColumn
 
 Re-exports [DatasetSchemaColumn](../types/interfaces/DatasetSchemaColumn.md)
+
+***
+
+### DatasetUnlabeled
+
+Re-exports [DatasetUnlabeled](../types/interfaces/DatasetUnlabeled.md)
 
 ***
 
@@ -248,6 +260,18 @@ Re-exports [InviteUsersResponse](../types/interfaces/InviteUsersResponse.md)
 
 ***
 
+### isDatasetLabeled
+
+Re-exports [isDatasetLabeled](../utils/functions/isDatasetLabeled.md)
+
+***
+
+### isLabeledDatasetItem
+
+Re-exports [isLabeledDatasetItem](../utils/functions/isLabeledDatasetItem.md)
+
+***
+
 ### LabeledDatasetItem
 
 Re-exports [LabeledDatasetItem](../types/interfaces/LabeledDatasetItem.md)
@@ -287,6 +311,12 @@ Re-exports [MetricFormat](../types/enumerations/MetricFormat.md)
 ### MetricResult
 
 Re-exports [MetricResult](../types/interfaces/MetricResult.md)
+
+***
+
+### OrderBy
+
+Re-exports [OrderBy](../types/interfaces/OrderBy.md)
 
 ***
 

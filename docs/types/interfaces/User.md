@@ -22,7 +22,7 @@ User email
 
 #### Defined in
 
-[src/types.ts:844](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L844)
+[src/types.ts:849](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L849)
 
 ***
 
@@ -34,7 +34,7 @@ User name
 
 #### Defined in
 
-[src/types.ts:841](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L841)
+[src/types.ts:846](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L846)
 
 ***
 
@@ -46,7 +46,7 @@ URL to the user's picture
 
 #### Defined in
 
-[src/types.ts:850](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L850)
+[src/types.ts:855](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L855)
 
 ***
 
@@ -58,7 +58,7 @@ User state
 
 #### Defined in
 
-[src/types.ts:853](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L853)
+[src/types.ts:858](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L858)
 
 ***
 
@@ -70,4 +70,4 @@ Team the user is associated with
 
 #### Defined in
 
-[src/types.ts:847](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L847)
+[src/types.ts:852](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L852)

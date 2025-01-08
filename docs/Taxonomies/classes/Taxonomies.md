@@ -28,7 +28,7 @@ Instead, access it through an instance of the Refuel class.
 
 #### Defined in
 
-[src/Taxonomies/index.ts:16](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Taxonomies/index.ts#L16)
+[src/Taxonomies/index.ts:16](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/Taxonomies/index.ts#L16)
 
 ## Methods
 
@@ -63,7 +63,7 @@ const taxonomy = await refuel.taxonomies.create(taskId, [
 
 #### Defined in
 
-[src/Taxonomies/index.ts:31](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Taxonomies/index.ts#L31)
+[src/Taxonomies/index.ts:31](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/Taxonomies/index.ts#L31)
 
 ***
 
@@ -95,7 +95,7 @@ await refuel.taxonomies.delete(taskId, taxonomyId);
 
 #### Defined in
 
-[src/Taxonomies/index.ts:62](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Taxonomies/index.ts#L62)
+[src/Taxonomies/index.ts:62](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/Taxonomies/index.ts#L62)
 
 ***
 
@@ -127,7 +127,7 @@ const taxonomy = await refuel.taxonomies.duplicate(taskId, taxonomyId);
 
 #### Defined in
 
-[src/Taxonomies/index.ts:79](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Taxonomies/index.ts#L79)
+[src/Taxonomies/index.ts:79](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/Taxonomies/index.ts#L79)
 
 ***
 
@@ -151,4 +151,4 @@ const taxonomy = await refuel.taxonomies.duplicate(taskId, taxonomyId);
 
 #### Defined in
 
-[src/Taxonomies/index.ts:48](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/Taxonomies/index.ts#L48)
+[src/Taxonomies/index.ts:48](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/Taxonomies/index.ts#L48)

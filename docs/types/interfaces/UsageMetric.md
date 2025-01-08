@@ -18,7 +18,7 @@ Application ID
 
 #### Defined in
 
-[src/types.ts:763](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L763)
+[src/types.ts:768](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L768)
 
 ***
 
@@ -30,7 +30,7 @@ Date the metric was recorded
 
 #### Defined in
 
-[src/types.ts:766](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L766)
+[src/types.ts:771](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L771)
 
 ***
 
@@ -42,7 +42,7 @@ Model ID
 
 #### Defined in
 
-[src/types.ts:769](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L769)
+[src/types.ts:774](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L774)
 
 ***
 
@@ -54,7 +54,7 @@ Task ID
 
 #### Defined in
 
-[src/types.ts:772](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L772)
+[src/types.ts:777](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L777)
 
 ***
 
@@ -66,4 +66,4 @@ Value of the metric
 
 #### Defined in
 
-[src/types.ts:775](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L775)
+[src/types.ts:780](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L780)

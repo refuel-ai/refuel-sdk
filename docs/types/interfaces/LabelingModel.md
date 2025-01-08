@@ -18,7 +18,7 @@ Generate labels with this model and include them in the training data
 
 #### Defined in
 
-[src/types.ts:1195](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1195)
+[src/types.ts:1226](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1226)
 
 ***
 
@@ -30,7 +30,7 @@ Availability status
 
 #### Defined in
 
-[src/types.ts:1192](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1192)
+[src/types.ts:1223](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1223)
 
 ***
 
@@ -42,7 +42,7 @@ Base model
 
 #### Defined in
 
-[src/types.ts:1198](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1198)
+[src/types.ts:1229](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1229)
 
 ***
 
@@ -54,7 +54,7 @@ Model to evaluate the finetuned model against
 
 #### Defined in
 
-[src/types.ts:1201](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1201)
+[src/types.ts:1232](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1232)
 
 ***
 
@@ -66,7 +66,7 @@ Date the labeling model was created
 
 #### Defined in
 
-[src/types.ts:1204](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1204)
+[src/types.ts:1235](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1235)
 
 ***
 
@@ -78,7 +78,7 @@ Datasets the labeling model is associated with
 
 #### Defined in
 
-[src/types.ts:1207](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1207)
+[src/types.ts:1238](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1238)
 
 ***
 
@@ -90,7 +90,7 @@ Evaluation statistics
 
 #### Defined in
 
-[src/types.ts:1210](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1210)
+[src/types.ts:1241](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1241)
 
 ***
 
@@ -102,7 +102,7 @@ Finetuning run status
 
 #### Defined in
 
-[src/types.ts:1213](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1213)
+[src/types.ts:1244](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1244)
 
 ***
 
@@ -114,7 +114,7 @@ Finetuning run timeline
 
 #### Defined in
 
-[src/types.ts:1216](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1216)
+[src/types.ts:1247](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1247)
 
 ***
 
@@ -126,7 +126,7 @@ Finetuning hyperparameters
 
 #### Defined in
 
-[src/types.ts:1219](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1219)
+[src/types.ts:1250](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1250)
 
 ***
 
@@ -138,7 +138,7 @@ Labeling model ID
 
 #### Defined in
 
-[src/types.ts:1189](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1189)
+[src/types.ts:1220](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1220)
 
 ***
 
@@ -150,7 +150,7 @@ Whether to use LoRA finetuning
 
 #### Defined in
 
-[src/types.ts:1222](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1222)
+[src/types.ts:1253](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1253)
 
 ***
 
@@ -162,7 +162,7 @@ Labeling model name
 
 #### Defined in
 
-[src/types.ts:1225](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1225)
+[src/types.ts:1256](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1256)
 
 ***
 
@@ -174,7 +174,7 @@ Project ID
 
 #### Defined in
 
-[src/types.ts:1228](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1228)
+[src/types.ts:1259](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1259)
 
 ***
 
@@ -186,7 +186,7 @@ Provider
 
 #### Defined in
 
-[src/types.ts:1231](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1231)
+[src/types.ts:1262](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1262)
 
 ***
 
@@ -198,7 +198,7 @@ Task ID
 
 #### Defined in
 
-[src/types.ts:1234](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1234)
+[src/types.ts:1265](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1265)
 
 ***
 
@@ -240,7 +240,7 @@ values indicating better performance
 
 #### Defined in
 
-[src/types.ts:1237](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1237)
+[src/types.ts:1268](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1268)
 
 ***
 
@@ -252,4 +252,4 @@ Date the labeling model was last updated
 
 #### Defined in
 
-[src/types.ts:1261](https://github.com/refuel-ai/refuel-sdk/blob/f2e28ab259fcf3e0cbb5ccf9e6bee5d2eda4cd6f/src/types.ts#L1261)
+[src/types.ts:1292](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1292)
