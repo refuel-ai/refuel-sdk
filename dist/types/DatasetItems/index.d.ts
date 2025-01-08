@@ -21,7 +21,9 @@ export declare class DatasetItems {
      * const item = await refuel.datasetItems.get(datasetId, itemId);
      * ```
      */
-    get<T extends GetDatasetItemOptions>(datasetId: string, itemId: string, options?: T): Promise<Record<string, unknown> | LabeledDatasetItem>;
+    get<T extends GetDatasetItemOptions>(datasetId: string, itemId: string, options?: T): Promise<Record<string, unknown> | (T extends {
+        taskId: string;
+    } ? LabeledDatasetItem : Record<string, unknown>[])>;
     list<T extends ListDatasetItemsOptions>(options: T): Promise<T extends {
         taskId: string;
     } ? DatasetLabeled : DatasetUnlabeled>;
@@ -33,5 +35,5 @@ export declare class DatasetItems {
      * await refuel.datasetItems.delete(datasetId, itemId);
      * ```
      */
-    delete(datasetId: string, itemId: string): Promise<void>;
+    delete(datasetId: string, itemId: string | string[]): Promise<void>;
 }
