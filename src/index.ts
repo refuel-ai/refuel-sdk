@@ -92,3 +92,4 @@ export class Refuel {
 }
 
 export * from "./types";
+export * from "./utils";

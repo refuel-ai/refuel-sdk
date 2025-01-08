@@ -1,5 +1,10 @@
 import { RefuelBase } from "../RefuelBase";
-import { Dataset, DatasetItemsOptions } from "../types";
+import {
+    Dataset,
+    DatasetItemsOptions,
+    DatasetLabeled,
+    DatasetUnlabeled,
+} from "../types";
 
 export class DatasetItems {
     private readonly base: RefuelBase;
@@ -46,35 +51,50 @@ export class DatasetItems {
         )[0];
     }
 
-    async list(
-        datasetId: string,
-        options?: DatasetItemsOptions
-    ): Promise<Dataset[]> {
+    async list<T extends DatasetItemsOptions>(options: T) {
         const params = new URLSearchParams();
 
-        if (options?.filters) {
+        let path: string | undefined;
+
+        if (options.taskId && options.evalSet) {
+            path = `/tasks/${options.taskId}/evalset`;
+        } else if (options.taskId && options.seedSet) {
+            path = `/tasks/${options.taskId}/seedset`;
+        } else if (options.taskId && options.datasetId) {
+            path = `/tasks/${options.taskId}/datasets/${options.datasetId}`;
+        } else if (options.datasetId) {
+            path = `/datasets/${options.datasetId}`;
+        } else {
+            throw new Error("Missing required parameters");
+        }
+
+        if (options.filters) {
             options.filters.forEach((filter) => {
                 params.append("filters", JSON.stringify(filter));
             });
         }
 
-        if (options?.maxItems) {
+        if (options.maxItems) {
             params.append("max_items", options.maxItems.toString());
         }
 
-        if (options?.orderBy) {
-            options.orderBy.forEach((orderBy) => {
-                params.append("order_bys", orderBy);
+        if (options.orderBy) {
+            const orderBys = Array.isArray(options.orderBy)
+                ? options.orderBy
+                : [options.orderBy];
+
+            orderBys.forEach((orderBy) => {
+                params.append("order_bys", JSON.stringify(orderBy));
             });
         }
 
-        if (options?.offset) {
+        if (options.offset) {
             params.append("offset", options.offset.toString());
         }
 
-        return this.base.request<Dataset[]>(
-            `/datasets/${datasetId}?${params.toString()}`
-        );
+        return this.base.request<
+            T extends { taskId: string } ? DatasetLabeled : DatasetUnlabeled
+        >(`${path}?${params.toString()}`);
     }
 
     /**
