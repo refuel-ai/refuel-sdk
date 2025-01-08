@@ -124,12 +124,15 @@ export class DatasetItems {
      * await refuel.datasetItems.delete(datasetId, itemId);
      * ```
      */
-    async delete(datasetId: string, itemId: string): Promise<void> {
-        return this.base.request<void>(
-            `/datasets/${datasetId}/items/${itemId}`,
-            {
-                method: "DELETE",
-            }
+    async delete(datasetId: string, itemId: string | string[]): Promise<void> {
+        const itemIds = Array.isArray(itemId) ? itemId : [itemId];
+
+        await Promise.all(
+            itemIds.map((id) =>
+                this.base.request<void>(`/datasets/${datasetId}/items/${id}`, {
+                    method: "DELETE",
+                })
+            )
         );
     }
 }
