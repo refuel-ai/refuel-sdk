@@ -1036,7 +1036,7 @@ export interface OrderBy {
 /**
  * Options for getting dataset items
  */
-export interface DatasetItemsOptions {
+export interface ListDatasetItemsOptions {
     /** Dataset ID */
     datasetId?: string;
 
@@ -1063,6 +1063,14 @@ export interface DatasetItemsOptions {
 
     /** Order by */
     orderBy?: OrderBy | OrderBy[];
+}
+
+export interface GetDatasetItemOptions {
+    /** Task ID */
+    taskId?: string;
+
+    /** Model ID */
+    modelId?: string;
 }
 
 /**

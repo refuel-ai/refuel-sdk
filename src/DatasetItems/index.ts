@@ -1,9 +1,11 @@
 import { RefuelBase } from "../RefuelBase";
 import {
     Dataset,
-    DatasetItemsOptions,
     DatasetLabeled,
     DatasetUnlabeled,
+    GetDatasetItemOptions,
+    LabeledDatasetItem,
+    ListDatasetItemsOptions,
 } from "../types";
 
 export class DatasetItems {
@@ -40,18 +42,35 @@ export class DatasetItems {
      * const item = await refuel.datasetItems.get(datasetId, itemId);
      * ```
      */
-    async get(
+    async get<T extends GetDatasetItemOptions>(
         datasetId: string,
-        itemId: string
-    ): Promise<Record<string, string>> {
+        itemId: string,
+        options?: T
+    ) {
+        const params = new URLSearchParams();
+
+        if (options?.taskId) {
+            params.append("task_id", options.taskId);
+        }
+
+        if (options?.modelId) {
+            params.append("model_id", options.modelId);
+        }
+
+        const path = options?.taskId
+            ? `/tasks/${options.taskId}/datasets/${datasetId}/items/${itemId}`
+            : `/datasets/${datasetId}/items/${itemId}`;
+
         return (
-            await this.base.request<Record<string, string>[]>(
-                `/datasets/${datasetId}/items/${itemId}`
-            )
+            await this.base.request<
+                T extends { taskId: string }
+                    ? LabeledDatasetItem[]
+                    : Record<string, unknown>[]
+            >(`${path}?${params.toString()}`)
         )[0];
     }
 
-    async list<T extends DatasetItemsOptions>(options: T) {
+    async list<T extends ListDatasetItemsOptions>(options: T) {
         const params = new URLSearchParams();
 
         let path: string | undefined;
