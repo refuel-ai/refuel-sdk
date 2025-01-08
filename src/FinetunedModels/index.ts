@@ -96,4 +96,20 @@ export class FinetunedModels {
             method: "DELETE",
         });
     }
+
+    /**
+     * Check if a task is trainable
+     *
+     * @example
+     * ```ts
+     * const isTrainable = await refuel.finetunedModels.isTaskTrainable(taskId);
+     * ```
+     */
+    async isTaskTrainable(taskId: string): Promise<boolean> {
+        const response = await this.base.request<{ trainable: boolean }>(
+            `/tasks/${taskId}/trainable`
+        );
+
+        return response.trainable;
+    }
 }
