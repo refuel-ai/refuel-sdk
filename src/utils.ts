@@ -1,4 +1,4 @@
-import { DatasetLabeled, LabeledDatasetItem } from "./types";
+import { DatasetLabeled, LabeledDatasetItem, Telemetry } from "./types";
 
 export const isLabeledDatasetItem = (
     item: unknown
@@ -15,5 +15,14 @@ export const isDatasetLabeled = (
         "items" in dataset &&
         Array.isArray(dataset?.items) &&
         isLabeledDatasetItem(dataset.items[0])
+    );
+};
+
+export const isTelemetry = (telemetry: unknown): telemetry is Telemetry => {
+    return (
+        typeof telemetry === "object" &&
+        telemetry !== null &&
+        "telemetry_type" in telemetry &&
+        "telemetry_value" in telemetry
     );
 };
