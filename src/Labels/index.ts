@@ -1,8 +1,8 @@
 import { RefuelBase } from "../RefuelBase";
 import {
-    Dataset,
     DatasetItemLabels,
     DatasetItemLabelsUpdate,
+    DatasetLabeled,
     LabelListOptions,
 } from "../types";
 
@@ -18,7 +18,7 @@ export class Labels {
         this.base = base;
     }
 
-    private getLabelsFromResponse(response: Dataset): DatasetItemLabels {
+    private getLabelsFromResponse(response: DatasetLabeled): DatasetItemLabels {
         const labels = response.items[0].labels;
 
         if (!labels) {
@@ -66,7 +66,7 @@ export class Labels {
             );
         }
 
-        const response = await this.base.request<Dataset>(
+        const response = await this.base.request<DatasetLabeled>(
             `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label?${params.toString()}`
         );
 
@@ -87,7 +87,7 @@ export class Labels {
         itemId: string,
         labels: DatasetItemLabelsUpdate
     ): Promise<DatasetItemLabels> {
-        const response = await this.base.request<Dataset>(
+        const response = await this.base.request<DatasetLabeled>(
             `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label`,
             {
                 method: "POST",
@@ -161,7 +161,7 @@ export class Labels {
             params.append("model_id", options.modelId);
         }
 
-        const response = await this.base.request<Dataset>(
+        const response = await this.base.request<DatasetLabeled>(
             `/tasks/${taskId}/datasets/${datasetId}/items/${itemId}/label?${params.toString()}`
         );
 

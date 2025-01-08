@@ -444,14 +444,19 @@ export interface Dataset {
     /** Ingest status */
     ingest_status: string | null;
 
-    /** Items in the dataset */
-    items: LabeledDatasetItem[];
-
     /** Number of items included in the response */
     response_count: number;
 
     /** Total number of items in the dataset */
     total_count: number;
+}
+
+export interface DatasetUnlabeled extends Dataset {
+    items: Record<string, unknown>[];
+}
+
+export interface DatasetLabeled extends Dataset {
+    items: LabeledDatasetItem[];
 }
 
 /**
@@ -1017,10 +1022,36 @@ export interface ExportDatasetResponse {
     uri: string;
 }
 
+export interface OrderBy {
+    /** Field to order by */
+    field: string;
+
+    /** Order direction */
+    direction: "ASC" | "DESC";
+
+    /** Order by a subtask ID */
+    subtask_id?: string;
+}
+
 /**
  * Options for getting dataset items
  */
 export interface DatasetItemsOptions {
+    /** Dataset ID */
+    datasetId?: string;
+
+    /** Task ID */
+    taskId?: string;
+
+    /** Whether to get results from the seed set */
+    seedSet?: boolean;
+
+    /** Whether to get results from the evaluation set */
+    evalSet?: boolean;
+
+    /** ID of the model to use */
+    modelId?: string;
+
     /** Filters to apply to the dataset */
     filters?: SQLFilter[];
 
@@ -1031,7 +1062,7 @@ export interface DatasetItemsOptions {
     offset?: number;
 
     /** Order by */
-    orderBy?: string[];
+    orderBy?: OrderBy | OrderBy[];
 }
 
 /**
