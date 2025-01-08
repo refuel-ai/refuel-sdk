@@ -53,4 +53,13 @@ export declare class FinetunedModels {
      * ```
      */
     delete(modelId: string): Promise<void>;
+    /**
+     * Check if a task is trainable
+     *
+     * @example
+     * ```ts
+     * const isTrainable = await refuel.finetunedModels.isTaskTrainable(taskId);
+     * ```
+     */
+    isTaskTrainable(taskId: string): Promise<boolean>;
 }

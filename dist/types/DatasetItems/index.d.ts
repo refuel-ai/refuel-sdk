@@ -1,5 +1,5 @@
 import { RefuelBase } from "../RefuelBase";
-import { Dataset, DatasetItemsOptions } from "../types";
+import { Dataset, DatasetLabeled, DatasetUnlabeled, GetDatasetItemOptions, LabeledDatasetItem, ListDatasetItemsOptions } from "../types";
 export declare class DatasetItems {
     private readonly base;
     /** @internal */
@@ -21,8 +21,10 @@ export declare class DatasetItems {
      * const item = await refuel.datasetItems.get(datasetId, itemId);
      * ```
      */
-    get(datasetId: string, itemId: string): Promise<Record<string, string>>;
-    list(datasetId: string, options?: DatasetItemsOptions): Promise<Dataset[]>;
+    get<T extends GetDatasetItemOptions>(datasetId: string, itemId: string, options?: T): Promise<Record<string, unknown> | LabeledDatasetItem>;
+    list<T extends ListDatasetItemsOptions>(options: T): Promise<T extends {
+        taskId: string;
+    } ? DatasetLabeled : DatasetUnlabeled>;
     /**
      * Delete a dataset item
      *

@@ -54,3 +54,4 @@ export declare class Refuel {
     constructor(options?: RefuelOptions | string);
 }
 export * from "./types";
+export * from "./utils";
