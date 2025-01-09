@@ -1,5 +1,5 @@
 import { RefuelBase } from "../RefuelBase";
-import { Dataset, DatasetFromList } from "../types";
+import { CreateDatasetOptions, Dataset, DatasetFromList } from "../types";
 
 /**
  * Handles operations related to datasets.
@@ -12,6 +12,44 @@ export class Datasets {
     /** @internal */
     constructor(base: RefuelBase) {
         this.base = base;
+    }
+
+    /**
+     * Create a dataset
+     *
+     * @example
+     * ```ts
+     * const dataset = await refuel.datasets.create(projectId, {
+     *     name: "My Dataset",
+     *     source: "csv",
+     *     source_path: "s3://my-bucket/my-file.csv"
+     * });
+     * ```
+     */
+    async create(
+        projectId: string,
+        options: CreateDatasetOptions
+    ): Promise<Dataset> {
+        const data = new FormData();
+
+        data.append("name", options.name);
+
+        if (options.source_path) {
+            data.append("source_path", options.source_path);
+        }
+
+        if (options.source) {
+            data.append("source", options.source);
+        }
+
+        if (options.redact_pii) {
+            data.append("redact_pii", options.redact_pii.toString());
+        }
+
+        return this.base.request<Dataset>(`/projects/${projectId}/datasets`, {
+            method: "POST",
+            data,
+        });
     }
 
     /**
