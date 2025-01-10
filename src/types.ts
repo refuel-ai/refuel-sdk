@@ -638,6 +638,9 @@ export interface Subtask {
 
     /** Subtask type */
     type: TaskType | null;
+
+    /** Related taxonomy ID */
+    taxonomy_id?: string | null;
 }
 
 /**
