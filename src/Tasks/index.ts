@@ -33,10 +33,10 @@ export class Tasks {
      * const tasks = await refuel.tasks.list();
      * ```
      */
-    async list(projectId?: string): Promise<Tasks[]> {
+    async list(projectId?: string): Promise<Task[]> {
         const endpoint = projectId ? `/projects/${projectId}/tasks` : "/tasks";
 
-        return this.base.request<Tasks[]>(endpoint);
+        return this.base.request<Task[]>(endpoint);
     }
 
     /**
