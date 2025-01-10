@@ -3,9 +3,12 @@ import {
     Dataset,
     DatasetLabeled,
     DatasetUnlabeled,
+    EvalsetSamplingStrategy,
     GetDatasetItemOptions,
     LabeledDatasetItem,
     ListDatasetItemsOptions,
+    SamplingEvent,
+    SQLFilter,
 } from "../types";
 
 export class DatasetItems {
@@ -128,15 +131,87 @@ export class DatasetItems {
      * await refuel.datasetItems.delete(datasetId, itemId);
      * ```
      */
-    async delete(datasetId: string, itemId: string | string[]): Promise<void> {
+    async delete(
+        itemId: string | string[],
+        options: Pick<
+            ListDatasetItemsOptions,
+            "datasetId" | "seedSet" | "evalSet" | "taskId"
+        >
+    ): Promise<void> {
         const itemIds = Array.isArray(itemId) ? itemId : [itemId];
+
+        let basePath: string;
+
+        if (options.taskId && options.seedSet) {
+            basePath = `/tasks/${options.taskId}/seedset/items`;
+        } else if (options.taskId && options.evalSet) {
+            basePath = `/tasks/${options.taskId}/evalset/items`;
+        } else if (options.datasetId) {
+            basePath = `/datasets/${options.datasetId}/items`;
+        } else {
+            throw new Error("Missing required parameters");
+        }
 
         await Promise.all(
             itemIds.map((id) =>
-                this.base.request<void>(`/datasets/${datasetId}/items/${id}`, {
+                this.base.request<void>(`${basePath}/${id}`, {
                     method: "DELETE",
                 })
             )
+        );
+    }
+
+    async addToEvalSet(
+        taskId: string,
+        datasetId: string,
+        options?: {
+            itemId?: string | string[];
+            samplingEvent?: SamplingEvent;
+            filters?: SQLFilter[];
+        }
+    ) {
+        if (options?.itemId) {
+            const itemIds = Array.isArray(options.itemId)
+                ? options.itemId
+                : [options.itemId];
+
+            return Promise.all(
+                itemIds.map((id) => {
+                    const params = new URLSearchParams({
+                        dataset_id: datasetId,
+                        item_id: id,
+                    });
+                    return this.base.request<void>(
+                        `/tasks/${taskId}/evalset/items?${params.toString()}`,
+                        {
+                            method: "POST",
+                        }
+                    );
+                })
+            );
+        }
+
+        const params = new URLSearchParams({
+            dataset_id: datasetId,
+        });
+
+        if (options?.filters) {
+            options.filters.forEach((filter) => {
+                params.append("filters", JSON.stringify(filter));
+            });
+        }
+
+        const data: SamplingEvent = {
+            sample_strategy: EvalsetSamplingStrategy.NO_SAMPLING,
+            ...options?.samplingEvent,
+        };
+
+        return this.base.request<void>(
+            `/tasks/${taskId}/evalset/items?${params.toString()}`,
+            {
+                method: "POST",
+                data,
+            }
         );
     }
 }
