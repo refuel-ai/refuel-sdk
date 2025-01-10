@@ -1,5 +1,5 @@
 import { RefuelBase } from "../RefuelBase";
-import { Dataset, DatasetLabeled, DatasetUnlabeled, GetDatasetItemOptions, LabeledDatasetItem, ListDatasetItemsOptions } from "../types";
+import { Dataset, DatasetLabeled, DatasetUnlabeled, GetDatasetItemOptions, LabeledDatasetItem, ListDatasetItemsOptions, SamplingEvent, SQLFilter } from "../types";
 export declare class DatasetItems {
     private readonly base;
     /** @internal */
@@ -35,5 +35,10 @@ export declare class DatasetItems {
      * await refuel.datasetItems.delete(datasetId, itemId);
      * ```
      */
-    delete(datasetId: string, itemId: string | string[]): Promise<void>;
+    delete(itemId: string | string[], options: Pick<ListDatasetItemsOptions, "datasetId" | "seedSet" | "evalSet" | "taskId">): Promise<void>;
+    addToEvalSet(taskId: string, datasetId: string, options?: {
+        itemId?: string | string[];
+        samplingEvent?: SamplingEvent;
+        filters?: SQLFilter[];
+    }): Promise<void | void[]>;
 }

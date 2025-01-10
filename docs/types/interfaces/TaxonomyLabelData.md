@@ -18,7 +18,7 @@ Label description
 
 #### Defined in
 
-[src/types.ts:923](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L923)
+[src/types.ts:936](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L936)
 
 ***
 
@@ -30,4 +30,4 @@ Label name
 
 #### Defined in
 
-[src/types.ts:920](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L920)
+[src/types.ts:933](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L933)

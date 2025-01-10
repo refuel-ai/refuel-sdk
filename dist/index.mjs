@@ -374,6 +374,25 @@ var CalibrationModel;
 (function (CalibrationModel) {
     CalibrationModel["LINEAR_REGRESSION"] = "LINEAR_REGRESSION";
 })(CalibrationModel || (CalibrationModel = {}));
+var SamplingStrategy;
+(function (SamplingStrategy) {
+    SamplingStrategy["RANDOM"] = "random";
+    SamplingStrategy["STRATIFIED"] = "stratified";
+    SamplingStrategy["SORTED"] = "sorted";
+})(SamplingStrategy || (SamplingStrategy = {}));
+var EvalsetSamplingStrategy;
+(function (EvalsetSamplingStrategy) {
+    EvalsetSamplingStrategy["NO_SAMPLING"] = "no sampling";
+    EvalsetSamplingStrategy["RANDOM"] = "random";
+    EvalsetSamplingStrategy["STRATIFIED"] = "stratified";
+    EvalsetSamplingStrategy["BALANCED"] = "balanced";
+})(EvalsetSamplingStrategy || (EvalsetSamplingStrategy = {}));
+var SampleColumnType;
+(function (SampleColumnType) {
+    SampleColumnType["LABEL"] = "label";
+    SampleColumnType["METADATA"] = "metadata";
+    SampleColumnType["CONFIDENCE"] = "confidence";
+})(SampleColumnType || (SampleColumnType = {}));
 
 /**
  * Handles operations related to confidence calibrations.
@@ -588,11 +607,56 @@ class DatasetItems {
      * await refuel.datasetItems.delete(datasetId, itemId);
      * ```
      */
-    async delete(datasetId, itemId) {
+    async delete(itemId, options) {
         const itemIds = Array.isArray(itemId) ? itemId : [itemId];
-        await Promise.all(itemIds.map((id) => this.base.request(`/datasets/${datasetId}/items/${id}`, {
+        let basePath;
+        if (options.taskId && options.seedSet) {
+            basePath = `/tasks/${options.taskId}/seedset/items`;
+        }
+        else if (options.taskId && options.evalSet) {
+            basePath = `/tasks/${options.taskId}/evalset/items`;
+        }
+        else if (options.datasetId) {
+            basePath = `/datasets/${options.datasetId}/items`;
+        }
+        else {
+            throw new Error("Missing required parameters");
+        }
+        await Promise.all(itemIds.map((id) => this.base.request(`${basePath}/${id}`, {
             method: "DELETE",
         })));
+    }
+    async addToEvalSet(taskId, datasetId, options) {
+        if (options === null || options === void 0 ? void 0 : options.itemId) {
+            const itemIds = Array.isArray(options.itemId)
+                ? options.itemId
+                : [options.itemId];
+            return Promise.all(itemIds.map((id) => {
+                const params = new URLSearchParams({
+                    dataset_id: datasetId,
+                    item_id: id,
+                });
+                return this.base.request(`/tasks/${taskId}/evalset/items?${params.toString()}`, {
+                    method: "POST",
+                });
+            }));
+        }
+        const params = new URLSearchParams({
+            dataset_id: datasetId,
+        });
+        if (options === null || options === void 0 ? void 0 : options.filters) {
+            options.filters.forEach((filter) => {
+                params.append("filters", JSON.stringify(filter));
+            });
+        }
+        const data = {
+            sample_strategy: EvalsetSamplingStrategy.NO_SAMPLING,
+            ...options === null || options === void 0 ? void 0 : options.samplingEvent,
+        };
+        return this.base.request(`/tasks/${taskId}/evalset/items?${params.toString()}`, {
+            method: "POST",
+            data,
+        });
     }
 }
 
@@ -1151,6 +1215,30 @@ class Tasks {
         this.base = base;
     }
     /**
+     * Create a task
+     *
+     * @example
+     * ```ts
+     * const task = await refuel.tasks.create({ task_name: "My Task", project_id: "123" });
+     * ```
+     */
+    async create(data) {
+        if (!data.task_name) {
+            throw new Error("task name is required");
+        }
+        if (!data.project_id) {
+            throw new Error("project id is required");
+        }
+        const params = new URLSearchParams({
+            task_name: data.task_name,
+            project_id: data.project_id,
+        });
+        return this.base.request(`/projects/${data.project_id}/tasks?${params.toString()}`, {
+            method: "POST",
+            data,
+        });
+    }
+    /**
      * Get a task by ID
      *
      * @example
@@ -1199,6 +1287,78 @@ class Tasks {
         return this.base.request(`/tasks/${taskId}`, {
             method: "DELETE",
         });
+    }
+    /**
+     * Duplicate a task
+     *
+     * @example
+     * ```ts
+     * const task = await refuel.tasks.duplicate(taskId);
+     * ```
+     */
+    async duplicate(taskId) {
+        const task = await this.get(taskId);
+        if (!task.id) {
+            throw new Error("task id is required");
+        }
+        if (!task.project_id) {
+            throw new Error("project id is required");
+        }
+        const duplicateName = `${task.task_name} (Copy)`;
+        const params = new URLSearchParams({
+            ref_task_id: task.id,
+            project_id: task.project_id,
+            task_name: duplicateName,
+        });
+        return this.base.request(`/projects/${task.project_id}/tasks?${params.toString()}`, {
+            method: "POST",
+        });
+    }
+    /**
+     * Reset all LLM and human verified labels
+     *
+     * @example
+     * ```ts
+     * await refuel.tasks.reset(taskId);
+     * ```
+     */
+    async reset(taskId) {
+        const params = new URLSearchParams({
+            clear_labels_and_feedback: "true",
+        });
+        return this.base.request(`/tasks/${taskId}?${params.toString()}`, {
+            method: "POST",
+        });
+    }
+    /**
+     * Delete a subtask field from a task
+     *
+     * @example
+     * ```ts
+     * await refuel.tasks.deleteSubtask(taskId, subtaskId);
+     * ```
+     */
+    async deleteSubtask(taskId, subtaskId) {
+        const subtaskIds = Array.isArray(subtaskId) ? subtaskId : [subtaskId];
+        await Promise.all(subtaskIds.map((id) => this.base.request(`/tasks/${taskId}/subtasks/${id}`, {
+            method: "DELETE",
+        })));
+    }
+    /**
+     * Delete an enrichment field from a task
+     *
+     * @example
+     * ```ts
+     * await refuel.tasks.deleteEnrichment(taskId, enrichmentId);
+     * ```
+     */
+    async deleteEnrichment(taskId, enrichmentId) {
+        const enrichmentIds = Array.isArray(enrichmentId)
+            ? enrichmentId
+            : [enrichmentId];
+        await Promise.all(enrichmentIds.map((id) => this.base.request(`/tasks/${taskId}/transforms/${id}`, {
+            method: "DELETE",
+        })));
     }
 }
 
@@ -1532,5 +1692,5 @@ class Refuel {
     }
 }
 
-export { AvailabilityStatus, CalibrationModel, CalibrationStatus, DatasetColumnType, FeatureFlagValues, FilterFieldCategory, FilterOperator, FinetuningRunStatus, LabelSource, MetricFormat, Refuel, SchemaMode, TaskType, TransformType, UserState, isDatasetLabeled, isLabeledDatasetItem, isTelemetry };
+export { AvailabilityStatus, CalibrationModel, CalibrationStatus, DatasetColumnType, EvalsetSamplingStrategy, FeatureFlagValues, FilterFieldCategory, FilterOperator, FinetuningRunStatus, LabelSource, MetricFormat, Refuel, SampleColumnType, SamplingStrategy, SchemaMode, TaskType, TransformType, UserState, isDatasetLabeled, isLabeledDatasetItem, isTelemetry };
 //# sourceMappingURL=index.mjs.map

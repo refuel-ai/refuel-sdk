@@ -18,7 +18,7 @@ Extract an answer from an item
 
 #### Defined in
 
-[src/types.ts:682](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L682)
+[src/types.ts:695](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L695)
 
 ***
 
@@ -30,7 +30,7 @@ Extract attributes from an item
 
 #### Defined in
 
-[src/types.ts:688](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L688)
+[src/types.ts:701](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L701)
 
 ***
 
@@ -42,7 +42,7 @@ Classify an item into one category
 
 #### Defined in
 
-[src/types.ts:676](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L676)
+[src/types.ts:689](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L689)
 
 ***
 
@@ -54,7 +54,7 @@ Extract structured data from a document
 
 #### Defined in
 
-[src/types.ts:685](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L685)
+[src/types.ts:698](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L698)
 
 ***
 
@@ -66,7 +66,7 @@ Classify an item into one or more categories
 
 #### Defined in
 
-[src/types.ts:679](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L679)
+[src/types.ts:692](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L692)
 
 ***
 
@@ -78,4 +78,4 @@ Chain of tasks
 
 #### Defined in
 
-[src/types.ts:691](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L691)
+[src/types.ts:704](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L704)

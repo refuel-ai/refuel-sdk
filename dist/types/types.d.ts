@@ -294,6 +294,8 @@ export interface DatasetSchemaColumn {
     type: DatasetColumnType;
     /** Order of the column */
     order: number;
+    primary_key?: boolean;
+    timestamp?: boolean;
 }
 /**
  * The schema for a dataset
@@ -471,6 +473,8 @@ export interface Subtask {
     schema?: string | null;
     /** Subtask type */
     type: TaskType | null;
+    /** Related taxonomy ID */
+    taxonomy_id?: string | null;
 }
 /**
  * The type of enrichment
@@ -1122,4 +1126,41 @@ export interface Calibration {
     updated_at: string;
     /** Team ID */
     team: string;
+}
+export declare enum SamplingStrategy {
+    RANDOM = "random",
+    STRATIFIED = "stratified",
+    SORTED = "sorted"
+}
+export declare enum EvalsetSamplingStrategy {
+    NO_SAMPLING = "no sampling",
+    RANDOM = "random",
+    STRATIFIED = "stratified",
+    BALANCED = "balanced"
+}
+export declare enum SampleColumnType {
+    LABEL = "label",
+    METADATA = "metadata",
+    CONFIDENCE = "confidence"
+}
+export interface SamplingColumn {
+    column_name?: string;
+    column_type: SampleColumnType;
+    subtask_id?: string;
+}
+export interface SamplingEvent {
+    sample_strategy: EvalsetSamplingStrategy;
+    sample_size?: number;
+    sampling_column?: SamplingColumn;
+    num_buckets?: number;
+    sample_size_per_group?: number;
+}
+export interface SampleDatasetParams {
+    column?: string | null;
+    filters?: string[];
+    sample_name: string;
+    sample_size: number;
+    sample_type: SamplingStrategy;
+    sort_direction?: string | null;
+    dataset_id: string | null;
 }

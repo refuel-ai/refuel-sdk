@@ -18,7 +18,7 @@ Model display name
 
 #### Defined in
 
-[src/types.ts:1321](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1321)
+[src/types.ts:1345](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1345)
 
 ***
 
@@ -30,7 +30,7 @@ Model name
 
 #### Defined in
 
-[src/types.ts:1315](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1315)
+[src/types.ts:1339](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1339)
 
 ***
 
@@ -42,7 +42,7 @@ Model parameters
 
 #### Defined in
 
-[src/types.ts:1324](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1324)
+[src/types.ts:1348](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1348)
 
 ***
 
@@ -54,4 +54,4 @@ Model provider
 
 #### Defined in
 
-[src/types.ts:1318](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1318)
+[src/types.ts:1342](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1342)

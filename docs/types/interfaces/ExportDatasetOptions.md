@@ -18,7 +18,7 @@ Email to send the export to
 
 #### Defined in
 
-[src/types.ts:996](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L996)
+[src/types.ts:1012](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1012)
 
 ***
 
@@ -30,7 +30,7 @@ Filters to apply to the dataset
 
 #### Defined in
 
-[src/types.ts:999](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L999)
+[src/types.ts:1015](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1015)
 
 ***
 
@@ -42,7 +42,7 @@ Whether to include labels in the export
 
 #### Defined in
 
-[src/types.ts:1002](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1002)
+[src/types.ts:1018](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1018)
 
 ***
 
@@ -54,7 +54,7 @@ Whether to include the Refuel UUID in the export
 
 #### Defined in
 
-[src/types.ts:1005](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1005)
+[src/types.ts:1021](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1021)
 
 ***
 
@@ -66,7 +66,7 @@ Task ID
 
 #### Defined in
 
-[src/types.ts:1008](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1008)
+[src/types.ts:1024](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1024)
 
 ***
 
@@ -78,4 +78,4 @@ Task run ID
 
 #### Defined in
 
-[src/types.ts:1011](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1011)
+[src/types.ts:1027](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1027)

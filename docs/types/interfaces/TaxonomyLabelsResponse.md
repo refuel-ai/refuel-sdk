@@ -18,7 +18,7 @@ Date the labels were created
 
 #### Defined in
 
-[src/types.ts:942](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L942)
+[src/types.ts:955](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L955)
 
 ***
 
@@ -30,7 +30,7 @@ ID of the task the labels are associated with
 
 #### Defined in
 
-[src/types.ts:939](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L939)
+[src/types.ts:952](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L952)
 
 ***
 
@@ -42,7 +42,7 @@ Labels
 
 #### Defined in
 
-[src/types.ts:945](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L945)
+[src/types.ts:958](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L958)
 
 ***
 
@@ -54,7 +54,7 @@ ID of the task the labels are associated with
 
 #### Defined in
 
-[src/types.ts:948](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L948)
+[src/types.ts:961](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L961)
 
 ***
 
@@ -66,7 +66,7 @@ Total number of labels
 
 #### Defined in
 
-[src/types.ts:951](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L951)
+[src/types.ts:964](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L964)
 
 ***
 
@@ -78,4 +78,4 @@ Date the labels were last updated
 
 #### Defined in
 
-[src/types.ts:954](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L954)
+[src/types.ts:967](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L967)

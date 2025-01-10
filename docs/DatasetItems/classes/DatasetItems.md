@@ -8,6 +8,44 @@
 
 ## Methods
 
+### addToEvalSet()
+
+> **addToEvalSet**(`taskId`, `datasetId`, `options`?): `Promise`\<`void` \| `void`[]\>
+
+#### Parameters
+
+##### taskId
+
+`string`
+
+##### datasetId
+
+`string`
+
+##### options?
+
+###### filters
+
+[`SQLFilter`](../../types/interfaces/SQLFilter.md)[]
+
+###### itemId
+
+`string` \| `string`[]
+
+###### samplingEvent
+
+[`SamplingEvent`](../../types/interfaces/SamplingEvent.md)
+
+#### Returns
+
+`Promise`\<`void` \| `void`[]\>
+
+#### Defined in
+
+[src/DatasetItems/index.ts:164](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/DatasetItems/index.ts#L164)
+
+***
+
 ### create()
 
 > **create**(`datasetId`, `data`): `Promise`\<[`Dataset`](../../types/interfaces/Dataset.md)\>
@@ -36,25 +74,25 @@ const dataset = await refuel.datasetItems.create(datasetId, [{ "name": "John Doe
 
 #### Defined in
 
-[src/DatasetItems/index.ts:25](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/DatasetItems/index.ts#L25)
+[src/DatasetItems/index.ts:30](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/DatasetItems/index.ts#L30)
 
 ***
 
 ### delete()
 
-> **delete**(`datasetId`, `itemId`): `Promise`\<`void`\>
+> **delete**(`itemId`, `options`): `Promise`\<`void`\>
 
 Delete a dataset item
 
 #### Parameters
 
-##### datasetId
-
-`string`
-
 ##### itemId
 
-`string`
+`string` | `string`[]
+
+##### options
+
+`Pick`\<[`ListDatasetItemsOptions`](../../types/interfaces/ListDatasetItemsOptions.md), `"taskId"` \| `"datasetId"` \| `"seedSet"` \| `"evalSet"`\>
 
 #### Returns
 
@@ -68,15 +106,19 @@ await refuel.datasetItems.delete(datasetId, itemId);
 
 #### Defined in
 
-[src/DatasetItems/index.ts:108](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/DatasetItems/index.ts#L108)
+[src/DatasetItems/index.ts:134](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/DatasetItems/index.ts#L134)
 
 ***
 
 ### get()
 
-> **get**(`datasetId`, `itemId`): `Promise`\<`Record`\<`string`, `string`\>\>
+> **get**\<`T`\>(`datasetId`, `itemId`, `options`?): `Promise`\<`Record`\<`string`, `unknown`\> \| `T` *extends* `object` ? [`LabeledDatasetItem`](../../types/interfaces/LabeledDatasetItem.md) : `Record`\<`string`, `unknown`\>[]\>
 
 Get a dataset item by ID
+
+#### Type Parameters
+
+• **T** *extends* [`GetDatasetItemOptions`](../../types/interfaces/GetDatasetItemOptions.md)
 
 #### Parameters
 
@@ -88,9 +130,13 @@ Get a dataset item by ID
 
 `string`
 
+##### options?
+
+`T`
+
 #### Returns
 
-`Promise`\<`Record`\<`string`, `string`\>\>
+`Promise`\<`Record`\<`string`, `unknown`\> \| `T` *extends* `object` ? [`LabeledDatasetItem`](../../types/interfaces/LabeledDatasetItem.md) : `Record`\<`string`, `unknown`\>[]\>
 
 #### Example
 
@@ -100,7 +146,7 @@ const item = await refuel.datasetItems.get(datasetId, itemId);
 
 #### Defined in
 
-[src/DatasetItems/index.ts:43](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/DatasetItems/index.ts#L43)
+[src/DatasetItems/index.ts:48](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/DatasetItems/index.ts#L48)
 
 ***
 
@@ -110,7 +156,7 @@ const item = await refuel.datasetItems.get(datasetId, itemId);
 
 #### Type Parameters
 
-• **T** *extends* [`DatasetItemsOptions`](../../types/interfaces/DatasetItemsOptions.md)
+• **T** *extends* [`ListDatasetItemsOptions`](../../types/interfaces/ListDatasetItemsOptions.md)
 
 #### Parameters
 
@@ -124,4 +170,4 @@ const item = await refuel.datasetItems.get(datasetId, itemId);
 
 #### Defined in
 
-[src/DatasetItems/index.ts:54](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/DatasetItems/index.ts#L54)
+[src/DatasetItems/index.ts:80](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/DatasetItems/index.ts#L80)

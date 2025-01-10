@@ -18,7 +18,7 @@ Dataset ID
 
 #### Defined in
 
-[src/types.ts:1419](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1419)
+[src/types.ts:1443](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1443)
 
 ***
 
@@ -30,4 +30,4 @@ Whether this is an evaluation run
 
 #### Defined in
 
-[src/types.ts:1416](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L1416)
+[src/types.ts:1440](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1440)

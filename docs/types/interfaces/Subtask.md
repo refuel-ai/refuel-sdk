@@ -16,7 +16,7 @@ Default value
 
 #### Defined in
 
-[src/types.ts:592](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L592)
+[src/types.ts:602](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L602)
 
 ***
 
@@ -28,7 +28,7 @@ Guidelines
 
 #### Defined in
 
-[src/types.ts:595](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L595)
+[src/types.ts:605](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L605)
 
 ***
 
@@ -40,7 +40,7 @@ Subtask ID
 
 #### Defined in
 
-[src/types.ts:589](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L589)
+[src/types.ts:599](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L599)
 
 ***
 
@@ -52,7 +52,7 @@ Columns with a URL to an image
 
 #### Defined in
 
-[src/types.ts:598](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L598)
+[src/types.ts:608](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L608)
 
 ***
 
@@ -64,7 +64,7 @@ Input columns
 
 #### Defined in
 
-[src/types.ts:601](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L601)
+[src/types.ts:611](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L611)
 
 ***
 
@@ -76,7 +76,7 @@ Ground truth column
 
 #### Defined in
 
-[src/types.ts:604](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L604)
+[src/types.ts:614](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L614)
 
 ***
 
@@ -88,7 +88,7 @@ Number of labels to send to the LLM to select from
 
 #### Defined in
 
-[src/types.ts:607](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L607)
+[src/types.ts:617](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L617)
 
 ***
 
@@ -100,7 +100,7 @@ Labels
 
 #### Defined in
 
-[src/types.ts:610](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L610)
+[src/types.ts:620](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L620)
 
 ***
 
@@ -112,7 +112,7 @@ Subtask name
 
 #### Defined in
 
-[src/types.ts:613](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L613)
+[src/types.ts:623](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L623)
 
 ***
 
@@ -124,7 +124,7 @@ Order of the subtask
 
 #### Defined in
 
-[src/types.ts:616](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L616)
+[src/types.ts:626](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L626)
 
 ***
 
@@ -140,7 +140,7 @@ JSON Schema the LLM output must conform to
 
 #### Defined in
 
-[src/types.ts:627](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L627)
+[src/types.ts:637](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L637)
 
 ***
 
@@ -152,7 +152,7 @@ Hash of the guidelines used to generate the schema
 
 #### Defined in
 
-[src/types.ts:619](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L619)
+[src/types.ts:629](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L629)
 
 ***
 
@@ -164,7 +164,19 @@ Schema mode
 
 #### Defined in
 
-[src/types.ts:622](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L622)
+[src/types.ts:632](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L632)
+
+***
+
+### taxonomy\_id?
+
+> `optional` **taxonomy\_id**: `null` \| `string`
+
+Related taxonomy ID
+
+#### Defined in
+
+[src/types.ts:643](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L643)
 
 ***
 
@@ -176,4 +188,4 @@ Subtask type
 
 #### Defined in
 
-[src/types.ts:630](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L630)
+[src/types.ts:640](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L640)
