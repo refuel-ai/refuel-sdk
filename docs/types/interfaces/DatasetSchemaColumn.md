@@ -18,7 +18,7 @@ Column name
 
 #### Defined in
 
-[src/types.ts:385](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L385)
+[src/types.ts:385](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L385)
 
 ***
 
@@ -30,7 +30,27 @@ Order of the column
 
 #### Defined in
 
-[src/types.ts:391](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L391)
+[src/types.ts:391](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L391)
+
+***
+
+### primary\_key?
+
+> `optional` **primary\_key**: `boolean`
+
+#### Defined in
+
+[src/types.ts:393](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L393)
+
+***
+
+### timestamp?
+
+> `optional` **timestamp**: `boolean`
+
+#### Defined in
+
+[src/types.ts:395](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L395)
 
 ***
 
@@ -42,4 +62,4 @@ Column type
 
 #### Defined in
 
-[src/types.ts:388](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L388)
+[src/types.ts:388](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L388)

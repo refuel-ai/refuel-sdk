@@ -134,12 +134,6 @@ Re-exports [DatasetItemLabelUpdateData](../types/type-aliases/DatasetItemLabelUp
 
 ***
 
-### DatasetItemsOptions
-
-Re-exports [DatasetItemsOptions](../types/interfaces/DatasetItemsOptions.md)
-
-***
-
 ### DatasetLabeled
 
 Re-exports [DatasetLabeled](../types/interfaces/DatasetLabeled.md)
@@ -167,6 +161,12 @@ Re-exports [DatasetUnlabeled](../types/interfaces/DatasetUnlabeled.md)
 ### DeepPartial
 
 Re-exports [DeepPartial](../types/type-aliases/DeepPartial.md)
+
+***
+
+### EvalsetSamplingStrategy
+
+Re-exports [EvalsetSamplingStrategy](../types/enumerations/EvalsetSamplingStrategy.md)
 
 ***
 
@@ -242,6 +242,12 @@ Re-exports [FinetuningRunStatus](../types/enumerations/FinetuningRunStatus.md)
 
 ***
 
+### GetDatasetItemOptions
+
+Re-exports [GetDatasetItemOptions](../types/interfaces/GetDatasetItemOptions.md)
+
+***
+
 ### Integration
 
 Re-exports [Integration](../types/interfaces/Integration.md)
@@ -272,6 +278,12 @@ Re-exports [isLabeledDatasetItem](../utils/functions/isLabeledDatasetItem.md)
 
 ***
 
+### isTelemetry
+
+Re-exports [isTelemetry](../utils/functions/isTelemetry.md)
+
+***
+
 ### LabeledDatasetItem
 
 Re-exports [LabeledDatasetItem](../types/interfaces/LabeledDatasetItem.md)
@@ -293,6 +305,12 @@ Re-exports [LabelListOptions](../types/interfaces/LabelListOptions.md)
 ### LabelSource
 
 Re-exports [LabelSource](../types/enumerations/LabelSource.md)
+
+***
+
+### ListDatasetItemsOptions
+
+Re-exports [ListDatasetItemsOptions](../types/interfaces/ListDatasetItemsOptions.md)
 
 ***
 
@@ -347,6 +365,36 @@ Re-exports [RefuelTeam](../types/interfaces/RefuelTeam.md)
 ### RequestOptions
 
 Re-exports [RequestOptions](../types/interfaces/RequestOptions.md)
+
+***
+
+### SampleColumnType
+
+Re-exports [SampleColumnType](../types/enumerations/SampleColumnType.md)
+
+***
+
+### SampleDatasetParams
+
+Re-exports [SampleDatasetParams](../types/interfaces/SampleDatasetParams.md)
+
+***
+
+### SamplingColumn
+
+Re-exports [SamplingColumn](../types/interfaces/SamplingColumn.md)
+
+***
+
+### SamplingEvent
+
+Re-exports [SamplingEvent](../types/interfaces/SamplingEvent.md)
+
+***
+
+### SamplingStrategy
+
+Re-exports [SamplingStrategy](../types/enumerations/SamplingStrategy.md)
 
 ***
 

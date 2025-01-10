@@ -12,3 +12,4 @@
 
 - [isDatasetLabeled](functions/isDatasetLabeled.md)
 - [isLabeledDatasetItem](functions/isLabeledDatasetItem.md)
+- [isTelemetry](functions/isTelemetry.md)

@@ -9,6 +9,15 @@ export declare class Tasks {
     private readonly base;
     constructor(base: RefuelBase);
     /**
+     * Create a task
+     *
+     * @example
+     * ```ts
+     * const task = await refuel.tasks.create({ task_name: "My Task", project_id: "123" });
+     * ```
+     */
+    create(data: Partial<Task>): Promise<Task>;
+    /**
      * Get a task by ID
      *
      * @example
@@ -25,7 +34,7 @@ export declare class Tasks {
      * const tasks = await refuel.tasks.list();
      * ```
      */
-    list(projectId?: string): Promise<Tasks[]>;
+    list(projectId?: string): Promise<Task[]>;
     /**
      * Update a task
      *
@@ -44,4 +53,40 @@ export declare class Tasks {
      * ```
      */
     delete(taskId: string): Promise<void>;
+    /**
+     * Duplicate a task
+     *
+     * @example
+     * ```ts
+     * const task = await refuel.tasks.duplicate(taskId);
+     * ```
+     */
+    duplicate(taskId: string): Promise<Task>;
+    /**
+     * Reset all LLM and human verified labels
+     *
+     * @example
+     * ```ts
+     * await refuel.tasks.reset(taskId);
+     * ```
+     */
+    reset(taskId: string): Promise<void>;
+    /**
+     * Delete a subtask field from a task
+     *
+     * @example
+     * ```ts
+     * await refuel.tasks.deleteSubtask(taskId, subtaskId);
+     * ```
+     */
+    deleteSubtask(taskId: string, subtaskId: string | string[]): Promise<void>;
+    /**
+     * Delete an enrichment field from a task
+     *
+     * @example
+     * ```ts
+     * await refuel.tasks.deleteEnrichment(taskId, enrichmentId);
+     * ```
+     */
+    deleteEnrichment(taskId: string, enrichmentId: string | string[]): Promise<void>;
 }

@@ -28,9 +28,37 @@ Instead, access it through an instance of the Refuel class.
 
 #### Defined in
 
-[src/Tasks/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/Tasks/index.ts#L12)
+[src/Tasks/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/Tasks/index.ts#L12)
 
 ## Methods
+
+### create()
+
+> **create**(`data`): `Promise`\<[`Task`](../../types/interfaces/Task.md)\>
+
+Create a task
+
+#### Parameters
+
+##### data
+
+`Partial`\<[`Task`](../../types/interfaces/Task.md)\>
+
+#### Returns
+
+`Promise`\<[`Task`](../../types/interfaces/Task.md)\>
+
+#### Example
+
+```ts
+const task = await refuel.tasks.create({ task_name: "My Task", project_id: "123" });
+```
+
+#### Defined in
+
+[src/Tasks/index.ts:24](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/Tasks/index.ts#L24)
+
+***
 
 ### delete()
 
@@ -56,7 +84,99 @@ await refuel.tasks.delete(taskId);
 
 #### Defined in
 
-[src/Tasks/index.ts:65](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/Tasks/index.ts#L65)
+[src/Tasks/index.ts:96](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/Tasks/index.ts#L96)
+
+***
+
+### deleteEnrichment()
+
+> **deleteEnrichment**(`taskId`, `enrichmentId`): `Promise`\<`void`\>
+
+Delete an enrichment field from a task
+
+#### Parameters
+
+##### taskId
+
+`string`
+
+##### enrichmentId
+
+`string` | `string`[]
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Example
+
+```ts
+await refuel.tasks.deleteEnrichment(taskId, enrichmentId);
+```
+
+#### Defined in
+
+[src/Tasks/index.ts:188](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/Tasks/index.ts#L188)
+
+***
+
+### deleteSubtask()
+
+> **deleteSubtask**(`taskId`, `subtaskId`): `Promise`\<`void`\>
+
+Delete a subtask field from a task
+
+#### Parameters
+
+##### taskId
+
+`string`
+
+##### subtaskId
+
+`string` | `string`[]
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Example
+
+```ts
+await refuel.tasks.deleteSubtask(taskId, subtaskId);
+```
+
+#### Defined in
+
+[src/Tasks/index.ts:165](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/Tasks/index.ts#L165)
+
+***
+
+### duplicate()
+
+> **duplicate**(`taskId`): `Promise`\<[`Task`](../../types/interfaces/Task.md)\>
+
+Duplicate a task
+
+#### Parameters
+
+##### taskId
+
+`string`
+
+#### Returns
+
+`Promise`\<[`Task`](../../types/interfaces/Task.md)\>
+
+#### Example
+
+```ts
+const task = await refuel.tasks.duplicate(taskId);
+```
+
+#### Defined in
+
+[src/Tasks/index.ts:110](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/Tasks/index.ts#L110)
 
 ***
 
@@ -84,13 +204,13 @@ const task = await refuel.tasks.get(taskId);
 
 #### Defined in
 
-[src/Tasks/index.ts:24](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/Tasks/index.ts#L24)
+[src/Tasks/index.ts:55](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/Tasks/index.ts#L55)
 
 ***
 
 ### list()
 
-> **list**(`projectId`?): `Promise`\<[`Tasks`](Tasks.md)[]\>
+> **list**(`projectId`?): `Promise`\<[`Task`](../../types/interfaces/Task.md)[]\>
 
 List all tasks
 
@@ -102,7 +222,7 @@ List all tasks
 
 #### Returns
 
-`Promise`\<[`Tasks`](Tasks.md)[]\>
+`Promise`\<[`Task`](../../types/interfaces/Task.md)[]\>
 
 #### Example
 
@@ -112,7 +232,35 @@ const tasks = await refuel.tasks.list();
 
 #### Defined in
 
-[src/Tasks/index.ts:36](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/Tasks/index.ts#L36)
+[src/Tasks/index.ts:67](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/Tasks/index.ts#L67)
+
+***
+
+### reset()
+
+> **reset**(`taskId`): `Promise`\<`void`\>
+
+Reset all LLM and human verified labels
+
+#### Parameters
+
+##### taskId
+
+`string`
+
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Example
+
+```ts
+await refuel.tasks.reset(taskId);
+```
+
+#### Defined in
+
+[src/Tasks/index.ts:144](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/Tasks/index.ts#L144)
 
 ***
 
@@ -144,4 +292,4 @@ const task = await refuel.tasks.update(taskId, { name: "New Name" });
 
 #### Defined in
 
-[src/Tasks/index.ts:50](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/Tasks/index.ts#L50)
+[src/Tasks/index.ts:81](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/Tasks/index.ts#L81)

@@ -12,4 +12,4 @@ Configuration for an integration to an external service
 
 ## Defined in
 
-[src/types.ts:960](https://github.com/refuel-ai/refuel-sdk/blob/4c2ff8dd3473ca3a77a7beb7cac6d4e017c1d0e0/src/types.ts#L960)
+[src/types.ts:973](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L973)
