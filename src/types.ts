@@ -409,6 +409,12 @@ export interface DatasetSchema {
     $schema: string;
 }
 
+export enum DatasetIngestStatus {
+    FAILED = "failed",
+    IN_PROGRESS = "in_progress",
+    SUCCESS = "success",
+}
+
 export interface DatasetFromList {
     /** Dataset ID */
     id: string;
@@ -423,7 +429,7 @@ export interface DatasetFromList {
     updated_at: string | null;
 
     /** Ingest status */
-    ingest_status: string | null;
+    ingest_status: DatasetIngestStatus | null;
 
     /** Dataset schema */
     dataset_schema: DatasetSchema;
@@ -449,7 +455,7 @@ export interface Dataset {
     schema: DatasetSchema | null;
 
     /** Ingest status */
-    ingest_status: string | null;
+    ingest_status: DatasetIngestStatus | null;
 
     /** Number of items included in the response */
     response_count: number;
