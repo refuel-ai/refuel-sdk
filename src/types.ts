@@ -487,9 +487,6 @@ export enum FilterFieldCategory {
 
     /** Filter on metadata */
     METADATA = "metadata",
-
-    /** Filter on similar items */
-    SIMILAR = "similar",
 }
 
 /**
@@ -540,9 +537,6 @@ export enum FilterOperator {
 
     /** Null */
     NULL = "IS NULL",
-
-    /** Similar to another item */
-    SIMILAR = "SIMILAR",
 }
 
 /**
