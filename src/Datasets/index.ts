@@ -59,4 +59,22 @@ export class Datasets {
             method: "DELETE",
         });
     }
+
+    /**
+     * Update a dataset
+     *
+     * @example
+     * ```ts
+     * await refuel.datasets.update(datasetId, { scheduled_ids: ["taskId"] });
+     * ```
+     */
+    async update(
+        datasetId: string,
+        data: Partial<Pick<Dataset, "scheduled_ids">>
+    ) {
+        return this.base.request<Dataset>(`/datasets/${datasetId}`, {
+            method: "PATCH",
+            data,
+        });
+    }
 }
