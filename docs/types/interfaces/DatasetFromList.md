@@ -16,7 +16,7 @@ Date the dataset was created
 
 #### Defined in
 
-[src/types.ts:420](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L420)
+[src/types.ts:426](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L426)
 
 ***
 
@@ -28,7 +28,7 @@ Dataset name
 
 #### Defined in
 
-[src/types.ts:417](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L417)
+[src/types.ts:423](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L423)
 
 ***
 
@@ -40,7 +40,7 @@ Dataset schema
 
 #### Defined in
 
-[src/types.ts:429](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L429)
+[src/types.ts:435](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L435)
 
 ***
 
@@ -52,19 +52,19 @@ Dataset ID
 
 #### Defined in
 
-[src/types.ts:414](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L414)
+[src/types.ts:420](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L420)
 
 ***
 
 ### ingest\_status
 
-> **ingest\_status**: `null` \| `string`
+> **ingest\_status**: `null` \| [`DatasetIngestStatus`](../enumerations/DatasetIngestStatus.md)
 
 Ingest status
 
 #### Defined in
 
-[src/types.ts:426](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L426)
+[src/types.ts:432](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L432)
 
 ***
 
@@ -76,7 +76,7 @@ Project IDs this dataset is associated with
 
 #### Defined in
 
-[src/types.ts:435](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L435)
+[src/types.ts:441](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L441)
 
 ***
 
@@ -88,7 +88,7 @@ Source of the dataset
 
 #### Defined in
 
-[src/types.ts:432](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L432)
+[src/types.ts:438](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L438)
 
 ***
 
@@ -100,4 +100,4 @@ Date the dataset was last updated
 
 #### Defined in
 
-[src/types.ts:423](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L423)
+[src/types.ts:429](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L429)

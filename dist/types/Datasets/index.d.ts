@@ -36,4 +36,13 @@ export declare class Datasets {
      * ```
      */
     delete(datasetId: string): Promise<void>;
+    /**
+     * Update a dataset
+     *
+     * @example
+     * ```ts
+     * await refuel.datasets.update(datasetId, { scheduled_ids: ["taskId"] });
+     * ```
+     */
+    update(datasetId: string, data: Partial<Pick<Dataset, "scheduled_ids">>): Promise<Dataset>;
 }

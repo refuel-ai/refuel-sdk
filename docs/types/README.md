@@ -14,6 +14,7 @@
 - [CalibrationModel](enumerations/CalibrationModel.md)
 - [CalibrationStatus](enumerations/CalibrationStatus.md)
 - [DatasetColumnType](enumerations/DatasetColumnType.md)
+- [DatasetIngestStatus](enumerations/DatasetIngestStatus.md)
 - [EvalsetSamplingStrategy](enumerations/EvalsetSamplingStrategy.md)
 - [FeatureFlagValues](enumerations/FeatureFlagValues.md)
 - [FilterFieldCategory](enumerations/FilterFieldCategory.md)

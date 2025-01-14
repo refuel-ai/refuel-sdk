@@ -18,7 +18,7 @@ Filter on a label
 
 #### Defined in
 
-[src/types.ts:477](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L477)
+[src/types.ts:486](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L486)
 
 ***
 
@@ -30,7 +30,7 @@ Filter on metadata
 
 #### Defined in
 
-[src/types.ts:480](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L480)
+[src/types.ts:489](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L489)
 
 ***
 
@@ -42,4 +42,4 @@ Filter on similar items
 
 #### Defined in
 
-[src/types.ts:483](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L483)
+[src/types.ts:492](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L492)

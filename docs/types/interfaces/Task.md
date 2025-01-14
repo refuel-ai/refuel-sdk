@@ -18,7 +18,7 @@ Whether to compute confidence scores
 
 #### Defined in
 
-[src/types.ts:715](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L715)
+[src/types.ts:724](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L724)
 
 ***
 
@@ -30,7 +30,7 @@ Context for the LLM to use when labeling
 
 #### Defined in
 
-[src/types.ts:718](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L718)
+[src/types.ts:727](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L727)
 
 ***
 
@@ -42,7 +42,7 @@ Date the task was created
 
 #### Defined in
 
-[src/types.ts:721](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L721)
+[src/types.ts:730](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L730)
 
 ***
 
@@ -54,7 +54,7 @@ Dataset ID
 
 #### Defined in
 
-[src/types.ts:724](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L724)
+[src/types.ts:733](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L733)
 
 ***
 
@@ -66,7 +66,7 @@ Whether the task is deployed as an application
 
 #### Defined in
 
-[src/types.ts:727](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L727)
+[src/types.ts:736](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L736)
 
 ***
 
@@ -78,7 +78,7 @@ Description of the task
 
 #### Defined in
 
-[src/types.ts:730](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L730)
+[src/types.ts:739](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L739)
 
 ***
 
@@ -90,7 +90,7 @@ Emoji for the task
 
 #### Defined in
 
-[src/types.ts:733](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L733)
+[src/types.ts:742](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L742)
 
 ***
 
@@ -102,7 +102,7 @@ Number of few-shot examples to use
 
 #### Defined in
 
-[src/types.ts:736](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L736)
+[src/types.ts:745](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L745)
 
 ***
 
@@ -114,7 +114,7 @@ Task ID
 
 #### Defined in
 
-[src/types.ts:712](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L712)
+[src/types.ts:721](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L721)
 
 ***
 
@@ -126,7 +126,7 @@ Whether the task is mutable
 
 #### Defined in
 
-[src/types.ts:739](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L739)
+[src/types.ts:748](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L748)
 
 ***
 
@@ -138,7 +138,7 @@ Project ID
 
 #### Defined in
 
-[src/types.ts:742](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L742)
+[src/types.ts:751](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L751)
 
 ***
 
@@ -150,7 +150,7 @@ Whether the task is runnable
 
 #### Defined in
 
-[src/types.ts:745](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L745)
+[src/types.ts:754](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L754)
 
 ***
 
@@ -162,7 +162,7 @@ Selected model ID
 
 #### Defined in
 
-[src/types.ts:748](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L748)
+[src/types.ts:757](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L757)
 
 ***
 
@@ -174,7 +174,7 @@ Subtasks
 
 #### Defined in
 
-[src/types.ts:751](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L751)
+[src/types.ts:760](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L760)
 
 ***
 
@@ -186,7 +186,7 @@ Task name
 
 #### Defined in
 
-[src/types.ts:754](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L754)
+[src/types.ts:763](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L763)
 
 ***
 
@@ -198,7 +198,7 @@ Task type
 
 #### Defined in
 
-[src/types.ts:757](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L757)
+[src/types.ts:766](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L766)
 
 ***
 
@@ -210,7 +210,7 @@ Transforms
 
 #### Defined in
 
-[src/types.ts:760](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L760)
+[src/types.ts:769](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L769)
 
 ***
 
@@ -222,7 +222,7 @@ Date the task was last updated
 
 #### Defined in
 
-[src/types.ts:763](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L763)
+[src/types.ts:772](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L772)
 
 ***
 
@@ -236,7 +236,7 @@ overall result
 
 #### Defined in
 
-[src/types.ts:770](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L770)
+[src/types.ts:779](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L779)
 
 ***
 
@@ -248,4 +248,4 @@ Whether to use the LLM cache
 
 #### Defined in
 
-[src/types.ts:773](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L773)
+[src/types.ts:782](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L782)

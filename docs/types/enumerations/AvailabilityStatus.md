@@ -16,7 +16,7 @@ The availability status of a labeling model
 
 #### Defined in
 
-[src/types.ts:1201](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1201)
+[src/types.ts:1210](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1210)
 
 ***
 
@@ -26,4 +26,4 @@ The availability status of a labeling model
 
 #### Defined in
 
-[src/types.ts:1200](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1200)
+[src/types.ts:1209](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1209)

@@ -308,6 +308,11 @@ export interface DatasetSchema {
     /** The schema URI */
     $schema: string;
 }
+export declare enum DatasetIngestStatus {
+    FAILED = "failed",
+    IN_PROGRESS = "in_progress",
+    SUCCESS = "success"
+}
 export interface DatasetFromList {
     /** Dataset ID */
     id: string;
@@ -318,7 +323,7 @@ export interface DatasetFromList {
     /** Date the dataset was last updated */
     updated_at: string | null;
     /** Ingest status */
-    ingest_status: string | null;
+    ingest_status: DatasetIngestStatus | null;
     /** Dataset schema */
     dataset_schema: DatasetSchema;
     /** Source of the dataset */
@@ -336,13 +341,15 @@ export interface Dataset {
     /** Dataset schema */
     schema: DatasetSchema | null;
     /** Ingest status */
-    ingest_status: string | null;
+    ingest_status: DatasetIngestStatus | null;
     /** Number of items included in the response */
     response_count: number;
     /** Total number of items in the dataset */
     total_count: number;
     /** Project IDs this dataset is associated with */
     project_ids: string[] | null;
+    /** Tasks that will be scheduled to run on new items in the dataset */
+    scheduled_ids: string[] | null;
 }
 export interface DatasetUnlabeled extends Dataset {
     items: Record<string, unknown>[];

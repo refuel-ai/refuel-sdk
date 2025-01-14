@@ -18,7 +18,7 @@ Label from a human
 
 #### Defined in
 
-[src/types.ts:245](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L245)
+[src/types.ts:245](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L245)
 
 ***
 
@@ -30,4 +30,4 @@ Label from an LLM
 
 #### Defined in
 
-[src/types.ts:242](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L242)
+[src/types.ts:242](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L242)

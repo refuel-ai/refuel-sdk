@@ -18,7 +18,7 @@ The schema URI
 
 #### Defined in
 
-[src/types.ts:409](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L409)
+[src/types.ts:409](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L409)
 
 ***
 
@@ -30,7 +30,7 @@ Properties in the schema
 
 #### Defined in
 
-[src/types.ts:403](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L403)
+[src/types.ts:403](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L403)
 
 ***
 
@@ -42,4 +42,4 @@ Type of the schema
 
 #### Defined in
 
-[src/types.ts:406](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L406)
+[src/types.ts:406](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L406)

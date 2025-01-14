@@ -110,6 +110,12 @@ Re-exports [DatasetFromList](../types/interfaces/DatasetFromList.md)
 
 ***
 
+### DatasetIngestStatus
+
+Re-exports [DatasetIngestStatus](../types/enumerations/DatasetIngestStatus.md)
+
+***
+
 ### DatasetItemLabel
 
 Re-exports [DatasetItemLabel](../types/interfaces/DatasetItemLabel.md)
