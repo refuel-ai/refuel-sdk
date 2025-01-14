@@ -373,8 +373,8 @@ export enum DatasetColumnType {
     STRING = "string",
     NUMBER = "number",
     BOOLEAN = "boolean",
-    IMAGE_URL = "image_url",
-    PDF_URL = "pdf_url",
+    IMAGE = "image",
+    PDF = "pdf",
 }
 
 /**
