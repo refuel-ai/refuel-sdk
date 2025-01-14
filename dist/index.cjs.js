@@ -197,6 +197,12 @@ exports.DatasetColumnType = void 0;
     DatasetColumnType["IMAGE_URL"] = "image_url";
     DatasetColumnType["PDF_URL"] = "pdf_url";
 })(exports.DatasetColumnType || (exports.DatasetColumnType = {}));
+exports.DatasetIngestStatus = void 0;
+(function (DatasetIngestStatus) {
+    DatasetIngestStatus["FAILED"] = "failed";
+    DatasetIngestStatus["IN_PROGRESS"] = "in_progress";
+    DatasetIngestStatus["SUCCESS"] = "success";
+})(exports.DatasetIngestStatus || (exports.DatasetIngestStatus = {}));
 /**
  * The category of a filter field
  */
@@ -709,6 +715,20 @@ class Datasets {
     async delete(datasetId) {
         return this.base.request(`/datasets/${datasetId}`, {
             method: "DELETE",
+        });
+    }
+    /**
+     * Update a dataset
+     *
+     * @example
+     * ```ts
+     * await refuel.datasets.update(datasetId, { scheduled_ids: ["taskId"] });
+     * ```
+     */
+    async update(datasetId, data) {
+        return this.base.request(`/datasets/${datasetId}`, {
+            method: "PATCH",
+            data,
         });
     }
 }

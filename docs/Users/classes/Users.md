@@ -28,7 +28,7 @@ Instead, access it through an instance of the Refuel class.
 
 #### Defined in
 
-[src/Users/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/Users/index.ts#L12)
+[src/Users/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/Users/index.ts#L12)
 
 ## Methods
 
@@ -56,7 +56,7 @@ const response = await refuel.users.create(["user1@example.com", "user2@example.
 
 #### Defined in
 
-[src/Users/index.ts:24](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/Users/index.ts#L24)
+[src/Users/index.ts:24](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/Users/index.ts#L24)
 
 ***
 
@@ -84,7 +84,7 @@ const user = await refuel.users.get(userId);
 
 #### Defined in
 
-[src/Users/index.ts:40](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/Users/index.ts#L40)
+[src/Users/index.ts:40](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/Users/index.ts#L40)
 
 ***
 
@@ -106,4 +106,4 @@ const users = await refuel.users.list();
 
 #### Defined in
 
-[src/Users/index.ts:52](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/Users/index.ts#L52)
+[src/Users/index.ts:52](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/Users/index.ts#L52)

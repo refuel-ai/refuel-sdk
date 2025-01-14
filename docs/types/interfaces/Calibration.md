@@ -18,7 +18,7 @@ Date the calibration was created
 
 #### Defined in
 
-[src/types.ts:1517](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1517)
+[src/types.ts:1526](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1526)
 
 ***
 
@@ -30,7 +30,7 @@ Calibration ID
 
 #### Defined in
 
-[src/types.ts:1493](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1493)
+[src/types.ts:1502](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1502)
 
 ***
 
@@ -42,7 +42,7 @@ Calibration model
 
 #### Defined in
 
-[src/types.ts:1511](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1511)
+[src/types.ts:1520](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1520)
 
 ***
 
@@ -54,7 +54,7 @@ Model artifacts
 
 #### Defined in
 
-[src/types.ts:1514](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1514)
+[src/types.ts:1523](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1523)
 
 ***
 
@@ -66,7 +66,7 @@ Calibration name
 
 #### Defined in
 
-[src/types.ts:1496](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1496)
+[src/types.ts:1505](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1505)
 
 ***
 
@@ -78,7 +78,7 @@ Project ID
 
 #### Defined in
 
-[src/types.ts:1499](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1499)
+[src/types.ts:1508](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1508)
 
 ***
 
@@ -90,7 +90,7 @@ Calibration status
 
 #### Defined in
 
-[src/types.ts:1505](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1505)
+[src/types.ts:1514](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1514)
 
 ***
 
@@ -102,7 +102,7 @@ Task ID
 
 #### Defined in
 
-[src/types.ts:1502](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1502)
+[src/types.ts:1511](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1511)
 
 ***
 
@@ -114,7 +114,7 @@ Team ID
 
 #### Defined in
 
-[src/types.ts:1523](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1523)
+[src/types.ts:1532](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1532)
 
 ***
 
@@ -126,7 +126,7 @@ Training hyperparameters
 
 #### Defined in
 
-[src/types.ts:1508](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1508)
+[src/types.ts:1517](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1517)
 
 ***
 
@@ -138,4 +138,4 @@ Date the calibration was last updated
 
 #### Defined in
 
-[src/types.ts:1520](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1520)
+[src/types.ts:1529](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1529)

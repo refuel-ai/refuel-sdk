@@ -18,7 +18,7 @@ ID of the export
 
 #### Defined in
 
-[src/types.ts:1035](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1035)
+[src/types.ts:1044](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1044)
 
 ***
 
@@ -30,4 +30,4 @@ URI of the export
 
 #### Defined in
 
-[src/types.ts:1038](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1038)
+[src/types.ts:1047](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1047)

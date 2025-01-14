@@ -195,6 +195,12 @@ var DatasetColumnType;
     DatasetColumnType["IMAGE_URL"] = "image_url";
     DatasetColumnType["PDF_URL"] = "pdf_url";
 })(DatasetColumnType || (DatasetColumnType = {}));
+var DatasetIngestStatus;
+(function (DatasetIngestStatus) {
+    DatasetIngestStatus["FAILED"] = "failed";
+    DatasetIngestStatus["IN_PROGRESS"] = "in_progress";
+    DatasetIngestStatus["SUCCESS"] = "success";
+})(DatasetIngestStatus || (DatasetIngestStatus = {}));
 /**
  * The category of a filter field
  */
@@ -707,6 +713,20 @@ class Datasets {
     async delete(datasetId) {
         return this.base.request(`/datasets/${datasetId}`, {
             method: "DELETE",
+        });
+    }
+    /**
+     * Update a dataset
+     *
+     * @example
+     * ```ts
+     * await refuel.datasets.update(datasetId, { scheduled_ids: ["taskId"] });
+     * ```
+     */
+    async update(datasetId, data) {
+        return this.base.request(`/datasets/${datasetId}`, {
+            method: "PATCH",
+            data,
         });
     }
 }
@@ -1692,5 +1712,5 @@ class Refuel {
     }
 }
 
-export { AvailabilityStatus, CalibrationModel, CalibrationStatus, DatasetColumnType, EvalsetSamplingStrategy, FeatureFlagValues, FilterFieldCategory, FilterOperator, FinetuningRunStatus, LabelSource, MetricFormat, Refuel, SampleColumnType, SamplingStrategy, SchemaMode, TaskType, TransformType, UserState, isDatasetLabeled, isLabeledDatasetItem, isTelemetry };
+export { AvailabilityStatus, CalibrationModel, CalibrationStatus, DatasetColumnType, DatasetIngestStatus, EvalsetSamplingStrategy, FeatureFlagValues, FilterFieldCategory, FilterOperator, FinetuningRunStatus, LabelSource, MetricFormat, Refuel, SampleColumnType, SamplingStrategy, SchemaMode, TaskType, TransformType, UserState, isDatasetLabeled, isLabeledDatasetItem, isTelemetry };
 //# sourceMappingURL=index.mjs.map

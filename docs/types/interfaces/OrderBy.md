@@ -16,7 +16,7 @@ Order direction
 
 #### Defined in
 
-[src/types.ts:1046](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1046)
+[src/types.ts:1055](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1055)
 
 ***
 
@@ -28,7 +28,7 @@ Field to order by
 
 #### Defined in
 
-[src/types.ts:1043](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1043)
+[src/types.ts:1052](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1052)
 
 ***
 
@@ -40,4 +40,4 @@ Order by a subtask ID
 
 #### Defined in
 
-[src/types.ts:1049](https://github.com/refuel-ai/refuel-sdk/blob/240c3e68ab946b6c24b6f2eafb12779c24332cdb/src/types.ts#L1049)
+[src/types.ts:1058](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1058)
