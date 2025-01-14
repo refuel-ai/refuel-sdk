@@ -465,6 +465,9 @@ export interface Dataset {
 
     /** Project IDs this dataset is associated with */
     project_ids: string[] | null;
+
+    /** Tasks that will be scheduled to run on new items in the dataset */
+    scheduled_ids: string[] | null;
 }
 
 export interface DatasetUnlabeled extends Dataset {
