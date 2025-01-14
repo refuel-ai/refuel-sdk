@@ -1041,12 +1041,20 @@ export interface ExportDatasetResponse {
     uri: string;
 }
 
+/**
+ * Sort order direction
+ */
+export type OrderDirection = "ASC" | "DESC";
+
+/**
+ * Order by options
+ */
 export interface OrderBy {
     /** Field to order by */
     field: string;
 
     /** Order direction */
-    direction: "ASC" | "DESC";
+    direction: OrderDirection;
 
     /** Order by a subtask ID */
     subtask_id?: string;
