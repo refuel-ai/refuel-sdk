@@ -1,5 +1,9 @@
 import { RefuelBase } from "../RefuelBase";
-import { ExportDatasetOptions, ExportDatasetResponse } from "../types";
+import {
+    ExportDatasetOptions,
+    ExportDatasetResponse,
+    GetDatasetExportOptions,
+} from "../types";
 
 /**
  * Handles operations related to dataset exports.
@@ -19,13 +23,39 @@ export class DatasetExports {
      *
      * @example
      * ```ts
-     * const export = await refuel.datasetExports.get(exportId, datasetId);
+     * const export = await refuel.datasetExports.get(exportId, { datasetId });
      * ```
      */
-    async get(exportId: string, datasetId: string): Promise<string> {
-        return this.base.request<string>(
-            `/datasets/${datasetId}/exports/${exportId}`
-        );
+    async get(
+        exportId: string,
+        options: GetDatasetExportOptions
+    ): Promise<string> {
+        let path;
+
+        if (options.evalSet) {
+            if (!options.taskId) {
+                throw new Error(
+                    "Task ID is required for evaluation set exports"
+                );
+            }
+            path = `/tasks/${options.taskId}/evalset/exports/${exportId}`;
+        } else if (options.seedSet) {
+            if (!options.taskId) {
+                throw new Error("Task ID is required for seed set exports");
+            }
+            path = `/tasks/${options.taskId}/seedset/exports/${exportId}`;
+        } else {
+            if (!options.datasetId) {
+                throw new Error("Dataset ID is required for dataset exports");
+            }
+            path = `/datasets/${options.datasetId}/exports/${exportId}`;
+        }
+
+        if (!path) {
+            throw new Error("Invalid export options");
+        }
+
+        return this.base.request<string>(path);
     }
 
     /**
@@ -33,14 +63,38 @@ export class DatasetExports {
      *
      * @example
      * ```ts
-     * const export = await refuel.datasetExports.create(datasetId, { email: "example@example.com" });
+     * const export = await refuel.datasetExports.create({ datasetId: "123", email: "example@example.com" });
      * ```
      */
     async create(
-        datasetId: string,
-        options?: ExportDatasetOptions
+        options: ExportDatasetOptions
     ): Promise<ExportDatasetResponse> {
         const params = new URLSearchParams();
+
+        let path;
+
+        if (options.evalSet) {
+            if (!options.taskId) {
+                throw new Error(
+                    "Task ID is required for evaluation set exports"
+                );
+            }
+            path = `/tasks/${options.taskId}/evalset/exports`;
+        } else if (options.seedSet) {
+            if (!options.taskId) {
+                throw new Error("Task ID is required for seed set exports");
+            }
+            path = `/tasks/${options.taskId}/seedset/exports`;
+        } else {
+            if (!options.datasetId) {
+                throw new Error("Dataset ID is required for dataset exports");
+            }
+            path = `/datasets/${options.datasetId}/exports`;
+        }
+
+        if (!path) {
+            throw new Error("Invalid export options");
+        }
 
         if (options?.email) {
             params.append("email", options.email);
@@ -69,7 +123,7 @@ export class DatasetExports {
         }
 
         return this.base.request<ExportDatasetResponse>(
-            `/datasets/${datasetId}/exports?${params.toString()}`,
+            `${path}?${params.toString()}`,
             {
                 method: "POST",
             }
