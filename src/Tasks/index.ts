@@ -80,7 +80,7 @@ export class Tasks {
      */
     async update(taskId: string, data: Partial<Task>): Promise<Task> {
         return this.base.request<Task, Partial<Task>>(`/tasks/${taskId}`, {
-            method: "PATCH",
+            method: "POST",
             data,
         });
     }
