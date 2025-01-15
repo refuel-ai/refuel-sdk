@@ -44,7 +44,7 @@ const model = await refuel.finetunedModels.create({
 
 #### Defined in
 
-[src/FinetunedModels/index.ts:32](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/FinetunedModels/index.ts#L32)
+[src/FinetunedModels/index.ts:32](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/FinetunedModels/index.ts#L32)
 
 ***
 
@@ -72,7 +72,7 @@ await refuel.finetunedModels.delete(modelId);
 
 #### Defined in
 
-[src/FinetunedModels/index.ts:94](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/FinetunedModels/index.ts#L94)
+[src/FinetunedModels/index.ts:94](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/FinetunedModels/index.ts#L94)
 
 ***
 
@@ -100,7 +100,7 @@ const model = await refuel.finetunedModels.get(modelId);
 
 #### Defined in
 
-[src/FinetunedModels/index.ts:50](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/FinetunedModels/index.ts#L50)
+[src/FinetunedModels/index.ts:50](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/FinetunedModels/index.ts#L50)
 
 ***
 
@@ -128,7 +128,7 @@ const isTrainable = await refuel.finetunedModels.isTaskTrainable(taskId);
 
 #### Defined in
 
-[src/FinetunedModels/index.ts:108](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/FinetunedModels/index.ts#L108)
+[src/FinetunedModels/index.ts:108](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/FinetunedModels/index.ts#L108)
 
 ***
 
@@ -160,7 +160,7 @@ const models = await refuel.finetunedModels.list(projectId);
 
 #### Defined in
 
-[src/FinetunedModels/index.ts:62](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/FinetunedModels/index.ts#L62)
+[src/FinetunedModels/index.ts:62](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/FinetunedModels/index.ts#L62)
 
 ***
 
@@ -184,4 +184,4 @@ const models = await refuel.finetunedModels.list(projectId);
 
 #### Defined in
 
-[src/FinetunedModels/index.ts:73](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/FinetunedModels/index.ts#L73)
+[src/FinetunedModels/index.ts:73](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/FinetunedModels/index.ts#L73)

@@ -98,6 +98,7 @@
 - [FilterValueType](type-aliases/FilterValueType.md)
 - [FinetunedModelCreateOptions](type-aliases/FinetunedModelCreateOptions.md)
 - [IntegrationConfig](type-aliases/IntegrationConfig.md)
+- [OrderDirection](type-aliases/OrderDirection.md)
 - [RefuelOptions](type-aliases/RefuelOptions.md)
 - [SortDirection](type-aliases/SortDirection.md)
 - [TaskRunStatus](type-aliases/TaskRunStatus.md)

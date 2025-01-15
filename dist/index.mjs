@@ -192,8 +192,8 @@ var DatasetColumnType;
     DatasetColumnType["STRING"] = "string";
     DatasetColumnType["NUMBER"] = "number";
     DatasetColumnType["BOOLEAN"] = "boolean";
-    DatasetColumnType["IMAGE_URL"] = "image_url";
-    DatasetColumnType["PDF_URL"] = "pdf_url";
+    DatasetColumnType["IMAGE"] = "image";
+    DatasetColumnType["PDF"] = "pdf";
 })(DatasetColumnType || (DatasetColumnType = {}));
 var DatasetIngestStatus;
 (function (DatasetIngestStatus) {
@@ -210,8 +210,6 @@ var FilterFieldCategory;
     FilterFieldCategory["LABEL"] = "label";
     /** Filter on metadata */
     FilterFieldCategory["METADATA"] = "metadata";
-    /** Filter on similar items */
-    FilterFieldCategory["SIMILAR"] = "similar";
 })(FilterFieldCategory || (FilterFieldCategory = {}));
 /**
  * The operator to use for a filter
@@ -248,8 +246,6 @@ var FilterOperator;
     FilterOperator["NOT_NULL"] = "IS NOT NULL";
     /** Null */
     FilterOperator["NULL"] = "IS NULL";
-    /** Similar to another item */
-    FilterOperator["SIMILAR"] = "SIMILAR";
 })(FilterOperator || (FilterOperator = {}));
 /**
  * The mode to used to generate the schema for a subtask
@@ -1291,7 +1287,7 @@ class Tasks {
      */
     async update(taskId, data) {
         return this.base.request(`/tasks/${taskId}`, {
-            method: "PATCH",
+            method: "POST",
             data,
         });
     }

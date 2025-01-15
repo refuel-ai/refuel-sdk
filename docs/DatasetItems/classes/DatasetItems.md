@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[src/DatasetItems/index.ts:164](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/DatasetItems/index.ts#L164)
+[src/DatasetItems/index.ts:164](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/DatasetItems/index.ts#L164)
 
 ***
 
@@ -74,7 +74,7 @@ const dataset = await refuel.datasetItems.create(datasetId, [{ "name": "John Doe
 
 #### Defined in
 
-[src/DatasetItems/index.ts:30](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/DatasetItems/index.ts#L30)
+[src/DatasetItems/index.ts:30](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/DatasetItems/index.ts#L30)
 
 ***
 
@@ -106,7 +106,7 @@ await refuel.datasetItems.delete(datasetId, itemId);
 
 #### Defined in
 
-[src/DatasetItems/index.ts:134](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/DatasetItems/index.ts#L134)
+[src/DatasetItems/index.ts:134](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/DatasetItems/index.ts#L134)
 
 ***
 
@@ -146,7 +146,7 @@ const item = await refuel.datasetItems.get(datasetId, itemId);
 
 #### Defined in
 
-[src/DatasetItems/index.ts:48](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/DatasetItems/index.ts#L48)
+[src/DatasetItems/index.ts:48](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/DatasetItems/index.ts#L48)
 
 ***
 
@@ -170,4 +170,4 @@ const item = await refuel.datasetItems.get(datasetId, itemId);
 
 #### Defined in
 
-[src/DatasetItems/index.ts:80](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/DatasetItems/index.ts#L80)
+[src/DatasetItems/index.ts:80](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/DatasetItems/index.ts#L80)

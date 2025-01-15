@@ -24,7 +24,7 @@ false
 
 #### Defined in
 
-[src/types.ts:1477](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1477)
+[src/types.ts:1479](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1479)
 
 ***
 
@@ -42,7 +42,7 @@ false
 
 #### Defined in
 
-[src/types.ts:1470](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1470)
+[src/types.ts:1472](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1472)
 
 ***
 
@@ -54,7 +54,7 @@ Override the model used for labeling
 
 #### Defined in
 
-[src/types.ts:1460](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1460)
+[src/types.ts:1462](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1462)
 
 ***
 
@@ -66,4 +66,4 @@ Specify the subtask to label
 
 #### Defined in
 
-[src/types.ts:1463](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1463)
+[src/types.ts:1465](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1465)

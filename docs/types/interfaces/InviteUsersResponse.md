@@ -18,7 +18,7 @@ Users that failed to be invited
 
 #### Defined in
 
-[src/types.ts:911](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L911)
+[src/types.ts:905](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L905)
 
 ***
 
@@ -30,4 +30,4 @@ Users that were invited
 
 #### Defined in
 
-[src/types.ts:914](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L914)
+[src/types.ts:908](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L908)

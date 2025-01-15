@@ -38,4 +38,4 @@ Value of the operator
 
 ## Defined in
 
-[src/types.ts:551](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L551)
+[src/types.ts:545](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L545)
