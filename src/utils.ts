@@ -1,28 +1,31 @@
+import { RefuelAPIError } from "./RefuelBase";
 import { DatasetLabeled, LabeledDatasetItem, Telemetry } from "./types";
 
 export const isLabeledDatasetItem = (
-    item: unknown
-): item is LabeledDatasetItem => {
-    return typeof item === "object" && item !== null && "labels" in item;
+    arg: unknown
+): arg is LabeledDatasetItem => {
+    return typeof arg === "object" && arg !== null && "labels" in arg;
 };
 
-export const isDatasetLabeled = (
-    dataset: unknown
-): dataset is DatasetLabeled => {
+export const isDatasetLabeled = (arg: unknown): arg is DatasetLabeled => {
     return (
-        typeof dataset === "object" &&
-        dataset !== null &&
-        "items" in dataset &&
-        Array.isArray(dataset?.items) &&
-        isLabeledDatasetItem(dataset.items[0])
+        typeof arg === "object" &&
+        arg !== null &&
+        "items" in arg &&
+        Array.isArray(arg?.items) &&
+        isLabeledDatasetItem(arg.items[0])
     );
 };
 
-export const isTelemetry = (telemetry: unknown): telemetry is Telemetry => {
+export const isTelemetry = (arg: unknown): arg is Telemetry => {
     return (
-        typeof telemetry === "object" &&
-        telemetry !== null &&
-        "telemetry_type" in telemetry &&
-        "telemetry_value" in telemetry
+        typeof arg === "object" &&
+        arg !== null &&
+        "telemetry_type" in arg &&
+        "telemetry_value" in arg
     );
+};
+
+export const isRefuelAPIError = (arg: unknown): arg is RefuelAPIError => {
+    return arg instanceof RefuelAPIError;
 };
