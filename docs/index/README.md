@@ -344,6 +344,12 @@ Re-exports [OrderBy](../types/interfaces/OrderBy.md)
 
 ***
 
+### OrderDirection
+
+Re-exports [OrderDirection](../types/type-aliases/OrderDirection.md)
+
+***
+
 ### Project
 
 Re-exports [Project](../types/interfaces/Project.md)

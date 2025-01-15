@@ -12,4 +12,4 @@ The type of a filter value
 
 ## Defined in
 
-[src/types.ts:568](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L568)
+[src/types.ts:562](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L562)

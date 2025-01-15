@@ -28,7 +28,7 @@ Instead, access it through an instance of the Refuel class.
 
 #### Defined in
 
-[src/Tasks/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/Tasks/index.ts#L12)
+[src/Tasks/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Tasks/index.ts#L12)
 
 ## Methods
 
@@ -56,7 +56,7 @@ const task = await refuel.tasks.create({ task_name: "My Task", project_id: "123"
 
 #### Defined in
 
-[src/Tasks/index.ts:24](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/Tasks/index.ts#L24)
+[src/Tasks/index.ts:24](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Tasks/index.ts#L24)
 
 ***
 
@@ -84,7 +84,7 @@ await refuel.tasks.delete(taskId);
 
 #### Defined in
 
-[src/Tasks/index.ts:96](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/Tasks/index.ts#L96)
+[src/Tasks/index.ts:96](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Tasks/index.ts#L96)
 
 ***
 
@@ -116,7 +116,7 @@ await refuel.tasks.deleteEnrichment(taskId, enrichmentId);
 
 #### Defined in
 
-[src/Tasks/index.ts:188](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/Tasks/index.ts#L188)
+[src/Tasks/index.ts:188](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Tasks/index.ts#L188)
 
 ***
 
@@ -148,7 +148,7 @@ await refuel.tasks.deleteSubtask(taskId, subtaskId);
 
 #### Defined in
 
-[src/Tasks/index.ts:165](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/Tasks/index.ts#L165)
+[src/Tasks/index.ts:165](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Tasks/index.ts#L165)
 
 ***
 
@@ -176,7 +176,7 @@ const task = await refuel.tasks.duplicate(taskId);
 
 #### Defined in
 
-[src/Tasks/index.ts:110](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/Tasks/index.ts#L110)
+[src/Tasks/index.ts:110](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Tasks/index.ts#L110)
 
 ***
 
@@ -204,7 +204,7 @@ const task = await refuel.tasks.get(taskId);
 
 #### Defined in
 
-[src/Tasks/index.ts:55](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/Tasks/index.ts#L55)
+[src/Tasks/index.ts:55](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Tasks/index.ts#L55)
 
 ***
 
@@ -232,7 +232,7 @@ const tasks = await refuel.tasks.list();
 
 #### Defined in
 
-[src/Tasks/index.ts:67](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/Tasks/index.ts#L67)
+[src/Tasks/index.ts:67](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Tasks/index.ts#L67)
 
 ***
 
@@ -260,7 +260,7 @@ await refuel.tasks.reset(taskId);
 
 #### Defined in
 
-[src/Tasks/index.ts:144](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/Tasks/index.ts#L144)
+[src/Tasks/index.ts:144](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Tasks/index.ts#L144)
 
 ***
 
@@ -292,4 +292,4 @@ const task = await refuel.tasks.update(taskId, { name: "New Name" });
 
 #### Defined in
 
-[src/Tasks/index.ts:81](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/Tasks/index.ts#L81)
+[src/Tasks/index.ts:81](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Tasks/index.ts#L81)

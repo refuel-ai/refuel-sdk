@@ -281,8 +281,8 @@ export declare enum DatasetColumnType {
     STRING = "string",
     NUMBER = "number",
     BOOLEAN = "boolean",
-    IMAGE_URL = "image_url",
-    PDF_URL = "pdf_url"
+    IMAGE = "image",
+    PDF = "pdf"
 }
 /**
  * A column in the dataset schema
@@ -364,9 +364,7 @@ export declare enum FilterFieldCategory {
     /** Filter on a label */
     LABEL = "label",
     /** Filter on metadata */
-    METADATA = "metadata",
-    /** Filter on similar items */
-    SIMILAR = "similar"
+    METADATA = "metadata"
 }
 /**
  * The operator to use for a filter
@@ -401,9 +399,7 @@ export declare enum FilterOperator {
     /** Not null */
     NOT_NULL = "IS NOT NULL",
     /** Null */
-    NULL = "IS NULL",
-    /** Similar to another item */
-    SIMILAR = "SIMILAR"
+    NULL = "IS NULL"
 }
 /**
  * An operator option
@@ -773,11 +769,18 @@ export interface ExportDatasetResponse {
     /** URI of the export */
     uri: string;
 }
+/**
+ * Sort order direction
+ */
+export type OrderDirection = "ASC" | "DESC";
+/**
+ * Order by options
+ */
 export interface OrderBy {
     /** Field to order by */
     field: string;
     /** Order direction */
-    direction: "ASC" | "DESC";
+    direction: OrderDirection;
     /** Order by a subtask ID */
     subtask_id?: string;
 }

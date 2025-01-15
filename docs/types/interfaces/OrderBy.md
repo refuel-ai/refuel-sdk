@@ -6,17 +6,19 @@
 
 # Interface: OrderBy
 
+Order by options
+
 ## Properties
 
 ### direction
 
-> **direction**: `"ASC"` \| `"DESC"`
+> **direction**: [`OrderDirection`](../type-aliases/OrderDirection.md)
 
 Order direction
 
 #### Defined in
 
-[src/types.ts:1055](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1055)
+[src/types.ts:1057](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1057)
 
 ***
 
@@ -28,7 +30,7 @@ Field to order by
 
 #### Defined in
 
-[src/types.ts:1052](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1052)
+[src/types.ts:1054](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1054)
 
 ***
 
@@ -40,4 +42,4 @@ Order by a subtask ID
 
 #### Defined in
 
-[src/types.ts:1058](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L1058)
+[src/types.ts:1060](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1060)

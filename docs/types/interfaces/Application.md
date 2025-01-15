@@ -18,7 +18,7 @@ Date the application was created
 
 #### Defined in
 
-[src/types.ts:58](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L58)
+[src/types.ts:58](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L58)
 
 ***
 
@@ -30,7 +30,7 @@ Dataset ID the application is associated with
 
 #### Defined in
 
-[src/types.ts:61](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L61)
+[src/types.ts:61](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L61)
 
 ***
 
@@ -42,7 +42,7 @@ Application description
 
 #### Defined in
 
-[src/types.ts:64](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L64)
+[src/types.ts:64](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L64)
 
 ***
 
@@ -54,7 +54,7 @@ Emoji for the application that can be used as the icon in the UI
 
 #### Defined in
 
-[src/types.ts:67](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L67)
+[src/types.ts:67](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L67)
 
 ***
 
@@ -66,7 +66,7 @@ Application ID
 
 #### Defined in
 
-[src/types.ts:55](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L55)
+[src/types.ts:55](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L55)
 
 ***
 
@@ -78,7 +78,7 @@ Input columns for the application
 
 #### Defined in
 
-[src/types.ts:70](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L70)
+[src/types.ts:70](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L70)
 
 ***
 
@@ -90,7 +90,7 @@ Model name for the application
 
 #### Defined in
 
-[src/types.ts:73](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L73)
+[src/types.ts:73](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L73)
 
 ***
 
@@ -102,7 +102,7 @@ Application name
 
 #### Defined in
 
-[src/types.ts:76](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L76)
+[src/types.ts:76](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L76)
 
 ***
 
@@ -114,7 +114,7 @@ Project ID the application is associated with
 
 #### Defined in
 
-[src/types.ts:79](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L79)
+[src/types.ts:79](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L79)
 
 ***
 
@@ -126,7 +126,7 @@ Subtasks for the application
 
 #### Defined in
 
-[src/types.ts:82](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L82)
+[src/types.ts:82](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L82)
 
 ***
 
@@ -138,7 +138,7 @@ Task ID the application is associated with
 
 #### Defined in
 
-[src/types.ts:85](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L85)
+[src/types.ts:85](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L85)
 
 ***
 
@@ -150,7 +150,7 @@ Name of the task the application is associated with
 
 #### Defined in
 
-[src/types.ts:88](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L88)
+[src/types.ts:88](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L88)
 
 ***
 
@@ -162,7 +162,7 @@ Date the related task was last updated
 
 #### Defined in
 
-[src/types.ts:91](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L91)
+[src/types.ts:91](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L91)
 
 ***
 
@@ -174,4 +174,4 @@ Date the application was last updated
 
 #### Defined in
 
-[src/types.ts:94](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L94)
+[src/types.ts:94](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L94)

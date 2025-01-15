@@ -18,7 +18,7 @@ User is active
 
 #### Defined in
 
-[src/types.ts:854](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L854)
+[src/types.ts:848](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L848)
 
 ***
 
@@ -30,7 +30,7 @@ User has been created but not invited
 
 #### Defined in
 
-[src/types.ts:860](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L860)
+[src/types.ts:854](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L854)
 
 ***
 
@@ -42,4 +42,4 @@ User has been invited to the team
 
 #### Defined in
 
-[src/types.ts:857](https://github.com/refuel-ai/refuel-sdk/blob/1b12f0442d5e4e331bc7d9e4f1f5828e99232382/src/types.ts#L857)
+[src/types.ts:851](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L851)
