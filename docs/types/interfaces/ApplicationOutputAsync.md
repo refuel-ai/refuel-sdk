@@ -18,7 +18,7 @@ Timestamp of the output
 
 #### Defined in
 
-[src/types.ts:153](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L153)
+[src/types.ts:153](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L153)
 
 ***
 
@@ -30,7 +30,7 @@ Refuel UUID for the output
 
 #### Defined in
 
-[src/types.ts:150](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L150)
+[src/types.ts:150](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L150)
 
 ***
 
@@ -42,4 +42,4 @@ URI to the output value
 
 #### Defined in
 
-[src/types.ts:156](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L156)
+[src/types.ts:156](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L156)

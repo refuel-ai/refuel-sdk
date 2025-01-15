@@ -759,6 +759,25 @@ export interface ExportDatasetOptions {
     taskId?: string;
     /** Task run ID */
     taskRunId?: string;
+    /** Whether this export is from a seed set */
+    seedSet?: boolean;
+    /** Whether this export is from an evaluation set */
+    evalSet?: boolean;
+    /** Dataset ID */
+    datasetId?: string;
+}
+/**
+ * Options for getting the URL of a dataset export
+ */
+export interface GetDatasetExportOptions {
+    /** Dataset ID */
+    datasetId?: string;
+    /** Task ID */
+    taskId?: string;
+    /** Whether this export is from a seed set */
+    seedSet?: boolean;
+    /** Whether this export is from an evaluation set */
+    evalSet?: boolean;
 }
 /**
  * Response from exporting a dataset

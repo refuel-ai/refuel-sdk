@@ -478,22 +478,66 @@ class DatasetExports {
      *
      * @example
      * ```ts
-     * const export = await refuel.datasetExports.get(exportId, datasetId);
+     * const export = await refuel.datasetExports.get(exportId, { datasetId });
      * ```
      */
-    async get(exportId, datasetId) {
-        return this.base.request(`/datasets/${datasetId}/exports/${exportId}`);
+    async get(exportId, options) {
+        let path;
+        if (options.evalSet) {
+            if (!options.taskId) {
+                throw new Error("Task ID is required for evaluation set exports");
+            }
+            path = `/tasks/${options.taskId}/evalset/exports/${exportId}`;
+        }
+        else if (options.seedSet) {
+            if (!options.taskId) {
+                throw new Error("Task ID is required for seed set exports");
+            }
+            path = `/tasks/${options.taskId}/seedset/exports/${exportId}`;
+        }
+        else {
+            if (!options.datasetId) {
+                throw new Error("Dataset ID is required for dataset exports");
+            }
+            path = `/datasets/${options.datasetId}/exports/${exportId}`;
+        }
+        if (!path) {
+            throw new Error("Invalid export options");
+        }
+        return this.base.request(path);
     }
     /**
      * Email a secure, expiring link to download a dataset
      *
      * @example
      * ```ts
-     * const export = await refuel.datasetExports.create(datasetId, { email: "example@example.com" });
+     * const export = await refuel.datasetExports.create({ datasetId: "123", email: "example@example.com" });
      * ```
      */
-    async create(datasetId, options) {
+    async create(options) {
         const params = new URLSearchParams();
+        let path;
+        if (options.evalSet) {
+            if (!options.taskId) {
+                throw new Error("Task ID is required for evaluation set exports");
+            }
+            path = `/tasks/${options.taskId}/evalset/exports`;
+        }
+        else if (options.seedSet) {
+            if (!options.taskId) {
+                throw new Error("Task ID is required for seed set exports");
+            }
+            path = `/tasks/${options.taskId}/seedset/exports`;
+        }
+        else {
+            if (!options.datasetId) {
+                throw new Error("Dataset ID is required for dataset exports");
+            }
+            path = `/datasets/${options.datasetId}/exports`;
+        }
+        if (!path) {
+            throw new Error("Invalid export options");
+        }
         if (options === null || options === void 0 ? void 0 : options.email) {
             params.append("email", options.email);
         }
@@ -514,7 +558,7 @@ class DatasetExports {
                 params.append("filters", JSON.stringify(filter));
             });
         }
-        return this.base.request(`/datasets/${datasetId}/exports?${params.toString()}`, {
+        return this.base.request(`${path}?${params.toString()}`, {
             method: "POST",
         });
     }
@@ -1649,21 +1693,24 @@ class Users {
     }
 }
 
-const isLabeledDatasetItem = (item) => {
-    return typeof item === "object" && item !== null && "labels" in item;
+const isLabeledDatasetItem = (arg) => {
+    return typeof arg === "object" && arg !== null && "labels" in arg;
 };
-const isDatasetLabeled = (dataset) => {
-    return (typeof dataset === "object" &&
-        dataset !== null &&
-        "items" in dataset &&
-        Array.isArray(dataset === null || dataset === void 0 ? void 0 : dataset.items) &&
-        isLabeledDatasetItem(dataset.items[0]));
+const isDatasetLabeled = (arg) => {
+    return (typeof arg === "object" &&
+        arg !== null &&
+        "items" in arg &&
+        Array.isArray(arg === null || arg === void 0 ? void 0 : arg.items) &&
+        isLabeledDatasetItem(arg.items[0]));
 };
-const isTelemetry = (telemetry) => {
-    return (typeof telemetry === "object" &&
-        telemetry !== null &&
-        "telemetry_type" in telemetry &&
-        "telemetry_value" in telemetry);
+const isTelemetry = (arg) => {
+    return (typeof arg === "object" &&
+        arg !== null &&
+        "telemetry_type" in arg &&
+        "telemetry_value" in arg);
+};
+const isRefuelAPIError = (arg) => {
+    return arg instanceof RefuelAPIError;
 };
 
 /**
@@ -1713,5 +1760,6 @@ class Refuel {
 exports.Refuel = Refuel;
 exports.isDatasetLabeled = isDatasetLabeled;
 exports.isLabeledDatasetItem = isLabeledDatasetItem;
+exports.isRefuelAPIError = isRefuelAPIError;
 exports.isTelemetry = isTelemetry;
 //# sourceMappingURL=index.cjs.js.map

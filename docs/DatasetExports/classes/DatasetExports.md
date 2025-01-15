@@ -14,17 +14,13 @@ Instead, access it through an instance of the Refuel class.
 
 ### create()
 
-> **create**(`datasetId`, `options`?): `Promise`\<[`ExportDatasetResponse`](../../types/interfaces/ExportDatasetResponse.md)\>
+> **create**(`options`): `Promise`\<[`ExportDatasetResponse`](../../types/interfaces/ExportDatasetResponse.md)\>
 
 Email a secure, expiring link to download a dataset
 
 #### Parameters
 
-##### datasetId
-
-`string`
-
-##### options?
+##### options
 
 [`ExportDatasetOptions`](../../types/interfaces/ExportDatasetOptions.md)
 
@@ -35,18 +31,18 @@ Email a secure, expiring link to download a dataset
 #### Example
 
 ```ts
-const export = await refuel.datasetExports.create(datasetId, { email: "example@example.com" });
+const export = await refuel.datasetExports.create({ datasetId: "123", email: "example@example.com" });
 ```
 
 #### Defined in
 
-[src/DatasetExports/index.ts:39](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/DatasetExports/index.ts#L39)
+[src/DatasetExports/index.ts:69](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/DatasetExports/index.ts#L69)
 
 ***
 
 ### get()
 
-> **get**(`exportId`, `datasetId`): `Promise`\<`string`\>
+> **get**(`exportId`, `options`): `Promise`\<`string`\>
 
 Get the URL of a dataset export
 
@@ -56,9 +52,9 @@ Get the URL of a dataset export
 
 `string`
 
-##### datasetId
+##### options
 
-`string`
+[`GetDatasetExportOptions`](../../types/interfaces/GetDatasetExportOptions.md)
 
 #### Returns
 
@@ -67,9 +63,9 @@ Get the URL of a dataset export
 #### Example
 
 ```ts
-const export = await refuel.datasetExports.get(exportId, datasetId);
+const export = await refuel.datasetExports.get(exportId, { datasetId });
 ```
 
 #### Defined in
 
-[src/DatasetExports/index.ts:25](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/DatasetExports/index.ts#L25)
+[src/DatasetExports/index.ts:29](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/DatasetExports/index.ts#L29)

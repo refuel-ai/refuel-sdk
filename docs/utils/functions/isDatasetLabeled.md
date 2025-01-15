@@ -6,18 +6,18 @@
 
 # Function: isDatasetLabeled()
 
-> **isDatasetLabeled**(`dataset`): `dataset is DatasetLabeled`
+> **isDatasetLabeled**(`arg`): `arg is DatasetLabeled`
 
 ## Parameters
 
-### dataset
+### arg
 
 `unknown`
 
 ## Returns
 
-`dataset is DatasetLabeled`
+`arg is DatasetLabeled`
 
 ## Defined in
 
-[src/utils.ts:9](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/utils.ts#L9)
+[src/utils.ts:10](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/utils.ts#L10)

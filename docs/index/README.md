@@ -248,6 +248,12 @@ Re-exports [FinetuningRunStatus](../types/enumerations/FinetuningRunStatus.md)
 
 ***
 
+### GetDatasetExportOptions
+
+Re-exports [GetDatasetExportOptions](../types/interfaces/GetDatasetExportOptions.md)
+
+***
+
 ### GetDatasetItemOptions
 
 Re-exports [GetDatasetItemOptions](../types/interfaces/GetDatasetItemOptions.md)
@@ -281,6 +287,12 @@ Re-exports [isDatasetLabeled](../utils/functions/isDatasetLabeled.md)
 ### isLabeledDatasetItem
 
 Re-exports [isLabeledDatasetItem](../utils/functions/isLabeledDatasetItem.md)
+
+***
+
+### isRefuelAPIError
+
+Re-exports [isRefuelAPIError](../utils/functions/isRefuelAPIError.md)
 
 ***
 

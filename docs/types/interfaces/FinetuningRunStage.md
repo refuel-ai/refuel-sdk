@@ -18,7 +18,7 @@ Stage details
 
 #### Defined in
 
-[src/types.ts:1195](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1195)
+[src/types.ts:1221](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1221)
 
 ***
 
@@ -30,7 +30,7 @@ Stage index
 
 #### Defined in
 
-[src/types.ts:1198](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1198)
+[src/types.ts:1224](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1224)
 
 ***
 
@@ -42,7 +42,7 @@ Stage ID
 
 #### Defined in
 
-[src/types.ts:1201](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1201)
+[src/types.ts:1227](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1227)
 
 ***
 
@@ -54,4 +54,4 @@ Stage status
 
 #### Defined in
 
-[src/types.ts:1204](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1204)
+[src/types.ts:1230](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1230)

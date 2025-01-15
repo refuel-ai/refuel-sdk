@@ -6,18 +6,18 @@
 
 # Function: isTelemetry()
 
-> **isTelemetry**(`telemetry`): `telemetry is Telemetry`
+> **isTelemetry**(`arg`): `arg is Telemetry`
 
 ## Parameters
 
-### telemetry
+### arg
 
 `unknown`
 
 ## Returns
 
-`telemetry is Telemetry`
+`arg is Telemetry`
 
 ## Defined in
 
-[src/utils.ts:21](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/utils.ts#L21)
+[src/utils.ts:20](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/utils.ts#L20)

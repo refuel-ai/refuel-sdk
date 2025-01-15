@@ -28,7 +28,7 @@ Instead, access it through an instance of the Refuel class.
 
 #### Defined in
 
-[src/Integrations/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Integrations/index.ts#L12)
+[src/Integrations/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/Integrations/index.ts#L12)
 
 ## Methods
 
@@ -56,7 +56,7 @@ const integration = await refuel.integrations.get(integrationId);
 
 #### Defined in
 
-[src/Integrations/index.ts:24](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Integrations/index.ts#L24)
+[src/Integrations/index.ts:24](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/Integrations/index.ts#L24)
 
 ***
 
@@ -78,7 +78,7 @@ const integrations = await refuel.integrations.list();
 
 #### Defined in
 
-[src/Integrations/index.ts:36](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Integrations/index.ts#L36)
+[src/Integrations/index.ts:36](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/Integrations/index.ts#L36)
 
 ***
 
@@ -110,4 +110,4 @@ const integration = await refuel.integrations.update(integrationId, { is_connect
 
 #### Defined in
 
-[src/Integrations/index.ts:48](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Integrations/index.ts#L48)
+[src/Integrations/index.ts:48](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/Integrations/index.ts#L48)

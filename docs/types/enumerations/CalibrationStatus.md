@@ -16,7 +16,7 @@ The status of a confidence calibration
 
 #### Defined in
 
-[src/types.ts:1489](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1489)
+[src/types.ts:1515](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1515)
 
 ***
 
@@ -26,7 +26,7 @@ The status of a confidence calibration
 
 #### Defined in
 
-[src/types.ts:1487](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1487)
+[src/types.ts:1513](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1513)
 
 ***
 
@@ -36,7 +36,7 @@ The status of a confidence calibration
 
 #### Defined in
 
-[src/types.ts:1486](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1486)
+[src/types.ts:1512](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1512)
 
 ***
 
@@ -46,4 +46,4 @@ The status of a confidence calibration
 
 #### Defined in
 
-[src/types.ts:1488](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1488)
+[src/types.ts:1514](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1514)
