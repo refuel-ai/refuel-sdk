@@ -16,7 +16,7 @@ The type of a column value
 
 #### Defined in
 
-[src/types.ts:375](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L375)
+[src/types.ts:375](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L375)
 
 ***
 
@@ -26,7 +26,7 @@ The type of a column value
 
 #### Defined in
 
-[src/types.ts:376](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L376)
+[src/types.ts:376](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L376)
 
 ***
 
@@ -36,7 +36,7 @@ The type of a column value
 
 #### Defined in
 
-[src/types.ts:374](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L374)
+[src/types.ts:374](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L374)
 
 ***
 
@@ -46,7 +46,7 @@ The type of a column value
 
 #### Defined in
 
-[src/types.ts:377](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L377)
+[src/types.ts:377](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L377)
 
 ***
 
@@ -56,4 +56,4 @@ The type of a column value
 
 #### Defined in
 
-[src/types.ts:373](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L373)
+[src/types.ts:373](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L373)

@@ -55,6 +55,7 @@
 - [ExportDatasetResponse](interfaces/ExportDatasetResponse.md)
 - [FinetuningHyperparameters](interfaces/FinetuningHyperparameters.md)
 - [FinetuningRunStage](interfaces/FinetuningRunStage.md)
+- [GetDatasetExportOptions](interfaces/GetDatasetExportOptions.md)
 - [GetDatasetItemOptions](interfaces/GetDatasetItemOptions.md)
 - [Integration](interfaces/Integration.md)
 - [InviteUsersResponse](interfaces/InviteUsersResponse.md)

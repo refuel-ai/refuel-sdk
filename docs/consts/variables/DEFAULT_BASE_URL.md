@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/consts.ts:1](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/consts.ts#L1)
+[src/consts.ts:1](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/consts.ts#L1)

@@ -18,7 +18,7 @@ Dictionary metric
 
 #### Defined in
 
-[src/types.ts:1117](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1117)
+[src/types.ts:1143](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1143)
 
 ***
 
@@ -30,7 +30,7 @@ Histogram metric
 
 #### Defined in
 
-[src/types.ts:1114](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1114)
+[src/types.ts:1140](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1140)
 
 ***
 
@@ -42,7 +42,7 @@ Numeric metric
 
 #### Defined in
 
-[src/types.ts:1108](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1108)
+[src/types.ts:1134](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1134)
 
 ***
 
@@ -54,4 +54,4 @@ Percentage metric
 
 #### Defined in
 
-[src/types.ts:1111](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L1111)
+[src/types.ts:1137](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1137)

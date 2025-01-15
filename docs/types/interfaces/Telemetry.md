@@ -16,7 +16,7 @@ Model name
 
 #### Defined in
 
-[src/types.ts:228](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L228)
+[src/types.ts:228](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L228)
 
 ***
 
@@ -28,7 +28,7 @@ Type of telemetry (e.g. "input_tokens")
 
 #### Defined in
 
-[src/types.ts:231](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L231)
+[src/types.ts:231](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L231)
 
 ***
 
@@ -40,4 +40,4 @@ Value of the telemetry (e.g. 100)
 
 #### Defined in
 
-[src/types.ts:234](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/types.ts#L234)
+[src/types.ts:234](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L234)

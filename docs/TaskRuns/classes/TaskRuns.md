@@ -28,7 +28,7 @@ Instead, access it through an instance of the Refuel class.
 
 #### Defined in
 
-[src/TaskRuns/index.ts:17](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/TaskRuns/index.ts#L17)
+[src/TaskRuns/index.ts:17](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/TaskRuns/index.ts#L17)
 
 ## Methods
 
@@ -60,7 +60,7 @@ await refuel.taskRuns.cancel(taskId, { datasetId });
 
 #### Defined in
 
-[src/TaskRuns/index.ts:76](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/TaskRuns/index.ts#L76)
+[src/TaskRuns/index.ts:76](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/TaskRuns/index.ts#L76)
 
 ***
 
@@ -92,7 +92,7 @@ const taskRun = await refuel.taskRuns.create(taskId, { datasetId });
 
 #### Defined in
 
-[src/TaskRuns/index.ts:29](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/TaskRuns/index.ts#L29)
+[src/TaskRuns/index.ts:29](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/TaskRuns/index.ts#L29)
 
 ***
 
@@ -124,4 +124,4 @@ const taskRuns = await refuel.taskRuns.list(taskId);
 
 #### Defined in
 
-[src/TaskRuns/index.ts:106](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/TaskRuns/index.ts#L106)
+[src/TaskRuns/index.ts:106](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/TaskRuns/index.ts#L106)

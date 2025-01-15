@@ -28,7 +28,7 @@ Instead, access it through an instance of the Refuel class.
 
 #### Defined in
 
-[src/Calibrations/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Calibrations/index.ts#L12)
+[src/Calibrations/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/Calibrations/index.ts#L12)
 
 ## Methods
 
@@ -56,7 +56,7 @@ const calibration = await refuel.calibrations.create(taskId);
 
 #### Defined in
 
-[src/Calibrations/index.ts:24](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Calibrations/index.ts#L24)
+[src/Calibrations/index.ts:24](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/Calibrations/index.ts#L24)
 
 ***
 
@@ -88,7 +88,7 @@ const task = await refuel.calibrations.get(taskId, calibrationId);
 
 #### Defined in
 
-[src/Calibrations/index.ts:41](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Calibrations/index.ts#L41)
+[src/Calibrations/index.ts:41](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/Calibrations/index.ts#L41)
 
 ***
 
@@ -116,7 +116,7 @@ const calibrations = await refuel.calibrations.list(taskId);
 
 #### Defined in
 
-[src/Calibrations/index.ts:55](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Calibrations/index.ts#L55)
+[src/Calibrations/index.ts:55](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/Calibrations/index.ts#L55)
 
 ***
 
@@ -154,4 +154,4 @@ const calibration = await refuel.calibrations.update(taskId, calibrationId, {
 
 #### Defined in
 
-[src/Calibrations/index.ts:71](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/Calibrations/index.ts#L71)
+[src/Calibrations/index.ts:71](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/Calibrations/index.ts#L71)

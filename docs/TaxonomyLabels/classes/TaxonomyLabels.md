@@ -28,7 +28,7 @@ Instead, access it through an instance of the Refuel class.
 
 #### Defined in
 
-[src/TaxonomyLabels/index.ts:16](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/TaxonomyLabels/index.ts#L16)
+[src/TaxonomyLabels/index.ts:16](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/TaxonomyLabels/index.ts#L16)
 
 ## Methods
 
@@ -67,7 +67,7 @@ const label = await refuel.taxonomyLabels.create(taskId, taxonomyId, [
 
 #### Defined in
 
-[src/TaxonomyLabels/index.ts:31](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/TaxonomyLabels/index.ts#L31)
+[src/TaxonomyLabels/index.ts:31](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/TaxonomyLabels/index.ts#L31)
 
 ***
 
@@ -103,7 +103,7 @@ await refuel.taxonomyLabels.delete(taskId, taxonomyId, labelId);
 
 #### Defined in
 
-[src/TaxonomyLabels/index.ts:119](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/TaxonomyLabels/index.ts#L119)
+[src/TaxonomyLabels/index.ts:119](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/TaxonomyLabels/index.ts#L119)
 
 ***
 
@@ -149,7 +149,7 @@ const labels = await refuel.taxonomyLabels.list(taskId, taxonomyId);
 
 #### Defined in
 
-[src/TaxonomyLabels/index.ts:60](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/TaxonomyLabels/index.ts#L60)
+[src/TaxonomyLabels/index.ts:60](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/TaxonomyLabels/index.ts#L60)
 
 ***
 
@@ -189,4 +189,4 @@ const label = await refuel.taxonomyLabels.update(taskId, taxonomyId, labelId, { 
 
 #### Defined in
 
-[src/TaxonomyLabels/index.ts:96](https://github.com/refuel-ai/refuel-sdk/blob/16874f20b5fcb3c7bb7b9b1c20e6a2b25e10328d/src/TaxonomyLabels/index.ts#L96)
+[src/TaxonomyLabels/index.ts:96](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/TaxonomyLabels/index.ts#L96)

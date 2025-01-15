@@ -12,4 +12,5 @@
 
 - [isDatasetLabeled](functions/isDatasetLabeled.md)
 - [isLabeledDatasetItem](functions/isLabeledDatasetItem.md)
+- [isRefuelAPIError](functions/isRefuelAPIError.md)
 - [isTelemetry](functions/isTelemetry.md)
