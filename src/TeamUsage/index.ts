@@ -1,7 +1,7 @@
 import { RefuelBase } from "../RefuelBase";
-import { UsageData } from "../types";
+import { TeamUsageData, TeamUsageGetOptions } from "../types";
 
-export class Usage {
+export class TeamUsage {
     private readonly base: RefuelBase;
 
     constructor(base: RefuelBase) {
@@ -19,12 +19,8 @@ export class Usage {
     async get(
         startDate: string,
         endDate: string,
-        options?: {
-            applicationId?: string;
-            taskId?: string;
-            modelId?: string;
-        }
-    ): Promise<UsageData> {
+        options?: TeamUsageGetOptions
+    ): Promise<TeamUsageData> {
         const params = new URLSearchParams();
         params.append("start_date", startDate);
         params.append("end_date", endDate);
@@ -41,6 +37,6 @@ export class Usage {
             params.append("model", options.modelId);
         }
 
-        return this.base.request<UsageData>(`/usage?${params.toString()}`);
+        return this.base.request<TeamUsageData>(`/usage?${params.toString()}`);
     }
 }
