@@ -780,17 +780,8 @@ export interface Task {
  * Telemetry metric for an application or task
  */
 export interface UsageMetric {
-    /** Application ID */
-    application_id?: string;
-
     /** Date the metric was recorded */
     date: string;
-
-    /** Model ID */
-    model_id?: string;
-
-    /** Task ID */
-    task_id?: string;
 
     /** Value of the metric */
     value: number;
@@ -799,20 +790,33 @@ export interface UsageMetric {
 /**
  * Key for a telemetry metric
  */
-export type UsageMetricKey =
+export type TeamUsageMetricKey =
     | "volume"
     | "input_tokens"
     | "output_tokens"
+    | "volume_web_search";
+
+/**
+ * Key for a telemetry metric
+ */
+export type ApplicationUsageMetricKey =
+    | TeamUsageMetricKey
     | "error_4xx"
     | "error_5xx"
-    | "latency"
-    | "volume_web_search";
+    | "latency";
 
 /**
  * Data for a telemetry metric
  */
-export type UsageData = {
-    [key in UsageMetricKey]: UsageMetric[];
+export type TeamUsageData = {
+    [key in TeamUsageMetricKey]: UsageMetric[];
+};
+
+/**
+ * Data for a telemetry metric
+ */
+export type ApplicationUsageData = {
+    [key in ApplicationUsageMetricKey]: UsageMetric[];
 };
 
 export enum FeatureFlagValues {
@@ -1601,4 +1605,18 @@ export interface SampleDatasetParams {
     sample_type: SamplingStrategy;
     sort_direction?: string | null;
     dataset_id: string | null;
+}
+
+/**
+ * Options for getting team usage metrics
+ */
+export interface TeamUsageGetOptions {
+    /** Application ID */
+    applicationId?: string;
+
+    /** Task ID */
+    taskId?: string;
+
+    /** Model ID */
+    modelId?: string;
 }
