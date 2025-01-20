@@ -18,7 +18,7 @@ Confidence score
 
 #### Defined in
 
-[src/types.ts:119](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L119)
+[src/types.ts:119](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L119)
 
 ***
 
@@ -30,7 +30,7 @@ Explanation of the labeling decision
 
 #### Defined in
 
-[src/types.ts:125](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L125)
+[src/types.ts:125](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L125)
 
 ***
 
@@ -42,7 +42,7 @@ Label value
 
 #### Defined in
 
-[src/types.ts:116](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L116)
+[src/types.ts:116](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L116)
 
 ***
 
@@ -54,4 +54,4 @@ Uncalibrated confidence score
 
 #### Defined in
 
-[src/types.ts:122](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L122)
+[src/types.ts:122](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L122)

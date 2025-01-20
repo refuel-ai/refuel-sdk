@@ -16,8 +16,9 @@ import { TaxonomyLabels } from "./TaxonomyLabels";
 import { Team } from "./Team";
 import { TeamModels } from "./TeamModels";
 import { RefuelOptions } from "./types";
-import { Usage } from "./Usage";
+import { TeamUsage } from "./TeamUsage";
 import { Users } from "./Users";
+import { ApplicationUsage } from "./ApplicationUsage";
 /**
  * Main class for interacting with the Refuel API.
  *
@@ -34,6 +35,7 @@ import { Users } from "./Users";
 export declare class Refuel {
     readonly base: RefuelBase;
     readonly applications: Applications;
+    readonly applicationUsage: ApplicationUsage;
     readonly calibrations: Calibrations;
     readonly datasetExports: DatasetExports;
     readonly datasetItems: DatasetItems;
@@ -49,7 +51,7 @@ export declare class Refuel {
     readonly taxonomyLabels: TaxonomyLabels;
     readonly team: Team;
     readonly teamModels: TeamModels;
-    readonly usage: Usage;
+    readonly teamUsage: TeamUsage;
     readonly users: Users;
     constructor(options?: RefuelOptions | string);
 }

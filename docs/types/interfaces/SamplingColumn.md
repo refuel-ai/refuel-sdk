@@ -14,7 +14,7 @@
 
 #### Defined in
 
-[src/types.ts:1583](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1583)
+[src/types.ts:1587](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1587)
 
 ***
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[src/types.ts:1584](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1584)
+[src/types.ts:1588](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1588)
 
 ***
 
@@ -34,4 +34,4 @@
 
 #### Defined in
 
-[src/types.ts:1585](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1585)
+[src/types.ts:1589](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1589)

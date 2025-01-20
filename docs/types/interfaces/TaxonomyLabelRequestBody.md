@@ -18,4 +18,4 @@ Labels to create or update
 
 #### Defined in
 
-[src/types.ts:947](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L947)
+[src/types.ts:951](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L951)

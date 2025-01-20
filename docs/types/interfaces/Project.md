@@ -18,7 +18,7 @@ Date the project was created
 
 #### Defined in
 
-[src/types.ts:211](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L211)
+[src/types.ts:211](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L211)
 
 ***
 
@@ -30,7 +30,7 @@ Project description
 
 #### Defined in
 
-[src/types.ts:214](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L214)
+[src/types.ts:214](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L214)
 
 ***
 
@@ -42,7 +42,7 @@ Project ID
 
 #### Defined in
 
-[src/types.ts:208](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L208)
+[src/types.ts:208](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L208)
 
 ***
 
@@ -54,7 +54,7 @@ Project name
 
 #### Defined in
 
-[src/types.ts:217](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L217)
+[src/types.ts:217](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L217)
 
 ***
 
@@ -66,7 +66,7 @@ Team the project is associated with
 
 #### Defined in
 
-[src/types.ts:220](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L220)
+[src/types.ts:220](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L220)
 
 ***
 
@@ -78,4 +78,4 @@ Date the project was last updated
 
 #### Defined in
 
-[src/types.ts:223](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L223)
+[src/types.ts:223](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L223)

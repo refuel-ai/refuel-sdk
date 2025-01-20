@@ -14,7 +14,7 @@
 
 #### Defined in
 
-[src/types.ts:1597](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1597)
+[src/types.ts:1601](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1601)
 
 ***
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[src/types.ts:1603](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1603)
+[src/types.ts:1607](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1607)
 
 ***
 
@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[src/types.ts:1598](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1598)
+[src/types.ts:1602](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1602)
 
 ***
 
@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[src/types.ts:1599](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1599)
+[src/types.ts:1603](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1603)
 
 ***
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[src/types.ts:1600](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1600)
+[src/types.ts:1604](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1604)
 
 ***
 
@@ -64,7 +64,7 @@
 
 #### Defined in
 
-[src/types.ts:1601](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1601)
+[src/types.ts:1605](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1605)
 
 ***
 
@@ -74,4 +74,4 @@
 
 #### Defined in
 
-[src/types.ts:1602](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1602)
+[src/types.ts:1606](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1606)

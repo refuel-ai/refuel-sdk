@@ -7,6 +7,7 @@
 ## Modules
 
 - [Applications](Applications/README.md)
+- [ApplicationUsage](ApplicationUsage/README.md)
 - [Calibrations](Calibrations/README.md)
 - [consts](consts/README.md)
 - [DatasetExports](DatasetExports/README.md)
@@ -25,7 +26,7 @@
 - [TaxonomyLabels](TaxonomyLabels/README.md)
 - [Team](Team/README.md)
 - [TeamModels](TeamModels/README.md)
+- [TeamUsage](TeamUsage/README.md)
 - [types](types/README.md)
-- [Usage](Usage/README.md)
 - [Users](Users/README.md)
 - [utils](utils/README.md)

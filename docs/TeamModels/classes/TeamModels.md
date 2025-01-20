@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[src/TeamModels/index.ts:7](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/TeamModels/index.ts#L7)
+[src/TeamModels/index.ts:7](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/TeamModels/index.ts#L7)
 
 ## Methods
 
@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[src/TeamModels/index.ts:11](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/TeamModels/index.ts#L11)
+[src/TeamModels/index.ts:11](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/TeamModels/index.ts#L11)

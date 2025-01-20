@@ -16,7 +16,7 @@ Model ID
 
 #### Defined in
 
-[src/types.ts:1126](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1126)
+[src/types.ts:1130](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1130)
 
 ***
 
@@ -28,4 +28,4 @@ Task ID
 
 #### Defined in
 
-[src/types.ts:1123](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1123)
+[src/types.ts:1127](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1127)
