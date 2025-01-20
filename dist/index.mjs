@@ -1614,7 +1614,7 @@ class TeamModels {
     }
 }
 
-class Usage {
+class TeamUsage {
     constructor(base) {
         this.base = base;
     }
@@ -1691,6 +1691,31 @@ class Users {
     }
 }
 
+class ApplicationUsage {
+    constructor(base) {
+        this.base = base;
+    }
+    /**
+     * Get usage data for a specific time period
+     *
+     * @example
+     * ```ts
+     * const usage = await refuel.applicationUsage.get("123", "2024-01-01", "2024-01-31");
+     * ```
+     */
+    async get(applicationId, startDate, endDate, 
+    /** period in seconds */
+    period) {
+        const params = new URLSearchParams();
+        params.append("start_date", startDate);
+        params.append("end_date", endDate);
+        if (period) {
+            params.append("period", period.toString());
+        }
+        return this.base.request(`/applications/${applicationId}/usage?${params.toString()}`);
+    }
+}
+
 const isLabeledDatasetItem = (arg) => {
     return typeof arg === "object" && arg !== null && "labels" in arg;
 };
@@ -1735,6 +1760,7 @@ class Refuel {
         }
         this.base = new RefuelBase(apiKey, typeof options === "string" ? undefined : options);
         this.applications = new Applications(this.base);
+        this.applicationUsage = new ApplicationUsage(this.base);
         this.calibrations = new Calibrations(this.base);
         this.datasets = new Datasets(this.base);
         this.datasetItems = new DatasetItems(this.base);
@@ -1750,7 +1776,7 @@ class Refuel {
         this.taxonomyLabels = new TaxonomyLabels(this.base);
         this.team = new Team(this.base);
         this.teamModels = new TeamModels(this.base);
-        this.usage = new Usage(this.base);
+        this.teamUsage = new TeamUsage(this.base);
         this.users = new Users(this.base);
     }
 }

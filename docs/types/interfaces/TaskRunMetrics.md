@@ -18,7 +18,7 @@ Metrics for the subtasks
 
 #### Defined in
 
-[src/types.ts:1174](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1174)
+[src/types.ts:1178](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1178)
 
 ***
 
@@ -30,4 +30,4 @@ Metrics for the overall task
 
 #### Defined in
 
-[src/types.ts:1171](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1171)
+[src/types.ts:1175](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1175)

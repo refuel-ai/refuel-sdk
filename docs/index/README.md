@@ -56,6 +56,18 @@ Re-exports [ApplicationOutputSync](../types/interfaces/ApplicationOutputSync.md)
 
 ***
 
+### ApplicationUsageData
+
+Re-exports [ApplicationUsageData](../types/type-aliases/ApplicationUsageData.md)
+
+***
+
+### ApplicationUsageMetricKey
+
+Re-exports [ApplicationUsageMetricKey](../types/type-aliases/ApplicationUsageMetricKey.md)
+
+***
+
 ### AuthenticatedUser
 
 Re-exports [AuthenticatedUser](../types/interfaces/AuthenticatedUser.md)
@@ -524,6 +536,24 @@ Re-exports [TeamModel](../types/interfaces/TeamModel.md)
 
 ***
 
+### TeamUsageData
+
+Re-exports [TeamUsageData](../types/type-aliases/TeamUsageData.md)
+
+***
+
+### TeamUsageGetOptions
+
+Re-exports [TeamUsageGetOptions](../types/interfaces/TeamUsageGetOptions.md)
+
+***
+
+### TeamUsageMetricKey
+
+Re-exports [TeamUsageMetricKey](../types/type-aliases/TeamUsageMetricKey.md)
+
+***
+
 ### Telemetry
 
 Re-exports [Telemetry](../types/interfaces/Telemetry.md)
@@ -542,21 +572,9 @@ Re-exports [TransformType](../types/enumerations/TransformType.md)
 
 ***
 
-### UsageData
-
-Re-exports [UsageData](../types/type-aliases/UsageData.md)
-
-***
-
 ### UsageMetric
 
 Re-exports [UsageMetric](../types/interfaces/UsageMetric.md)
-
-***
-
-### UsageMetricKey
-
-Re-exports [UsageMetricKey](../types/type-aliases/UsageMetricKey.md)
 
 ***
 

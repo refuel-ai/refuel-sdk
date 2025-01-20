@@ -18,7 +18,7 @@ Metrics for the task run
 
 #### Defined in
 
-[src/types.ts:1182](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1182)
+[src/types.ts:1186](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1186)
 
 ***
 
@@ -30,4 +30,4 @@ Model ID
 
 #### Defined in
 
-[src/types.ts:1185](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L1185)
+[src/types.ts:1189](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1189)

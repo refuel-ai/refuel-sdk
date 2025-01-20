@@ -18,7 +18,7 @@ Automatically generate the schema from the guidelines
 
 #### Defined in
 
-[src/types.ts:594](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L594)
+[src/types.ts:594](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L594)
 
 ***
 
@@ -30,4 +30,4 @@ Manually specify the schema
 
 #### Defined in
 
-[src/types.ts:597](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L597)
+[src/types.ts:597](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L597)

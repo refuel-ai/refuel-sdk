@@ -18,7 +18,7 @@ Date the team was created
 
 #### Defined in
 
-[src/types.ts:828](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L828)
+[src/types.ts:832](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L832)
 
 ***
 
@@ -30,7 +30,7 @@ Feature flags for the team
 
 #### Defined in
 
-[src/types.ts:831](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L831)
+[src/types.ts:835](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L835)
 
 ***
 
@@ -42,7 +42,7 @@ Team name
 
 #### Defined in
 
-[src/types.ts:834](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L834)
+[src/types.ts:838](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L838)
 
 ***
 
@@ -56,4 +56,4 @@ This can be used to authenticate requests to the Refuel API or with the Refuel S
 
 #### Defined in
 
-[src/types.ts:840](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L840)
+[src/types.ts:844](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L844)

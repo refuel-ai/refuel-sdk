@@ -18,7 +18,7 @@ Column name
 
 #### Defined in
 
-[src/types.ts:385](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L385)
+[src/types.ts:385](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L385)
 
 ***
 
@@ -30,7 +30,7 @@ Order of the column
 
 #### Defined in
 
-[src/types.ts:391](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L391)
+[src/types.ts:391](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L391)
 
 ***
 
@@ -40,7 +40,7 @@ Order of the column
 
 #### Defined in
 
-[src/types.ts:393](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L393)
+[src/types.ts:393](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L393)
 
 ***
 
@@ -50,7 +50,7 @@ Order of the column
 
 #### Defined in
 
-[src/types.ts:395](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L395)
+[src/types.ts:395](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L395)
 
 ***
 
@@ -62,4 +62,4 @@ Column type
 
 #### Defined in
 
-[src/types.ts:388](https://github.com/refuel-ai/refuel-sdk/blob/6bdaa976108229093d96ed4ea0b79dde2d2eeea9/src/types.ts#L388)
+[src/types.ts:388](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L388)

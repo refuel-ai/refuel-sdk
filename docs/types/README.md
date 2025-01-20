@@ -86,6 +86,7 @@
 - [TaxonomyLabelRequestBody](interfaces/TaxonomyLabelRequestBody.md)
 - [TaxonomyLabelsResponse](interfaces/TaxonomyLabelsResponse.md)
 - [TeamModel](interfaces/TeamModel.md)
+- [TeamUsageGetOptions](interfaces/TeamUsageGetOptions.md)
 - [Telemetry](interfaces/Telemetry.md)
 - [Transform](interfaces/Transform.md)
 - [UsageMetric](interfaces/UsageMetric.md)
@@ -93,6 +94,8 @@
 
 ### Type Aliases
 
+- [ApplicationUsageData](type-aliases/ApplicationUsageData.md)
+- [ApplicationUsageMetricKey](type-aliases/ApplicationUsageMetricKey.md)
 - [DatasetItemLabelUpdateData](type-aliases/DatasetItemLabelUpdateData.md)
 - [DeepPartial](type-aliases/DeepPartial.md)
 - [FilterOperatorOption](type-aliases/FilterOperatorOption.md)
@@ -103,5 +106,5 @@
 - [RefuelOptions](type-aliases/RefuelOptions.md)
 - [SortDirection](type-aliases/SortDirection.md)
 - [TaskRunStatus](type-aliases/TaskRunStatus.md)
-- [UsageData](type-aliases/UsageData.md)
-- [UsageMetricKey](type-aliases/UsageMetricKey.md)
+- [TeamUsageData](type-aliases/TeamUsageData.md)
+- [TeamUsageMetricKey](type-aliases/TeamUsageMetricKey.md)
