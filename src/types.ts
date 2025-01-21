@@ -1162,15 +1162,12 @@ export interface MetricResult {
 
     /** Support */
     support: number;
-
-    /** Subtask ID */
-    subtaskId: string;
 }
 
 /**
  * Metrics for a task run
  */
-export interface TaskRunMetrics {
+export interface TaskRunMetricsResponse {
     /** Metrics for the overall task */
     task: MetricResult[] | null;
 
@@ -1183,7 +1180,7 @@ export interface TaskRunMetrics {
  */
 export interface EvaluationStat {
     /** Metrics for the task run */
-    metrics?: TaskRunMetrics | null;
+    metrics?: TaskRunMetricsResponse | null;
 
     /** Model ID */
     model?: string | null;
@@ -1619,4 +1616,11 @@ export interface TeamUsageGetOptions {
 
     /** Model ID */
     modelId?: string;
+}
+
+export interface TaskRunMetricsListOptions {
+    filters?: SQLFilter[];
+    modelId?: string;
+    datasetId?: string;
+    evalSet?: boolean;
 }

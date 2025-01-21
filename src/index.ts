@@ -19,6 +19,7 @@ import { RefuelOptions } from "./types";
 import { TeamUsage } from "./TeamUsage";
 import { Users } from "./Users";
 import { ApplicationUsage } from "./ApplicationUsage";
+import { TaskRunMetrics } from "./TaskRunMetrics";
 
 /**
  * Main class for interacting with the Refuel API.
@@ -47,6 +48,7 @@ export class Refuel {
     public readonly labels: Labels;
     public readonly projects: Projects;
     public readonly taskModels: TaskModels;
+    public readonly taskRunMetrics: TaskRunMetrics;
     public readonly taskRuns: TaskRuns;
     public readonly tasks: Tasks;
     public readonly taxonomies: Taxonomies;
@@ -83,6 +85,7 @@ export class Refuel {
         this.labels = new Labels(this.base);
         this.projects = new Projects(this.base);
         this.taskModels = new TaskModels(this.base);
+        this.taskRunMetrics = new TaskRunMetrics(this.base);
         this.taskRuns = new TaskRuns(this.base);
         this.tasks = new Tasks(this.base);
         this.taxonomies = new Taxonomies(this.base);
