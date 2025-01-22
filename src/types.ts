@@ -1455,7 +1455,7 @@ export interface TaskRunListOptions {
  */
 export interface TaskRunCreateOptions {
     /** Maximum number of items to label */
-    limit?: number;
+    numItems?: number;
 
     /** Whether to get the eval set */
     evalSet?: boolean;
