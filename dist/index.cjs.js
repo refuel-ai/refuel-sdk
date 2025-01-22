@@ -1193,8 +1193,8 @@ class TaskRuns {
             throw new Error("Either datasetId or evalSet must be provided");
         }
         const params = new URLSearchParams();
-        if (options === null || options === void 0 ? void 0 : options.limit) {
-            params.append("limit", options.limit.toString());
+        if (options === null || options === void 0 ? void 0 : options.numItems) {
+            params.append("num_items", options.numItems.toString());
         }
         if (options === null || options === void 0 ? void 0 : options.filters) {
             options.filters.forEach((filter) => {
@@ -1718,6 +1718,43 @@ class ApplicationUsage {
     }
 }
 
+/**
+ * Handles operations related to task metrics.
+ * This class is not intended to be instantiated directly.
+ * Instead, access it through an instance of the Refuel class.
+ */
+class TaskRunMetrics {
+    constructor(base) {
+        this.base = base;
+    }
+    /**
+     * Get metrics for a task run
+     *
+     * @example
+     * ```ts
+     * const metrics = await refuel.taskRunMetrics.get(taskId, { datasetId: "123" });
+     * ```
+     */
+    async list(taskId, options) {
+        if (options.datasetId && options.evalSet) {
+            throw new Error("Cannot specify both datasetId and evalSet. Please specify one or the other.");
+        }
+        const path = options.evalSet
+            ? `/tasks/${taskId}/evalset/metrics`
+            : `/tasks/${taskId}/runs/${options.datasetId}/metrics`;
+        const params = new URLSearchParams();
+        if (options.filters) {
+            options.filters.forEach((filter) => {
+                params.append("filters", JSON.stringify(filter));
+            });
+        }
+        if (options.modelId) {
+            params.append("model_id", options.modelId);
+        }
+        return this.base.request(`${path}?${params.toString()}`);
+    }
+}
+
 const isLabeledDatasetItem = (arg) => {
     return typeof arg === "object" && arg !== null && "labels" in arg;
 };
@@ -1772,6 +1809,7 @@ class Refuel {
         this.labels = new Labels(this.base);
         this.projects = new Projects(this.base);
         this.taskModels = new TaskModels(this.base);
+        this.taskRunMetrics = new TaskRunMetrics(this.base);
         this.taskRuns = new TaskRuns(this.base);
         this.tasks = new Tasks(this.base);
         this.taxonomies = new Taxonomies(this.base);

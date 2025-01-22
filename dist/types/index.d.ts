@@ -19,6 +19,7 @@ import { RefuelOptions } from "./types";
 import { TeamUsage } from "./TeamUsage";
 import { Users } from "./Users";
 import { ApplicationUsage } from "./ApplicationUsage";
+import { TaskRunMetrics } from "./TaskRunMetrics";
 /**
  * Main class for interacting with the Refuel API.
  *
@@ -45,6 +46,7 @@ export declare class Refuel {
     readonly labels: Labels;
     readonly projects: Projects;
     readonly taskModels: TaskModels;
+    readonly taskRunMetrics: TaskRunMetrics;
     readonly taskRuns: TaskRuns;
     readonly tasks: Tasks;
     readonly taxonomies: Taxonomies;

@@ -861,13 +861,11 @@ export interface MetricResult {
     type: MetricFormat;
     /** Support */
     support: number;
-    /** Subtask ID */
-    subtaskId: string;
 }
 /**
  * Metrics for a task run
  */
-export interface TaskRunMetrics {
+export interface TaskRunMetricsResponse {
     /** Metrics for the overall task */
     task: MetricResult[] | null;
     /** Metrics for the subtasks */
@@ -878,7 +876,7 @@ export interface TaskRunMetrics {
  */
 export interface EvaluationStat {
     /** Metrics for the task run */
-    metrics?: TaskRunMetrics | null;
+    metrics?: TaskRunMetricsResponse | null;
     /** Model ID */
     model?: string | null;
 }
@@ -1078,7 +1076,7 @@ export interface TaskRunListOptions {
  */
 export interface TaskRunCreateOptions {
     /** Maximum number of items to label */
-    limit?: number;
+    numItems?: number;
     /** Whether to get the eval set */
     evalSet?: boolean;
     /** Filters to apply to the dataset */
@@ -1207,4 +1205,10 @@ export interface TeamUsageGetOptions {
     taskId?: string;
     /** Model ID */
     modelId?: string;
+}
+export interface TaskRunMetricsListOptions {
+    filters?: SQLFilter[];
+    modelId?: string;
+    datasetId?: string;
+    evalSet?: boolean;
 }
