@@ -488,9 +488,15 @@ Re-exports [TaskRunListOptions](../types/interfaces/TaskRunListOptions.md)
 
 ***
 
-### TaskRunMetrics
+### TaskRunMetricsListOptions
 
-Re-exports [TaskRunMetrics](../types/interfaces/TaskRunMetrics.md)
+Re-exports [TaskRunMetricsListOptions](../types/interfaces/TaskRunMetricsListOptions.md)
+
+***
+
+### TaskRunMetricsResponse
+
+Re-exports [TaskRunMetricsResponse](../types/interfaces/TaskRunMetricsResponse.md)
 
 ***
 

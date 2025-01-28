@@ -18,7 +18,7 @@ Date the task run was created
 
 #### Defined in
 
-[src/types.ts:1436](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1436)
+[src/types.ts:1433](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1433)
 
 ***
 
@@ -30,7 +30,7 @@ Dataset ID
 
 #### Defined in
 
-[src/types.ts:1424](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1424)
+[src/types.ts:1421](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1421)
 
 ***
 
@@ -42,7 +42,7 @@ Dataset name
 
 #### Defined in
 
-[src/types.ts:1427](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1427)
+[src/types.ts:1424](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1424)
 
 ***
 
@@ -54,7 +54,7 @@ Task run ID
 
 #### Defined in
 
-[src/types.ts:1409](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1409)
+[src/types.ts:1406](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1406)
 
 ***
 
@@ -66,7 +66,7 @@ Whether the task run is an evaluation run
 
 #### Defined in
 
-[src/types.ts:1433](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1433)
+[src/types.ts:1430](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1430)
 
 ***
 
@@ -78,7 +78,7 @@ Model(s) used to label the items in this run
 
 #### Defined in
 
-[src/types.ts:1442](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1442)
+[src/types.ts:1439](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1439)
 
 ***
 
@@ -90,7 +90,7 @@ Model name
 
 #### Defined in
 
-[src/types.ts:1421](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1421)
+[src/types.ts:1418](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1418)
 
 ***
 
@@ -102,7 +102,7 @@ Project ID
 
 #### Defined in
 
-[src/types.ts:1412](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1412)
+[src/types.ts:1409](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1409)
 
 ***
 
@@ -114,7 +114,7 @@ Task run status
 
 #### Defined in
 
-[src/types.ts:1430](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1430)
+[src/types.ts:1427](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1427)
 
 ***
 
@@ -126,7 +126,7 @@ Task ID
 
 #### Defined in
 
-[src/types.ts:1415](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1415)
+[src/types.ts:1412](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1412)
 
 ***
 
@@ -138,7 +138,7 @@ Task name
 
 #### Defined in
 
-[src/types.ts:1418](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1418)
+[src/types.ts:1415](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1415)
 
 ***
 
@@ -150,4 +150,4 @@ Date the task run was last updated
 
 #### Defined in
 
-[src/types.ts:1439](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1439)
+[src/types.ts:1436](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1436)

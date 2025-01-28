@@ -28,7 +28,7 @@ Instead, access it through an instance of the Refuel class.
 
 #### Defined in
 
-[src/Labels/index.ts:17](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/Labels/index.ts#L17)
+[src/Labels/index.ts:17](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/Labels/index.ts#L17)
 
 ## Methods
 
@@ -74,7 +74,7 @@ const labels = await refuel.labels.approve(taskId, datasetId, itemId, subtaskId)
 
 #### Defined in
 
-[src/Labels/index.ts:109](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/Labels/index.ts#L109)
+[src/Labels/index.ts:109](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/Labels/index.ts#L109)
 
 ***
 
@@ -112,7 +112,7 @@ const labels = await refuel.labels.approve(taskId, datasetId, itemId, subtaskId)
 
 #### Defined in
 
-[src/Labels/index.ts:144](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/Labels/index.ts#L144)
+[src/Labels/index.ts:144](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/Labels/index.ts#L144)
 
 ***
 
@@ -152,7 +152,7 @@ const labels = await refuel.labels.list(taskId, datasetId, itemId);
 
 #### Defined in
 
-[src/Labels/index.ts:39](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/Labels/index.ts#L39)
+[src/Labels/index.ts:39](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/Labels/index.ts#L39)
 
 ***
 
@@ -192,4 +192,4 @@ const labels = await refuel.labels.update(taskId, datasetId, itemId, { "subtask_
 
 #### Defined in
 
-[src/Labels/index.ts:84](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/Labels/index.ts#L84)
+[src/Labels/index.ts:84](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/Labels/index.ts#L84)

@@ -18,7 +18,7 @@ Confidence score
 
 #### Defined in
 
-[src/types.ts:253](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L253)
+[src/types.ts:253](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L253)
 
 ***
 
@@ -30,7 +30,7 @@ User who created the label
 
 #### Defined in
 
-[src/types.ts:256](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L256)
+[src/types.ts:256](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L256)
 
 ***
 
@@ -42,7 +42,7 @@ Error message if the label creation failed
 
 #### Defined in
 
-[src/types.ts:259](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L259)
+[src/types.ts:259](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L259)
 
 ***
 
@@ -54,7 +54,7 @@ Expected label (either from ground truth in dataset or human verified value)
 
 #### Defined in
 
-[src/types.ts:262](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L262)
+[src/types.ts:262](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L262)
 
 ***
 
@@ -66,7 +66,7 @@ An explanation of the labeling decision
 
 #### Defined in
 
-[src/types.ts:265](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L265)
+[src/types.ts:265](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L265)
 
 ***
 
@@ -78,7 +78,7 @@ Related subtask ID
 
 #### Defined in
 
-[src/types.ts:268](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L268)
+[src/types.ts:268](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L268)
 
 ***
 
@@ -90,7 +90,7 @@ Label value
 
 #### Defined in
 
-[src/types.ts:271](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L271)
+[src/types.ts:271](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L271)
 
 ***
 
@@ -102,7 +102,7 @@ Original label from the LLM
 
 #### Defined in
 
-[src/types.ts:274](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L274)
+[src/types.ts:274](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L274)
 
 ***
 
@@ -114,7 +114,7 @@ Multilabel confidence
 
 #### Defined in
 
-[src/types.ts:277](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L277)
+[src/types.ts:277](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L277)
 
 ***
 
@@ -126,7 +126,7 @@ Whether the label was overridden
 
 #### Defined in
 
-[src/types.ts:280](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L280)
+[src/types.ts:280](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L280)
 
 ***
 
@@ -138,7 +138,7 @@ Uncalibrated confidence score
 
 #### Defined in
 
-[src/types.ts:283](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L283)
+[src/types.ts:283](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L283)
 
 ***
 
@@ -150,7 +150,7 @@ Raw response from the LLM
 
 #### Defined in
 
-[src/types.ts:286](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L286)
+[src/types.ts:286](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L286)
 
 ***
 
@@ -162,7 +162,7 @@ List of labels the LLM selected from
 
 #### Defined in
 
-[src/types.ts:289](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L289)
+[src/types.ts:289](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L289)
 
 ***
 
@@ -174,4 +174,4 @@ The source of the label
 
 #### Defined in
 
-[src/types.ts:292](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L292)
+[src/types.ts:292](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L292)

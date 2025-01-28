@@ -28,7 +28,7 @@ Instead, access it through an instance of the Refuel class.
 
 #### Defined in
 
-[src/TaskModels/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/TaskModels/index.ts#L12)
+[src/TaskModels/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/TaskModels/index.ts#L12)
 
 ## Methods
 
@@ -56,4 +56,4 @@ const models = await refuel.taskModels.list(taskId);
 
 #### Defined in
 
-[src/TaskModels/index.ts:24](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/TaskModels/index.ts#L24)
+[src/TaskModels/index.ts:24](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/TaskModels/index.ts#L24)

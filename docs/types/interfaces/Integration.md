@@ -18,7 +18,7 @@ Integration category
 
 #### Defined in
 
-[src/types.ts:993](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L993)
+[src/types.ts:993](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L993)
 
 ***
 
@@ -30,7 +30,7 @@ Integration configuration
 
 #### Defined in
 
-[src/types.ts:1005](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1005)
+[src/types.ts:1005](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1005)
 
 ***
 
@@ -42,7 +42,7 @@ Integration description
 
 #### Defined in
 
-[src/types.ts:996](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L996)
+[src/types.ts:996](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L996)
 
 ***
 
@@ -54,7 +54,7 @@ URL to the docs of the external service
 
 #### Defined in
 
-[src/types.ts:1011](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1011)
+[src/types.ts:1011](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1011)
 
 ***
 
@@ -66,7 +66,7 @@ Integration ID
 
 #### Defined in
 
-[src/types.ts:987](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L987)
+[src/types.ts:987](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L987)
 
 ***
 
@@ -78,7 +78,7 @@ Whether the integration is available
 
 #### Defined in
 
-[src/types.ts:1002](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1002)
+[src/types.ts:1002](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1002)
 
 ***
 
@@ -90,7 +90,7 @@ Whether the integration is connected
 
 #### Defined in
 
-[src/types.ts:999](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L999)
+[src/types.ts:999](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L999)
 
 ***
 
@@ -102,7 +102,7 @@ URL to the logo of the external service
 
 #### Defined in
 
-[src/types.ts:1008](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L1008)
+[src/types.ts:1008](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1008)
 
 ***
 
@@ -114,4 +114,4 @@ Name of the external service
 
 #### Defined in
 
-[src/types.ts:990](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L990)
+[src/types.ts:990](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L990)

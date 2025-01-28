@@ -20,6 +20,7 @@
 - [Projects](Projects/README.md)
 - [RefuelBase](RefuelBase/README.md)
 - [TaskModels](TaskModels/README.md)
+- [TaskRunMetrics](TaskRunMetrics/README.md)
 - [TaskRuns](TaskRuns/README.md)
 - [Tasks](Tasks/README.md)
 - [Taxonomies](Taxonomies/README.md)

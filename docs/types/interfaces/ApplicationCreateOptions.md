@@ -18,7 +18,7 @@ Application name
 
 #### Defined in
 
-[src/types.ts:108](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L108)
+[src/types.ts:108](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L108)
 
 ***
 
@@ -30,7 +30,7 @@ Project ID to deploy the application to
 
 #### Defined in
 
-[src/types.ts:102](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L102)
+[src/types.ts:102](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L102)
 
 ***
 
@@ -42,4 +42,4 @@ Task ID to deploy as an application
 
 #### Defined in
 
-[src/types.ts:105](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L105)
+[src/types.ts:105](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L105)
