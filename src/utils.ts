@@ -4,7 +4,13 @@ import { DatasetLabeled, LabeledDatasetItem, Telemetry } from "./types";
 export const isLabeledDatasetItem = (
     arg: unknown
 ): arg is LabeledDatasetItem => {
-    return typeof arg === "object" && arg !== null && "labels" in arg;
+    return (
+        typeof arg === "object" &&
+        arg !== null &&
+        "fields" in arg &&
+        "labels" in arg &&
+        Array.isArray(arg["labels"])
+    );
 };
 
 export const isDatasetLabeled = (arg: unknown): arg is DatasetLabeled => {
