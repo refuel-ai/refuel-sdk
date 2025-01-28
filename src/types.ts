@@ -478,6 +478,29 @@ export interface DatasetLabeled extends Dataset {
     items: LabeledDatasetItem[];
 }
 
+export interface CreateDatasetOptions {
+    /** Name of the dataset */
+    name: string;
+
+    /** Project ID */
+    projectId: string;
+
+    /** Integration ID */
+    integrationId: string;
+
+    /** Whether to redact personally identifiable information */
+    redactPII?: boolean;
+
+    /** Path to the dataset */
+    sourcePath?: string;
+
+    /** Schema to use */
+    schema?: string;
+
+    /** Source of the dataset */
+    source?: string;
+}
+
 /**
  * The category of a filter field
  */
