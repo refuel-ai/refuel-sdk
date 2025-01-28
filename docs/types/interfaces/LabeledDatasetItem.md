@@ -18,7 +18,7 @@ Fields and their values
 
 #### Defined in
 
-[src/types.ts:327](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L327)
+[src/types.ts:327](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L327)
 
 ***
 
@@ -30,7 +30,7 @@ Whether the item is in the eval set
 
 #### Defined in
 
-[src/types.ts:336](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L336)
+[src/types.ts:336](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L336)
 
 ***
 
@@ -42,7 +42,7 @@ Labels for the item
 
 #### Defined in
 
-[src/types.ts:330](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L330)
+[src/types.ts:330](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L330)
 
 ***
 
@@ -54,4 +54,4 @@ Telemetry for the item (e.g. how many tokens were used)
 
 #### Defined in
 
-[src/types.ts:333](https://github.com/refuel-ai/refuel-sdk/blob/992e715e614e75caa11e039ae8b03c5366ed7bea/src/types.ts#L333)
+[src/types.ts:333](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L333)

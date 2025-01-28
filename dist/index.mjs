@@ -1754,7 +1754,11 @@ class TaskRunMetrics {
 }
 
 const isLabeledDatasetItem = (arg) => {
-    return typeof arg === "object" && arg !== null && "labels" in arg;
+    return (typeof arg === "object" &&
+        arg !== null &&
+        "fields" in arg &&
+        "labels" in arg &&
+        Array.isArray(arg["labels"]));
 };
 const isDatasetLabeled = (arg) => {
     return (typeof arg === "object" &&
