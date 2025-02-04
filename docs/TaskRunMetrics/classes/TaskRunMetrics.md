@@ -28,7 +28,7 @@ Instead, access it through an instance of the Refuel class.
 
 #### Defined in
 
-[src/TaskRunMetrics/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/TaskRunMetrics/index.ts#L12)
+[src/TaskRunMetrics/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/TaskRunMetrics/index.ts#L12)
 
 ## Methods
 
@@ -60,4 +60,4 @@ const metrics = await refuel.taskRunMetrics.get(taskId, { datasetId: "123" });
 
 #### Defined in
 
-[src/TaskRunMetrics/index.ts:24](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/TaskRunMetrics/index.ts#L24)
+[src/TaskRunMetrics/index.ts:24](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/TaskRunMetrics/index.ts#L24)

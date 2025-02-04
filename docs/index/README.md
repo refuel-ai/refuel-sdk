@@ -524,12 +524,6 @@ Re-exports [TaxonomyLabelData](../types/interfaces/TaxonomyLabelData.md)
 
 ***
 
-### TaxonomyLabelRequestBody
-
-Re-exports [TaxonomyLabelRequestBody](../types/interfaces/TaxonomyLabelRequestBody.md)
-
-***
-
 ### TaxonomyLabelsResponse
 
 Re-exports [TaxonomyLabelsResponse](../types/interfaces/TaxonomyLabelsResponse.md)

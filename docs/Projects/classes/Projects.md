@@ -28,7 +28,7 @@ Instead, access it through an instance of the Refuel class.
 
 #### Defined in
 
-[src/Projects/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/Projects/index.ts#L12)
+[src/Projects/index.ts:12](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/Projects/index.ts#L12)
 
 ## Methods
 
@@ -58,7 +58,7 @@ const project = await refuel.projects.create({
 
 #### Defined in
 
-[src/Projects/index.ts:26](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/Projects/index.ts#L26)
+[src/Projects/index.ts:26](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/Projects/index.ts#L26)
 
 ***
 
@@ -86,7 +86,7 @@ await refuel.projects.delete(projectId);
 
 #### Defined in
 
-[src/Projects/index.ts:69](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/Projects/index.ts#L69)
+[src/Projects/index.ts:69](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/Projects/index.ts#L69)
 
 ***
 
@@ -114,7 +114,7 @@ const project = await refuel.projects.get(projectId);
 
 #### Defined in
 
-[src/Projects/index.ts:45](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/Projects/index.ts#L45)
+[src/Projects/index.ts:45](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/Projects/index.ts#L45)
 
 ***
 
@@ -136,4 +136,4 @@ const projects = await refuel.projects.list();
 
 #### Defined in
 
-[src/Projects/index.ts:57](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/Projects/index.ts#L57)
+[src/Projects/index.ts:57](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/Projects/index.ts#L57)
