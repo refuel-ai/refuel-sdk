@@ -84,7 +84,6 @@
 - [TaskRunMetricsResponse](interfaces/TaskRunMetricsResponse.md)
 - [TaxonomyLabel](interfaces/TaxonomyLabel.md)
 - [TaxonomyLabelData](interfaces/TaxonomyLabelData.md)
-- [TaxonomyLabelRequestBody](interfaces/TaxonomyLabelRequestBody.md)
 - [TaxonomyLabelsResponse](interfaces/TaxonomyLabelsResponse.md)
 - [TeamModel](interfaces/TeamModel.md)
 - [TeamUsageGetOptions](interfaces/TeamUsageGetOptions.md)

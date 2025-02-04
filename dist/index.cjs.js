@@ -1445,9 +1445,8 @@ class Taxonomies {
      * ```
      */
     async create(taskId, labels = []) {
-        const data = {
-            labels: Array.isArray(labels) ? labels : [labels],
-        };
+        const data = new FormData();
+        data.append("labels", JSON.stringify(Array.isArray(labels) ? labels : [labels]));
         return this.base.request(`/tasks/${taskId}/taxonomies`, {
             method: "POST",
             data,

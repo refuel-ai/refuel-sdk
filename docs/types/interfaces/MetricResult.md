@@ -18,7 +18,7 @@ Metric name
 
 #### Defined in
 
-[src/types.ts:1155](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1155)
+[src/types.ts:1147](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1147)
 
 ***
 
@@ -30,7 +30,7 @@ Support
 
 #### Defined in
 
-[src/types.ts:1164](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1164)
+[src/types.ts:1156](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1156)
 
 ***
 
@@ -42,7 +42,7 @@ Metric type
 
 #### Defined in
 
-[src/types.ts:1161](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1161)
+[src/types.ts:1153](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1153)
 
 ***
 
@@ -54,4 +54,4 @@ Metric value
 
 #### Defined in
 
-[src/types.ts:1158](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1158)
+[src/types.ts:1150](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1150)

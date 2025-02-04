@@ -18,7 +18,7 @@ Dataset ID
 
 #### Defined in
 
-[src/types.ts:1043](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1043)
+[src/types.ts:1035](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1035)
 
 ***
 
@@ -30,7 +30,7 @@ Email to send the export to
 
 #### Defined in
 
-[src/types.ts:1019](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1019)
+[src/types.ts:1011](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1011)
 
 ***
 
@@ -42,7 +42,7 @@ Whether this export is from an evaluation set
 
 #### Defined in
 
-[src/types.ts:1040](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1040)
+[src/types.ts:1032](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1032)
 
 ***
 
@@ -54,7 +54,7 @@ Filters to apply to the dataset
 
 #### Defined in
 
-[src/types.ts:1022](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1022)
+[src/types.ts:1014](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1014)
 
 ***
 
@@ -66,7 +66,7 @@ Whether to include labels in the export
 
 #### Defined in
 
-[src/types.ts:1025](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1025)
+[src/types.ts:1017](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1017)
 
 ***
 
@@ -78,7 +78,7 @@ Whether to include the Refuel UUID in the export
 
 #### Defined in
 
-[src/types.ts:1028](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1028)
+[src/types.ts:1020](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1020)
 
 ***
 
@@ -90,7 +90,7 @@ Whether this export is from a seed set
 
 #### Defined in
 
-[src/types.ts:1037](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1037)
+[src/types.ts:1029](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1029)
 
 ***
 
@@ -102,7 +102,7 @@ Task ID
 
 #### Defined in
 
-[src/types.ts:1031](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1031)
+[src/types.ts:1023](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1023)
 
 ***
 
@@ -114,4 +114,4 @@ Task run ID
 
 #### Defined in
 
-[src/types.ts:1034](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/types.ts#L1034)
+[src/types.ts:1026](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1026)

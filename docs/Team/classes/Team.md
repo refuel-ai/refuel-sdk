@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[src/Team/index.ts:7](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/Team/index.ts#L7)
+[src/Team/index.ts:7](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/Team/index.ts#L7)
 
 ## Methods
 
@@ -46,7 +46,7 @@ const team = await refuel.team.get();
 
 #### Defined in
 
-[src/Team/index.ts:19](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/Team/index.ts#L19)
+[src/Team/index.ts:19](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/Team/index.ts#L19)
 
 ***
 
@@ -68,7 +68,7 @@ const apiKey = await refuel.team.regenerateApiKey();
 
 #### Defined in
 
-[src/Team/index.ts:31](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/Team/index.ts#L31)
+[src/Team/index.ts:31](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/Team/index.ts#L31)
 
 ***
 
@@ -96,4 +96,4 @@ const signedUrl = await refuel.team.signUrl("https://example.com");
 
 #### Defined in
 
-[src/Team/index.ts:47](https://github.com/refuel-ai/refuel-sdk/blob/d0bf0a37e69cf6e99e0c214ac03b050c5c5d48a2/src/Team/index.ts#L47)
+[src/Team/index.ts:47](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/Team/index.ts#L47)

@@ -697,13 +697,6 @@ export interface TaxonomyLabelData {
     description?: string | null;
 }
 /**
- * Request body to create or update taxonomy labels
- */
-export interface TaxonomyLabelRequestBody {
-    /** Labels to create or update */
-    labels: TaxonomyLabelData[];
-}
-/**
  * Response from getting taxonomy labels
  */
 export interface TaxonomyLabelsResponse {
