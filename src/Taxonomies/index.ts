@@ -1,9 +1,5 @@
 import { RefuelBase } from "../RefuelBase";
-import {
-    TaxonomyLabelData,
-    TaxonomyLabelRequestBody,
-    TaxonomyLabelsResponse,
-} from "../types";
+import { TaxonomyLabelData, TaxonomyLabelsResponse } from "../types";
 
 /**
  * Handles operations related to taxonomies.
@@ -32,17 +28,20 @@ export class Taxonomies {
         taskId: string,
         labels: TaxonomyLabelData | TaxonomyLabelData[] = []
     ): Promise<TaxonomyLabelsResponse> {
-        const data = {
-            labels: Array.isArray(labels) ? labels : [labels],
-        };
+        const data = new FormData();
 
-        return this.base.request<
-            TaxonomyLabelsResponse,
-            TaxonomyLabelRequestBody
-        >(`/tasks/${taskId}/taxonomies`, {
-            method: "POST",
-            data,
-        });
+        data.append(
+            "labels",
+            JSON.stringify(Array.isArray(labels) ? labels : [labels])
+        );
+
+        return this.base.request<TaxonomyLabelsResponse>(
+            `/tasks/${taskId}/taxonomies`,
+            {
+                method: "POST",
+                data,
+            }
+        );
     }
 
     async get(taskId: string, taxonomyId: string) {
