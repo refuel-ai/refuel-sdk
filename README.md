@@ -76,7 +76,7 @@ After making changes, use the following steps to test your changes locally:
 
 After merging your changes to main, complete the following steps to publish a new version of the SDK:
 
-1. Edit `package.json` and increase the version number (follow [semver](https://semver.org/) starting with v1.0.0, for versions prior to v1.0.0 always increase the minor version by one)
+1. Edit `package.json` and increase the version number (following [semver](https://semver.org/))
 2. Run `npm run build`
 3. Create a new commit called "build vX.X.X" using the version number you saved to `package.json` in step 1
 4. Create a new PR with this commit and get that approved and merged to the main branch

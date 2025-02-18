@@ -18,7 +18,7 @@ Process labels asynchronously
 
 #### Defined in
 
-[src/types.ts:183](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L183)
+[src/types.ts:183](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L183)
 
 ***
 
@@ -30,7 +30,7 @@ Include an explanation of the labeling decision in the response
 
 #### Defined in
 
-[src/types.ts:180](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L180)
+[src/types.ts:180](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L180)
 
 ***
 
@@ -42,7 +42,7 @@ Model to use
 
 #### Defined in
 
-[src/types.ts:186](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L186)
+[src/types.ts:186](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L186)
 
 ***
 
@@ -54,4 +54,4 @@ Redact personally identifiable information
 
 #### Defined in
 
-[src/types.ts:189](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L189)
+[src/types.ts:189](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L189)

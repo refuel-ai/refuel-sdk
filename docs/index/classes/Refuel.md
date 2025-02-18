@@ -37,7 +37,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:61](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L61)
+[src/index.ts:61](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L61)
 
 ## Properties
 
@@ -47,7 +47,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:40](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L40)
+[src/index.ts:40](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L40)
 
 ***
 
@@ -57,7 +57,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:41](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L41)
+[src/index.ts:41](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L41)
 
 ***
 
@@ -67,7 +67,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:38](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L38)
+[src/index.ts:38](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L38)
 
 ***
 
@@ -77,7 +77,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:42](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L42)
+[src/index.ts:42](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L42)
 
 ***
 
@@ -87,7 +87,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:43](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L43)
+[src/index.ts:43](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L43)
 
 ***
 
@@ -97,7 +97,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:44](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L44)
+[src/index.ts:44](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L44)
 
 ***
 
@@ -107,7 +107,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:45](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L45)
+[src/index.ts:45](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L45)
 
 ***
 
@@ -117,7 +117,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:46](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L46)
+[src/index.ts:46](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L46)
 
 ***
 
@@ -127,7 +127,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:47](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L47)
+[src/index.ts:47](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L47)
 
 ***
 
@@ -137,7 +137,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:48](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L48)
+[src/index.ts:48](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L48)
 
 ***
 
@@ -147,7 +147,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:49](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L49)
+[src/index.ts:49](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L49)
 
 ***
 
@@ -157,7 +157,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:50](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L50)
+[src/index.ts:50](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L50)
 
 ***
 
@@ -167,7 +167,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:51](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L51)
+[src/index.ts:51](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L51)
 
 ***
 
@@ -177,7 +177,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:52](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L52)
+[src/index.ts:52](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L52)
 
 ***
 
@@ -187,7 +187,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:53](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L53)
+[src/index.ts:53](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L53)
 
 ***
 
@@ -197,7 +197,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:54](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L54)
+[src/index.ts:54](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L54)
 
 ***
 
@@ -207,7 +207,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:55](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L55)
+[src/index.ts:55](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L55)
 
 ***
 
@@ -217,7 +217,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:56](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L56)
+[src/index.ts:56](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L56)
 
 ***
 
@@ -227,7 +227,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:57](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L57)
+[src/index.ts:57](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L57)
 
 ***
 
@@ -237,7 +237,7 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:58](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L58)
+[src/index.ts:58](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L58)
 
 ***
 
@@ -247,4 +247,4 @@ console.log(projects);
 
 #### Defined in
 
-[src/index.ts:59](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/index.ts#L59)
+[src/index.ts:59](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/index.ts#L59)

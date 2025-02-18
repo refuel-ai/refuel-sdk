@@ -18,7 +18,7 @@ Dataset ID
 
 #### Defined in
 
-[src/types.ts:1090](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1090)
+[src/types.ts:1090](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1090)
 
 ***
 
@@ -30,7 +30,7 @@ Whether to get results from the evaluation set
 
 #### Defined in
 
-[src/types.ts:1099](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1099)
+[src/types.ts:1099](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1099)
 
 ***
 
@@ -42,7 +42,7 @@ Filters to apply to the dataset
 
 #### Defined in
 
-[src/types.ts:1105](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1105)
+[src/types.ts:1105](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1105)
 
 ***
 
@@ -54,7 +54,7 @@ Maximum number of items to return
 
 #### Defined in
 
-[src/types.ts:1108](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1108)
+[src/types.ts:1108](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1108)
 
 ***
 
@@ -66,7 +66,7 @@ ID of the model to use
 
 #### Defined in
 
-[src/types.ts:1102](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1102)
+[src/types.ts:1102](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1102)
 
 ***
 
@@ -78,7 +78,7 @@ Offset to start the items at
 
 #### Defined in
 
-[src/types.ts:1111](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1111)
+[src/types.ts:1111](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1111)
 
 ***
 
@@ -90,7 +90,7 @@ Order by
 
 #### Defined in
 
-[src/types.ts:1114](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1114)
+[src/types.ts:1114](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1114)
 
 ***
 
@@ -102,7 +102,7 @@ Whether to get results from the seed set
 
 #### Defined in
 
-[src/types.ts:1096](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1096)
+[src/types.ts:1096](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1096)
 
 ***
 
@@ -114,4 +114,4 @@ Task ID
 
 #### Defined in
 
-[src/types.ts:1093](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1093)
+[src/types.ts:1093](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1093)

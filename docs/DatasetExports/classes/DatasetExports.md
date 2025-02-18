@@ -36,7 +36,7 @@ const export = await refuel.datasetExports.create({ datasetId: "123", email: "ex
 
 #### Defined in
 
-[src/DatasetExports/index.ts:69](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/DatasetExports/index.ts#L69)
+[src/DatasetExports/index.ts:69](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/DatasetExports/index.ts#L69)
 
 ***
 
@@ -68,4 +68,4 @@ const export = await refuel.datasetExports.get(exportId, { datasetId });
 
 #### Defined in
 
-[src/DatasetExports/index.ts:29](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/DatasetExports/index.ts#L29)
+[src/DatasetExports/index.ts:29](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/DatasetExports/index.ts#L29)

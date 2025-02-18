@@ -14,7 +14,7 @@
 
 #### Defined in
 
-[src/types.ts:824](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L824)
+[src/types.ts:824](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L824)
 
 ***
 
@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[src/types.ts:823](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L823)
+[src/types.ts:823](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L823)
