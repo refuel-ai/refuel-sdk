@@ -22,7 +22,7 @@ Application ID
 
 #### Defined in
 
-[src/types.ts:166](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L166)
+[src/types.ts:166](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L166)
 
 ***
 
@@ -34,7 +34,7 @@ Application name
 
 #### Defined in
 
-[src/types.ts:169](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L169)
+[src/types.ts:169](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L169)
 
 ***
 
@@ -46,4 +46,4 @@ Output of the application
 
 #### Defined in
 
-[src/types.ts:172](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L172)
+[src/types.ts:172](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L172)

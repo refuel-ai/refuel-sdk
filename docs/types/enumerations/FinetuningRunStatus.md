@@ -16,7 +16,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1243](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1243)
+[src/types.ts:1243](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1243)
 
 ***
 
@@ -26,7 +26,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1244](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1244)
+[src/types.ts:1244](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1244)
 
 ***
 
@@ -36,7 +36,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1242](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1242)
+[src/types.ts:1242](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1242)
 
 ***
 
@@ -46,7 +46,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1241](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1241)
+[src/types.ts:1241](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1241)
 
 ***
 
@@ -56,7 +56,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1258](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1258)
+[src/types.ts:1258](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1258)
 
 ***
 
@@ -66,7 +66,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1259](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1259)
+[src/types.ts:1259](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1259)
 
 ***
 
@@ -76,7 +76,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1257](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1257)
+[src/types.ts:1257](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1257)
 
 ***
 
@@ -86,7 +86,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1256](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1256)
+[src/types.ts:1256](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1256)
 
 ***
 
@@ -96,7 +96,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1263](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1263)
+[src/types.ts:1263](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1263)
 
 ***
 
@@ -106,7 +106,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1264](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1264)
+[src/types.ts:1264](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1264)
 
 ***
 
@@ -116,7 +116,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1262](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1262)
+[src/types.ts:1262](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1262)
 
 ***
 
@@ -126,7 +126,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1261](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1261)
+[src/types.ts:1261](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1261)
 
 ***
 
@@ -136,7 +136,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1239](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1239)
+[src/types.ts:1239](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1239)
 
 ***
 
@@ -146,7 +146,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1238](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1238)
+[src/types.ts:1238](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1238)
 
 ***
 
@@ -156,7 +156,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1266](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1266)
+[src/types.ts:1266](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1266)
 
 ***
 
@@ -166,7 +166,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1248](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1248)
+[src/types.ts:1248](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1248)
 
 ***
 
@@ -176,7 +176,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1249](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1249)
+[src/types.ts:1249](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1249)
 
 ***
 
@@ -186,7 +186,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1247](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1247)
+[src/types.ts:1247](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1247)
 
 ***
 
@@ -196,7 +196,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1246](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1246)
+[src/types.ts:1246](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1246)
 
 ***
 
@@ -206,7 +206,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1253](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1253)
+[src/types.ts:1253](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1253)
 
 ***
 
@@ -216,7 +216,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1254](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1254)
+[src/types.ts:1254](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1254)
 
 ***
 
@@ -226,7 +226,7 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1252](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1252)
+[src/types.ts:1252](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1252)
 
 ***
 
@@ -236,4 +236,4 @@ The status of a finetuning run
 
 #### Defined in
 
-[src/types.ts:1251](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1251)
+[src/types.ts:1251](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1251)

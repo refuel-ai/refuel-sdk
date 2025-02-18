@@ -18,7 +18,7 @@ Dataset ID
 
 #### Defined in
 
-[src/types.ts:1043](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1043)
+[src/types.ts:1043](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1043)
 
 ***
 
@@ -30,7 +30,7 @@ Whether this export is from an evaluation set
 
 #### Defined in
 
-[src/types.ts:1052](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1052)
+[src/types.ts:1052](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1052)
 
 ***
 
@@ -42,7 +42,7 @@ Whether this export is from a seed set
 
 #### Defined in
 
-[src/types.ts:1049](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1049)
+[src/types.ts:1049](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1049)
 
 ***
 
@@ -54,4 +54,4 @@ Task ID
 
 #### Defined in
 
-[src/types.ts:1046](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L1046)
+[src/types.ts:1046](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L1046)

@@ -18,7 +18,7 @@ Existing label task IDs
 
 #### Defined in
 
-[src/types.ts:344](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L344)
+[src/types.ts:344](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L344)
 
 ***
 
@@ -30,7 +30,7 @@ Whether the column is a confidence score
 
 #### Defined in
 
-[src/types.ts:347](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L347)
+[src/types.ts:347](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L347)
 
 ***
 
@@ -42,7 +42,7 @@ Whether the column is an LLM label
 
 #### Defined in
 
-[src/types.ts:350](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L350)
+[src/types.ts:350](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L350)
 
 ***
 
@@ -54,7 +54,7 @@ Source of the column value
 
 #### Defined in
 
-[src/types.ts:353](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L353)
+[src/types.ts:353](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L353)
 
 ***
 
@@ -66,7 +66,7 @@ Task ID
 
 #### Defined in
 
-[src/types.ts:356](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L356)
+[src/types.ts:356](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L356)
 
 ***
 
@@ -78,4 +78,4 @@ Type of the column value
 
 #### Defined in
 
-[src/types.ts:359](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L359)
+[src/types.ts:359](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L359)

@@ -22,7 +22,7 @@ Timestamp of the output
 
 #### Defined in
 
-[src/types.ts:136](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L136)
+[src/types.ts:136](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L136)
 
 ***
 
@@ -34,7 +34,7 @@ Fields and their labels
 
 #### Defined in
 
-[src/types.ts:139](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L139)
+[src/types.ts:139](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L139)
 
 ***
 
@@ -46,7 +46,7 @@ Refuel UUID for the output
 
 #### Defined in
 
-[src/types.ts:133](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L133)
+[src/types.ts:133](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L133)
 
 ***
 
@@ -58,4 +58,4 @@ Telemetry metrics, such as how many tokens were used
 
 #### Defined in
 
-[src/types.ts:142](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L142)
+[src/types.ts:142](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L142)

@@ -18,7 +18,7 @@ Use a custom API to transform the data
 
 #### Defined in
 
-[src/types.ts:666](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L666)
+[src/types.ts:666](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L666)
 
 ***
 
@@ -30,7 +30,7 @@ Search for a location on a map
 
 #### Defined in
 
-[src/types.ts:657](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L657)
+[src/types.ts:657](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L657)
 
 ***
 
@@ -42,7 +42,7 @@ Extract text from an image or document
 
 #### Defined in
 
-[src/types.ts:663](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L663)
+[src/types.ts:663](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L663)
 
 ***
 
@@ -54,7 +54,7 @@ Search the web for information relevant to the input
 
 #### Defined in
 
-[src/types.ts:654](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L654)
+[src/types.ts:654](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L654)
 
 ***
 
@@ -66,4 +66,4 @@ Transform a webpage into structured data
 
 #### Defined in
 
-[src/types.ts:660](https://github.com/refuel-ai/refuel-sdk/blob/ce96b857bf5c9f1c73e98ea4629535109c473935/src/types.ts#L660)
+[src/types.ts:660](https://github.com/refuel-ai/refuel-sdk/blob/7a0f1a61ebc96b440ae457740bef10a1f55424fa/src/types.ts#L660)
